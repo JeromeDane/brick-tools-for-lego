@@ -2,6 +2,8 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       BRICKSET_API_KEY: string;
+      BRICKSET_USERNAME: string;
+      BRICKSET_PASSWORD: string
     }
   }
 }
