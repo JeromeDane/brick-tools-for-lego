@@ -86,6 +86,7 @@ __metadata:
     "@types/node": ^16.11.10
     cross-fetch: ^3.1.4
     form-urlencoded: ^6.0.5
+    gunzip-file: ^0.1.1
     ts-node: ^10.4.0
     typescript: ^4.5.2
   languageName: unknown
@@ -118,6 +119,13 @@ __metadata:
   version: 6.0.5
   resolution: "form-urlencoded@npm:6.0.5"
   checksum: 537221048a3b5753d765e23f08c7fb408ad54cc35027af4bc6a9160df85db4ed4fca7ce4d52bec29824a69fbdb1a3c724cf3ace11c2f5aea714a562b09123756
+  languageName: node
+  linkType: hard
+
+"gunzip-file@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "gunzip-file@npm:0.1.1"
+  checksum: 14f1aae379d88849dbe62a25da66787fce14ed688e59a514c8948c2ebca03fff7b4d895b1b6680496817148eff76afe4d661bbb26ca30682949ef7b89f888824
   languageName: node
   linkType: hard
 
