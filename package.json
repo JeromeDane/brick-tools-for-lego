@@ -1,0 +1,7 @@
+{
+  "name": "brick-tools-for-lego",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:JeromeDane/brick-tools-for-lego.git",
+  "author": "Jerome Dane <jerome.dane@gmail.com>"
+}
