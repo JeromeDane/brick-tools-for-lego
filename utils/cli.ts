@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch'
 import formUrlEncode from 'form-urlencoded'
-import {updateCsvData} from './rebrickable'
+import {buildJson, updateCsvData} from './rebrickable'
 
 const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers')
@@ -41,3 +41,4 @@ const run = async () => {
 if(argv.updateData) {
   updateCsvData()
 }
+buildJson()

@@ -1,8 +1,9 @@
 import fetch from 'cross-fetch'
-import {mkdirSync, rmSync, writeFile} from 'fs'
+import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path';
 import {promisify} from 'util'
 
+const csv = require('csvtojson')
 const gUnzip = require('gunzip-file')
 const writeFilePromise = promisify(writeFile);
 
@@ -49,5 +50,28 @@ export const updateCsvData = async () => {
   await downloadRebrickableCsv('inventory_sets')
   await downloadRebrickableCsv('inventory_minifigs')
   rmSync(tmpDir, {recursive: true})
+}
 
+const csvToJson = (type: string) =>
+  csv()
+    .fromFile(path.join(dataDir, type + '.csv'))
+    .then((data: Object) =>
+      writeFileSync(
+        path.join(__dirname, `../app/data/${type}.json`),
+        JSON.stringify(data, null, 2))
+    )
+
+export const buildJson = async () => {
+  await csvToJson('themes')
+  await csvToJson('colors')
+  await csvToJson('part_categories')
+  await csvToJson('parts')
+  await csvToJson('part_relationships')
+  await csvToJson('elements')
+  await csvToJson('sets')
+  await csvToJson('minifigs')
+  await csvToJson('inventories')
+  await csvToJson('inventory_parts')
+  await csvToJson('inventory_sets')
+  await csvToJson('inventory_minifigs')
 }
