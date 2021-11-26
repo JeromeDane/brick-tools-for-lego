@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Image, ScrollView, StyleSheet, ViewPropTypes } from 'react-native'
 import sortBy from 'sort-by'
-import { Picker, Text, View } from '../components/Themed'
+import { Paginator, Picker, Text, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
   const [sortField, setSortField] = useState('setNum'),
-        [numToShow, setNumToShow] = useState(25)
+        [pageSize, setPageSize] = useState(25),
+        [currentPage, setCurrentPage] = useState(0),
+        scrollRef = useRef()
+
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <ScrollView ref={scrollRef} style={{padding: 20, paddingBottom: 100}}>
         <View style={styles.filterBar}>
           <Text>Sort by</Text>
           <Picker
@@ -25,21 +28,24 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             <Picker.Item label="Year Released" value="year" />
             <Picker.Item label="Year Released (desc)" value="-year" />
           </Picker>
-          <Text>Show</Text>
+          <Text style={{marginLeft: 10}}>Show</Text>
           <Picker
             style={{width: 150}}
             prompt="Show"
-            selectedValue={numToShow}
-            onValueChange={(num: string) => setNumToShow(parseInt(num))}>
-            <Picker.Item label="10 per page" value="10" />
-            <Picker.Item label="25 per page" value="25" />
-            <Picker.Item label="50 per page" value="50" />
-            <Picker.Item label="100 per page" value="100" />
+            selectedValue={pageSize}
+            onValueChange={(num: number) => {
+              setCurrentPage(0)
+              setPageSize(num)
+            }}>
+            <Picker.Item label="10 per page" value={10} />
+            <Picker.Item label="25 per page" value={25} />
+            <Picker.Item label="50 per page" value={50} />
+            <Picker.Item label="100 per page" value={100} />
           </Picker>
         </View>
         {sets
           .sort(sortBy(sortField))
-          .slice(0, numToShow)
+          .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
           .map(set =>
             <View key={set.setNum} style={styles.theme}>
               <Image
@@ -53,6 +59,14 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             </View>
           )
         }
+        <Paginator
+          pageSize={pageSize}
+          numItems={sets.length}
+          onValueChange={val => {
+            scrollRef.current?.scrollTo({y: 0, animated: false})
+            setCurrentPage(val)
+          }}
+          selectedValue={currentPage} />
       </ScrollView>
     </View>
   )
@@ -60,7 +74,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20
+    flex: 1
   },
   theme: {
     flex: 1,
@@ -77,6 +91,7 @@ const styles = StyleSheet.create({
   },
   filterBar: {
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 })

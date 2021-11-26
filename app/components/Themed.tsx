@@ -4,7 +4,8 @@
  */
 
 import * as React from 'react';
-import { Text as DefaultText, View as DefaultView } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
+import { Text as DefaultText, TouchableOpacity, View as DefaultView } from 'react-native';
 import {Picker as DefaultPicker, PickerProps} from '@react-native-picker/picker'
 
 import Colors from '../constants/Colors';
@@ -54,9 +55,54 @@ export function Picker(props: PickerProps) {
   return <DefaultPicker
     style={[{
       backgroundColor,
-      color
+      color,
+      minWidth: 100
     }, style]} {...otherProps}
     dropdownIconColor={color} />;
 }
 
 Picker.Item = DefaultPicker.Item
+
+type PaginatorProps = {
+  selectedValue: number,
+  onValueChange: Function,
+  numItems: number,
+  pageSize: number
+}
+
+export const Paginator = (props: PaginatorProps) => {
+  const numPages = Math.ceil(props.numItems/props.pageSize),
+        pickerItems = []
+  for(let i = 0; i < numPages; i++)
+    pickerItems.push(<Picker.Item label={`Page ${(i + 1)}`} value={i} />)
+  return <View style={{flex: 1, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
+    <TouchableOpacity
+      style={{height: props.selectedValue == 0 ? 0 : 'auto'}}
+      onPress={() =>
+        props.onValueChange(props.selectedValue == 0 ? 0 : props.selectedValue - 1)
+      }>
+      <Icon name="chevron-left" style={{marginRight: 20}} />
+    </TouchableOpacity>
+    <Picker
+      style={{width: 150}}
+      selectedValue={props.selectedValue}
+      onValueChange={props.onValueChange}>
+      {pickerItems}
+    </Picker>
+    <TouchableOpacity
+      style={{height: props.selectedValue == numPages - 1 ? 0 : 'auto'}}
+      onPress={() =>
+        props.onValueChange(props.selectedValue + 1)
+      }>
+      <Icon name="chevron-right" style={{marginLeft: 20}} />
+    </TouchableOpacity>
+  </View>
+}
+
+/**
+ * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
+ */
+export function Icon(props: any) {
+  const color = useThemeColor({}, 'text')
+  return <FontAwesome size={30}  {...props} style={{ color, ...props.style }}/>;
+}
