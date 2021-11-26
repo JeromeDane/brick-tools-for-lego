@@ -12,23 +12,29 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.filterBar}>
+          <Text>Sort by</Text>
           <Picker
+            style={{width: 150}}
+            prompt="Sort by"
             selectedValue={sortField}
             onValueChange={(field: string) => setSortField(field)}>
-            <Picker.Item label="Sort by Set Number" value="setNumSort" />
-            <Picker.Item label="Sort by Set Number (desc)" value="-setNumSort" />
-            <Picker.Item label="Sort by Name" value="num" />
-            <Picker.Item label="Sort by Name (desc)" value="-num" />
-            <Picker.Item label="Sort by Year Released" value="year" />
-            <Picker.Item label="Sort by Year Released (desc)" value="-year" />
+            <Picker.Item label="Set Number" value="setNumSort" />
+            <Picker.Item label="Set Number (desc)" value="-setNumSort" />
+            <Picker.Item label="Name" value="name" />
+            <Picker.Item label="Name (desc)" value="-name" />
+            <Picker.Item label="Year Released" value="year" />
+            <Picker.Item label="Year Released (desc)" value="-year" />
           </Picker>
+          <Text>Show</Text>
           <Picker
+            style={{width: 150}}
+            prompt="Show"
             selectedValue={numToShow}
             onValueChange={(num: string) => setNumToShow(parseInt(num))}>
-            <Picker.Item label="Show 10 per page" value="10" />
-            <Picker.Item label="Show 25 per page" value="25" />
-            <Picker.Item label="Show 50 per page" value="50" />
-            <Picker.Item label="Show 100 per page" value="100" />
+            <Picker.Item label="10 per page" value="10" />
+            <Picker.Item label="25 per page" value="25" />
+            <Picker.Item label="50 per page" value="50" />
+            <Picker.Item label="100 per page" value="100" />
           </Picker>
         </View>
         {sets
