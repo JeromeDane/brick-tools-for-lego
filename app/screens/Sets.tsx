@@ -6,7 +6,8 @@ import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
-  const [sortField, setSortField] = useState('setNum')
+  const [sortField, setSortField] = useState('setNum'),
+        [numToShow, setNumToShow] = useState(25)
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -21,10 +22,18 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             <Picker.Item label="Sort by Year Released" value="year" />
             <Picker.Item label="Sort by Year Released (desc)" value="-year" />
           </Picker>
+          <Picker
+            selectedValue={numToShow}
+            onValueChange={(num: string) => setNumToShow(parseInt(num))}>
+            <Picker.Item label="Show 10 per page" value="10" />
+            <Picker.Item label="Show 25 per page" value="25" />
+            <Picker.Item label="Show 50 per page" value="50" />
+            <Picker.Item label="Show 100 per page" value="100" />
+          </Picker>
         </View>
         {sets
           .sort(sortBy(sortField))
-          .slice(0, 25)
+          .slice(0, numToShow)
           .map(set =>
             <View key={set.setNum} style={styles.theme}>
               <Image
