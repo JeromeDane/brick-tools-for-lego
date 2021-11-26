@@ -8,10 +8,12 @@ const csv = require('csvtojson')
 const gUnzip = require('gunzip-file')
 const writeFilePromise = promisify(writeFile);
 
-const dataDir = path.join(__dirname, '../data/rebrickable')
+const csvDir = path.join(__dirname, '../data/rebrickable')
+const dataDir = path.join(__dirname, '../app/data/')
 const tmpDir = path.join(__dirname, 'tmp')
-mkdirSync(tmpDir, {recursive: true})
+mkdirSync(csvDir, {recursive: true})
 mkdirSync(dataDir, {recursive: true})
+mkdirSync(tmpDir, {recursive: true})
 
 const downloadGzAndExtract = async (url: string, ) =>
   new Promise(resolve => {
@@ -25,7 +27,7 @@ const downloadGzAndExtract = async (url: string, ) =>
         process.stdout.write(' extracting...')
         gUnzip(
           gZipDest,
-          path.join(dataDir, outFile),
+          path.join(csvDir, outFile),
           () => {
             process.stdout.write(' done.\n')
             resolve(null)
@@ -60,7 +62,7 @@ const saveData = (type: string, data: Object) =>
 
 const csvToJson = (type: string) =>
   csv()
-    .fromFile(path.join(dataDir, type + '.csv'))
+    .fromFile(path.join(csvDir, type + '.csv'))
     .then(camelize)
 
 export const buildJson = async () => {
@@ -86,6 +88,8 @@ export const buildJson = async () => {
 
   sets.map((set: any) => {
     set.setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))
+    set.numParts = parseInt(set.numParts)
+    set.year = parseInt(set.year)
     if(isNaN(set.setNumSort)) set.setNumSort = set.setNum
     return set
   })

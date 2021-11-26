@@ -25,6 +25,8 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             <Picker.Item label="Set Number (desc)" value="-setNumSort" />
             <Picker.Item label="Name" value="name" />
             <Picker.Item label="Name (desc)" value="-name" />
+            <Picker.Item label="Parts" value="numParts" />
+            <Picker.Item label="Parts (desc)" value="-numParts" />
             <Picker.Item label="Year Released" value="year" />
             <Picker.Item label="Year Released (desc)" value="-year" />
           </Picker>
@@ -54,7 +56,8 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
               <View>
                 <Text>{set.setNum}</Text>
                 <Text>{set.name}</Text>
-                <Text>{set.year}</Text>
+                <Text>{set.numParts.toLocaleString()} parts</Text>
+                <Text>Released in {set.year}</Text>
               </View>
             </View>
           )
