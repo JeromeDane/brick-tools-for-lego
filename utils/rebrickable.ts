@@ -84,6 +84,12 @@ export const buildJson = async () => {
     return theme
   })
 
+  sets.map((set: any) => {
+    set.setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))
+    if(isNaN(set.setNumSort)) set.setNumSort = set.setNum
+    return set
+  })
+
   saveData('themes', themes)
   saveData('colors', colors)
   saveData('part_categories', partCategories)

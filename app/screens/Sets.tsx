@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Image, ScrollView, StyleSheet, ViewPropTypes } from 'react-native'
 import sortBy from 'sort-by'
-import { Text, View } from '../components/Themed'
+import { Picker, Text, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
+  const [sortField, setSortField] = useState('setNum')
   return (
     <View style={styles.container}>
       <ScrollView>
+        <View style={styles.filterBar}>
+          <Picker
+            selectedValue={sortField}
+            onValueChange={(field: string) => setSortField(field)}>
+            <Picker.Item label="Sort by Set Number" value="setNumSort" />
+            <Picker.Item label="Sort by Set Number (desc)" value="-setNumSort" />
+            <Picker.Item label="Sort by Name" value="num" />
+            <Picker.Item label="Sort by Name (desc)" value="-num" />
+            <Picker.Item label="Sort by Year Released" value="year" />
+            <Picker.Item label="Sort by Year Released (desc)" value="-year" />
+          </Picker>
+        </View>
         {sets
-          .sort(sortBy('name'))
-          .slice(100, 125)
+          .sort(sortBy(sortField))
+          .slice(0, 25)
           .map(set =>
             <View key={set.setNum} style={styles.theme}>
               <Image
                 style={styles.image}
                 source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}} />
-              <Text>
-                {set.name} ({set.setNum})
-              </Text>
+              <View>
+                <Text>{set.setNum}</Text>
+                <Text>{set.name}</Text>
+                <Text>{set.year}</Text>
+              </View>
             </View>
           )
         }
@@ -30,11 +45,11 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'flex-start',
     padding: 20
   },
   theme: {
+    flex: 1,
+    flexDirection: 'row',
     textAlign: 'left',
     paddingVertical: 10,
     paddingRight: 20
@@ -42,6 +57,11 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
-    backgroundColor: 'gray'
+    backgroundColor: 'gray',
+    marginRight: 10
+  },
+  filterBar: {
+    flex: 1,
+    flexDirection: 'column'
   }
 })

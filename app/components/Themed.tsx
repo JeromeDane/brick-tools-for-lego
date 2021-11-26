@@ -5,6 +5,7 @@
 
 import * as React from 'react';
 import { Text as DefaultText, View as DefaultView } from 'react-native';
+import {Picker as DefaultPicker, PickerProps} from '@react-native-picker/picker'
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -44,3 +45,18 @@ export function View(props: ViewProps) {
 
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
+
+export function Picker(props: PickerProps) {
+  const { style, ...otherProps } = props;
+  const backgroundColor = useThemeColor({}, 'background');
+  const color = useThemeColor({}, 'text');
+
+  return <DefaultPicker
+    style={[{
+      backgroundColor,
+      color
+    }, style]} {...otherProps}
+    dropdownIconColor={color} />;
+}
+
+Picker.Item = DefaultPicker.Item
