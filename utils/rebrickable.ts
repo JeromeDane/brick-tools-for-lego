@@ -1,3 +1,4 @@
+import camelize from 'camelcase-keys'
 import fetch from 'cross-fetch'
 import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path';
@@ -52,26 +53,47 @@ export const updateCsvData = async () => {
   rmSync(tmpDir, {recursive: true})
 }
 
+const saveData = (type: string, data: Object) =>
+  writeFileSync(
+    path.join(__dirname, `../app/data/${type}.json`),
+    JSON.stringify(data, null, 2))
+
 const csvToJson = (type: string) =>
   csv()
     .fromFile(path.join(dataDir, type + '.csv'))
-    .then((data: Object) =>
-      writeFileSync(
-        path.join(__dirname, `../app/data/${type}.json`),
-        JSON.stringify(data, null, 2))
-    )
+    .then(camelize)
 
 export const buildJson = async () => {
-  await csvToJson('themes')
-  await csvToJson('colors')
-  await csvToJson('part_categories')
-  await csvToJson('parts')
-  await csvToJson('part_relationships')
-  await csvToJson('elements')
-  await csvToJson('sets')
-  await csvToJson('minifigs')
-  await csvToJson('inventories')
-  await csvToJson('inventory_parts')
-  await csvToJson('inventory_sets')
-  await csvToJson('inventory_minifigs')
+  const themes = await csvToJson('themes'),
+        colors = await csvToJson('colors'),
+        partCategories = await csvToJson('part_categories'),
+        parts = await csvToJson('parts'),
+        partRelationships = await csvToJson('part_relationships'),
+        elements = await csvToJson('elements'),
+        sets = await csvToJson('sets'),
+        minifigs = await csvToJson('minifigs'),
+        inventories = await csvToJson('inventories'),
+        inventoryParts = await csvToJson('inventory_parts'),
+        inventorySets = await csvToJson('inventory_sets'),
+        inventoryMinifigs = await csvToJson('inventory_minifigs')
+
+  themes.map((theme: any) => {
+    theme.numSets = sets.reduce((num : number, set: any) =>
+      num + (set.themeId == theme.id ? 1 : 0)
+    , 0)
+    return theme
+  })
+
+  saveData('themes', themes)
+  saveData('colors', colors)
+  saveData('part_categories', partCategories)
+  saveData('parts', parts)
+  saveData('part_relationships', partRelationships)
+  saveData('elements', elements)
+  saveData('sets', sets)
+  saveData('minifigs', minifigs)
+  saveData('inventories', inventories)
+  saveData('inventory_parts', inventoryParts)
+  saveData('inventory_sets', inventorySets)
+  saveData('inventory_minifigs', inventoryMinifigs)
 }
