@@ -2,6 +2,10 @@ import fetch from 'cross-fetch'
 import formUrlEncode from 'form-urlencoded'
 import {updateCsvData} from './rebrickable'
 
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
+
 const api = (method: string, data: Object) =>
   fetch('https://brickset.com/api/v3.asmx/' + method, {
     method: 'POST',
@@ -34,4 +38,6 @@ const run = async () => {
 
 // run()
 
-updateCsvData()
+if(argv.updateData) {
+  updateCsvData()
+}

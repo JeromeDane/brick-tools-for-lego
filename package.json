@@ -5,7 +5,8 @@
   "repository": "git@github.com:JeromeDane/brick-tools-for-lego.git",
   "author": "Jerome Dane <jerome.dane@gmail.com>",
   "scripts": {
-    "cli": "ts-node ./utils/cli.ts"
+    "cli": "ts-node ./utils/cli.ts",
+    "update-data": "ts-node ./utils/cli.ts --updateData"
   },
   "devDependencies": {
     "@types/node": "^16.11.10",
@@ -13,6 +14,7 @@
     "form-urlencoded": "^6.0.5",
     "gunzip-file": "^0.1.1",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.2",
+    "yargs": "^17.2.1"
   }
 }
