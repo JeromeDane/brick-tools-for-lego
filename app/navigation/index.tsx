@@ -58,10 +58,18 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Themes"
+      initialRouteName="Sets"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
+      <BottomTab.Screen
+        name="Sets"
+        component={SetsScreen}
+        options={{
+          title: 'Sets',
+          tabBarIcon: ({ color }) => <TabBarIcon name="cubes" color={color} />,
+        }}
+      />
       <BottomTab.Screen
         name="Themes"
         component={ThemesScreen}
@@ -83,14 +91,6 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
-      />
-      <BottomTab.Screen
-        name="Sets"
-        component={SetsScreen}
-        options={{
-          title: 'Sets',
-          tabBarIcon: ({ color }) => <TabBarIcon name="cubes" color={color} />,
-        }}
       />
     </BottomTab.Navigator>
   );
