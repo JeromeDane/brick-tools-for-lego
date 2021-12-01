@@ -32,7 +32,7 @@ fig-000030,Space Police II,6
 fig-000031,Street Skater,4
 fig-000032,"Batman, Black Suit, Black Cape and Cowl, Yellow Batman Logo (56630 Cape)",5
 fig-000033,"Red Torso, Dark Blue Legs, Light Bluish Gray Helmet",4
-fig-000034,Aquanaut 2,7
+fig-000034,Aquanaut 2,5
 fig-000035,Milhouse Van Houten (CMF),3
 fig-000036,Crazy Scientist,4
 fig-000037,Pop Star (CMF),4
@@ -94,7 +94,7 @@ fig-000092,Marsha Queen of the Mermaids (CMF),4
 fig-000093,Ogel with Trans-red Hook,6
 fig-000094,Dr. Hibbert (CMF),3
 fig-000095,"Pilot, Blue Jacket with Plane Logo and Blue Tie, Blue Hat, Goatee Beard",4
-fig-000096,Dash with Black Flippers,8
+fig-000096,Dash,6
 fig-000097,"Knight (Knights Kingdom I) - Cedric the Bull, Chrome Helmet, Horn",5
 fig-000098,"Douglas Elton / El Fuego, Green Outfit - Possessed Form",4
 fig-000099,"Astronaut, White, Light Gray Hips, Helmet with Breastplate and Large Chrome Gold Visor, Headset",5
@@ -175,7 +175,7 @@ fig-000173,Chess Piece - Crown - Pawn,4
 fig-000174,"Racer, Red Jacket with Zipper, Red Helmet with Visor (3626a Head)",5
 fig-000175,"Man, Blue Overalls over Shirt, Blue Legs, Red Cap, Goatee Beard",4
 fig-000176,Soccer Player,4
-fig-000177,Hockey Player,8
+fig-000177,Hockey Player,6
 fig-000178,Zombie Driver,4
 fig-000179,"Mia - Medium Blue Top, Lime Shorts",4
 fig-000180,Dastan,4
@@ -429,7 +429,7 @@ fig-000427,"Blue Torso, Tan Legs, Black Hair",4
 fig-000428,"Racer, White Jacket with 2 Stars, Red Helmet with Visor, Sunglasses",5
 fig-000429,Biker Bob,5
 fig-000430,"Knight (Fright Knights) - Red Legs, Black Hips",4
-fig-000431,"Diver, Woman, Blue Wetsuit, Black Helmet with Mask, Airtank, Flippers",8
+fig-000431,"Diver, Woman, Blue Wetsuit, Black Helmet with Mask, Airtank",6
 fig-000432,"Racer, Extreme Team, Black Jacket, Green Legs, Blue Cap, Yellow Life Vest",5
 fig-000433,"Man, Plain White, Red Helmet with Visor",5
 fig-000434,"Worker, Blue Jacket with Orange Stripes, Blue Legs, Blue Cap, Silver Sunglasses",4
@@ -528,7 +528,7 @@ fig-000526,Pharaoh Hotep,4
 fig-000527,"Fireman with Reflective Stripes and Radio, White Fire Helmet, and Beard Stubble",4
 fig-000528,Nya (The Golden Weapons),4
 fig-000529,Stitch (CMF),3
-fig-000530,"Diver, Man, Red Wetsuit, Red Helmet with Mask, Airtank, Flippers, Stubble",8
+fig-000530,"Diver, Man, Red Wetsuit, Red Helmet with Mask, Airtank, Stubble",6
 fig-000531,"Man, Red Jacket with Zipper, Red Legs, Black Hat",4
 fig-000532,Alien (CMF),3
 fig-000533,"Stephanie - Lavender Jacket, Scarf, Light Aqua Skirt",4
@@ -658,7 +658,6 @@ fig-000656,Mario Gotze (CMF),4
 fig-000657,Aquanaut 1,5
 fig-000658,"Race Driver, Green Torso, Green Legs, Lime Helmet",5
 fig-000659,"Knight - Blue Torso, Dark Bluish Grey legs, Metallic Silver Helmet",4
-fig-000660,Aquashark 1 with Flippers,7
 fig-000661,"Medium Blue Torso, Blue Overall, Blue Cap",4
 fig-000662,"Pirate - Blue Jacket, Light Gray Legs, Brown Tricorne (3626b Head)",4
 fig-000663,Claus Stormward - Possessed Form,5
@@ -678,7 +677,6 @@ fig-000676,"Cargo Worker, Green Jacket with Pocket, Green Cap, Sunglasses",4
 fig-000677,"Man, Red Torso, Blue Legs, Black Hard Hat",4
 fig-000678,Toni Kroos,4
 fig-000679,"Construction Worker, Orange Overalls, Red Hard Hat, Beard and Glasses",4
-fig-000680,Cam with Black Flippers,8
 fig-000681,"Man, White Torso, Green Legs, White Cap",4
 fig-000682,Scott Francis - Possessed Form,8
 fig-000683,Mesut Ozil (CMF),4
@@ -708,7 +706,7 @@ fig-000706,"Man, Black Jacket over Red Shirt, Black Legs, White Cap",4
 fig-000707,"Doctor, Woman, White Jacket with Red Cross, White Legs, Black Hair",4
 fig-000708,Baseball Fielder,4
 fig-000709,Christoph Kramer (CMF),4
-fig-000710,"Diver, Man, Red Wetsuit, Black Helmet with Mask, Airtank, Flippers, Printed White Hair",8
+fig-000710,"Diver, Man, Red Wetsuit, Black Helmet with Mask, Airtank, Printed White Hair",6
 fig-000711,Shkodran Mustafi (CMF),4
 fig-000712,Lloyd Garmadon,5
 fig-000713,"Man, White Torso with Red and Blue Stripes, Blue Legs, Red Helmet",4
@@ -728,7 +726,7 @@ fig-000726,"Man, Red Top with Exxon Logo, Black Legs, Black Hat",4
 fig-000727,"Doctor, White Jacket with Red Cross, White Legs, Red Helmet",4
 fig-000728,"Man, Green Jacket, Blue Legs, Blue Cap, Blue Sunglasses",4
 fig-000729,"Fireman, Classic, Black Fire Jacket with Red Belt and Buttons, White Helmet (3842a Helmet)",4
-fig-000730,Stingray 3 with Flippers,6
+fig-000730,Stingray 3,4
 fig-000731,"Man, Blue Shirt with Buttons and Pockets, Blue Legs, Blue Hard Hat",4
 fig-000732,Bill - Possessed Form,6
 fig-000733,"Man - Blue Jacket, Blue Legs, Red Hat",4
@@ -907,7 +905,7 @@ fig-000905,Karate Master,4
 fig-000906,"Stephanie - Bright Pink Top, Dark Purple Skirt",4
 fig-000907,Elf,5
 fig-000908,"Lifeguard, Female",4
-fig-000909,Ice Skater,7
+fig-000909,Ice Skater,5
 fig-000910,Lawn Gnome,5
 fig-000911,Musketeer,5
 fig-000912,Surfer Girl (CMF),4
@@ -965,7 +963,7 @@ fig-000963,Constable,4
 fig-000964,Gingerbread Man (CMF),3
 fig-000965,Lumberjack,4
 fig-000966,Welder,4
-fig-000967,Axel,7
+fig-000967,Axel,5
 fig-000968,Island Warrior,6
 fig-000969,"Tactical Tennis Player, Team GB (CMF)",5
 fig-000970,"Agile Archer, Team GB (CMF)",5
@@ -977,7 +975,6 @@ fig-000975,"Green Lantern, Hal Jordan",4
 fig-000976,"Racer, White Shirt with Two Stripes and 'S', White Legs, Black Helmet with Visor (3626a Head)",5
 fig-000977,"Racer, White Shirt with Two Stripes and 'S', White Legs, Black Helmet with Visor (3626b Head)",5
 fig-000978,Flame Thrower with Quiver,5
-fig-000979,Bobby with Flippers,7
 fig-000980,"Astronaut, White, Helmet with Large Chrome Gold Visor, Airtanks, Headset",6
 fig-000981,Grandpa Abe Simpson (CMF),3
 fig-000982,"Racer, Black Torso, Black Legs, Black Helmet",5
@@ -987,7 +984,6 @@ fig-000985,Flex with Trans-Dark Blue Diving Mask,6
 fig-000986,"Astronaut, White, Helmet with Visor, Headset",5
 fig-000987,"Man, Plain Red Torso, Black Legs, Red Hard Hat",4
 fig-000988,"Racer, White Shirt with Two Stripes and 'S', White Legs, White Helmet with Visor",5
-fig-000989,Hydronaut 3 with Flippers,7
 fig-000990,"Fireman, Classic, Black Fire Jacket with Red Belt and Buttons, White Helmet, White Airtanks",5
 fig-000991,"Policeman, Black Suit with Pocket and Badge, White Cap",4
 fig-000992,Cragger (Dimensions),6
@@ -999,7 +995,7 @@ fig-000997,"Chewbacca, Brown",3
 fig-000998,"Mia - Black Tuxedo, Magician",4
 fig-000999,"Policeman, Black Jacket with Zipper and Badge, White Helmet with 'POLICE' and Trans-Green Visor, Sunglasses",5
 fig-001000,Frax with Shoulder Armor,10
-fig-001001,Roller Derby Girl,6
+fig-001001,Roller Derby Girl,4
 fig-001002,"King Leo (Knights Kingdom I) - Lion Shield, Crown",4
 fig-001003,Minotaur,3
 fig-001004,Ryo,4
@@ -1036,13 +1032,12 @@ fig-001034,Kendo Fighter,4
 fig-001035,"Man, Plain Blue with White Arms, Blue Helmet with Visor",5
 fig-001036,Dash,4
 fig-001037,Laser Mech,7
-fig-001038,Hydronaut 1 with Flippers,7
+fig-001038,Hydronaut 1,5
 fig-001039,"Andrea - Bright Light Orange Top, Light Aqua Skirt",4
 fig-001040,"Racer, White Jacket with Octan Logo and 'RACE' and 'TEAM', Green Helmet with Visor, Moustache",5
 fig-001041,Danny Longlegs / Corporal Steel with Black Shoulder Armor,5
 fig-001042,Stingray 2,4
 fig-001043,"Racer, Extreme Team, Black Jacket, Black Legs, Green Helmet with Visor, Blue Sunglasses",5
-fig-001044,Aquashark 2 with Flippers,7
 fig-001045,"Man, Red Top with Dark Blue Arms, Blue Legs, Blue Helmet with Visor, Orange Sunglasses",5
 fig-001046,"Man, Red Overalls, Red Hard Hat (3626a Head)",4
 fig-001047,Gypsy Moth / Navigator Sharp with Shoulder Armor,5
@@ -1187,7 +1182,7 @@ fig-001185,"Man - White Torso, White Legs, Red Hat",4
 fig-001186,Traffic Cop,4
 fig-001187,Forestman (CMF),6
 fig-001188,LEGO House - White,4
-fig-001189,Deep Sea Diver (CMF),8
+fig-001189,Deep Sea Diver (CMF),6
 fig-001190,Lord Vampyre / Vampire,5
 fig-001191,"Policeman, Plain Black, White Helmet (193au Helmet)",4
 fig-001192,Maiden - Bright Light Yellow Hair,4
@@ -1243,7 +1238,7 @@ fig-001241,Genie Girl,4
 fig-001242,"Woman, Cardigan Tied with Bow and Necklace, Black Legs, Dark Brown Hair",4
 fig-001243,"Blue Torso, Blue Legs, Blue Hat",4
 fig-001244,Toad,13
-fig-001245,"Andrea - Magenta/White Bikini, Bright Light Yellow Skirt",6
+fig-001245,"Andrea - Magenta/White Bikini, Bright Light Yellow Skirt",4
 fig-001246,Ghost with Open Mouth,4
 fig-001247,"Race Driver, White Torso, White Legs, Red Helmet, Chevrolet",5
 fig-001248,Desert Warrior,4
@@ -1260,7 +1255,7 @@ fig-001258,"Stephanie - Light Aqua Top, Bright Pink Skirt",4
 fig-001259,Spooky Boy,4
 fig-001260,Lake-town Guard,5
 fig-001261,Hiker,5
-fig-001262,Penguin Boy (CMF),6
+fig-001262,Penguin Boy (CMF),4
 fig-001263,Wildlife Photographer,4
 fig-001264,Rogue,5
 fig-001265,Kickboxer,4
@@ -1345,7 +1340,7 @@ fig-001343,"ADU Trooper, Big Smile / Confused, with Jetpack",6
 fig-001344,Samurai,5
 fig-001345,Tidus Stormsurfer,4
 fig-001346,"Postal Worker, Red Jacket with Zipper and Letter Logo, Black Legs, Red Cap, Silver Sunglasses",4
-fig-001347,Disco Diva,6
+fig-001347,Disco Diva,4
 fig-001348,Aira Windwhistler,4
 fig-001349,Wrestling Champion,4
 fig-001350,Hot Dog Man,4
@@ -1511,7 +1506,7 @@ fig-001509,"Batman, Glam Metal Outfit (CMF)",6
 fig-001510,"Batman, Bright Pink Suit, Bright Pink Cowl, Wings (Fairy Batman)",6
 fig-001511,"Batman, Caveman (CMF)",5
 fig-001512,Jake Raines with Ammo Belt (3626b Head),4
-fig-001513,"Batman, Swimsuit with Duck Float and Flippers (CMF)",7
+fig-001513,"Batman, Swimsuit with Duck Float (CMF)",5
 fig-001514,"Train Worker - Red/White Shirt, Blue Legs, Brown Hair, Standard head",4
 fig-001515,Barbara Gordon (CMF),4
 fig-001516,"Anakin Skywalker, Black Robe, Black Eyes",4
@@ -1692,7 +1687,7 @@ fig-001691,"Unkar's Thug, Dark Tan",3
 fig-001692,Emily Jones with Sand Blue Jacket and Necklace,5
 fig-001693,Naida Riverheart in Dark Azure and Light Aqua Outfit,4
 fig-001694,Azari Firedancer in Magenta and Gold Outfit with Belt over Torso,4
-fig-001695,Harley Quinn in Disco Outfit with Rollerskates (CMF),7
+fig-001695,Harley Quinn in Disco Outfit (CMF),5
 fig-001696,"Alfred Pennyworth, Balding, White Tuxedo (Dicso Outfit)(CMF)",6
 fig-001697,Clock King (CMF),4
 fig-001698,Hugo Strange (CMF),4
@@ -1722,7 +1717,6 @@ fig-001721,Giant Man (Hank Pym),3
 fig-001722,"White Torso with Space Figure, Red Legs, Red Cap",4
 fig-001723,Lester - LEGO Brand Store Exclusive,4
 fig-001724,"Royal Guard, White Hands",4
-fig-001725,"Diver, Man, Red and Black Wetsuit with Straps and Gauges, Red Helmet with Mask, Airtank, Flippers",8
 fig-001726,"Race Driver, Tan Torso, Tan Legs, Black Helmet, Ford",5
 fig-001727,"Race Driver, White Torso, Dark Blue Legs, White Helmet, Ford",5
 fig-001728,"Race Driver, White Torso, White Legs, Red Helmet, Porsche",5
@@ -1784,7 +1778,7 @@ fig-001783,"Darth Vader, Light Flesh Skin",6
 fig-001784,"Belle, Bright Light Orange and Bright Light Yellow Full Dress",4
 fig-001785,Edna Mode,4
 fig-001786,"Rapunzel - Dark Purple Top, Medium Lavender Dress",4
-fig-001787,"Arctic Explorer, Beanie Hat, Printed Goggles, Snowshoes",6
+fig-001787,"Arctic Explorer, Beanie Hat, Printed Goggles",4
 fig-001788,"Arctic Explorer, Ushanka Hat, Orange Sunglasses",4
 fig-001789,Cole (Hunted),5
 fig-001790,Jay (Hunted),5
@@ -1802,11 +1796,11 @@ fig-001801,"Han Solo, Mudtrooper Outfit, Dark Tan",4
 fig-001802,Olivia - Dark Azure/White Race Suit,4
 fig-001803,"Batman, Black Suit, Black Cape, Pearl Dark Gray Cowl (Armor)",5
 fig-001804,"Batman, Black Suit, Black Cape and Cowl, Utility Belt (3626cpr9998 Head)",6
-fig-001805,Harley Quinn with Rollerskates,6
+fig-001805,Harley Quinn,4
 fig-001806,Cheep Cheep,15
 fig-001807,Aaron Fox with Hair and Shoulder Armor,5
 fig-001808,Lloyd in Black Training Gi,4
-fig-001809,Scooter,8
+fig-001809,Scooter,6
 fig-001810,"Finn, Black Undershirt",4
 fig-001811,"Lloyd, Kendo Outfit no Mask",5
 fig-001812,Party Banana Guy,4
@@ -1873,7 +1867,7 @@ fig-001872,Superman with Red Eyes on Dual Sided Head,5
 fig-001873,"Construction Worker, Dark Blue Shirt with Harness, Red Hard Hat, Sweat Drops",4
 fig-001874,Worker with Orange Stripes and Blue Cap,4
 fig-001875,Master Wu in White Robes (The Golden Weapons),5
-fig-001876,"Diver, Man, Black and Gray Wetsuit, Helmet with Mask, Breathing Apparatus, Airtank, Flippers",8
+fig-001876,"Diver, Man, Black and Gray Wetsuit, Helmet with Mask, Breathing Apparatus, Airtank",6
 fig-001877,Dwayne - Possessed Form,5
 fig-001878,"Pilot, Black Torso, Black Legs, Black Hat",4
 fig-001879,"Boy, White and Blue Hoodie, Short Light Bluish Gray Legs, Light Bluish Gray Helmet",4
@@ -1985,7 +1979,7 @@ fig-001984,Celeste,4
 fig-001985,Cyren,4
 fig-001986,Woody with Dual Sided Head,4
 fig-001987,Heavy Metal / Faith,5
-fig-001988,Chicken Skater,6
+fig-001988,Chicken,4
 fig-001989,"Man, Blue Overalls over White V-Neck Shirt, Dark Red Cap, Beard",4
 fig-001990,"Rex Dangervest, Neck Bracket",5
 fig-001991,Robin with Red Eyemask,5
@@ -2029,7 +2023,7 @@ fig-002028,"Goomba, Angry",10
 fig-002029,"Mia - Dark Purple Top, Dark Purple Skirt",4
 fig-002030,"Olivia - Magenta Top, Dark Pink Skirt",4
 fig-002031,"Stephanie - Medium Blue Top, Medium Azure Skirt",4
-fig-002032,"Emma - Dark Blue Top, Light Aqua Trousers",7
+fig-002032,"Emma - Dark Blue Top, Light Aqua Trousers",5
 fig-002033,"Andrea - Dark Turquoise Bikini, Dark Turquoise Skirt",4
 fig-002034,Charge with Trans-Dark Blue Diving Mask,5
 fig-002035,Captain Jack Sparrow,4
@@ -2058,7 +2052,7 @@ fig-002057,"Rey, Dark Tan Robe",4
 fig-002058,Dr. Wu with Dark Azure Hands,4
 fig-002059,Blizzard Samurai,4
 fig-002060,"Hermione Granger, Gryffindor Sweater, Short Legs",4
-fig-002061,"Diver, Man, Black and Lime Wetsuit, Blue Helmet and Mask, Flippers",8
+fig-002061,"Diver, Man, Black and Lime Wetsuit, Blue Helmet and Mask",6
 fig-002062,Santa with Glasses,5
 fig-002063,"Man - White Torso, classic Space Logo, Blue Legs, Red Cap",4
 fig-002064,"Mia - Christmas Sweater, Dark Blue Trousers",4
@@ -2266,7 +2260,7 @@ fig-002265,Agent Fuse,4
 fig-002266,Agent Chase with Helmet,5
 fig-002267,Space Police III - Kranxx,3
 fig-002268,Space Police III - Slizer,4
-fig-002269,Slime Face,7
+fig-002269,Slime Face,5
 fig-002270,Break Jaw,4
 fig-002271,Space Police III - Classic Space Statue,5
 fig-002272,Space Police III - Officer,6
@@ -2307,9 +2301,9 @@ fig-002306,Cam,4
 fig-002307,Flex,4
 fig-002308,Ogel Minion,5
 fig-002309,Skeleton with Evil Face and Crown,7
-fig-002310,Aquaraider Diver with Black Flippers,8
+fig-002310,Aquaraider Diver,6
 fig-002311,Aquaraider Diver with Black Hat,4
-fig-002312,Aquanaut 3,7
+fig-002312,Aquanaut 3,5
 fig-002313,Chuck,1
 fig-002314,Piggy with Tongue Out,1
 fig-002315,Toa Inika Nuparu,7
@@ -2330,7 +2324,6 @@ fig-002329,"Marie - Bright Pink Blouse, Bright Pink Skirt",4
 fig-002330,"Battle Droid, One Bent Arm, One Straight Arm",5
 fig-002331,Katharina - Amazone,4
 fig-002332,"Batman, Light Bluish Gray Suit, Black Cape and Cowl (1939 1st Appearance)",5
-fig-002333,Lance Spears with Flippers,7
 fig-002334,"Knight (Dragon Knights) - Black Legs, Yellow Plumes, Plastic Cape",8
 fig-002335,Dr. Octopus / Doc Ock (4 Juniors),3
 fig-002336,"Sophie - Light Aqua Shirt, Bright Pink Skirt",4
@@ -2432,7 +2425,7 @@ fig-002431,Flex (Alpha Team),4
 fig-002432,Charge with Black and Blue Clothing,4
 fig-002433,Crunch,4
 fig-002434,Aquaraider Diver 8,6
-fig-002435,Aquaraider Diver 6 with Flippers,8
+fig-002435,Aquaraider Diver 6,6
 fig-002436,Aquaraider Diver 7,6
 fig-002437,Bobby,5
 fig-002438,Lance Spears,5
@@ -2440,23 +2433,23 @@ fig-002439,Skeleton (Diver),8
 fig-002440,Atlantis Shark Warrior,3
 fig-002441, Atlantis Squid Warrior,4
 fig-002442,Atlantis Portal Emperor,5
-fig-002443,Samantha Rhodes with Flippers,7
-fig-002444,Axel with Backpack with Narrow Lights,13
-fig-002445,Ace Speedman with Propeller,11
-fig-002446,Jeff Fisher,7
-fig-002447,Ace Speedman with Flippers,7
-fig-002448,Axel with Backpack with Wide Lights,15
+fig-002443,Samantha Rhodes,5
+fig-002444,Axel with Backpack with Narrow Lights,11
+fig-002445,Ace Speedman with Propeller,9
+fig-002446,Jeff Fisher,5
+fig-002447,Ace Speedman,5
+fig-002448,Axel with Backpack with Wide Lights,13
 fig-002449,Atlantis Barracuda Guard,5
 fig-002450,Atlantis Lobster Guard (Short Legs),9
 fig-002451,Atlantis Temple Statue,5
-fig-002452,Samantha Rhodes with Yellow Flippers,7
-fig-002453,Ace Speedman with Lights and Propeller,20
+fig-002452,Samantha Rhodes,5
+fig-002453,Ace Speedman with Lights and Propeller,18
 fig-002454,Atlantis Hammerhead Warrior,4
-fig-002455,Dr Brains with Yellow Flippers (3626c),7
-fig-002456,Brains with Yellow Flippers (3626b),7
-fig-002457,Jeff Fisher with Yellow Flippers,7
-fig-002458,Axel with Yellow Flippers,7
-fig-002459,Lance Spears with Yellow Flippers,7
+fig-002455,Dr Brains (3626c),5
+fig-002456,Brains (3626b),5
+fig-002457,Jeff Fisher,5
+fig-002458,Axel,5
+fig-002459,Lance Spears,5
 fig-002460,Aang,3
 fig-002461,Fire Nation Soldier,5
 fig-002462,Firebender,6
@@ -2538,7 +2531,7 @@ fig-002537,"Batman, Light Bluish Gray Suit, White Cape and Cowl (Arctic Batman)"
 fig-002538,Mr. Freeze with Diver Helmet,5
 fig-002539,Black Manta with Flat Silver Helmet,3
 fig-002540,"Batman, Dark Bluish Gray Suit, Black Cape and Cowl, Diving Suit",5
-fig-002541,Robin in Scuba Outfit,8
+fig-002541,Robin in Scuba Outfit,6
 fig-002542,"Kylo Ren, Light Flesh Hands",4
 fig-002543,Unkar Plutt,3
 fig-002544,BB-8,2
@@ -3289,7 +3282,6 @@ fig-003288,Squidward Tentacles with Lei,3
 fig-003289,SpongeBob Squarepants in Pirate Outfit,4
 fig-003290,Patrick Star in Pirate Outfit,3
 fig-003291,Flying Dutchman,4
-fig-003292,Blossom with Roller Skates,5
 fig-003293,Mojo Jojo,6
 fig-003294,Bubbles,3
 fig-003295,Princess Morbucks,5
@@ -4547,7 +4539,7 @@ fig-004609,Ned Leeds with Dark Red Plaid Shirt and Dark Blue Legs,4
 fig-004610,Maria Hill with Black Jacket and Dark Blue Legs,4
 fig-004611,Spider-Man with Dual Molded Legs with Red Boots,3
 fig-004612,"Batman, Clown Outfit",5
-fig-004613,"Batman, White Suit, Gold Cape and Cowl (Roller Disco Batman)",8
+fig-004613,"Batman, White Suit, Gold Cape and Cowl (Roller Disco Batman)",6
 fig-004615,Mr. Freeze (60's TV Series),4
 fig-004616,"Nick Fury, Young",4
 fig-004617,Captain Marvel in Kree Starforce Uniform,4
@@ -4595,7 +4587,7 @@ fig-004663,Security Guard,4
 fig-004664,"Bruce Wayne, White Tuxedo",5
 fig-004665,"Alfred Pennyworth, Balding, Dark Blue Suit with Pinstripe Vest",6
 fig-004666,"Batman, Light Bluish Gray Suit, Dark Blue Cape and Cowl, Boxing Outfit",5
-fig-004667,"Batman, Scuba Outfit",8
+fig-004667,"Batman, Scuba Outfit",6
 fig-004668,"Batman, Gold Tuxedo, Gold Cape and Cowl",5
 fig-004669,"Viking Warrior - Armour, Sand Blue Arms, Blue Legs",6
 fig-004670,"Viking Warrior - Armour, Battle Axe on Torso, Sand Green Arms, Dark Green Legs",6
@@ -4928,7 +4920,7 @@ fig-005012,The Riddler in Green and Dark Green Outfit with Zipper,4
 fig-005013,"Batman, Dark Bluish Gray Suit, Black Cape and Cowl, Light Flesh Head, Black Hips, Muscle Outline",5
 fig-005014,Nightwing with Dark Red Eyes and Dark Red Chest Symbol,4
 fig-005015,The Penguin with Printed Fur Collar,4
-fig-005016,"Batman, Dark Blue Suit, Dark Blue Cowl, Diving Suit with Flippers and Airtank",7
+fig-005016,"Batman, Dark Blue Suit, Dark Blue Cowl, Diving Suit with Airtank",5
 fig-005017,Lois Lane in Light Bluish Gray Vest,4
 fig-005018,The Mandarin,5
 fig-005019,Iron Man in Heart Breaker Armor,5
@@ -5130,9 +5122,8 @@ fig-005216,"Pirate - Shirt with Knife, Peg Leg",4
 fig-005217,"Pirate - Shirt with Knife, Peg Leg, Blue Epaulettes",5
 fig-005218,"Pirate - Shirt with Knife, Black Legs, Black Bicorne",4
 fig-005219,"Pirate - Shirt with Knife, Black Legs, Brown Tricorne",4
-fig-005220,HYDRA Henchman in Diver Outfit,6
+fig-005220,HYDRA Henchman in Diver Outfit,4
 fig-005221,Iron Man in Scuba Suit,9
-fig-005222,Captain America in Diving Outfit,6
 fig-005223,Iron Skull,3
 fig-005224,Winter Soldier with Black Hands,4
 fig-005225,Black Panther,4
@@ -5397,7 +5388,7 @@ fig-005483,Poison Ivy in Green Outfit,4
 fig-005484,Firefly,5
 fig-005485,"Batman, Light Bluish Gray Suit, Black Cape and Cowl, Light Flesh Head, Gold Trim Batman Logo",5
 fig-005486,"Aquaman, Long Yellow Hair, Green Hands",4
-fig-005487,"Batman, Light Bluish Gray Suit, Black Cowl, Breathing Apparatus, Black Flippers",7
+fig-005487,"Batman, Light Bluish Gray Suit, Black Cowl, Breathing Apparatus",5
 fig-005488,Ocean Master,5
 fig-005489,Aunt May in Bright Light Blue Sweater,4
 fig-005490,Spider-Man with Blue Around Eyes,3
@@ -5668,16 +5659,13 @@ fig-005759,Astromech Droid Christmas Tree,7
 fig-005760,Skeleton with Evil Face and Aquaraiders Helmet,8
 fig-005761,Aquaraider Diver 4 with Dark Bluish Gray Hat,4
 fig-005762,Aquaraider Diver 3,4
-fig-005763,Aquaraider Diver 2 with Black Flippers,8
-fig-005764,Aquaraider Diver 1 with Black Flipper,8
-fig-005765,Aquaraider Diver 8 with Black Flippers,8
+fig-005763,Aquaraider Diver 2,6
+fig-005764,Aquaraider Diver 1,6
 fig-005766,Aquaraider Diver 5 with Dark Bluish Gray Hat,4
 fig-005767,Aquaraider Diver 5 with Black Hat,4
-fig-005768,Stingray 2 with Flippers,6
 fig-005769,Stingray 1,4
-fig-005770,Hydronaut 2 with Black Flippers,7
+fig-005770,Hydronaut 2,5
 fig-005771,Hydronaut 3,5
-fig-005772,Stingray 1 with Flippers,6
 fig-005773,Aquashark 2,5
 fig-005774,Aquashark 1,5
 fig-005775,"Danju, Wolf Pattern (Knights Kingdom II)",6
@@ -5858,7 +5846,7 @@ fig-005950,"Female, Plain White Torso and Legs, Black Pigtails Hair",4
 fig-005951,"Skeleton with Evil Face and Red Eyes, in Bicorne Hat",7
 fig-005953,"Stephanie - Lime Bikini, Magenta Skirt and Lift Jacket",5
 fig-005955,"Andrea - Bright Light Orange Layered Skirt, Halter Top with Bright Light Orange Chevron Stripes and Life Jacket",5
-fig-005957,Anna with Ice Skates,6
+fig-005957,Anna,4
 fig-005958,Zoltar,3
 fig-005959,Lloyd in ZX Hood (Rebooted),4
 fig-005960,Jay in ZX Hood (Rebooted),4
@@ -6003,7 +5991,7 @@ fig-006100,Hogwarts Statue,3
 fig-006101,"Professor Severus Snape, Glow in the Dark Head, Long Purple Robes with Black Buttons, Cape",5
 fig-006102,"Draco Malfoy, Slytherin Sweater, Cape",5
 fig-006103,Viktor Krum with Shark Head,4
-fig-006104,"Harry Potter, Tournament Uniform Red Diving Outfit with Hogwarts Crest, Flippers",6
+fig-006104,"Harry Potter, Tournament Uniform Red Diving Outfit with Hogwarts Crest",4
 fig-006105,"Hermione Granger, Gryffindor Sweater, Mid-Length Hair",4
 fig-006106,Merman with Dark Red Hair,4
 fig-006107,"Ron Weasley, Gryffindor Sweater",4
@@ -6691,7 +6679,7 @@ fig-006793,"Man, Plaid Shirt, Dark Red Legs, Reddish Brown Hair",4
 fig-006794,"Girl, Cardigan Tied with Bow, Necklace, Short Red Legs",4
 fig-006795,"Girl, Cardigan Light Bright Blue, Short Medium Lavender Legs",4
 fig-006796,"Boy, Green Sweater, Short Dark Blue Legs, Santa Hat",4
-fig-006797,"Girl, White Hoodie, Short Dark Blue Legs, Ice Skates",6
+fig-006797,"Girl, White Hoodie, Short Dark Blue Legs",4
 fig-006798,"Man, Bright Green Jacket, Blue Legs",4
 fig-006799,"Woman, Medium Blue Polo Shirt with Necklace, Dark Blue Legs, Red Bandana Scarf, Medium Lavender Hat",5
 fig-006800,"Man, Green Overalls over Red Shirt, Red Cap",4
@@ -7096,7 +7084,6 @@ fig-007203,"Basketball Player, Red  Torso, Red Legs #6",3
 fig-007204,"Basketball Player, Red  Torso, Red Legs #8",3
 fig-007205,"Basketball Player, Red  Torso, Red Legs #10",4
 fig-007206,"Basketball Player, Red  Torso, Red Legs #8, Black Hear",4
-fig-007207,"Arctic Crew, Blue, Showshoes",6
 fig-007208,"Arctic Crew, Green, Cap",4
 fig-007209,"Basketball Player, Red  Torso, Red Legs #2",3
 fig-007210,"Arctic Crew, Blue, Hood",4
@@ -7115,11 +7102,8 @@ fig-007222,"Arctic Explorer, Pilot, Black Helmet, Stubble",5
 fig-007223,"Arctic Explorer, Ship Captain",4
 fig-007224,"Arctic Explorer, Scientist",4
 fig-007225,"Arctic Explorer, Pilot, Black Helmet",5
-fig-007226,"Arctic Explorer, Dark Blue Hat, Orange Sunglasses, Snowshoes",6
-fig-007227,"Arctic Explorer, Hood, Printed Orange Goggles, Woman, Showshoes",6
 fig-007228,"Arctic Explorer, Scientist, Beard",4
 fig-007229,"Arctic Explorer, Dark Blue Hat, Orange Sunglasses",4
-fig-007230,"Arctic Explorer, Hood, Printed Green Goggles, Snowshoes",6
 fig-007231,"Arctic Explorer, Pilot, Black Helmet, Sunglasses",5
 fig-007232,"Woman, Orange Safety Vest, Dark Tan Legs, Glasses",4
 fig-007233,"Man, Open Blue Jacket over Dark Red Shirt, Dark Bluish Gray Legs, Red Cap",4
@@ -7139,10 +7123,10 @@ fig-007246,"Coast Guard, Yellow Jacket with Zipper, Radio and Badge, Blue Cap, G
 fig-007247,"Coast Guard, Yellow Jacket with Zipper, Radio and Badge, Blue Helmet with Visor",5
 fig-007248,"Coast Guard Diver, Blue Helmet, Airtank, Mask",6
 fig-007249,"Man, Blue Overalls over Shirt, Blue Legs, Black Hat, Cheek Lines",4
-fig-007250,"Coast Guard, Yellow Jacket with Zipper, Radio and Badge, Light Bluish Gray Helmet, Flippers, Orange Sunglasses",6
+fig-007250,"Coast Guard, Yellow Jacket with Zipper, Radio and Badge, Light Bluish Gray Helmet, Orange Sunglasses",4
 fig-007251,"Coast Guard, Yellow Jacket with Zipper, Radio and Badge, Blue Helmet with Visor, Brown Eyebrows",5
 fig-007252,"Coast Guard, Light Bluish Gray Shirt with Badge, Blue Cap, Ear Defenders, Yellow Life Vest",6
-fig-007253,"Coast Guard Diver, Orange, White Helmet, Airtank, Mask, Flippers",8
+fig-007253,"Coast Guard Diver, Orange, White Helmet, Airtank, Mask",6
 fig-007254,"Coast Guard, Orange Jumpsuit, White Helmet with Visor",5
 fig-007255,"Man, Black Wetsuit, Yellow Life Vest",5
 fig-007256,"Coast Guard, Light Bluish Gray Shirt with Badge, Blue Cap, Yellow Life Vest",5
@@ -7167,7 +7151,7 @@ fig-007274,"Coast Guard, Open Sand Blue Jacket with Badge over Orange Sweater, W
 fig-007275,"Coast Guard, Woman, Orange Jumpsuit, Yellow Life Vest, Dark Red Hair",5
 fig-007276,"Coast Guard, Woman, Orange Jumpsuit, White Helmet with Diving Mask, Yellow Life Vest",6
 fig-007277,"Coast Guard, Woman, Orange Jumpsuit, Yellow Life Vest, Reddish Brown Hair, Glasses",5
-fig-007278,"Coast Guard Diver, Black and Lime Wetsuit, Black Helmet, Airtank, Mask, Flippers",8
+fig-007278,"Coast Guard Diver, Black and Lime Wetsuit, Black Helmet, Airtank, Mask",6
 fig-007279,"Coast Guard, Open Sand Blue Jacket with Badge over Orange Sweater, Blue Cap",4
 fig-007280,"Coast Guard, Orange Jumpsuit, Blue Cap, Yellow Life Vest",5
 fig-007281,"Man, Open Red Jacket over Dark Red Sweater, Dark Red Hat, Yellow Life Vest, Beard",5
@@ -7249,7 +7233,7 @@ fig-007356,King Leo (Knights Kingdom I) - Armor,5
 fig-007357,"Baby, Dark Turquoise with Moose and Snowflakes",2
 fig-007358,"Statue, Light Bluish Gray, Fire Helmet",4
 fig-007359,"Girl, Red Flannel Shirt, Short Light Bluish Gray Legs, Orange Scarf, Glasses",5
-fig-007360,"Man, Argyle Sweater, Blue Legs, Ice Skates, Hat",6
+fig-007360,"Man, Argyle Sweater, Blue Legs, Hat",4
 fig-007361,"Firewoman, Jacket with 8 Buttons and Belt, Dark Orange Hair",4
 fig-007362,"Fireman, Jacket with 8 Buttons and Belt, Dark Tan Hair",4
 fig-007363,"Fireman, Jacket with 8 Buttons and Belt, Light Bluish Gray Hair, Beard",4
@@ -7306,7 +7290,7 @@ fig-007415,"Fairground Worker, Man, Moustache, Top Hat",5
 fig-007417,"Man, White Tank Top with Windsurfer, Dark Azure Legs, Sunglasses",4
 fig-007418,"Woman, Red Swimsuit, Bright Light Yellow Hair",4
 fig-007419,"Surfer, Woman, Black Wetsuit, Reddish Brown Hair",4
-fig-007420,"Diver, Man, Black and Lime Wetsuit, Black Helmet and Mask, Lime Flippers",7
+fig-007420,"Diver, Man, Black and Lime Wetsuit, Black Helmet and Mask",5
 fig-007421,"Classic Spaceman, Blue with Airtanks (2446 Helmet)",5
 fig-007422,"Blacktron I, Yellow Hands",6
 fig-007423,"Doctor, Woman, White Torso with Stethoscope and Red Cross, Red Legs, Black Hair (3626b Head)",4
@@ -7373,9 +7357,9 @@ fig-007485,"Man, Blue Overalls over White V-Neck Shirt, Red Cap, Open Mouth",4
 fig-007486,"Woman, Green Overalls over Red Paid Shirt, Tan Hair",4
 fig-007487,"Volcano Explorer, Man, Olive Green Jumpsuit with Straps, White Hard Hat with Visor, Breathing Apparatus",7
 fig-007488,"Volcano Explorer, Man, Olive Green Shirt, Sand Blue Legs, Dark Tan Cap, Stubble",4
-fig-007489,"Girl, Medium Blue Jacket with Medium Lavender Scarf, Short Dark Azure Legs, Magenta Helmet with Visor",7
+fig-007489,"Girl, Medium Blue Jacket with Medium Lavender Scarf, Short Dark Azure Legs, Magenta Helmet with Visor",5
 fig-007490,"Firewoman, Fire Jacket with Straps and Gauge, White Helmet with Visor, Breathing Apparatus, Airtanks",7
-fig-007491,"Boy, Green Jacket, Short Red Legs, Black Helmet with Visor, Ice Skates",7
+fig-007491,"Boy, Green Jacket, Short Red Legs, Black Helmet with Visor",5
 fig-007492,"Race Driver, Tan Torso, Tan Legs, White Helmet",5
 fig-007493,"Race Driver, Black Torso, Black Legs, Black Helmet",5
 fig-007494,"Race Driver, Tan Torso, Tan Legs, Reddish Brown Hair",4
@@ -7469,7 +7453,7 @@ fig-007581,"Boy, Plain Blue Torso, Short Tan Legs, Hood",4
 fig-007582,"Policeman, Blue Shirt with Badge and Pouches, Dark Blue Legs, Dark Blue Police Hat with Badge, Open Mouth",4
 fig-007583,"Policeman, Blue Shirt with Badge and Pouches, Dark Blue Legs, Dark Blue Police Hat with Badge",4
 fig-007584,"Criminal, Prison Shirt with #86753, Black Legs, Black Hat, Black Eyemask",4
-fig-007585,"Girl, Green Jacket, Short Dark Purple Legs, Ice Skates",6
+fig-007585,"Girl, Green Jacket, Short Dark Purple Legs",4
 fig-007586,"Woman, Green Overalls over Red Paid Shirt, Dark Brown Hair",4
 fig-007587,"Boy, White and Blue Hoodie, Short Blue Legs, Dark Orange Hair",4
 fig-007588,"Santa, Plain Red, White Hands",5
@@ -7588,7 +7572,7 @@ fig-007701,"Boy, Plain Red Torso, Short Red Legs, Black Hair",4
 fig-007702,"Criminal, Prison Shirt with #86753, Dark Bluish Gray Legs, Dark Bluish Gray Beanie Hat, Beard",4
 fig-007703,"Policeman, Vest with Gold Badge, Radio, and Pockets. Black Hat, Beard",4
 fig-007704,"Postal Worker, Woman, Red Jacket with Zipper and Letter Logo, Dark Blue Legs, Red Cap",4
-fig-007705,"Woman, Pink Striped Tank Top with Cat Face, Dark Purple Legs, Rollerskates",6
+fig-007705,"Woman, Pink Striped Tank Top with Cat Face, Dark Purple Legs",4
 fig-007706,"Boy, Black and Lime Jacket with Zipper, Short Dark Green Legs, White Helmet",4
 fig-007707,"Woman, Orange Halter Top with Flowers, Blue Legs, Bright Light Yellow Hair, Glasses",4
 fig-007708,"Woman, Open Green Jacket with Necklace, Tan Hair",4
@@ -7948,7 +7932,7 @@ fig-008062,"Woman, Medium Blue Polo Shirt with Necklace, White Legs, Light Brigh
 fig-008063,"Fireman, Orange Safety Vest with Radio, Gold Helmet, Beard",4
 fig-008064,"Man, Blue Overalls over Shirt, Blue Legs, Dark Blue Hat, Beard",4
 fig-008065,"Fireman, White Shirt with Red Tie, Badge, and Radio on Belt, White Hat, Beard",4
-fig-008066,"Diver, Man, Black and Lime Wetsuit, White Helmet and Mask, Black Flippers, Stubble",8
+fig-008066,"Diver, Man, Black and Lime Wetsuit, White Helmet and Mask, Stubble",6
 fig-008067,"Firewoman, Safety Vest with Flashlight, Pocket, and Belt, White Helmet, Yellow Life Vest",5
 fig-008068,"Fireman, Safety Vest with Flashlight, Pocket, and Belt, White Helmet, Yellow Life Vest, Goatee Beard",5
 fig-008069,"Firewoman, Safety Vest with Flashlight, Pocket, and Belt, Black Legs with Straps, White Helmet with Visor",5
@@ -8225,7 +8209,7 @@ fig-008339,"Boxer, Blue Shorts, Red Gloves",4
 fig-008340,"Chef - White Torso, Reddish Brown Legs",4
 fig-008341,"Dark Bluish grey Torso, Jacket, Dark Purple Legs, Dark Orange Hair",4
 fig-008342,"Bright Light Blue Torso, Dark Blue Legs, Dark Brown Hair",4
-fig-008343,"White Torso, Bright Light Blue Legs, Black Hair, Red Roller skates",6
+fig-008343,"White Torso, Bright Light Blue Legs, Black Hair",4
 fig-008344,"White Torso, Biue Legs, Dark Brown Hair",4
 fig-008345,"Black Torso Jacket, White Legs, Dark Brown Hair",4
 fig-008346,"Dark Blue Torso, Jacket, Dark Tan Legs, Tan Hair",4
@@ -8431,11 +8415,11 @@ fig-008546,"Fireman, Light Gray Fire Suit with Gauge and Pocket, Dark Gray Helme
 fig-008547,"Racer, Extreme Team, Black Jacket, Black Legs, Green Cap, Blue Sunglasses",4
 fig-008548,"Racer, White Jacket with Octan Logo and 'RACE' and 'TEAM', Green Legs, White Cap, Moustache",4
 fig-008549,"Man, White Shirt with TV Logo, Blue Cap, Sunglasses",4
-fig-008550,"Diver, Man, Red Wetsuit, Black Helmet with Mask, Airtank, Flippers, Stubble",8
+fig-008550,"Diver, Man, Red Wetsuit, Black Helmet with Mask, Airtank, Stubble",6
 fig-008551,"Marine Explorer, Red Shirt with Divers Logo, Black Cap, Glasses and Headset",4
 fig-008552,"Marine Explorer, Red Shirt with Divers Logo, Black Cap, Headset",4
 fig-008553,"Marine Explorer, White Shirt with Fish, Blue Cap, Sunglasses",4
-fig-008554,"Diver, Man, Blue Wetsuit, Black Helmet with Mask, Airtank, Flippers, Moustache",8
+fig-008554,"Diver, Man, Blue Wetsuit, Black Helmet with Mask, Airtank, Moustache",6
 fig-008555,"Marine Explorer, Red Shirt with Divers Logo, Red Legs, Red Cap, Glasses and Headset",4
 fig-008556,"Diver, Man, Red Wetsuit, Black Helmet with Mask, Airtank, Stubble",6
 fig-008557,"Diver, Man, Red Wetsuit, Black Helmet with Mask, Airtank, Printed White Hair",6
@@ -8682,7 +8666,7 @@ fig-008799,80's Musician (CMF),4
 fig-008800,Super Warrior (CMF),4
 fig-008801,Pajama Girl,4
 fig-008802,Green Brick Suit Guy (CMF),4
-fig-008803,Sea Rescuer (CMF),7
+fig-008803,Sea Rescuer (CMF),5
 fig-008804,Athlete (CMF),5
 fig-008805, Martial Arts Boy (CMF),4
 fig-008806,Llama Costume Girl (CMF),4
@@ -8988,7 +8972,7 @@ fig-009131,"Criminal, Medium Blue Overalls over Prison Shirt",4
 fig-009132,Pepper Roni with Dark Bluish Gray Hat,4
 fig-009133,Sky Lane with Backpack,5
 fig-009134,"Man, White Top with Large Octan Logo, Blue Legs, Reddish Brown Hair",4
-fig-009135,"Woman, White Tank Top with Flowers, Yellow Legs, Brown Hair, Airtanks, Sunglasses",7
+fig-009135,"Woman, White Tank Top with Flowers, Yellow Legs, Brown Hair, Airtanks, Sunglasses",5
 fig-009136,"Policeman, Dark Blue Shirt with Radio and Badge, Black Legs, Black Cap, Smile",4
 fig-009137,"Security Guard Dark Bluish Gray Shirt with Badge, Black Cap, Orange Sunglasses",4
 fig-009138,"Man, Dark Blue Plaid Shirt, White Legs, Black Hair, Gold Tooth",4
@@ -9433,8 +9417,8 @@ fig-009579,"Harley Quinn in Black and Red Jester Outfit, Bright Light Yellow Hai
 fig-009580,Loki,5
 fig-009581,"Captain Marvel, Bright Light Yellow Hair",4
 fig-009582,"Thor, Red Cape, Tan Hair",5
-fig-009583,"Diver, Man, Black and Lime Wetsuit, Black Helmet and Mask, Black Flippers",8
-fig-009584,"Diver, Woman, Black And Azure Wetsuit, Black Helmet with Mask, Flippers",8
+fig-009583,"Diver, Man, Black and Lime Wetsuit, Black Helmet and Mask",6
+fig-009584,"Diver, Woman, Black And Azure Wetsuit, Black Helmet with Mask",6
 fig-009585,"Woman, Green and White Jacket with Zipper, Sand Blue Legs, Reddish Brown Hair, Yellow Life Vest",5
 fig-009586,"Man, Open Dark Azure Hoodie over Lime Shirt, Dark Tan Legs, Dark Red Cap, Yellow Life Vest, Silver Sunglasses",5
 fig-009587,"Woman, Dark Bluish Gray Suit with Magenta Scarf, Dark Orange Hair",4
@@ -9451,7 +9435,7 @@ fig-009597,"Ship Captain, White Shirt with Anchor and Tie, Black Legs, Black Hat
 fig-009598,"Construction Worker, Orange Jacket with Zipper and Reflective Stripes, Red Hard Hat, Glasses",4
 fig-009599,"Man, Green Overalls over Red Shirt, Black Cap, Glasses",4
 fig-009600,"Man, Blue Overalls over Shirt, Blue Legs, Dark Bluish Gray Hat, Stubble",4
-fig-009601,"Diver, Black and Gray Wetsuit, Helmet with Mask, Airtank, Flippers, Stubble",8
+fig-009601,"Diver, Black and Gray Wetsuit, Helmet with Mask, Airtank, Stubble",6
 fig-009602,"Lifeguard, Black and Gray Wetsuit, Red Cap, Yellow Life Vest",5
 fig-009603,"Woman, White Vest with Stars, Blue Legs, Reddish Brown Hair",4
 fig-009604,"Man, White and Blue Hoodie, Blue Legs, Blue Cap, Silver Sunglasses",4
@@ -9584,10 +9568,10 @@ fig-009731,"Volcano Explorer Scientist, Woman, Open White Lab Coat, Sand Blue Le
 fig-009732,"Volcano Explorer, Man, Olive Green Shirt, Sand Blue Legs, Dark Tan Wide Brim Hat",4
 fig-009733,"Volcano Explorer, Man, Olive Green Shirt, Sand Blue Legs, Dark Tan Cap, Beard",4
 fig-009734,"Volcano Explorer Scientist, Woman, Open White Lab Coat, Sand Blue Legs, Reddish Brown Hair, Glasses",4
-fig-009735,"Diver, Man, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Flippers",7
+fig-009735,"Diver, Man, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks",5
 fig-009736,"Diver, Man, Dark Blue and Orange Wetsuit, Dark Blue Diving Helmet with Visor",5
-fig-009737,"Diver, Man, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Flippers, Stubble",7
-fig-009738,"Diver, Woman, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Flippers, Open Mouth",7
+fig-009737,"Diver, Man, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Stubble",5
+fig-009738,"Diver, Woman, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Open Mouth",5
 fig-009739,"Marine Scientist, Woman, Open White Lab Coat, Sand Blue Legs, Medium Dark Flesh Hair, Glasses",4
 fig-009740,"Marine Explorer, Sand Blue Jumpsuit, Red Cap, Headset",4
 fig-009741,"Marine Explorer, Dark Red Jacket, Dark Blue Cap, Sweat Drops",4
@@ -9595,7 +9579,7 @@ fig-009742,"Diver, Man, Dark Blue and Orange Wetsuit, Dark Blue Diving Helmet wi
 fig-009743,"Diver, Woman, Dark Blue and Orange Wetsuit, Dark Blue Diving Helmet with Flashlights and Visor",9
 fig-009744,Jessica Sharpe,4
 fig-009745,"Marine Explorer, Sand Blue Jumpsuit, Red Cap",4
-fig-009746,"Diver, Woman, Black and Red Wetsuit with Gauges, Red Helmet with Mask, Flippers",7
+fig-009746,"Diver, Woman, Black and Red Wetsuit with Gauges, Red Helmet with Mask",5
 fig-009747,"Marine Explorer, Open Red Jacket over Dark Red Sweater, Red Cap, Stubble",4
 fig-009748,"Marine Explorer, Woman, Open Red Jacket over Dark Red Sweater, Dark Orange Hair",4
 fig-009749,"Pilot, Blue Jacket with Zipper and Wings Badge, Dark Blue Cap, Silver Sunglasses",4
@@ -9604,16 +9588,16 @@ fig-009751,"Ship Captain, Open Blue Jacket with Anchor over Dark Red Sweater, Ta
 fig-009752,"Marine Explorer, Open Red Jacket over Dark Red Sweater, Dark Red Hat, Stubble",4
 fig-009753,"Diver, Woman, Black and Red Wetsuit with Gauges, Red Helmet with Mask",6
 fig-009754,"Diver, Man, Black and Red Wetsuit with Gauges, Red Helmet with Mask",6
-fig-009755,"Diver, Man, Black and Red Wetsuit with Gauges, Red Helmet with Mask, Flippers",8
-fig-009756,"Diver, Woman, Black and Red Wetsuit with Gauges, Red Helmet with Mask, Flippers",8
+fig-009755,"Diver, Man, Black and Red Wetsuit with Gauges, Red Helmet with Mask",6
+fig-009756,"Diver, Woman, Black and Red Wetsuit with Gauges, Red Helmet with Mask",6
 fig-009757,"Marine Explorer, Woman, Open Red Jacket over Dark Red Sweater, Reddish Brown Hair, Glasses",4
 fig-009758,"Harl Hubbs, Dark Red Jacket, Sand Blue Legs, Reddish Brown Hair, Orange Life Vest",5
 fig-009759,"Marine Explorer, Dark Red Jacket, Sand Blue Legs, Reddish Brown Hair, Orange Life Vest",5
 fig-009760,"Marine Explorer, Open Dark Red Jacket, Dark Blue Legs, White Helmet with Visor, Stubble",5
 fig-009761,"Marine Explorer, Dark Blue Shirt, Dark Bluish Gray Legs, Dark Blue Cap, Orange Life Vest",5
 fig-009762,"Diver, Woman, Dark Blue and Orange Wetsuit, Dark Blue Diving Helmet with Visor",5
-fig-009763,"Diver, Woman, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Flippers",7
-fig-009764,"Diver, Man, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Flippers, Beard",7
+fig-009763,"Diver, Woman, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks",5
+fig-009764,"Diver, Man, Red and Dark Blue Wetsuit with Straps and Gauges, Red Diving Helmet, Airtanks, Beard",5
 fig-009765,"Marine Explorer, Woman, Sand Blue Jumpsuit, Black Hair",4
 fig-009766,"Racer, Red and Orange Jumpsuit, Black Helmet with Visor",5
 fig-009767,"Racer, Red and Orange Jumpsuit, Red Cap, Goatee Beard and Safety Glasses",4
@@ -9670,7 +9654,7 @@ fig-009817,"Woman, Red and White Swimsuit, Light Bluish Gray Hair, Glasses",4
 fig-009818,"Man, Open Dark Azure Hawaiian Shirt, Dark Blue Legs, Light Bluish Gray Hair, Glasses",4
 fig-009819,"Woman, Gren Bikini Top with White Spots, Green Shorts, Dark Brown Hair, Sunglasses",4
 fig-009820,"Woman, Red Swimsuit, Reddish Brown Hair, Safety Glasses",4
-fig-009821,"Diver, Man, Red and Black Wetsuit with Straps and Gauges, Red Helmet with Mask, Flippers",7
+fig-009821,"Diver, Man, Red and Black Wetsuit with Straps and Gauges, Red Helmet with Mask",5
 fig-009822,"Woman, White and Dark Azure Striped Tank Top with Red Neckerchief, Red Legs, Dark Orange Hair",4
 fig-009823,"Surfer, Woman, Black Wetsuit, Bright Light Yellow Hair, Yellow Life Vest",5
 fig-009824,"Man, Black and Lime Wetsuit, Dark Tan Hair, Yellow Life Vest, Orange Safety Glasses",5
@@ -10017,7 +10001,7 @@ fig-010166,"Orange Torso, Blue Legs, Yellow Hat",4
 fig-010167,"Dark Blue Torso, Dark Tan Legs, Dark Bluish Grey Cap",4
 fig-010168,"White Torso, Dark Blue Legs, Dark Brown Hair - Nashville",4
 fig-010169,"White Torso, Green Legs, Lime Cap - Nashville",4
-fig-010170,"Pirate - Black Torso, Black Leg, Peg LEg, - Nashville",4
+fig-010170,"Pirate - Black Torso, Black Leg, Peg Leg, - Nashville",4
 fig-010171,"Orange Torso, Orange LEgs, Reddish Brown Hair - OverlandPark",4
 fig-010172,"Chef - White Torso, White Legs, - OverlandPark",4
 fig-010173,"Blue Torso, Blue Legs, Blue Cap - OverlandPark",4
@@ -10110,7 +10094,7 @@ fig-010260,Valorie,3
 fig-010261,Hal,3
 fig-010262,Hedwig,3
 fig-010263,"Batman, Dark Bluish Gray Suit, Black Cowl, Neck Bracket",5
-fig-010264,Scuba Diver,7
+fig-010264,Scuba Diver,5
 fig-010265,Tygurah (Big Fig),8
 fig-010266,Dirk Drifter,5
 fig-010267,Plankton - Helmet,10
@@ -10161,7 +10145,6 @@ fig-010315,Zobo - Farmer Outfit,13
 fig-010316,"Andrea - White Top, Bright Light Orange Skirt, Medium Azure Flower",5
 fig-010318,"Mia - Medium Azure Shirt, Magenta Skirt, Veterinarian, Nurse Hat",5
 fig-010319,"Olivia - Dark Pink Top, Medium Lavender Skirt",4
-fig-010320,"Stephanie - Azure Shirt, Dark Blue SKirt, Black Roller Skates",6
 fig-010322,"Mia - Lime Top, Dark Purple Skirt",4
 fig-010323,"Andrea - Bright Light Orange Top, Light Aqua Skirt, Magenta Headphone",5
 fig-010324,"Andrea - Bright Light Orange Top, Light Aqua Skirt, Sunglasses",5
@@ -10420,7 +10403,6 @@ fig-010596,"Stephanie - Olive Green Jacket, Olive Green Skirt, Bright Light Yell
 fig-010597,"Olivia - Dark Pink Top, Sand Green Skirt, Reddish Brown Hair, Bow",5
 fig-010598,Urchin,16
 fig-010600,Agent Chase (Diver) - Single Sided Head,6
-fig-010601,Aquanaut 1 with Blue Flippers,7
 fig-010602,Rainbow Unikitty,14
 fig-010603,Angry Unikitty,14
 fig-010604,Shades Puppycorn,14
@@ -10525,7 +10507,7 @@ fig-010708,"Prisoner - White Torso, Light Bluish Grey Legs, Light Bluish Grey Ca
 fig-010709,"Tan Torso, Tan Legs, Reddish Brown Hair",4
 fig-010710,"Black Jacket, Black Legs, Black Hair",4
 fig-010711,"White Torso, Yellow Legs, Black Hair",4
-fig-010712,"White Torso, White Legs, Black Hair, Black Flippers, Yellow Airtank",7
+fig-010712,"White Torso, White Legs, Black Hair, Yellow Airtank",5
 fig-010713,Vampire - Black Pants,4
 fig-010714,Wacky Witch - Black Legs,4
 fig-010715,Pete Python,5
@@ -10556,8 +10538,8 @@ fig-010743,"White Torso, Orange Vest, Blue Legs, Black Cap, Smile",5
 fig-010744,"Red Torso, Blue Legs, Smile",3
 fig-010746,"Knight (Knights Kingdom II) - Jayko, Geometric Pattern, no Harness",5
 fig-010747,Shazam - White Hood,5
-fig-010748,"White Torso, Sand Green Legs, Bright Light Yellow Hair, Red Scarf",6
-fig-010749,"Red Torso, Dark Blue Legs, Dark Azure Cap",5
+fig-010748,"White Torso, Sand Green Legs, Bright Light Yellow Hair, Red Scarf",5
+fig-010749,"Red Torso, Dark Blue Legs, Dark Azure Cap",4
 fig-010750,Roman Chariot Rider,5
 fig-010751,Bee Keeper,6
 fig-010752,"Villager, Reddish Brown with Honey",3
@@ -10566,7 +10548,7 @@ fig-010754,"Woman, Medium Lavender Sweater, Dark Blue Legs, Black Hair",4
 fig-010755,"Girl, Bright Light Orange Shirt, Blue Medium Legs, Red Beanie with Braids",4
 fig-010756,"Man, Light Bluish Gray Open Hoodie, Dark Tan Legs, Dark Blue Cap, Beard",4
 fig-010757,"Boy, Green Ninjago Hoodie, Short Black Legs, Reddish Brown Hair, Glasses",4
-fig-010758,"Diver - Dark Blue Torso, Red Legs, Red Helmet, Beard",7
+fig-010758,"Diver - Dark Blue Torso, Red Legs, Red Helmet, Beard",5
 fig-010759,Koopa Troopa,24
 fig-010760,"Sand Blue Torso, Dark Blue Legs, Black Hair",4
 fig-010761,"Orange Torso, White Legs, Black Long Hair",4
@@ -10611,7 +10593,7 @@ fig-010800,"Construction Worker, Woman, Orange Safety Jacket, Blue Legs, Ponytai
 fig-010801,Sir Fangar - Dark Blue Cape,5
 fig-010802,"Knight (Breastplate on Black) - Black Legs, Armor, Red Plume, Hollow Stud Head",7
 fig-010803,"White Torso, White Slope for Dress, Reddish Brown Hair",4
-fig-010804,"Green Torso, Red Legs, Dark Azure Helmet, Medium Azure Skies",6
+fig-010804,"Green Torso, Red Legs, Dark Azure Helmet",4
 fig-010805,"Black Torso, Black Legs, Black Hair",4
 fig-010806,"Chef - White Torso, Red Legs, Black Hair",4
 fig-010807,"Kid - Blue Torso, Dark Red Legs, Tan Hair",4
@@ -10657,8 +10639,8 @@ fig-010849,Clara the Criminal with Goggles,5
 fig-010850,"Policewoman, Bright Light Blue Shirt, Dark Blue Legs, Dark Blue Cap with Ponytail",4
 fig-010851,Gracie Goodhart,5
 fig-010852,"Policeman, Bright Light Blue Shirt with Tie and Police Badge, Dark Blue Cap, Moustache",5
-fig-010853,"Criminal, Frankie Lupelli, Diving Suit",8
-fig-010854,"Policeman, Diving Suit",8
+fig-010853,"Criminal, Frankie Lupelli, Diving Suit",6
+fig-010854,"Policeman, Diving Suit",6
 fig-010855,"Criminal, Woman, Prison Shirt with '50382', Dark Red Legs, Dark Orange Hair",4
 fig-010856,"The Mandalorian / Din Djarin, Dark Brown Outfit with Cape",5
 fig-010857,NI-L8 Protocol Droid,3
@@ -10824,7 +10806,7 @@ fig-011044,"White Torso Octan, Blue Legs, Blue Black Hair",4
 fig-011045,"White Torso Octan, Green Legs, Black Hair",4
 fig-011046,"White Torso, Blue Overall, Brown Hair",4
 fig-011047,"White Torso, Blue Legs, Brown Hair Ponytail",4
-fig-011048,"Diver - Blue Torso, Blue Legs, Yellow Tanks, Blue Helmet",8
+fig-011048,"Diver - Blue Torso, Blue Legs, Yellow Tanks, Blue Helmet",6
 fig-011049,"Blue Torso, Blue Legs, Black Hair Ponytail",4
 fig-011050,"Blue Torso, Blue Legs, Black Hair Long",4
 fig-011051,"Blue Torso, Blue Legs, Black Hair, Mustache",4
@@ -10939,7 +10921,7 @@ fig-011170,Alien Keytarist,4
 fig-011171,Candy Mermaid,4
 fig-011172,Hiphop Robot,9
 fig-011173,Alien DJ,3
-fig-011174,Party Llama,5
+fig-011174,Party Llama,3
 fig-011175,Punk Pirate,4
 fig-011176,Unicorn DJ,4
 fig-011178,Rapunzel - Medium Lavender Dress,4
@@ -11043,8 +11025,8 @@ fig-011288,"Stormtrooper, First Order - Rounded Mouth",4
 fig-011289,Pug Costume - Medium Blue,4
 fig-011290,Miles Morales - Classic Suit,3
 fig-011291,"Medium Blue Torso, Dark Bluish Gray Legs, Dark Orange Hair - Las Vegas",4
-fig-011292,"Black Torso, Blue Legs, Black Hood, Snow Shoes",6
-fig-011293,"Red Torso, Red Legs, Red Hood, Snowshoes",6
+fig-011292,"Black Torso, Blue Legs, Black Hood",4
+fig-011293,"Red Torso, Red Legs, Red Hood, Snowshoes",4
 fig-011294,Daredevil,4
 fig-011295,Firestar,4
 fig-011297,"Mysterio, Bright Green Outfit",5
@@ -11118,7 +11100,7 @@ fig-011381,Madam Rosmerta,4
 fig-011382,Mr. Flume,4
 fig-011383,Mrs. Flume,4
 fig-011385,"Albus Dumbledore, Dark Orange Robes",5
-fig-011386,"Olivia - Dark Blue Top, Bright Light Yellow Skirt",4
+fig-011386,"Olivia - Dark Blue Top, Bright Light Yellow Skirt, Light Aqua Headphones",5
 fig-011388,"Emma - Coral Top, Dark Pink Skirt",4
 fig-011389,"Mia - Coral/Lime Top, Lime Pants",4
 fig-011390,"Stephanie - Magenta Top, White Skirt",4
@@ -11151,7 +11133,7 @@ fig-011420,"Vet, Light Aqua Scrubs, Black Hair",4
 fig-011421,"Man, Blue Vest, Dark Red Cap, Goattee Beard",4
 fig-011422,"Man, Blue Vest, Dark Red Dirt Bike Helmet, Stubble Beard",4
 fig-011423,"Man, Blue Jacket, Dark Red Cap, Sunglasses",4
-fig-011424,"Woman, Vest Top with Necklace, Olive Green Legs, Bright Light Yellow Hair",4
+fig-011424,"Jessica Sharpe, Vest Top with Necklace, Olive Green Legs, Bright Light Yellow Hair",4
 fig-011425,"Vet, Man, Light Aqua Scrubs",4
 fig-011426,"Woman, Blue Jacket, Dark Red Cap",4
 fig-011427,"Woman, Pilot, Blue Vest, White Helmet",5
@@ -11228,19 +11210,19 @@ fig-011504,"Race Driver - Black Torso, Black Legs, Black Helmet",5
 fig-011505,"Race Driver - Tan Torso, Legs, White Helmet",5
 fig-011507,Zane / Gold (Legacy) - Forbidden Spinjitzu Wraps,5
 fig-011508,Zane with Silver Head (Legacy),4
-fig-011509,Lloyd - Scuba (Seabound),7
-fig-011510,Maaray Guard,6
-fig-011512,Jay - Scuba (Seabound),7
-fig-011514,Cole - Scuba (Seabound),7
+fig-011509,Lloyd - Scuba (Seabound),5
+fig-011510,Maaray Guard,4
+fig-011512,Jay - Scuba (Seabound),5
+fig-011514,Cole - Scuba (Seabound),5
 fig-011516,Nya / Gold (Legacy),6
-fig-011518,Nya - NRG,7
-fig-011520,Zane - Scuba (Seabound),7
+fig-011518,Nya - NRG,6
+fig-011520,Zane - Scuba (Seabound),5
 fig-011521,Prince Kalmaar,4
 fig-011522,Prince Benthomaar,5
-fig-011524,Kai - Scuba (Seabound),7
+fig-011524,Kai - Scuba (Seabound),5
 fig-011525,Glutinous,21
-fig-011527,Nya - Scuba (Seabound),7
-fig-011528,Wu Bot - Scuba,8
+fig-011527,Nya - Scuba (Seabound),5
+fig-011528,Wu Bot,6
 fig-011529,Candy Ballerina,5
 fig-011530,Blue-Beary Guitarist,3
 fig-011531,Sing-Bot,4
@@ -11278,7 +11260,7 @@ fig-011564,Bone Spirit,4
 fig-011565,White Bone Demon,5
 fig-011567,"Mei - Helmet, Black Backpack",7
 fig-011568,"Monkie Kid - Angry, Orange Torso",5
-fig-011569,"Lee - Panda Bear Costume, Black Roller Blades",6
+fig-011569,Lee - Panda Bear Costume,4
 fig-011570,Pan,4
 fig-011571,"Mr. Tang - White Torso, Dark Red Legs",5
 fig-011572,Pigsy - Ammo Belt,4
@@ -11291,7 +11273,7 @@ fig-011580,Sir Jorgenbjorgen,2
 fig-011581,Unity - Female,4
 fig-011582,Unity - Male,4
 fig-011583,Belle Bottom,4
-fig-011584,"Diver - Pearl Dark Grey Torso, Legs, Black Airtanks, Red Helmet",8
+fig-011584,"Diver - Pearl Dark Grey Torso, Legs, Black Airtanks, Red Helmet",6
 fig-011585,"Lloyd - Hunted, Legacy",4
 fig-011586,Gladys,6
 fig-011587,"Captain America, Medium Dark Flesh Hair, Red Hand, Beared",4
@@ -11500,7 +11482,7 @@ fig-011812,Ajak,4
 fig-011813,Gilgamesh,4
 fig-011814,Sprite,4
 fig-011815,Alien Dancer,4
-fig-011816,Discowgirl Guitarist,6
+fig-011816,Discowgirl Guitarist,4
 fig-011817,DJ Rasp-Beary,3
 fig-011818,Dragon Guitarist,6
 fig-011819,Karaoke Mermaid,4
@@ -11542,7 +11524,6 @@ fig-011855,Vampire Bassist,5
 fig-011856,DJ Beatbox,3
 fig-011857,"White Torso, Red Legs, Orange Cap",4
 fig-011858,"Orange Torso, Red Legs, Dark Brown Hair",4
-fig-011859,"Criminal, Big Betty - Ice Skates",6
 fig-011860,Kevin McCallister,5
 fig-011861,Marv Merchants,4
 fig-011862,Harry Lime,4
@@ -11567,3 +11548,17 @@ fig-011917,"Worker - Orange Torso, Blue Legs, Yellow Helmet - Wauwatosa",4
 fig-011918,"Knight - Light Bluish Grey Rorso, Light Bluish Grey Legs, Black Hips, Helmet - Wauwatosa",4
 fig-011929,Minion Bob - Robotic Arms,20
 fig-011934,"Chef - White Torso, Black Legs, White Hat, Mustache",4
+fig-011940,"Snowtrooper, White Hips, Reddish Brown Head",4
+fig-011941,"General Maximillian Veers, Sand Blue Helmet with Visor, Black Boots",4
+fig-011942,"AT-AT Driver - Light Bluish Grey Helmet, Sand Blue Legs, Flesh Head, Female",4
+fig-011944,"Snowtrooper, White Hips, Reddish Brown Head",4
+fig-011945,"Snowtrooper, White Hips, Light Flesh Head, Female",4
+fig-011946,"Snowtrooper, White Hips, Light Flesh Head, Officer",4
+fig-011948,Nya,5
+fig-011949,Antonio - Microdoll,3
+fig-011950,"Mirabel - Microdoll, Closed Eyes",3
+fig-011951,Mirabel,4
+fig-011952,Abuela,4
+fig-011953,"Mirabel - Microdoll, Open Eyes",3
+fig-011954,Isabela - Microdoll,4
+fig-011955,Louisa - Microdoll,3

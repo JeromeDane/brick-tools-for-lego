@@ -22,7 +22,7 @@ set_num,name,year,theme_id,num_parts
 0241357594-1,Star Wars: Build Your Own Adventure: Galactic Missions,2019,497,70
 028-1,Nursery Furniture,1979,652,7
 030-2,Building Set,1973,505,29
-03093-1,The Race to Build It Board Game,1999,502,73
+03093-1,The Race to Build It Board Game,1999,22,73
 032-1,Living Room,1979,652,14
 033-1,Farm Animals,1979,632,21
 033-2,Basic Building Set,1968,366,177
@@ -55,7 +55,7 @@ set_num,name,year,theme_id,num_parts
 0744023726-1,Disney Princess: Enchanted Treasury,2020,497,4
 075-1,Pre-School Set,1975,505,17
 0751359483-1,The Ultimate LEGO Book,1999,497,0
-0756668530-1,Atlantis: Brickmaster,2010,497,157
+0756668530-1,Atlantis: Brickmaster,2010,497,164
 0756672805-1,Pirates: Brickmaster,2009,497,162
 0756682762-1,Ninjago: Brickmaster,2011,497,154
 0756692571-1,Harry Potter: Characters of the Magical World,2012,497,4
@@ -88,7 +88,7 @@ set_num,name,year,theme_id,num_parts
 10016-1,Tanker,2001,236,128
 10017-1,Hopper Wagon,2001,236,228
 10018-1,Darth Maul,2001,171,1868
-10019-1,Rebel Blockade Runner - UCS,2001,171,1748
+10019-1,Rebel Blockade Runner,2001,171,1748
 100-2,4.5V Motor with Wheels (Large Version),1966,235,27
 10020-1,Santa Fe Super Chief,2002,236,435
 10020-2,Santa Fe Super Chief - Limited Edition,2002,236,441
@@ -97,7 +97,7 @@ set_num,name,year,theme_id,num_parts
 10023-1,Master Builder Set,2002,324,111
 10024-1,Red Baron,2002,673,670
 10025-1,Santa Fe Cars - Set I (mail or baggage car),2002,236,326
-10026-1,Naboo Starfighter - UCS,2002,171,188
+10026-1,Naboo Starfighter,2002,171,188
 10027-1,Train Engine Shed,2003,105,670
 10029-1,Lunar Lander,2003,387,469
 10030-1,Imperial Star Destroyer,2002,171,3116
@@ -167,13 +167,13 @@ set_num,name,year,theme_id,num_parts
 10124-1,Wright Flyer,2003,673,663
 10127-1,NHL Action Set with Stickers,2003,461,59
 10128-1,Train Level Crossing,2003,105,327
-10129-1,Rebel Snowspeeder - UCS,2003,171,1457
+10129-1,Rebel Snowspeeder,2003,171,1457
 101-3,4.5V Battery Case,1966,235,1
 1013-1,Numbers (6 Symbols),1985,516,0
 10131-1,TIE Fighter Collection,2004,171,685
 10132-1,Motorized Hogwarts Express,2004,246,713
 10133-1,Burlington Northern Santa Fe Locomotive,2004,236,409
-10134-1,Y-wing Attack Starfighter - UCS,2004,171,1490
+10134-1,Y-wing Attack Starfighter,2004,171,1490
 10135-1,Holiday Decoration Kit,2004,500,282
 10143-1,Death Star II,2005,171,3461
 10144-1,Sandcrawler,2005,171,1681
@@ -205,12 +205,12 @@ set_num,name,year,theme_id,num_parts
 10169-1,Chicken & Chicks,2005,229,61
 10170-1,TTX Intermodal Double-Stack Car,2005,236,366
 10173-1,Holiday Train,2006,673,969
-10174-1,Imperial AT-ST - UCS,2006,171,1069
-10175-1,Vader's TIE Advanced - UCS,2006,171,1212
+10174-1,Imperial AT-ST,2006,171,1069
+10175-1,Vader's TIE Advanced,2006,171,1212
 10176-1,Royal King's Castle,2006,197,877
 10177-1,Boeing 787 Dreamliner,2006,673,1197
 10178-1,Motorized Walking AT-AT,2007,171,1137
-10179-1,Millennium Falcon - UCS,2007,171,5197
+10179-1,Millennium Falcon,2007,171,5197
 10181-1,Eiffel Tower 1:300,2007,673,3428
 10182-1,Cafe Corner,2007,155,2058
 10183-1,Hobby Train,2007,397,1080
@@ -298,11 +298,11 @@ set_num,name,year,theme_id,num_parts
 10257-1,Carousel,2017,673,2670
 10258-1,London Bus,2017,673,1686
 10259-1,Winter Village Station,2017,228,902
-10260-1,Downtown Diner,2018,155,2480
+10260-1,Downtown Diner,2018,155,2482
 1026-1,Playhouse Boxes,1985,516,2
 10261-1,Roller Coaster,2018,673,4124
 10262-1,James Bond Aston Martin DB5,2018,673,1297
-10263-1,Winter Village Fire Station,2018,228,1166
+10263-1,Winter Village Fire Station,2018,228,1168
 10264-1,Corner Garage,2019,155,2569
 10265-1,Ford Mustang,2019,673,1471
 10266-1,NASA Apollo 11 Lunar Lander,2019,673,1087
@@ -558,7 +558,7 @@ set_num,name,year,theme_id,num_parts
 10733-1,Mater's Junkyard,2017,615,62
 10734-1,Demolition Site,2017,591,175
 10735-1,Police Truck Chase,2017,591,90
-10736-1,Anna & Elsa's Frozen Playground,2017,591,94
+10736-1,Anna & Elsa's Frozen Playground,2017,591,96
 10737-1,Batman vs. Mr. Freeze,2017,592,64
 10738-1,Snow White's Forest Cottage,2017,593,67
 10739-1,Shark Attack,2017,597,108
@@ -926,6 +926,7 @@ set_num,name,year,theme_id,num_parts
 11952-1,Wind Energy,2021,22,38
 11953-1,Gecko,2021,22,36
 11954-1,Spaceship,2021,22,40
+11955-1,Lion,2021,22,47
 1196-1,Biker with Bicycle,2000,458,8
 1197-1,Telekom Race Cyclist and Television Motorbike,2000,458,31
 1197-2,Crown Gears,1981,453,2
@@ -1237,9 +1238,9 @@ set_num,name,year,theme_id,num_parts
 1423-1,Air Boat (Kabaya Promotional),2001,273,24
 1424-1,Stunt Go-Kart (Kabaya Promotional),2001,273,25
 14249-1,Batman Costume,2018,501,0
-1425-1,Dash Jet Sub,2002,305,23
+1425-1,Dash Jet Sub,2002,305,25
 14251-1,Minifigure Costume,2018,501,0
-1426-1,Cam Wing Diver,2002,305,21
+1426-1,Cam Wing Diver,2002,305,23
 1427-1,Ogel Marine Slizer,2002,305,21
 14271-1,Minifigure Mask with Hands,2018,501,0
 1428-1,Small Soccer Set 1 (Kabaya Box),2002,462,24
@@ -1587,7 +1588,7 @@ set_num,name,year,theme_id,num_parts
 1726-1,Girl,1994,468,7
 1727-1,Horse,1994,468,10
 1727-2,Chewbacca Pen,2002,501,15
-1728-1,Crystal Crawler,1996,308,97
+1728-1,Crystal Crawler,1996,308,99
 1728-2,Darth Maul Pen,2002,501,13
 1729-1,Barnacle Bay Value Pack,1994,148,0
 1729-2,Luke Skywalker Pen,2003,501,14
@@ -1612,11 +1613,11 @@ set_num,name,year,theme_id,num_parts
 1745-1,"Box of Standard Bricks, 3+",1995,473,404
 1746-1,Wiz the Wizard,1995,186,18
 1747-1,Treasure Surprise,1996,148,25
-1749-1,Paravane,1996,308,16
+1749-1,Paravane,1996,308,18
 1750-1,Renault Formula 1 Racer,1992,67,33
 1751-1,Bucket,1996,505,27
 1752-1,Boat with Armour,1996,201,21
-1754-1,Bionicle: The Quest Game,2006,502,0
+1754-1,Bionicle: The Quest Game,2006,501,0
 1756-1,{Basic Promotional Set},1995,468,8
 1758-1,{Basic Promotional Set},1995,468,7
 1759-1,Parrot,1995,505,7
@@ -1660,7 +1661,7 @@ set_num,name,year,theme_id,num_parts
 1802-2,Clikits Heart Pen,2004,500,0
 1804-1,Crossbow Boat,1996,201,21
 1805-1,Small Bucket,1995,505,32
-1806-1,Underwater Scooter,1996,308,16
+1806-1,Underwater Scooter,1996,308,18
 1807-1,Santa Claus and Sleigh,1995,227,17
 1808-1,Light Aircraft and Ground Support,1996,67,127
 1809-1,Condor Promotional Airplane,1996,466,29
@@ -1674,7 +1675,7 @@ set_num,name,year,theme_id,num_parts
 1819-1,Large Bucket,1995,469,950
 182-1,Train Set with Signal,1975,235,373
 1821-1,Rally Racers,1996,67,196
-1822-1,Sea Claw 7 / Neptune III,1995,308,189
+1822-1,Sea Claw 7 / Neptune III,1995,308,191
 1823-1,Sabah Promotional Set: Yacht,1996,468,10
 1824-1,Flying Duck,1997,468,17
 18247-1,Vampire Costume,2017,501,0
@@ -2055,6 +2056,7 @@ set_num,name,year,theme_id,num_parts
 21054-1,The White House,2020,252,1483
 21055-1,Burj Khalifa,2019,252,333
 21056-1,Taj Mahal,2021,252,2024
+21057-1,Singapore,2022,253,0
 2108-1,Perky Paddler,1999,440,4
 2-11,Medium Basic Set,1976,433,130
 21-1,Horses & Corral,1986,443,10
@@ -2143,7 +2145,7 @@ set_num,name,year,theme_id,num_parts
 21174-1,The Modern Treehouse,2021,577,909
 21176-1,The Jungle Abomination,2021,577,496
 211803-1,Batman,2018,708,9
-211804-1,Harley Quinn,2018,708,6
+211804-1,Harley Quinn,2018,708,7
 211901-1,Batman,2019,697,7
 211902-1,Robin,2019,697,7
 211903-1,Superman and Kryptonite,2019,701,10
@@ -2151,12 +2153,12 @@ set_num,name,year,theme_id,num_parts
 211905-1,The Joker,2019,697,9
 211906-1,Armored Batman,2019,697,7
 21-2,Truck,1971,433,33
-21200-1,Life of George,2011,502,146
+21200-1,Life of George,2011,598,146
 212007-1,Mr. Freeze,2020,697,17
 212008-1,Batman,2020,697,13
 212009-1,The Riddler,2020,697,10
 212010-1,Batman - Mechanical Arms Backpack,2020,697,14
-21201-1,Life of George II,2012,502,145
+21201-1,Life of George II,2012,598,145
 212011-1,The Joker & Catapult,2020,697,17
 212012-1,Shazam!,2020,695,8
 21204-1,Town Master,2014,590,256
@@ -2560,7 +2562,7 @@ set_num,name,year,theme_id,num_parts
 2532-1,Aircraft and Ground Crew,1998,50,143
 253257-1,Bionicle Towel Toa Hordika,2006,501,0
 2535-1,Formula 1 Racing Car,1998,50,31
-2536-1,Divers Jet Ski,1998,86,25
+2536-1,Divers Jet Ski,1998,86,27
 2537-1,Extreme Team Raft,1998,87,20
 2538-1,Fright Knights Fire Cart,1998,195,21
 2539-1,Fright Knights Flying Machine,1998,195,21
@@ -2851,7 +2853,7 @@ set_num,name,year,theme_id,num_parts
 281-2,"1 x 2 and 3 x 2 Sloping Bricks, Blue",1959,371,21
 2814-1,Big Wheels Road Worker Set,1999,632,38
 2815-1,Bike Ride (Me & My Bike),1998,652,6
-2817-1,(Me and My) Birthday,1998,652,33
+2817-1,(Me and My) Birthday,1998,652,35
 2818-1,Me and My House (Villa),1998,652,69
 2819-1,Brick Mixer,1999,505,71
 282-1,"2 x 2 Sloping Roof Bricks, Red",1958,371,22
@@ -2918,7 +2920,7 @@ set_num,name,year,theme_id,num_parts
 2853591-1,Rock Band - Xbox 360,2009,501,0
 2853592-1,Rock Band - PS3,2009,501,0
 2853593-1,Indiana Jones 2: The Adventure Continues - Xbox 360,2009,501,0
-2853594-1,Indiana Jones 2: The Adventure Continues - PS3,2009,502,0
+2853594-1,Indiana Jones 2: The Adventure Continues - PS3,2009,501,0
 2853595-1,Indiana Jones 2: The Adventure Continues - PSP,2009,501,0
 2853596-1,Indiana Jones 2: The Adventure Continues - Wii,2009,501,0
 2853597-1,Indiana Jones 2: The Adventure Continues - DS,2009,501,0
@@ -3128,7 +3130,7 @@ set_num,name,year,theme_id,num_parts
 30036-1,Buggy Racer,2011,112,28
 30040-1,Octopus,2010,315,42
 30041-1,Piranha,2010,315,45
-30042-1,Mini Sub,2010,315,37
+30042-1,Mini Sub,2010,315,39
 30050-1,Republic Attack Shuttle - Mini,2010,158,54
 3005-1,Kabaya Promotional Set: Car,1999,1,26
 30051-1,X-wing Fighter - Mini,2010,158,61
@@ -3195,7 +3197,7 @@ set_num,name,year,theme_id,num_parts
 30111-1,The Lab,2011,246,34
 30112-1,Emma's Flower Stand,2014,494,35
 30113-1,Stephanie's Bakery Stand,2014,494,28
-30114-1,Andrea's Beach Lounge,2014,494,29
+30114-1,Andrea's Beach Lounge,2014,494,31
 30115-1,Jungle Boat,2014,494,31
 30116-1,Rapunzel's Market Visit,2014,579,37
 30120-1,Guido,2011,269,34
@@ -3427,7 +3429,7 @@ set_num,name,year,theme_id,num_parts
 30367-1,Police Helicopter,2020,61,39
 30368-1,Fire Rescue Water Scooter,2020,58,34
 30369-1,Beach Buggy,2020,52,45
-30370-1,Deep Sea Diver,2020,52,22
+30370-1,Deep Sea Diver,2020,52,24
 3037-1,Strata Tub,1998,505,142
 30371-1,Knight's Cycle,2016,605,42
 30372-1,Robin's Mini Fortrex,2016,605,45
@@ -3464,7 +3466,7 @@ set_num,name,year,theme_id,num_parts
 30402-1,Snowboard Tricks,2017,494,27
 30403-1,Olivia's Remote Control Boat,2018,494,25
 30404-1,Friendship Flower,2018,494,100
-30405-1,Stephanie's Hockey Practice,2018,494,39
+30405-1,Stephanie's Hockey Practice,2018,494,41
 30406-1,Unikitty Roller Coaster Wagon,2018,625,46
 30407-1,Harry's Journey to Hogwarts,2018,246,40
 30408-1,Tulips,2019,494,90
@@ -3589,7 +3591,7 @@ set_num,name,year,theme_id,num_parts
 30604-1,Cosmic Boy,2016,695,7
 30605-1,Finn (FN-2187),2016,158,6
 30606-1,Nightwing,2016,697,6
-30607-1,Disco Batman - Tears of Batman,2017,708,13
+30607-1,Disco Batman - Tears of Batman,2017,708,15
 30608-1,Kendo Lloyd,2017,616,7
 30609-1,Lloyd,2017,616,6
 306-1,Two Lunar Landing Plates,1979,143,2
@@ -3816,7 +3818,7 @@ set_num,name,year,theme_id,num_parts
 31307-1,"Clikits Wallet, Hearts (Pink)",2008,501,0
 313-1,London Bus,1966,373,140
 31313-1,Mindstorms EV3,2013,262,601
-31314-1,Racers Super Speedway Game,2001,502,126
+31314-1,Racers Super Speedway Game,2001,112,126
 31317-1,Knights' Kingdom: Save the Kingdom Game,2004,502,48
 313-2,Bracelet and Pendant,1979,668,59
 3132-1,Emma,1999,668,11
@@ -3891,7 +3893,7 @@ set_num,name,year,theme_id,num_parts
 3210-1,Party Dress and Accessories,1998,668,28
 321-1,Clowns,1965,366,223
 3211-1,Girls' Dress and Accessories,1998,668,26
-3219-1,TIE Fighter - Mini,2002,158,12
+3219-1,MINI TIE Fighter,2002,158,12
 32-2,Large Ship Set,1973,433,57
 3220-1,Christian with Gifts,1998,668,23
 322-1,Basic Set,1981,469,82
@@ -4048,7 +4050,7 @@ set_num,name,year,theme_id,num_parts
 3388-1,Xtreme Stunts Snap Lockitt Chupa Chups Promotional,2003,407,4
 3389-1,Skateboarder Bill Chupa Chups Promotional,2003,460,7
 3390-1,Basketball Street Player Chupa Chups Promotional,2003,459,5
-3391-1,"Dash, Mission Deep Sea, Chupa Chups Promotional",2003,305,9
+3391-1,"Dash, Mission Deep Sea, Chupa Chups Promotional",2003,305,15
 3-4,Basic Set,1973,469,191
 340-1,Basic Building Set,1985,467,220
 3401-1,Shoot n' Score,2000,462,24
@@ -4801,7 +4803,7 @@ set_num,name,year,theme_id,num_parts
 40104-1,Monster,2014,409,36
 40105-1,Gingerbread House,2014,409,54
 40106-1,Toy Workshop,2014,227,115
-40107-1,Winter Skating Scene,2014,228,129
+40107-1,Winter Skating Scene,2014,228,131
 40108-1,Balloon Cart,2014,22,66
 40109-1,MINI Cooper Mini Model,2014,22,59
 40110-1,Coin Bank,2014,61,122
@@ -4854,7 +4856,7 @@ set_num,name,year,theme_id,num_parts
 40154-1,Pencil Pot,2015,301,176
 40155-1,Coinbank,2015,301,148
 40156-1,Organizer,2015,494,171
-40158-1,Pirates Chess Set,2015,502,856
+40158-1,Pirates Chess Set,2015,147,856
 4016-1,Racer,2001,674,21
 40161-1,What Am I?,2016,408,536
 40165-1,Minifigure Wedding Favor Set,2016,301,91
@@ -4865,7 +4867,7 @@ set_num,name,year,theme_id,num_parts
 40171-1,Hedgehog Storage,2017,494,249
 40172-1,Brick Calendar,2017,501,278
 40173-1,Picture Frame,2017,501,268
-40174-1,LEGO Chess,2017,502,1450
+40174-1,LEGO Chess,2017,301,1450
 40175-1,Police Road Block Mission,2017,61,58
 40176-1,Scarif Stormtrooper,2017,158,25
 40177-1,City Jungle Explorer Kit,2017,614,40
@@ -4888,7 +4890,7 @@ set_num,name,year,theme_id,num_parts
 40195-1,Shell Station,2014,598,80
 40196-1,Shell Tanker,2014,598,94
 40197-1,Wedding Favour 2018,2018,301,132
-40198-1,Ludo Game,2018,502,389
+40198-1,Ludo Game,2018,301,389
 40199-1,Billund Airport,2018,408,286
 40200-1,BMW Racer,2013,598,30
 4020-1,Fire Fighting Boat,1987,363,209
@@ -5050,7 +5052,7 @@ set_num,name,year,theme_id,num_parts
 40341-1,Sea Accessories,2019,646,24
 40342-1,Minifigure Pack,2019,435,59
 40343-1,Spider-Man and the Museum Break-In,2019,706,49
-40344-1,Summer Celebration Minifigure Set,2019,535,45
+40344-1,Summer Celebration Minifigure Set,2019,535,47
 40345-1,Mars Exploration Minifigure Pack,2019,679,44
 40346-1,LEGOLAND Park,2019,425,1336
 40347-1,LEGOLAND Driving School,2019,425,209
@@ -5119,7 +5121,7 @@ set_num,name,year,theme_id,num_parts
 40412-1,Hagrid & Buckbeak,2020,610,270
 40413-1,Mini Robots,2020,258,366
 40414-1,Monty Mole & Super Mushroom Expansion Set,2020,690,171
-40416-1,Ice Skating Rink,2020,227,306
+40416-1,Ice Skating Rink,2020,227,307
 40417-1,Year of the Ox,2021,206,168
 40418-1,Falcon & Black Widow Team Up,2020,702,60
 40419-1,Hogwarts Students,2020,246,55
@@ -5180,7 +5182,7 @@ set_num,name,year,theme_id,num_parts
 4048-1,Mech Lab,2003,204,0
 40481-1,Cockatiel and Chick,2021,610,218
 40482-1,Hamster and Baby Hamster,2021,610,242
-40483-1,Luke Skywalker's Lightsaber,2021,158,0
+40483-1,Luke Skywalker's Lightsaber,2021,158,173
 40484-1,Santa's Front Yard,2021,598,316
 40485-1,FC Barcelona Celebration,2021,598,178
 40486-1,Adidas Originals Superstar,2021,598,92
@@ -5481,7 +5483,7 @@ set_num,name,year,theme_id,num_parts
 41253-1,Lonesome Flats Raft Adventure,2020,682,170
 41254-1,Volcano Rock City Concert,2020,682,397
 41255-1,Pop Village Celebration,2020,682,385
-41256-1,Rainbow Caterbus,2020,682,391
+41256-1,Rainbow Caterbus,2020,682,403
 41258-1,Vibe City Concert,2020,682,504
 4127417-1,Super Value Pack,1999,559,1
 4128-1,XL Freestyle Bucket,1997,399,657
@@ -5577,7 +5579,7 @@ set_num,name,year,theme_id,num_parts
 41382-1,Friends Advent Calendar 2019,2019,216,330
 41383-1,Olivia's Hamster Playground,2019,494,81
 41384-1,Andrea's Summer Heart Box,2019,494,83
-41385-1,Emma's Summer Heart Box,2019,494,86
+41385-1,Emma's Summer Heart Box,2019,494,88
 41386-1,Stephanie's Summer Heart Box,2019,494,95
 41387-1,Olivia's Summer Heart Box,2019,494,93
 41388-1,Mia's Summer Heart Box,2019,494,85
@@ -6173,7 +6175,6 @@ set_num,name,year,theme_id,num_parts
 4274259-1,Vintage Pen (Red),2005,501,13
 4274291-1,Yoda Key Chain,2006,503,9
 4277206-1,Letters and Keyring,2005,500,72
-4277678-1,Knights' Kingdom Chess,2005,502,249
 4278-1,Blue Tub,2003,22,1000
 4279-1,CREATOR Strata Red {Red Tub},2003,22,1002
 4280-1,Freestyle Trial Size,1998,399,39
@@ -6217,7 +6218,7 @@ set_num,name,year,theme_id,num_parts
 4296983-1,Dino 2010 Parachute,2006,384,4
 4296984-1,Dino 2010 Kite,2006,501,0
 4297-1,Lightning Streak,2002,112,20
-4297431-1,City Playing Cards,2006,502,0
+4297431-1,City Playing Cards,2006,501,0
 4297455-1,Soccer Ball,2007,501,0
 4298-1,Blue Power,2002,112,24
 4299-1,Nesquik Quicky Racer,2002,112,18
@@ -6251,7 +6252,7 @@ set_num,name,year,theme_id,num_parts
 43102-1,Candy Mermaid BeatBox,2021,713,57
 43103-1,Punk Pirate BeatBox,2021,713,59
 43104-1,Alien DJ BeatBox,2021,713,59
-43105-1,Party Llama BeatBox,2021,713,68
+43105-1,Party Llama BeatBox,2021,713,70
 43106-1,Unicorn DJ BeatBox,2021,713,70
 43107-1,Hiphop Robot BeatBox,2021,713,59
 43108-0,Bandmates  Series 2 - Random Box,2021,713,0
@@ -6261,7 +6262,7 @@ set_num,name,year,theme_id,num_parts
 43108-12,Zombie Dancer,2021,713,10
 43108-13,Bandmates  Series 2 - Complete,2021,713,0
 43108-14,Bandmates  Series 2 - Sealed Box,2021,713,0
-43108-2,Discowgirl Guitarist,2021,713,11
+43108-2,Discowgirl Guitarist,2021,713,13
 43108-3,DJ Rasp-Beary,2021,713,8
 43108-4,Dragon Guitarist,2021,713,11
 43108-5,Karaoke Mermaid,2021,713,10
@@ -6303,9 +6304,9 @@ set_num,name,year,theme_id,num_parts
 43195-1,Belle and Rapunzel's Royal Stables,2021,579,254
 43196-1,Belle and the Beast's Castle,2021,579,505
 43197-1,The Ice Castle,2021,687,1709
-43200-1,Antonio's Magical Door,2021,608,0
-43201-1,Isabela's Magical Door,2021,608,0
-43202-1,The Madrigal House,2021,608,0
+43200-1,Antonio's Magical Door,2021,608,98
+43201-1,Isabela's Magical Door,2021,608,113
+43202-1,The Madrigal House,2021,608,586
 432-1,Road Signs (The Building Toy),1966,371,8
 433-1,6 Street Lamps with Curved Top (The Building Toy),1966,371,6
 4335-1,Black Robots Pod,2004,478,50
@@ -6449,23 +6450,23 @@ set_num,name,year,theme_id,num_parts
 4475-1,Jabba's Message,2003,158,46
 4476-1,Jabba's Prize,2003,158,40
 4477-1,T-16 Skyhopper,2003,158,98
-4478-1,"Geonosian Fighter, Black Box",2003,158,170
-4478-2,Geonosian Fighter Blue Box,2004,158,172
+4478-1,Geonosian Fighter (Black Box),2003,158,170
+4478-2,Geonosian Fighter (Blue Box),2004,158,172
 4479-1,TIE Bomber,2003,158,229
 4480-1,Jabba's Palace,2003,158,234
 4481-1,Hailfire Droid,2003,158,680
 4482-1,AT-TE,2003,158,663
 4483-1,AT-AT [Black Box],2003,158,1070
 4483-2,AT-AT [Blue Box],2004,158,1070
-4484-1,X-wing Fighter & TIE Advanced - Mini,2003,158,72
+4484-1,X-wing Fighter & TIE Advanced,2003,158,72
 4485-1,Sebulba's Podracer & Anakin's Podracer,2003,158,72
 4486-1,AT-ST & Snowspeeder - Mini,2003,158,76
-4487-1,Jedi Starfighter & Slave I - Mini,2003,158,53
-4488-1,Millennium Falcon - Mini,2003,158,87
+4487-1,Jedi Starfighter & Slave I,2003,158,53
+4488-1,Millennium Falcon,2003,158,87
 4489-1,AT-AT - Mini,2003,158,98
-4490-1,Republic Gunship - Mini,2003,158,102
+4490-1,Republic Gunship,2003,158,102
 4490471-1,Piraka Ball Shooter / Zamor Sphere Launcher Accessory Pack,2006,501,0
-4491-1,MTT - Mini,2003,158,99
+4491-1,MTT,2003,158,99
 4492-1,Star Destroyer - Mini,2004,158,87
 4493-1,Sith Infiltrator - Mini,2004,158,55
 4493464-1,Sand Mould Set,2006,501,0
@@ -6501,7 +6502,7 @@ set_num,name,year,theme_id,num_parts
 4499397-1,"Clikits Wallet, Hearts And Circles",2006,501,0
 4499536-1,Offre Speciale 4 Boites,2007,52,0
 4499565-1,Santa Magnet Set,2006,227,17
-4499574-1,Tic Tac Toe,2006,502,71
+4499574-1,Tic Tac Toe,2006,52,71
 45000-1,Creative Builder,2013,507,122
 4500-1,Rebel Snowspeeder [Redesign] - Blue box,2003,158,217
 45001-1,Playground Set with Storage,2013,516,106
@@ -6532,7 +6533,7 @@ set_num,name,year,theme_id,num_parts
 4502-1,X-wing Fighter,2003,158,564
 45021-1,Our Town,2017,516,280
 4502-2,X-wing Fighter,2004,158,564
-45022-1,Community Minifigure Set,2016,507,277
+45022-1,Community Minifigure Set,2016,507,279
 45023-1,Fantasy Minifigure Set,2016,507,221
 45024-1,STEAM Park,2017,516,303
 45025-1,Coding Express,2018,516,234
@@ -6784,7 +6785,7 @@ set_num,name,year,theme_id,num_parts
 4641-1,Speed Boat,2011,59,34
 4642-1,Fishing Boat,2011,59,65
 4643-1,Power Boat Transporter,2011,59,255
-4644-1,Marina,2011,59,298
+4644-1,Marina,2011,59,300
 4645-1,Harbor,2011,59,552
 4648933-1,Accessory Pack,2011,400,6
 4648939-1,Golden Die,2011,502,8
@@ -6893,7 +6894,7 @@ set_num,name,year,theme_id,num_parts
 4757-1,Hogwarts Castle,2004,246,937
 4758-1,Hogwarts Express,2004,246,388
 4759-1,Three Christmas Decorations - Santa Tree and Snowman,2004,227,0
-4762-1,Rescue from the Merpeople,2005,246,177
+4762-1,Rescue from the Merpeople,2005,246,179
 4766-1,Graveyard Duel,2005,246,552
 4767-1,Harry and the Hungarian Horntail,2005,246,265
 4768-1,The Durmstrang Ship,2005,246,552
@@ -7157,7 +7158,7 @@ set_num,name,year,theme_id,num_parts
 5000644-1,Monster Fighters Promotional Pack,2012,558,12
 5000646-1,City poster,2012,501,0
 5000672-1,The LEGO Ideas Book - Unlock Your Imagination,2011,497,0
-5000704-1,Duplo: Find a Pair Game,2013,502,0
+5000704-1,Duplo: Find a Pair Game,2013,598,0
 5000728-1,DC Universe Super Heroes Collection,2012,699,0
 5001050-1,ZipBin Millennium Falcon Messenger Bag,2012,501,0
 5001090-1,Batman 2: DC Super Heroes - 3DS,2012,501,0
@@ -7981,6 +7982,7 @@ set_num,name,year,theme_id,num_parts
 5006171-1,The United Trinity Statue,2020,598,37
 5006186-1,Storage Head S (Winking),2020,501,0
 5006201-1,Brick Erasers,2021,501,0
+5006202-1,Note Brick (Blue),2021,501,0
 5006203-1,Paint Party Puzzle,2020,501,0
 5006204-1,Still Life with Bricks: The Art of Everyday Play,2020,497,0
 5006205-1,Brick Notebook,2020,501,0
@@ -8180,7 +8182,7 @@ set_num,name,year,theme_id,num_parts
 5006855-1,Grogu Bag Tag,2021,501,0
 5006856-1,Magical Ideas,2021,497,32
 5006860-1,Grogu Key Light,2021,503,0
-5006865-1,Creationary Travel Edition,2021,502,0
+5006865-1,Creationary Travel Edition,2021,598,0
 5006871-1,Storage Brick Drawer (4-Stud Green),2021,501,0
 5006880-1,Harry Potter: Magical Treasury: A Visual Guide to the Wizarding World,2020,497,5
 5006881-1,Ninjago: Character Encyclopedia New Edition,2021,497,5
@@ -8193,6 +8195,7 @@ set_num,name,year,theme_id,num_parts
 5006976-1,Brick Hip Pack (Navy),2021,501,0
 5006978-1,Masters' Book of Secrets,2021,497,0
 5007016-1,1950's Retro Tin,2021,598,0
+5007023-1,VIP Fleece Blanket,2021,501,0
 5007024-1,Anniversary Box,2021,435,10
 5007029-1,Luigi Key Chain,2021,503,0
 5007060-1,The Team-Up Bundle,2021,690,0
@@ -8219,7 +8222,9 @@ set_num,name,year,theme_id,num_parts
 5007172-1,I [Heart] BCN Tote Bag,2021,501,0
 5007178-1,Minifigure Notes: 20 Notecards and Envelopes,2021,501,0
 5007179-1,Small Parts: The Secret Life of Minifigures,2020,497,0
+5007180-1,2022 LEGO Wall Calendar,2021,501,0
 5007204-1,Disney Princess Ultimate Celebration Bundle,2021,579,0
+5007224-1,Note Brick (Yellow),2021,501,0
 5008-1,Brick Separator,1990,443,1
 5009-1,"Building Plate 16 x 32, Yellow",1990,443,1
 50-1,Universal Building Set,1976,469,390
@@ -8531,7 +8536,7 @@ set_num,name,year,theme_id,num_parts
 5254-1,"Cross Axles (Sizes 8, 10, 12)",1987,453,9
 5255-1,Connector Pegs / Connectorpegs,1987,453,30
 52558-1,Buildable Ruler with Minifigure,2019,501,31
-5256-1,Suspension Pack,1987,453,12
+5256-1,Suspension Pack,1989,453,12
 5257-1,"Connector Pegs, Toggle Joints, and Wheels",1987,453,25
 5258-1,"Crown Wheels, Gear Racks, Point Wheels, Worm Gears",1987,453,10
 5259-1,"Universal Joint, Rubber Bands, and Wheels",1987,453,12
@@ -8721,7 +8726,7 @@ set_num,name,year,theme_id,num_parts
 5493-1,Emergency Rescue Box,2006,22,705
 5494-1,Rolling Duck,2003,505,4
 5497-1,Play with Numbers,2010,505,58
-55000-1,Universe - PC CD-ROM,2010,502,0
+55000-1,Universe - PC CD-ROM,2010,501,0
 55001-1,LEGO Universe Rocket,2010,560,56
 550-1,Basic Building Set,1985,467,577
 550-2,Windmill,1976,413,211
@@ -8977,8 +8982,8 @@ set_num,name,year,theme_id,num_parts
 5712-1,Stunt Rally - PC CD-ROM,2000,501,0
 5713-1,Stunt Rally - Playstation,2000,501,0
 5714-1,Alpha Team - PC CD-ROM,2000,501,0
-5715-1,My Style: Preschool - PC CD-ROM,2000,502,0
-5716-1,My Style: Kindergarden - PC CD-ROM,2000,502,0
+5715-1,My Style: Preschool - PC CD-ROM,2000,501,0
+5716-1,My Style: Kindergarden - PC CD-ROM,2000,501,0
 5719-1,Racers - Game Boy Color,2000,501,0
 5723-1,Creator: Knights' Kingdom - PC CD-ROM,2000,501,0
 5724-1,Stunt Rally - Game Boy Color,2000,501,0
@@ -9199,7 +9204,7 @@ set_num,name,year,theme_id,num_parts
 60010-1,Fire Helicopter,2013,58,225
 60011-1,Surfer Rescue,2013,55,32
 60012-1,Coast Guard 4 x 4,2013,55,128
-60013-1,Coast Guard Helicopter,2013,55,230
+60013-1,Coast Guard Helicopter,2013,55,232
 60014-1,Coast Guard Patrol,2013,55,450
 60015-1,Coast Guard Plane,2013,55,281
 60016-1,Tanker Truck,2013,63,191
@@ -9224,7 +9229,7 @@ set_num,name,year,theme_id,num_parts
 60033-1,Arctic Ice Crawler,2014,65,113
 60034-1,Arctic Helicrane,2014,65,262
 60035-1,Arctic Outpost,2014,65,374
-60036-1,Arctic Base Camp,2014,65,733
+60036-1,Arctic Base Camp,2014,65,735
 60040-1,Building Table,2007,501,0
 6004-1,Crossbow Cart,1997,195,21
 60041-1,Crook Pursuit,2014,61,38
@@ -9249,8 +9254,8 @@ set_num,name,year,theme_id,num_parts
 60060-1,Auto Transporter,2014,63,350
 60061-1,Airport Fire Truck,2014,53,326
 6006139-1,Best Friends Promotional Brick Set,2012,494,2
-60062-1,Arctic Icebreaker,2014,65,718
-60063-1,City Advent Calendar 2014,2014,208,218
+60062-1,Arctic Icebreaker,2014,65,720
+60063-1,City Advent Calendar 2014,2014,208,220
 60064-1,Arctic Supply Plane,2014,65,374
 60065-1,ATV Patrol,2015,61,59
 60066-1,Swamp Police Starter Set,2015,61,78
@@ -9277,13 +9282,13 @@ set_num,name,year,theme_id,num_parts
 60085-1,4x4 with Powerboat,2015,59,302
 60086-1,City Starter Set,2015,52,242
 60088-1,Fire Starter Set,2015,58,92
-60090-1,Deep Sea Scuba Scooter,2015,52,42
+60090-1,Deep Sea Scuba Scooter,2015,52,50
 6009-1,Black Knight,1992,188,24
 60091-1,Deep Sea Starter Set,2015,52,90
 60092-1,Deep Sea Submarine,2015,52,274
-60093-1,Deep Sea Helicopter,2015,52,388
-60095-1,Deep Sea Exploration Vessel,2015,52,718
-60096-1,Deep Sea Operation Base,2015,52,907
+60093-1,Deep Sea Helicopter,2015,52,390
+60095-1,Deep Sea Exploration Vessel,2015,52,720
+60096-1,Deep Sea Operation Base,2015,52,909
 60097-1,City Square,2015,63,1683
 60098-1,Heavy-Haul Train,2015,66,984
 60099-1,City Advent Calendar 2015,2015,208,278
@@ -9294,10 +9299,10 @@ set_num,name,year,theme_id,num_parts
 60103-1,Airport Air Show,2016,53,678
 60104-1,Airport Passenger Terminal,2016,53,694
 60105-1,Fire ATV,2016,58,64
-60106-1,Fire Starter Set,2016,58,90
+60106-1,Fire Starter Set,2016,58,92
 60107-1,Fire Ladder Truck,2016,58,214
 60108-1,Fire Response Unit,2016,58,257
-60109-1,Fire Boat,2016,58,415
+60109-1,Fire Boat,2016,58,417
 601-1,Petrol Pump,1978,67,13
 60110-1,Fire Station,2016,58,920
 6011-1,Black Knight's Treasure,1985,187,27
@@ -9329,7 +9334,7 @@ set_num,name,year,theme_id,num_parts
 6013-1,Samurai Swordsman,1998,434,13
 60131-1,Crooks Island,2016,61,244
 60132-1,Service Station,2016,63,515
-60133-1,City Advent Calendar 2016,2016,208,290
+60133-1,City Advent Calendar 2016,2016,208,292
 60134-1,People Pack - Fun in the Park,2016,52,159
 60135-1,ATV Arrest,2017,61,47
 60136-1,Police Starter Set,2017,61,80
@@ -9349,7 +9354,7 @@ set_num,name,year,theme_id,num_parts
 60150-1,Pizza Van,2017,63,249
 60151-1,Dragster Transporter,2017,52,333
 60152-1,Sweeper & Excavator,2017,56,299
-60153-1,People Pack - Fun At The Beach,2017,52,169
+60153-1,People Pack - Fun At The Beach,2017,52,171
 60154-1,Bus Station,2017,63,337
 60155-1,City Advent Calendar 2017,2017,208,248
 60156-1,Jungle Buggy,2017,614,53
@@ -9364,7 +9369,7 @@ set_num,name,year,theme_id,num_parts
 60162-1,Jungle Air Drop Helicopter,2017,614,1250
 60163-1,Coast Guard Starter Set,2017,55,76
 60164-1,Sea Rescue Plane,2017,55,141
-60165-1,4 x 4 Response Unit,2017,55,347
+60165-1,4 x 4 Response Unit,2017,55,349
 60166-1,Heavy-Duty Rescue Helicopter,2017,55,415
 60167-1,Coast Guard Head Quarters,2017,55,795
 60168-1,Sailboat Rescue,2017,55,196
@@ -9391,7 +9396,7 @@ set_num,name,year,theme_id,num_parts
 60186-1,Mining Heavy Driller,2018,56,294
 60188-1,Mining Experts Site,2018,56,883
 60190-1,Arctic Ice Glider,2018,65,50
-60191-1,Arctic Exploration Team,2018,65,70
+60191-1,Arctic Exploration Team,2018,65,72
 60192-1,Arctic Ice Crawler,2018,65,200
 60193-1,Arctic Air Transport,2018,65,277
 60194-1,Arctic Scout Truck,2018,65,322
@@ -9424,7 +9429,7 @@ set_num,name,year,theme_id,num_parts
 602-2,Fire Truck,1970,417,30
 60220-1,Garbage Truck,2019,52,90
 6022-1,Horse Cart,1984,199,43
-60221-1,Diving Yacht,2019,59,149
+60221-1,Diving Yacht,2019,59,151
 60222-1,Snow Groomer,2019,52,197
 60223-1,Harvester Transport,2019,57,358
 60224-1,Satellite Service Mission,2019,679,84
@@ -9470,8 +9475,8 @@ set_num,name,year,theme_id,num_parts
 60262-1,Passenger Airplane,2020,53,669
 60263-1,Ocean Mini Submarine,2020,52,41
 60264-1,Ocean Exploration Submarine,2020,52,286
-60265-1,Ocean Exploration Base,2020,52,497
-60266-1,Ocean Exploration Ship,2020,52,747
+60265-1,Ocean Exploration Base,2020,52,499
+60266-1,Ocean Exploration Ship,2020,52,749
 60267-1,Safari Off-roader,2020,64,168
 60268-1,City Advent Calendar 2020,2020,208,342
 60270-1,Police Brick Box,2020,61,301
@@ -9482,7 +9487,7 @@ set_num,name,year,theme_id,num_parts
 60274-1,Elite Police Lighthouse Arrest,2020,61,189
 60275-1,Police Helicopter,2021,61,51
 60276-1,Police Prisoner Transport,2021,61,244
-60277-1,Police Patrol Boat,2021,61,276
+60277-1,Police Patrol Boat,2021,61,278
 60279-1,Fire Hazard Truck,2021,58,88
 60280-1,Fire Ladder Truck,2021,58,88
 6028-1,Treasure Cart,1998,195,23
@@ -9510,7 +9515,7 @@ set_num,name,year,theme_id,num_parts
 6030-1,Catapult,1984,187,83
 60301-1,Wildlife Rescue Off-Roader,2021,52,159
 60302-1,Wildlife Rescue Operation,2021,52,525
-60303-1,City Advent Calendar 2021,2021,208,353
+60303-1,City Advent Calendar 2021,2021,208,351
 60304-1,Road Plates,2021,52,112
 60305-1,Car Transporter,2021,52,342
 60306-1,Shopping Street,2021,52,533
@@ -9526,7 +9531,7 @@ set_num,name,year,theme_id,num_parts
 6031640-1,Chima Promotional Pack,2013,571,1
 6031641-1,Lion Tribe Ripcord and Topper,2013,572,1
 6031645-1,City Promotional Pack,2013,501,0
-6031646-1,Duplo Memory Card Game 3 - Animal Memory,2013,502,15
+6031646-1,Duplo Memory Card Game 3 - Animal Memory,2013,504,15
 6032-1,Catapult Crusher,2000,197,57
 6032459-1,Friends (DVD),2012,501,0
 603-3,Vintage Car,1970,423,36
@@ -9618,11 +9623,11 @@ set_num,name,year,theme_id,num_parts
 6102148-1,Mixels Series 6 - Sealed Box,2015,580,0
 6103-1,Castle Mini Figures,1988,202,38
 6103-2,Knights,1984,202,25
-6104-1,Aquacessories,1996,307,26
+6104-1,Aquacessories,1996,307,28
 6105-1,Medieval Knights,1993,202,37
 6107-1,Recon Ray,1998,313,20
-6109-1,Sea Creeper,1998,313,79
-6110-1,Solo Sub,1998,312,25
+6109-1,Sea Creeper,1998,313,81
+6110-1,Solo Sub,1998,312,27
 611-1,Police Car,1973,421,19
 6111-1,Street Chase,2006,112,196
 611-2,Air Canada Jet Plane,1988,466,98
@@ -9644,7 +9649,7 @@ set_num,name,year,theme_id,num_parts
 6132-1,Red,2012,506,13
 6133-1,Race Day,2012,506,26
 6134-1,Siddeley Saves the Day,2012,506,34
-6135-1,Spy Shark,1996,311,60
+6135-1,Spy Shark,1996,311,62
 6136-1,My First Zoo,2011,632,60
 6136-2,My First Zoo (re-release),2014,632,60
 6137-1,My First Supermarket,2011,632,38
@@ -9652,26 +9657,26 @@ set_num,name,year,theme_id,num_parts
 6139025-1,Mixels Series 7 - Sealed Box,2016,580,0
 6139030-1,Mixels Series 8 - Sealed Box,2016,580,0
 6139034-1,Mixels Series 9 - Sealed Box,2016,580,0
-6140-1,Crab,1998,313,78
+6140-1,Crab,1998,313,80
 614-1,Excavator,1974,416,31
 6141-1,My First Farm,2012,632,62
 6142702-1,Fire Helmet,2020,501,0
 6143-1,Race Team,2012,504,34
 6144-1,Zoo Train,2012,634,12
-6145-1,Crystal Crawler,1996,308,96
+6145-1,Crystal Crawler,1996,308,98
 6146-1,Pick-up Truck,2012,504,17
-6150-1,Crystal Detector,1998,312,106
+6150-1,Crystal Detector,1998,312,108
 6151-1,Sleeping Beauty's Chamber,2012,640,16
 615-2,Fork Lift with Driver,1975,416,21
 6152-1,Snow White's Cottage,2012,640,28
 6153-1,Cinderella's Carriage,2012,640,20
 6154-1,Cinderella's Castle,2012,640,77
-6155-1,Deep Sea Predator,1995,311,104
+6155-1,Deep Sea Predator,1995,311,106
 6156-1,Photo Safari,2012,632,67
 6157-1,The Big Zoo,2012,632,147
 6158-1,Animal Clinic,2012,632,62
-6159-1,Crystal Detector,1998,312,105
-6160-1,Sea Scorpion,1998,313,305
+6159-1,Crystal Detector,1998,312,107
+6160-1,Sea Scorpion,1998,313,307
 616-1,Cargo Ship,1976,419,31
 6161-1,Brick Box,2007,22,221
 6162-1,A World of LEGO Mosaic 4 in 1,2007,277,286
@@ -9687,24 +9692,24 @@ set_num,name,year,theme_id,num_parts
 6171-1,My First Gas Station,2012,504,45
 6172-1,Zoo Truck,2012,632,8
 6173-1,Panda,2012,632,8
-6175-1,Crystal Explorer Sub,1995,308,165
+6175-1,Crystal Explorer Sub,1995,308,167
 6176-1,Basic Bricks - Deluxe,2008,505,80
 6176782-1,Escape the Space Slug,2016,158,161
 6177-1,Basic Bricks Deluxe,2008,22,650
 6178-1,My Town,2008,505,79
-6180-1,Hydro Search Sub,1998,312,297
+6180-1,Hydro Search Sub,1998,312,298
 618-1,Police Helicopter,1977,421,39
 6186-1,Build Your Own LEGO Harbor,2008,22,252
 6187-1,Road Construction Set,2008,22,300
-6190-1,Shark's Crystal Cave,1996,311,259
+6190-1,Shark's Crystal Cave,1996,311,261
 619-1,Rally Car,1977,423,23
 6191-1,Fire Fighter Building Set,2009,22,117
 6192-1,Pirates Building Set,2009,22,150
 6193-1,Castle Building Set,2009,22,137
 6194-1,My LEGO Town,2009,22,516
 6195-1,Neptune Discovery Lab,1995,308,507
-6198-1,Stingray Stormer,1998,313,413
-6199-1,Hydro Crystalization Station,1998,312,483
+6198-1,Stingray Stormer,1998,313,415
+6199-1,Hydro Crystalization Station,1998,312,485
 6200-1,Pirates Double Pack,1989,148,0
 6200-2,Evo,2012,401,36
 620-1,Fireman's Car,1978,67,33
@@ -9979,6 +9984,7 @@ set_num,name,year,theme_id,num_parts
 638-1,"Lots of Extra Basic Bricks, 3+",1996,473,404
 6381-1,Motor Speedway,1987,67,206
 6382-1,Fire Station,1981,67,396
+6382975-1,Tantive IV,2021,158,56
 6383-1,Public Works Center,1981,67,419
 6384-1,Police Station,1983,67,399
 6384212-1,Stuttgart Brand Store Opening Associate Figure,2021,408,129
@@ -10216,16 +10222,16 @@ set_num,name,year,theme_id,num_parts
 65542-1,Sweet Dreamy Jewels Click-N-Store Jewelry Set Co-Pack,2004,500,1
 65545-1,Ta-Metru Collector's Pack,2004,324,1
 65549-1,Bionicle Bonus Pack,2004,324,0
-6555-1,Sea Hunter,1997,86,32
-6556-1,Scuba Squad,1997,86,77
-6557-1,Treasure Hunters,1997,86,144
+6555-1,Sea Hunter,1997,86,34
+6556-1,Scuba Squad,1997,86,79
+6557-1,Treasure Hunters,1997,86,146
 65572-1,Spider-Man Co-Pack,2005,706,0
 65573-1,Rumble Racers,2005,112,0
 65579-1,Knights' Kingdom Value Pack,2004,198,1
 65580-1,Knights' Kingdom Value Pack,2004,198,1
-6558-1,Shark Cage Cove,1997,86,198
-6559-1,Deep Sea Bounty,1997,86,353
-6560-1,Diving Expedition Explorer,1997,86,478
+6558-1,Shark Cage Cove,1997,86,200
+6559-1,Deep Sea Bounty,1997,86,355
+6560-1,Diving Expedition Explorer,1997,86,482
 656-1,Car and Caravan,1974,423,49
 6561-1,Hot Rod Club,1994,67,242
 6562-1,Gas Stop Shop,1995,67,227
@@ -10243,11 +10249,11 @@ set_num,name,year,theme_id,num_parts
 6571-1,Flame Fighters,1994,67,433
 65716-1,Limited Edition Collector Pack with Vohtarak Sidorak and Life-Size Toa Hordika Mask (8742 8756),2004,324,0
 6572-1,Wind Runners,1998,87,52
-6573-1,Arctic Expedition,2000,51,121
+6573-1,Arctic Expedition,2000,51,123
 65743-1,City Construction Value Pack,2005,56,0
 6575-1,Polar Base,2000,51,441
 65757-1,Special Edition Guardian Toa,2005,324,0
-6576-1,Sledge,1998,51,24
+6576-1,Sledge,1998,51,26
 65766-1,Thomas Bridge & Tunnel Set,2005,631,15
 65767-1,Attack from the Sea,2005,198,0
 65768-1,Jayko Value Pack,2005,198,2
@@ -10285,7 +10291,7 @@ set_num,name,year,theme_id,num_parts
 6596-1,Wave Master,1995,67,134
 6597-1,Century Skyway,1994,67,905
 6598-1,Metro PD Station,1996,67,568
-6599-1,Shark Attack,1997,86,59
+6599-1,Shark Attack,1997,86,61
 6600-1,Police Patrol,1981,67,24
 6600-2,Highway Construction,2000,106,317
 660-1,Car with Plane Transporter,1975,423,41
@@ -10537,7 +10543,7 @@ set_num,name,year,theme_id,num_parts
 66596-1,Super Pack 2-in-1,2018,158,0
 66597-1,Super Pack 2-in-1,2018,158,0
 6660-1,Hook & Haul Wrecker,1989,67,53
-6661-1,Mobile TV Studio,1989,67,78
+6661-1,Mobile TV Studio,1989,67,79
 66614-1,City Vehicles Super Pack 3-in-1,2019,52,0
 66615-1,City / Classic Super Pack 3 in 1,2019,559,0
 66619-1,Super Pack 3-in-1,2019,52,0
@@ -10573,6 +10579,8 @@ set_num,name,year,theme_id,num_parts
 66677-1,2 in 1 Super Pack,2021,690,0
 66678-1,Marvel Studios – 6 Pack,2021,715,0
 6668-1,Recycle Truck,1992,67,109
+66682-1,City 3in1 Bundle Pack,2021,52,0
+66683-1,Creator 3in1 Bundle Pack,2021,672,0
 66684-1,Vehicles Gift Set,2021,52,6
 6669-1,Diesel Daredevil,1991,67,90
 6670-1,Rescue Rig,1993,67,114
@@ -11386,10 +11394,10 @@ set_num,name,year,theme_id,num_parts
 70903-1,The Riddler Riddle Racer,2017,708,254
 70904-1,Clayface Splat Attack,2017,708,448
 70905-1,The Batmobile,2017,708,581
-70906-1,The Joker Notorious Lowrider,2017,708,433
+70906-1,The Joker Notorious Lowrider,2017,708,434
 70907-1,Killer Croc Tail-Gator,2017,708,460
 70908-1,The Scuttler,2017,708,775
-70909-1,Batcave Break-in,2017,708,1047
+70909-1,Batcave Break-in,2017,708,1049
 709-1,Police Boat,1978,363,50
 70910-1,Scarecrow Special Delivery,2017,708,203
 7091-1,Knights' Catapult Defense,2007,193,123
@@ -11406,7 +11414,7 @@ set_num,name,year,theme_id,num_parts
 70920-1,Egghead Mech Food Fight,2018,708,293
 7092-1,Skeletons' Prison Carriage,2007,193,193
 70921-1,Harley Quinn Cannonball Attack,2018,708,425
-70922-1,The Joker Manor,2017,708,3445
+70922-1,The Joker Manor,2017,708,3446
 70923-1,The Bat-Space Shuttle,2018,708,638
 7093-1,Skeleton Tower,2007,193,400
 7094-1,King's Castle Siege,2007,193,974
@@ -11429,7 +11437,7 @@ set_num,name,year,theme_id,num_parts
 71000-5,Roman Emperor,2013,544,6
 71000-6,Policeman,2013,544,7
 71000-7,Chicken Suit Guy,2013,544,5
-71000-8,Roller Derby Girl,2013,544,7
+71000-8,Roller Derby Girl,2013,544,9
 71000-9,Fortune Teller,2013,544,7
 7100-1,Samsonite Large Educational Set,1963,523,0
 71001-0,Series 10 - Random Bag,2013,545,0
@@ -11535,7 +11543,7 @@ set_num,name,year,theme_id,num_parts
 71008-10,Evil Wizard,2015,551,10
 71008-11,Fencer,2015,551,6
 71008-12,Samurai,2015,551,8
-71008-13,Disco Diva,2015,551,8
+71008-13,Disco Diva,2015,551,10
 71008-14,Hot Dog Man,2015,551,5
 71008-15,Lady Cyclops,2015,551,6
 71008-16,Galaxy Trooper,2015,551,8
@@ -11631,7 +11639,7 @@ set_num,name,year,theme_id,num_parts
 71012-9,Daisy Duck,2016,555,6
 71013-0,Series 16 - Random Bag,2016,556,0
 71013-1,Ice Queen,2016,556,12
-71013-10,Penguin Boy,2016,556,7
+71013-10,Penguin Boy,2016,556,9
 71013-11,Rogue,2016,556,7
 71013-12,Dog Show Winner,2016,556,7
 71013-13,Mariachi,2016,556,7
@@ -11686,7 +11694,7 @@ set_num,name,year,theme_id,num_parts
 71017-22,The LEGO Batman Movie Series 1 - Sealed Box,2017,609,0
 71017-3,Fairy Batman,2017,609,8
 71017-4,Clan of the Cave Batman,2017,609,7
-71017-5,Vacation Batman,2017,609,8
+71017-5,Vacation Batman,2017,609,10
 71017-6,Barbara Gordon,2017,609,8
 71017-7,Commissioner Gordon,2017,609,7
 71017-8,The Joker – Arkham Asylum,2017,609,6
@@ -11737,7 +11745,7 @@ set_num,name,year,theme_id,num_parts
 71019-9,Misako,2017,618,6
 710-2,Lockable Storage Case,1966,501,1
 71020-0,The LEGO Batman Movie Series 2 - Random Bag,2018,711,0
-71020-1,Disco Harley Quinn,2018,711,8
+71020-1,Disco Harley Quinn,2018,711,10
 71020-10,Vacation Alfred,2018,711,8
 71020-11,Bat-Merch Batgirl,2018,711,9
 71020-12,Killer Moth,2018,711,7
@@ -11895,7 +11903,7 @@ set_num,name,year,theme_id,num_parts
 71027-1,Piñata Kid,2020,692,9
 71027-10,Martial Arts Boy,2020,692,6
 71027-11,Athlete,2020,692,8
-71027-12,Sea Rescuer,2020,692,12
+71027-12,Sea Rescuer,2020,692,14
 71027-13,Green Brick Suit Guy,2020,692,6
 71027-14,80's Musician,2020,692,6
 71027-15,Pajama Girl,2020,692,6
@@ -12252,21 +12260,21 @@ set_num,name,year,theme_id,num_parts
 71752-1,Ninja Sub Speeder,2021,435,356
 71753-1,Fire Dragon Attack,2021,435,564
 71754-1,Water Dragon,2021,435,737
-71755-1,Temple of the Endless Sea,2021,435,1060
-71756-1,Hydro Bounty,2021,435,1163
+71755-1,Temple of the Endless Sea,2021,435,1061
+71756-1,Hydro Bounty,2021,435,1165
 7176-1,Watermelon - Capespan Promotional,2007,22,21
 7177-1,Orange,2007,22,8
 7178-1,Chef,2007,22,5
 7179-1,Dunkan Bulk and Vapor,2010,401,89
 7180-1,B-wing at Rebel Control Center,2000,158,346
-7181-1,TIE Interceptor - UCS,2000,171,703
+7181-1,TIE Interceptor,2000,171,703
 7184-1,Trade Federation MTT,2000,158,466
 7186-1,Watto's Junkyard,2001,158,449
 7187-1,Escape from Dragon's Prison,2011,196,185
 7188-1,King's Carriage Ambush,2011,196,286
 7189-1,Mill Village Raid,2011,196,666
 7190-1,Millennium Falcon,2000,158,671
-7191-1,X-wing Fighter - UCS,2000,171,1304
+7191-1,X-wing Fighter,2000,171,1304
 7194-1,Yoda,2002,171,1076
 7195-1,Ambush in Cairo,2009,264,79
 7196-1,Chauchilla Cemetery Battle,2009,264,188
@@ -12699,7 +12707,7 @@ set_num,name,year,theme_id,num_parts
 75190-1,First Order Star Destroyer,2017,158,1416
 7519-1,Cool Room Frames,2003,500,131
 75191-1,Jedi Starfighter with Hyperdrive,2017,158,832
-75192-1,UCS Millennium Falcon,2017,171,7541
+75192-1,Millennium Falcon,2017,171,7541
 75193-1,Millennium Falcon Microfighter,2018,158,92
 75194-1,First Order TIE Fighter Microfighter,2018,158,91
 75195-1,Ski Speeder vs First Order Walker Microfighters,2018,158,216
@@ -12831,7 +12839,7 @@ set_num,name,year,theme_id,num_parts
 7531-1,The Ultimate Jewelry Collection,2004,500,152
 75311-1,Imperial Armored Marauder,2021,158,478
 75312-1,Boba Fett’s Starship,2021,158,600
-75313-1,AT-AT,2021,171,0
+75313-1,AT-AT,2021,171,6780
 75314-1,The Bad Batch Attack Shuttle,2021,158,969
 75315-1,Imperial Light Cruiser,2021,158,1336
 75316-1,Mandalorian Starfighter,2021,158,551
@@ -12840,6 +12848,7 @@ set_num,name,year,theme_id,num_parts
 75319-1,The Armorer's Mandalorian Forge,2021,158,258
 75320-1,Snowtrooper Battle Pack,2022,158,0
 7532-1,My Special Storage Space,2004,500,190
+75321-1,The Razor Crest Microfighter,2022,158,0
 75322-1,Hoth AT-ST,2022,158,0
 7533-1,Pretty in Pink Jewels-n-More,2005,500,67
 7534-1,Stylin' Citrus Jewels-n-More,2005,500,67
@@ -13033,7 +13042,7 @@ set_num,name,year,theme_id,num_parts
 76008-1,Iron Man vs. The Mandarin: Ultimate Showdown,2013,705,91
 76009-1,Superman: Black Zero Escape,2013,701,169
 760-1,Storage Cabinet,1985,443,5
-76010-1,Batman: The Penguin Face off,2014,697,137
+76010-1,Batman: The Penguin Face off,2014,697,139
 7601-1,LEGO Go-Kart Set,2006,22,42
 76011-1,Batman: Man-Bat Attack,2014,697,185
 76012-1,Batman: The Riddler Chase,2014,697,305
@@ -13052,7 +13061,7 @@ set_num,name,year,theme_id,num_parts
 76023-1,The Tumbler,2014,698,1873
 76025-1,Green Lantern vs. Sinestro,2015,700,176
 76026-1,Gorilla Grodd Goes Bananas,2015,700,348
-76027-1,Black Manta Deep Sea Strike,2015,700,389
+76027-1,Black Manta Deep Sea Strike,2015,700,391
 76028-1,Darkseid Invasion,2015,700,547
 76029-1,Iron Man vs. Ultron,2015,702,92
 76030-1,Avengers Hydra Showdown,2015,702,221
@@ -13073,7 +13082,7 @@ set_num,name,year,theme_id,num_parts
 76045-1,Kryptonite Interception,2016,700,307
 76046-1,Heroes of Justice: Sky High Battle,2016,700,518
 76047-1,Black Panther Pursuit,2016,696,288
-76048-1,Iron Skull Sub Attack,2016,702,335
+76048-1,Iron Skull Sub Attack,2016,702,338
 76049-1,Avenjet Space Mission,2016,702,524
 76050-1,Crossbones’ Hazard Heist,2016,696,180
 7605-1,Stegosaurus,2006,22,47
@@ -13146,7 +13155,7 @@ set_num,name,year,theme_id,num_parts
 76113-1,Spider-Man Bike Rescue,2019,706,243
 76114-1,Spider-Man's Spider Crawler,2019,706,426
 76115-1,Spider Mech vs. Venom,2019,706,612
-76116-1,Batman Batsub and the Underwater Clash,2019,697,183
+76116-1,Batman Batsub and the Underwater Clash,2019,697,185
 76117-1,Batman Mech vs. Poison Ivy Mech,2019,697,394
 76118-1,Mr. Freeze Batcycle Battle,2019,697,212
 76119-1,Batmobile: Pursuit of The Joker,2019,697,352
@@ -13274,6 +13283,7 @@ set_num,name,year,theme_id,num_parts
 76393-1,Harry Potter & Hermione Granger,2021,246,1673
 76394-1,"Fawkes, Dumbledore's Phoenix",2021,246,597
 76395-1,Hogwarts: First Flying Lesson,2021,246,262
+76399-1,Hogwarts Magical Trunk,2022,246,0
 7641-1,City Corner,2009,63,485
 7642-1,Garage,2009,63,958
 7643-1,Air Show Plane,2009,53,115
@@ -13295,7 +13305,7 @@ set_num,name,year,theme_id,num_parts
 7662-1,Trade Federation MTT,2007,158,1326
 7663-1,Sith Infiltrator,2007,158,310
 7664-1,TIE Crawler,2007,158,546
-7665-1,Republic Cruiser (Limited Edition - with R2-R7),2007,158,919
+7665-1,Republic Cruiser (Limited Edition - with R2-R7),2007,158,927
 7666-1,Hoth Rebel Base,2007,158,558
 7667-1,Imperial Dropship,2008,158,81
 7668-1,Rebel Scout Speeder,2008,158,82
@@ -13381,7 +13391,7 @@ set_num,name,year,theme_id,num_parts
 7735-1,Freight Train,1985,234,518
 7736-1,Coast Guard Quad Bike,2008,55,33
 7737-1,Coast Guard 4WD & Jet Scooter,2008,55,131
-7738-1,Coast Guard Helicopter and Life Raft,2008,55,448
+7738-1,Coast Guard Helicopter and Life Raft,2008,55,450
 7739-1,Coast Guard Patrol Boat and Tower,2008,55,446
 7740-1,Inter-City Passenger Train,1980,234,786
 7741-1,Police Helicopter,2008,61,94
@@ -13401,12 +13411,12 @@ set_num,name,year,theme_id,num_parts
 7755-1,Diesel Heavy Shunting Locomotive,1983,234,164
 7760-1,Diesel Shunter Locomotive,1980,234,155
 7770-1,Deep Sea Treasure Hunter,2007,310,79
-7771-1,Angler Ambush,2007,310,135
-7772-1,Lobster Strike,2007,310,224
-7773-1,Tiger Shark Attack,2007,310,341
-7774-1,Crab Crusher,2007,310,597
-7775-1,Aquabase Invasion,2007,310,854
-7776-1,The Shipwreck,2007,310,246
+7771-1,Angler Ambush,2007,310,137
+7772-1,Lobster Strike,2007,310,226
+7773-1,Tiger Shark Attack,2007,310,343
+7774-1,Crab Crusher,2007,310,601
+7775-1,Aquabase Invasion,2007,310,856
+7776-1,The Shipwreck,2007,310,248
 7777-1,Idea Book 7777,1981,497,1
 7778-1,Midi-Scale Millennium Falcon,2009,158,356
 7779-1,The Batman Dragster: Catwoman Pursuit,2006,697,93
@@ -13660,15 +13670,15 @@ set_num,name,year,theme_id,num_parts
 797-1,"2 large baseplates, gray/white",1971,473,2
 7971-1,Bad,2010,112,72
 7975-1,Large Bucket,2000,505,106
-7976-1,Ocean Speeder,2011,315,54
-7977-1,Seabed Strider,2011,315,105
-7978-1,Angler Attack,2011,315,201
+7976-1,Ocean Speeder,2011,315,56
+7977-1,Seabed Strider,2011,315,107
+7978-1,Angler Attack,2011,315,203
 7979-1,Castle Advent Calendar 2008,2008,211,176
 79801214-1,Legends of Chima: Quest for Chima,2015,497,5
 79801412-1,City: Freeze! Police!,2017,497,10
 798-1,"Baseplates, Green",1972,473,2
-7984-1,Deep Sea Raider,2011,315,265
-7985-1,City of Atlantis,2011,315,687
+7984-1,Deep Sea Raider,2011,315,267
+7985-1,City of Atlantis,2011,315,689
 7990-1,Cement Mixer,2007,56,213
 799-1,"Baseplate, Gray",1964,371,1
 7991-1,Recycle Truck,2007,63,206
@@ -13702,9 +13712,16 @@ set_num,name,year,theme_id,num_parts
 80023-1,Monkie Kid's Team Dronecopter,2021,693,1471
 80024-1,The Legendary Flower Fruit Mountain,2021,693,1949
 80025-1,Sandy's Power Loader Mech,2021,693,519
-80026-1,Pigsy’s Noodle Tank,2021,693,661
+80026-1,Pigsy’s Noodle Tank,2021,693,663
 80028-1,The Bone Demon,2021,693,1376
+80030-1,Monkie Kid's Staff Creations,2022,693,9
 8003-1,Volcano Climber,2000,16,35
+80031-1,Mei’s Dragon Car,2022,693,21
+80032-1,Chang’e Moon Cake Factory,2022,693,14
+80033-1,Evil Macaque’s Mech,2022,693,0
+80034-1,Nezha’s Fire Ring,2022,693,40
+80035-1,Monkie Kid's Galactic Explorer,2022,693,0
+80036-1,The City of Lanterns,2022,693,0
 8004-1,Dirt Bike,2000,16,32
 8005-1,Ice Explorer,2000,16,34
 8006-1,Swamp Craft,2000,16,25
@@ -13783,13 +13800,13 @@ set_num,name,year,theme_id,num_parts
 8053-1,Mobile Crane,2010,1,1289
 8054-1,Universal Building Set,1989,21,196
 8055-1,Universal Building Set with Motor,1986,21,188
-8056-1,Monster Crab Clash,2010,315,69
-8057-1,Wreck Raider,2010,315,65
-8058-1,Guardian of the Deep,2010,315,145
+8056-1,Monster Crab Clash,2010,315,71
+8057-1,Wreck Raider,2010,315,67
+8058-1,Guardian of the Deep,2010,315,152
 8059-1,Seabed Scavenger,2010,315,120
-8060-1,Typhoon Turbo Sub,2010,315,198
+8060-1,Typhoon Turbo Sub,2010,315,200
 806-1,Extra Plates Blue,1986,473,42
-8061-1,Gateway of the Squid,2010,315,356
+8061-1,Gateway of the Squid,2010,315,360
 806-2,Cowboy & Pony,1964,365,87
 8062-1,Universal Set with Storage Case,1994,21,410
 8063-1,Tractor with Trailer,2009,1,1100
@@ -13802,14 +13819,14 @@ set_num,name,year,theme_id,num_parts
 8070-1,Supercar,2011,1,1281
 807-1,Extra Plates Red,1986,473,42
 8071-1,Lift Truck,2011,1,593
-8072-1,Sea Jet,2010,315,24
+8072-1,Sea Jet,2010,315,31
 8073-1,Manta Warrior,2010,315,13
 8074-1,Universal Building Set with Flex System,1991,21,317
 80741919-1,Ninjago: Ninja vs. Hypnobrai,2012,497,6
-8075-1,Neptune Carrier,2010,315,479
-8076-1,Deep Sea Striker,2010,315,261
-8077-1,Atlantis Exploration HQ,2010,315,475
-8078-1,Portal of Atlantis,2010,315,1010
+8075-1,Neptune Carrier,2010,315,483
+8076-1,Deep Sea Striker,2010,315,263
+8077-1,Atlantis Exploration HQ,2010,315,477
+8078-1,Portal of Atlantis,2010,315,1012
 8079-1,Shadow Snapper,2010,315,245
 80791214-1,DC Comics Super Heroes: Enter The Dark Knight,2016,497,5
 80791412-1,DC Comics Super Heroes: Faster Than Lightning!,2018,497,4
@@ -14268,7 +14285,7 @@ set_num,name,year,theme_id,num_parts
 850595-1,Friends Notebook,2014,501,16
 850596-1,Heartlake City Playmat,2012,501,0
 850597-1,Friends Carry Case,2013,501,31
-850598-1,Legends of Chima Game Cards Binder,2013,502,0
+850598-1,Legends of Chima Game Cards Binder,2013,501,0
 850602-1,Cragger Key Chain,2013,503,0
 850607-1,Eris Key Chain,2013,503,0
 850608-1,Laval Key Chain,2013,503,0
@@ -14473,6 +14490,7 @@ set_num,name,year,theme_id,num_parts
 851463-1,Clone Trooper Key Chain,2007,503,0
 851464-1,Chewbacca Key Chain,2007,503,0
 851490-1,Lord Vladek Mask,2005,501,1
+851499-1,Knights' Kingdom Chess,2005,502,249
 851501-1,Kitchen Egg Timer,2005,501,0
 851502-1,Ice Cube Tray (Yellow),2007,501,0
 8515-1,RoboRider Wheels,2000,16,0
@@ -14490,7 +14508,7 @@ set_num,name,year,theme_id,num_parts
 851625-1,City Police Badge,2007,501,0
 851626-1,Police Officer Key Chain,2008,503,0
 851627-1,Key Chain Name Kit,2007,503,73
-851641-1,Memory Game,2007,502,0
+851641-1,Memory Game,2007,501,0
 851648-1,Magnetic Notepad,2007,501,0
 851652-1,Corkscrew and Bottle Opener,2006,501,0
 851653-1,Store & Carry Case,2006,501,0
@@ -14524,7 +14542,7 @@ set_num,name,year,theme_id,num_parts
 851853-1,Mr. Krabs Key Chain,2007,503,0
 851854-1,SpongeBob Minifigure Magnet Set,2006,501,9
 851855-1,Gift Wrap,2007,501,0
-851861-1,Vikings Chess Set,2006,502,206
+851861-1,Vikings Chess Set,2006,474,206
 851868-1,Belville Princess Crown,2007,501,0
 851873-1,Porcelain Picnic Tea Set,2007,501,0
 851875-1,Takadox Sword,2007,501,0
@@ -14575,7 +14593,7 @@ set_num,name,year,theme_id,num_parts
 851994-1,Manga Tutorial Set,2007,501,0
 851999-1,Hagrid Key Chain,2007,503,0
 852000-1,Hermione Key Chain,2007,503,0
-852001-1,Fantasy Era Castle Chess Set,2007,502,286
+852001-1,Fantasy Era Castle Chess Set,2007,193,286
 852003-1,Castle Skeleton Sword,2007,501,0
 852004-1,Castle Skeleton Shield,2007,501,0
 852005-1,Knight Hero Helmet,2007,501,0
@@ -14667,7 +14685,7 @@ set_num,name,year,theme_id,num_parts
 852283-1,Picture Frame,2008,501,0
 852286-1,Fashion Diary Stationery Set,2008,501,0
 852292-1,Duplo Activity Set,2008,501,0
-852293-1,Fantasy Era Castle Giant Chess Set,2008,502,2455
+852293-1,Fantasy Era Castle Giant Chess Set,2008,193,2455
 852294-1,Dwarf Helmet,2008,501,0
 852302-1,Agents Gadget Pen,2008,501,0
 852309-1,Light Up Brick Key Chain,2008,503,0
@@ -14755,7 +14773,7 @@ set_num,name,year,theme_id,num_parts
 852660-1,Ice Cube Tray (Blue),2008,501,0
 852666-1,Brick Wall Photo Display,2009,425,87
 852673-1,City Eraser Set,2009,501,0
-852676-1,Travel Game,2009,502,82
+852676-1,Travel Game,2009,501,82
 852678-1,Classic Shoulder Bag,2009,501,0
 852683-1,Belville Fairy Wash Towel,2009,501,0
 852685-1,Animal Puzzle,2009,504,5
@@ -14763,7 +14781,7 @@ set_num,name,year,theme_id,num_parts
 852689-1,Brick Sticky Notes,2009,501,0
 852690-1,Designers' Tool Set,2009,501,2
 852695-1,Bionicle Stationery Set,2009,501,0
-852696-1,Duplo Picture Lottery,2009,502,0
+852696-1,Duplo Picture Lottery,2009,504,0
 852697-1,Vintage Minifigure Collection Vol. 3,2009,535,22
 852701-1,Battle Pack Troll Warriors,2009,193,36
 852702-1,Battle Pack Dwarfs,2009,193,45
@@ -14794,8 +14812,8 @@ set_num,name,year,theme_id,num_parts
 852747-1,Battle Pack Pirates,2009,153,40
 852748-1,Pirates Coin Bank,2009,501,127
 852749-1,Pirates Soldier Key Chain,2009,503,0
-852750-1,Pirates Tic Tac Toe,2009,502,90
-852751-1,Pirates Chess,2009,502,285
+852750-1,Pirates Tic Tac Toe,2009,147,90
+852751-1,Pirates Chess,2009,147,285
 852753-1,Vintage Minifigure Collection Vol. 4,2009,535,25
 852754-1,Coin Bank,2009,501,0
 852759-1,Ruler,2009,443,1
@@ -14908,7 +14926,7 @@ set_num,name,year,theme_id,num_parts
 853108-1,Ninjago Headband,2011,501,0
 8531-1,Pohatu,2001,324,49
 853111-1,Exclusive Weapon Training Set - Limited Edition,2011,435,33
-853114-1,Ninjago Trading Card Holder,2011,502,1
+853114-1,Ninjago Trading Card Holder,2011,501,1
 853116-1,Boba Fett Key Chain,2011,503,0
 853118-1,Emperor Palpatine Key Chain,2011,503,0
 8531-2,Pohatu - With mini CD-ROM,2001,324,50
@@ -15316,7 +15334,7 @@ set_num,name,year,theme_id,num_parts
 853954-1,Ariel Key Chain,2019,503,0
 853955-1,Aurora Key Chain,2019,503,0
 853956-1,Creeper Key Chain,2019,503,0
-853958-1,Chicken Skater Pod,2019,229,37
+853958-1,Chicken Skater Pod,2019,229,39
 853960-1,2x6 Brick Key Chain,2019,503,0
 853961-1,Friends Activity Book,2019,497,0
 853963-1,Stop Sign Shield,2019,501,0
@@ -15330,7 +15348,7 @@ set_num,name,year,theme_id,num_parts
 853986-1,Customizable Weapon Set,2020,501,0
 853989-1,Celebration Bag Charm,2020,503,29
 853990-1,Easter Bunny House,2020,229,57
-853992-1,2 x 4 Black Metal Key Chain,2020,503,1
+853992-1,2 x 4 Black Metallic Key Chain,2020,503,1
 853993-1,2 x 4 Bright Blue Key Chain,2020,503,1
 853995-1,Crayon Girl Key Chain,2020,503,0
 853996-1,Jay Key Chain,2020,503,0
@@ -15386,7 +15404,7 @@ set_num,name,year,theme_id,num_parts
 854080-1,Peapod Girl Key Chain,2021,503,0
 854081-1,Llama Girl Key Chain,2021,503,0
 854082-1,Lady Liberty Key Chain,2021,503,0
-854083-1,Green Metallic Key Chain,2021,503,0
+854083-1,2x4 Green Metallic Key Chain,2021,503,0
 854084-1,2x4 White Metallic Key Chain,2021,503,1
 854085-1,Monkie Kid Key Chain,2021,503,0
 854086-1,Red Son Key Chain,2021,503,0
@@ -15437,7 +15455,7 @@ set_num,name,year,theme_id,num_parts
 8564-1,Lehvak,2002,324,40
 8565-1,Kohrak,2002,324,40
 8566-1,Onua Nuva,2002,324,41
-8567-1,Lewa Nuva,2002,324,35
+8567-1,Lewa Nuva,2002,324,37
 8568-1,Pohatu Nuva,2002,324,43
 8569-1,Krana,2002,324,25
 8570-1,Gali Nuva,2002,324,43
@@ -15480,7 +15498,7 @@ set_num,name,year,theme_id,num_parts
 8592-2,Turahk - With Shadow Kraata,2003,324,45
 8592-3,Turahk - With mini CD-ROM,2003,324,46
 8593-1,Makuta,2003,324,199
-8594-1,Jaller and Gukko,2003,324,168
+8594-1,Jaller and Gukko,2003,324,166
 8595-1,Takua and Pewku,2003,324,221
 8596-1,Takanuva,2003,324,199
 8597-1,Krana Nuva,2002,324,0
@@ -15527,11 +15545,11 @@ set_num,name,year,theme_id,num_parts
 8633-1,Mission 4: Speedboat Rescue,2008,302,342
 8634-1,Mission 5: Turbocar Chase,2008,302,497
 8635-1,Mission 6: Mobile Command Center,2008,302,1155
-8636-1,Mission 7: Deep Sea Quest,2008,302,521
+8636-1,Mission 7: Deep Sea Quest,2008,302,523
 8637-1,Mission 8: Volcano Base,2008,302,716
 8638-1,Spy Jet Escape,2011,269,339
 8639-1,Big Bentley Bust Out,2011,269,747
-8640-1,Polar Copter,1986,1,241
+8640-1,Polar Copter,1986,1,242
 8641-1,Flame Glider,2005,112,54
 8642-1,Monster Crusher,2005,112,43
 8643-1,Power Cruiser,2005,112,46
@@ -15580,7 +15598,7 @@ set_num,name,year,theme_id,num_parts
 8683-12,Ninja,2010,536,6
 8683-13,Spaceman,2010,536,8
 8683-14,Forestman,2010,536,8
-8683-15,Deep Sea Diver,2010,536,9
+8683-15,Deep Sea Diver,2010,536,11
 8683-16,Cowboy,2010,536,7
 8683-17,Series 1 - Complete - All Sets,2010,536,0
 8683-18,Series 1 - Sealed Box,2010,536,0
@@ -15783,7 +15801,7 @@ set_num,name,year,theme_id,num_parts
 8804-12,Werewolf,2011,539,6
 8804-13,Hazmat Guy,2011,539,6
 8804-14,Artist,2011,539,7
-8804-15,Ice Skater,2011,539,8
+8804-15,Ice Skater,2011,539,10
 8804-16,Crazy Scientist,2011,539,6
 8804-17,Series 4 - Complete - All Sets,2011,539,0
 8804-18,Series 4 - Sealed Box,2011,539,0
@@ -15793,7 +15811,7 @@ set_num,name,year,theme_id,num_parts
 8804-5,Surfer Girl,2011,539,6
 8804-6,Viking,2011,539,10
 8804-7,The Monster,2011,539,5
-8804-8,Hockey Player,2011,539,11
+8804-8,Hockey Player,2011,539,13
 8804-9,Street Skater,2011,539,8
 8805-0,Series 5 - Random Bag,2011,540,0
 8805-1,Graduate,2011,540,7
@@ -16027,7 +16045,7 @@ set_num,name,year,theme_id,num_parts
 891833-1,Jay,2018,435,13
 891834-1,Lloyd,2018,435,8
 891835-1,Sawyer,2018,435,11
-891836-1,Scooter,2018,435,10
+891836-1,Scooter,2018,435,12
 891837-1,Nya,2018,435,10
 891838-1,Buffer,2018,435,9
 891839-1,Cole,2018,435,22
@@ -16074,9 +16092,10 @@ set_num,name,year,theme_id,num_parts
 892177-1,Kai,2021,435,16
 892178-1,Poulerik,2021,435,10
 892179-1,Lloyd,2021,435,11
-892180-1,Cole,2021,435,9
-892181-1,Jay,2021,435,11
+892180-1,Cole,2021,435,15
+892181-1,Jay,2021,435,13
 892182-1,Maaray Guard,2021,435,8
+892183-1,Nya,2021,435,8
 8922-1,Gadunka,2007,324,176
 8923-1,Hydraxon,2007,324,165
 8924-1,Maxilos and Spinax,2007,324,256
@@ -16313,6 +16332,7 @@ set_num,name,year,theme_id,num_parts
 912175-1,AT-ST Raider,2021,158,53
 912176-1,Clone Turbo Tank,2021,158,57
 912177-1,Resistance A-Wing,2021,158,45
+912178-1,Republic Gunship,2021,158,51
 9122-1,Vehicles,1998,516,76
 9123-1,Supplementary Set,1999,516,56
 9124-1,Transportation Set,1999,516,31
@@ -16425,7 +16445,7 @@ set_num,name,year,theme_id,num_parts
 924-1,Space Transporter,1979,130,172
 9241-1,Wheels Set,2007,528,360
 9243-1,Doors Windows and Roof Tiles,2002,528,270
-9247-1,Community Workers,2005,533,244
+9247-1,Community Workers,2005,533,246
 9247-2,Community Workers,2006,533,248
 9248-1,Bonus Lego Basic Town,1998,534,0
 9249-1,BASIC Airport,1988,534,0
@@ -16445,7 +16465,7 @@ set_num,name,year,theme_id,num_parts
 9287-1,Bonus Lego Basic Town,1996,534,2542
 9290-1,Thematic Builder Set,1996,534,2
 9291-1,Medium Lego Dacta Basic Set,1997,534,0
-9293-1,Community Workers,1996,533,220
+9293-1,Community Workers,1996,533,222
 9-3,Magnetic Train Couplers,1977,456,4
 930-1,Red Bricks,1973,473,45
 9301-1,Road Signs,1999,533,172
@@ -16583,7 +16603,7 @@ set_num,name,year,theme_id,num_parts
 9516-1,Jabba’s Palace,2012,158,717
 951701-1,Policeman and Crook,2017,61,16
 951702-1,Workman and Wheelbarrow,2017,56,14
-951703-1,Diver and Shark,2017,59,11
+951703-1,Diver and Shark,2017,59,13
 951704-1,Firefighter Fred,2017,58,21
 9517-1,Measurement Activities,1995,516,60
 951805-1,Mountain Ranger & Quad Bike,2018,61,32
@@ -16598,7 +16618,7 @@ set_num,name,year,theme_id,num_parts
 951903-1,Gardener with Lawn Mower,2019,57,31
 951904-1,Police Officer with Jetpack,2019,61,16
 951905-1,Gyrocopter,2019,58,29
-951906-1,Cool Diver,2019,59,16
+951906-1,Cool Diver,2019,59,18
 951907-1,Police Buggy,2019,61,31
 951908-1,Astronaut,2019,679,18
 951909-1,Pizza Delivery Guy,2019,52,15
@@ -16613,10 +16633,10 @@ set_num,name,year,theme_id,num_parts
 952009-1,Clemmons With Fire Quad,2020,58,31
 952010-1,"Pete Python, Daredevil PI",2020,63,15
 952011-1,Duke DeTain,2020,61,17
-952012-1,Scuba Diver,2020,52,13
+952012-1,Scuba Diver,2020,52,15
 952016-1,Policeman and Robber,2020,61,10
 952018-1,Harl Hubbs with Tamping Rammer,2020,56,20
-952019-1,Scuba Diver and Shark,2020,52,12
+952019-1,Scuba Diver and Shark,2020,52,14
 952-1,Tractor,1978,4,322
 952101-1,Policeman and Helicopter,2021,61,31
 952102-1,Builder with Epic Digger,2021,56,21
@@ -16624,11 +16644,12 @@ set_num,name,year,theme_id,num_parts
 952104-1,Firefighter Bob with Equipment,2021,58,19
 952105-1,Doctor and Patient,2021,52,21
 952106-1,Sweeper,2021,52,32
-952107-1,Diver and Crab,2021,59,19
+952107-1,Diver and Crab,2021,59,21
 952108-1,Stuntman with Quad,2021,52,28
 952109-1,Police Officer with Dog,2021,61,7
 952110-1,Larry Jones - The Adventurer,2021,52,11
 952111-1,Builder and Traffic Light,2021,52,13
+952112-1,Jessica Sharpe and Lion Cub,2021,52,0
 9525-1,Pre Vizsla's Mandalorian Fighter,2012,158,403
 9526-1,Palpatine’s Arrest,2012,158,649
 9530-1,Letters Set,2008,516,156
@@ -17018,7 +17039,7 @@ set_num,name,year,theme_id,num_parts
 9781409312833-1,City: Busy Airport,2012,497,8
 9781409312840-1,City: Crooks on the Loose!,2012,497,8
 9781409314103-1,City: Big City Life,2012,497,8
-9781409314110-1,City: Harbour Activity Book,2013,497,9
+9781409314110-1,City: Harbour Activity Book,2013,497,11
 9781409333586-1,Star Wars: The Yoda Chronicles,2013,497,4
 9781409350545-1,Legends of Chima: Character Encyclopedia,2014,497,10
 9781452182315-1,We Just Click,2021,497,0
@@ -17113,7 +17134,7 @@ set_num,name,year,theme_id,num_parts
 9781789050455-1,Star Wars: Rebels Forever,2017,497,4
 9781789053074-1,Disney Princess: The Mystery Garden,2018,497,29
 9781797210711-1,Brick Playing Cards,2021,501,0
-9781797210735-1,2022 LEGO Wall Calendar,2021,501,0
+9781797214207-1,Space Stars,2021,501,0
 9781912564644-1,City: Join the Police,2018,497,10
 9781912564972-1,Ninjago: Annual 2019,2018,497,16
 9781912707782-1,Harry Potter: Sticker Scenes,2020,497,0
@@ -17142,6 +17163,7 @@ set_num,name,year,theme_id,num_parts
 9783-1,Infrared Transmitter with USB Cable,2001,520,1
 9783960801511-1,LEGO Life: Emoticons Sticker Book,2018,497,0
 9783960801825-1,DC Comics Super Heroes: 1001 Stickers Heroes vs Villains,2018,497,0
+9783960805823-1,Harry Potter: Rätselspaß für clevere Zauberer (Germany),2021,246,7
 9783960805847-1,Ninjago Legacy: Rätselspaß mit Garmadon,2021,497,10
 9784-1,Arctic Impact Challenge Kit,2001,398,1368
 9785-1,Robo Technology Set [Serial Cable],2003,507,220
@@ -17394,7 +17416,7 @@ CAPITOL-1,Capitol Building,2015,598,36
 CAPTAINMARVEL-1,Mini Captain Marvel Ship,2019,696,46
 CARROT-1,Sven's Carrot,2019,687,9
 casbon-1,Castle Bonus Pack,1998,186,0
-CASTLEBYERS-1,Castle Byers,2019,680,48
+CASTLEBYERS-1,Castle Byers,2019,680,50
 CCegg-1,Chupa Chups Egg with Surprise Lego Set,2003,459,0
 CELEB2015-1,Tatooine Mini-Build (Star Wars Celebration Version),2015,158,178
 CELEB2015MF-1,Mini Millennium Falcon,2015,158,20
@@ -17484,7 +17506,6 @@ DCSHDVD3-1,DC Comics Super Heroes: Justice League: Cosmic Clash (Blu-ray + DVD +
 DCSHDVD4-1,DC Comics Super Heroes: Justice League: Gotham City Breakout,2016,501,0
 DELMONTE1-1,Del Monte Building Kit,1971,523,0
 DesPeres-1,"LEGO Store Grand Opening Exclusive Set, West County Center, Des Peres, MO",2013,408,17
-DISABLED - DKSS-1,Standing Small,2009,501,0
 DOTSBOOK-1,DOTS: Friends Code Together,2021,497,38
 DOTS-MEGA-PACK-1,DOTS Collectible Tiles 41913-1 Mega Pack,2021,688,22
 DOTS-SERIES-1,DOTS Collectible Tiles Series 1,2020,688,16
@@ -17568,7 +17589,7 @@ fruit5-1,Melon - Hong Kong Lego Show Promotional,2007,22,9
 fruit6-1,Orange - Hong Kong Lego Show Promotional,2007,22,8
 fruit7-1,Pear - Hong Kong Lego Show Promotional,2007,22,11
 fruit8-1,Tree - Hong Kong Lego Show Promotional,2007,22,1
-G1753-1,Checkers,2006,502,24
+G1753-1,Checkers,2006,504,24
 GANYMEDE-1,Ganymede,2019,669,38
 GANYMEDE-2,Ganymede,2019,669,39
 GardenCity-1,"LEGO Store Grand Opening Exclusive Set, Roosevelt Field Mall, Garden City, NY",2010,408,88
@@ -17982,15 +18003,18 @@ Manchester-1,"LEGO Store Grand Opening Exclusive Set, Manchester, UK",2012,408,1
 MAY2013-1,Holocron Droid,2013,158,31
 MAYHEMSTARSHIP-1,Sweet Mayhem's Systar Starship!,2019,670,29
 MCALLEN-1,"Grand Opening LEGO Store McAllen, TX",2018,408,5
-McDR2-1,McDonald's Racers Car 2 - Monster Rad (EU),2009,112,4
+McDR1-1,McDonald's Racers Car 1 - Kurvencruiser (EU),2009,112,4
+McDR1US-1,6 x 2 Turbo (US),2009,112,4
+McDR2-1,Monster Rad (EU),2009,112,4
 McDR2US-1,Rally Fire,2009,112,4
 McDR3-1,Turbobooster (EU),2009,112,4
-McDR3US-1,Curve Cruiser,2009,112,3
-McDR4-1,LegoMcDonald's Racers Car 4 - Sportpfeil (EU),2009,112,4
-McDR4US-1,Circuit Star,2009,112,3
+McDR3US-1,Curve Cruiser,2009,112,4
+McDR4-1,Sportpfeil (EU),2009,112,4
+McDR4US-1,Circuit Star,2009,112,4
+McDR5US-1,Lap Star,2009,112,4
 McDR6US-1,EZ Rally,2009,112,4
 McDR7US-1,Curve Chaser,2009,112,4
-McDR8US-1,McDonald's Racers Car 8 - Sport Racer,2009,112,3
+McDR8US-1,Sport Racer,2009,112,4
 MESSENGERBAG-1,Minifigure Motion Messenger Bag,2021,501,0
 MESSENGERBAG-2,2 x 2 Building Brick Messenger Bag,2021,501,0
 MFCN-1,Chinese Minifig Collection Volume 1,2009,535,0
@@ -18206,7 +18230,6 @@ SWDVDBD-1,The Padawan Menace,2011,501,4
 swminifigs-1,Star Wars Minifig Packs 4-Pack,2000,158,0
 SWMP-1,Star Wars / M&M Mosaic - Promo Set,2005,158,5462
 SWORD-1,Light Sword,2021,501,0
-TANTIVE-IV-1,Tantive IV,2019,158,56
 tech007promo-1,Technic Figure Cyber Person Promotional Polybag - [Toy Fair Nuernberg Promotion 1998],1998,3,1
 TEDDYBEAR-1,Teddy Bear,2020,232,67
 tf05-1,Lego Toy Fair 2005 Star Wars V.I.P. Gala Set,2005,158,60
@@ -18289,7 +18312,7 @@ Vancouver-1,"LEGO Store Grand Opening Exclusive Set, Oakridge Centre, Vancouver,
 Victor-1,"LEGO Store Grand Opening Exclusive Set, Eastview Mall, Victor, NY",2012,408,15
 VIDIYO-TILES-1,VIDIYO Tiles,2021,713,80
 VIENNA-1,Big Opening Ceremony of LEGO Stores SCS,2013,408,17
-VIENNA-2,Big Opening Ceremony of LEGO Stores Donau Zentrum,2013,408,17
+VIENNA-2,Big Opening Ceremony of LEGO Stores Donau Zentrum,2013,408,19
 VISION-1,Vision Photo Signed by Paul Bettany,2021,501,0
 VP-1,Ice Planet Co-Pack of 6814 6879 and 6898,1995,133,0
 VP-10,Star Wars Value Pack with Free LEGO Backpack,2003,158,1
