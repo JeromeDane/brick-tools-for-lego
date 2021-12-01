@@ -36,7 +36,10 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             label="Sort by"
             prompt="Sort by"
             selectedValue={sortField}
-            onValueChange={(field: string) => setSortField(field)}>
+            onValueChange={(field: string) => {
+              setCurrentPage(0)
+              setSortField(field)
+            }}>
             <Picker.Item label="Set Number" value="setNumSort" />
             <Picker.Item label="Set Number (desc)" value="-setNumSort" />
             <Picker.Item label="Name" value="name" />
