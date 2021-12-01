@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react'
-import { Image, ScrollView, StyleSheet, ViewPropTypes } from 'react-native'
+import { ScrollView, StyleSheet } from 'react-native'
 import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
+import Image from '../components/Image'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
@@ -54,6 +55,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
               <View key={set.setNum} style={styles.theme}>
                 <Image
                   style={styles.image}
+                  width={100}
                   source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}} />
                 <View>
                   <Text>{set.setNum}</Text>
@@ -103,8 +105,6 @@ const styles = StyleSheet.create({
     paddingRight: 20
   },
   image: {
-    width: 100,
-    height: 100,
     backgroundColor: 'gray',
     marginRight: 10
   },
