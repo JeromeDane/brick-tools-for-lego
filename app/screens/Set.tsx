@@ -20,12 +20,10 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
           console.log(nativeEvent.layout.width)
           setViewWidth(nativeEvent.layout.width - 40)
         }}>
-        {viewWidth
-          ? <Image
-            width={viewWidth}
-            source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
-            style={{marginBottom: 20}} />
-          : null}
+        <Image
+          width={viewWidth}
+          source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
+          style={{marginBottom: 20}} />
         <View>
           <Text>{set.setNum}</Text>
           <Text>{set.name}</Text>

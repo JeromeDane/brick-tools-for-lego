@@ -10,20 +10,23 @@ interface ImageProps extends DefaultImageProps {
 
 const Image = (props: ImageProps) => {
   const { style, ...otherProps } = props,
-        [imageWidth, setImageWidth] = useState(props.width || 100),
-        [imageHeight, setImageHeight] = useState(props.height || 100)
+        [width, setImageWidth] = useState(props.width || 100),
+        [height, setImageHeight] = useState(props.height || 100)
   useEffect(() => {
     DefaultImage.getSize(props.source.uri, (width, height) => {
-      if (props.width && !props.height)
+      if(props.width && !props.height) {
         setImageHeight(height * (props.width / width))
-      else if (!props.width && props.height)
+        setImageWidth(props.width)
+      } else if(!props.width && props.height) {
+        setImageHeight(props.height)
         setImageWidth(width * (props.height / height))
+      }
     })
-  }, [])
+  }, [props.width, props.height])
   return <DefaultImage style={[{
     backgroundColor: Colors[useColorScheme()].background,
-    width: imageWidth,
-    height: imageHeight
+    width,
+    height
   }, style]} {...otherProps} />
 }
 
