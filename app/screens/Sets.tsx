@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
 import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
-import Image from '../components/Image'
+import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
@@ -58,7 +58,7 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
               <TouchableOpacity key={set.setNum} style={styles.set} onPress={() => {
                 navigate('Set', {id: set.setNum})
               }}>
-                <Image
+                <ScaledImage
                   style={styles.image}
                   width={100}
                   source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}} />

@@ -5,21 +5,25 @@ import useColorScheme from '../hooks/useColorScheme';
 
 type DefaultImageProps = React.ComponentProps<typeof DefaultImage>
 interface ImageProps extends DefaultImageProps {
-  source: {uri: string}
+  source: {uri: string},
+  maxWidth?: number,
+  maxHeight?: number
 }
 
-const Image = (props: ImageProps) => {
+const ScaledImage = (props: ImageProps) => {
   const { style, ...otherProps } = props,
         [width, setImageWidth] = useState(props.width || 100),
         [height, setImageHeight] = useState(props.height || 100)
   useEffect(() => {
-    DefaultImage.getSize(props.source.uri, (width, height) => {
+    DefaultImage.getSize(props.source.uri, (w, h) => {
       if(props.width && !props.height) {
-        setImageHeight(height * (props.width / width))
-        setImageWidth(props.width)
+        const newWidth = Math.min(props.width, props.maxWidth || Number.POSITIVE_INFINITY)
+        setImageHeight(h * (newWidth / w))
+        setImageWidth(newWidth)
       } else if(!props.width && props.height) {
-        setImageHeight(props.height)
-        setImageWidth(width * (props.height / height))
+        const newHeight = Math.min(props.height, props.maxHeight || Number.POSITIVE_INFINITY)
+        setImageHeight(newHeight)
+        setImageWidth(w * (newHeight / h))
       }
     })
   }, [props.width, props.height])
@@ -30,4 +34,4 @@ const Image = (props: ImageProps) => {
   }, style]} {...otherProps} />
 }
 
-export default Image
+export default ScaledImage

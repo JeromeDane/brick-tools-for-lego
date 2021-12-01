@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, } from 'react-native';
 
 import { Text, View } from '../components/Themed';
-import Image from '../components/Image'
+import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
@@ -16,16 +16,16 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
   return (
     <View>
       <ScrollView style={{padding: 20}}
-        onLayout={({nativeEvent}) => {
-          console.log(nativeEvent.layout.width)
+        onLayout={({nativeEvent}) =>
           setViewWidth(nativeEvent.layout.width - 40)
-        }}>
-        <Image
+        }>
+        <ScaledImage
           width={viewWidth}
+          maxWidth={500}
           source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
           style={{marginBottom: 20}} />
         <View>
-          <Text>{set.setNum}</Text>
+          <Text>Set number: {set.setNum}</Text>
           <Text>{set.name}</Text>
           <Text>{set.numParts.toLocaleString()} parts</Text>
           <Text>Released in {set.year}</Text>
