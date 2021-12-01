@@ -15,18 +15,11 @@ const linking: LinkingOptions<RootStackParamList> = {
     screens: {
       Root: {
         screens: {
-          Themes: {
-            screens: {
-              ThemesScreen: 'one',
-            },
-          },
-          Sets: {
-            screens: {
-              SetsScreen: 'two',
-            },
-          },
+          Themes: 'themes',
+          Sets: 'sets',
         },
       },
+      Set: 'set',
       Modal: 'modal',
       NotFound: '*',
     },

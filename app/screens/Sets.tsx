@@ -1,12 +1,12 @@
 import React, { useRef, useState } from 'react'
-import { ScrollView, StyleSheet } from 'react-native'
+import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
 import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import Image from '../components/Image'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
-export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
+export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProps<'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
@@ -55,7 +55,9 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             .sort(sortBy.apply(sortBy, sortField.split(',')))
             .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
             .map(set =>
-              <View key={set.setNum} style={styles.theme}>
+              <TouchableOpacity key={set.setNum} style={styles.set} onPress={() => {
+                navigate('Set', {id: set.setNum})
+              }}>
                 <Image
                   style={styles.image}
                   width={100}
@@ -66,7 +68,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
                   <Text>{set.numParts.toLocaleString()} parts</Text>
                   <Text>Released in {set.year}</Text>
                 </View>
-              </View>
+              </TouchableOpacity>
             )
           : <Text style={{textAlign: 'center'}}>
             No results match your search criteria
@@ -100,12 +102,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row-reverse',
     flexWrap: 'nowrap'
   },
-  theme: {
+  set: {
     flex: 1,
     flexDirection: 'row',
     textAlign: 'left',
     paddingVertical: 10,
-    paddingRight: 20
+    paddingRight: 20,
+    flexGrow: 1
   },
   image: {
     backgroundColor: 'gray',

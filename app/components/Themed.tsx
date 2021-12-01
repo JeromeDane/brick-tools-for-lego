@@ -3,7 +3,7 @@
  * https://docs.expo.io/guides/color-schemes/
  */
 
-import * as React from 'react';
+import React from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 import { Text as DefaultText, TouchableOpacity, View as DefaultView, TextInput as DefaultTextInput } from 'react-native';
 import {Picker as DefaultPicker, PickerProps} from '@react-native-picker/picker'

@@ -19,14 +19,12 @@ const Image = (props: ImageProps) => {
       else if (!props.width && props.height)
         setImageWidth(width * (props.height / height))
     })
-  }, [props.width, props.height, imageWidth, imageHeight])
-  return (imageWidth && imageHeight)
-    ? <DefaultImage style={[{
-        backgroundColor: Colors[useColorScheme()].background,
-        width: imageWidth,
-        height: imageHeight
-      }, style]} {...otherProps} />
-    : null
+  }, [])
+  return <DefaultImage style={[{
+    backgroundColor: Colors[useColorScheme()].background,
+    width: imageWidth,
+    height: imageHeight
+  }, style]} {...otherProps} />
 }
 
 export default Image
