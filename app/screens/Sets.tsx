@@ -6,7 +6,7 @@ import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
-  const [sortField, setSortField] = useState('setNum'),
+  const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
         [currentPage, setCurrentPage] = useState(0),
@@ -48,7 +48,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
         </View>
         {filteredSets.length
           ? filteredSets
-            .sort(sortBy(sortField))
+            .sort(sortBy.apply(sortBy, sortField.split(',')))
             .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
             .map(set =>
               <View key={set.setNum} style={styles.theme}>
