@@ -753,9 +753,14 @@ set_num,name,year,theme_id,num_parts
 10956-1,Amusement Park,2021,504,95
 10957-1,Fire Helicopter & Police Car,2021,504,16
 10958-1,Creative Birthday Party,2021,504,200
+10960-1,Belle's Ballroom,2022,504,0
 1096-1,Race Buggy,1997,87,23
 10961-1,Airplane & Airport,2021,632,28
+10964-1,Bath Time Fun: Floating Red Panda,2022,504,0
+10965-1,Bath Time Fun: Floating Animal Train,2022,504,0
+10966-1,Bath Time Fun: Floating Animal Island,2022,504,0
 1097-1,Res-Q Runner,1999,92,18
+10978-1,Creative Building Time,2022,504,0
 1098-1,Hang Glider,1998,87,19
 1099-1,Ninja Blaster,1999,434,24
 1-1,Bulldozer Chain Links,1982,453,50
@@ -2144,8 +2149,14 @@ set_num,name,year,theme_id,num_parts
 21173-1,The Sky Tower,2021,577,565
 21174-1,The Modern Treehouse,2021,577,909
 21176-1,The Jungle Abomination,2021,577,496
+21177-1,The Creeper Ambush,2022,577,0
+21178-1,The Fox Lodge,2022,577,0
+21179-1,The Mushroom House,2022,577,0
+21180-1,The Guardian Battle,2022,577,0
 211803-1,Batman,2018,708,9
 211804-1,Harley Quinn,2018,708,7
+21181-1,The Rabbit Ranch,2022,577,0
+21183-1,The Training Grounds,2022,577,0
 211901-1,Batman,2019,697,7
 211902-1,Robin,2019,697,7
 211903-1,Superman and Kryptonite,2019,701,10
@@ -3478,6 +3489,7 @@ set_num,name,year,theme_id,num_parts
 30412-1,Park Picnic,2020,494,44
 30413-1,Flower Cart,2021,494,55
 30414-1,Emma's Magical Box,2021,494,67
+30416-1,Market Stall,2022,494,0
 304-2,Tractor & Trailer,1964,373,82
 30420-1,Harry Potter and Hedwig: Owl Delivery,2020,246,31
 30421-1,Skybound Plane,2016,435,30
@@ -3488,6 +3500,7 @@ set_num,name,year,theme_id,num_parts
 30426-1,Stealthy Swamp Airboat,2017,435,43
 30427-1,Ice Tank,2017,616,71
 30428-1,Green Ninja Mech Dragon,2017,616,60
+30433-1,Volvo Wheel Loader,2022,1,0
 30446-1,The Batmobile,2016,700,63
 30447-1,Captain America's Motorcycle,2016,696,25
 30448-1,Spider-Man vs. The Venom Symbiote,2016,706,49
@@ -3514,6 +3527,7 @@ set_num,name,year,theme_id,num_parts
 3048-1,Medium Idea Bucket,2000,505,49
 3048-2,Medium Idea Bucket,2000,505,51
 3049-1,XL Idea Bucket,2000,505,78
+30495-1,AT-ST,2022,158,0
 30496-1,U-Wing Fighter,2017,158,55
 30497-1,First Order Heavy Assault Walker,2017,158,54
 30498-1,Imperial AT-Hauler,2018,158,49
@@ -3563,6 +3577,7 @@ set_num,name,year,theme_id,num_parts
 30557-1,Photo Holder Cube,2021,688,109
 30558-1,Raya and the Ongi,2021,608,49
 3056-1,Go-Kart,1998,50,23
+30562-1,Monkie Kid's Underwater Journey,2022,693,0
 30563-1,Build Your Own Snail With Superpowers,2021,621,36
 30564-1,Build Your Own Monster or Vehicles,2021,621,60
 30565-1,Birthday Clown,2021,22,59
@@ -3583,6 +3598,7 @@ set_num,name,year,theme_id,num_parts
 30579-1,Easter Chick Egg,2021,229,52
 30580-1,Santa Claus,2021,227,69
 3058-1,Busy City - Master Builders (Masterbuilders),2000,497,74
+30588-1,Kids’ Playground,2022,52,0
 3059-1,Mars Mission - Master Builders (Masterbuilders),2000,497,90
 30591-1,Titanium Mini Mech,2021,435,77
 30601-1,Scooby-Doo,2016,603,2
@@ -3606,7 +3622,7 @@ set_num,name,year,theme_id,num_parts
 30620-1,Star-Stuck Emmet,2019,670,41
 30623-1,SHAZAM!,2019,695,5
 30624-1,Obi-Wan Kenobi - Collectible Minifigure,2019,158,12
-30625-1,Luke Skywalker with Blue Milk,2021,158,6
+30625-1,Luke Skywalker with Blue Milk,2022,158,6
 30628-1,The Monster Book of Monsters,2020,246,320
 3063-1,Heartlake Flying Club,2012,494,197
 3065-1,Olivia’s Tree House,2012,494,214
@@ -5206,12 +5222,22 @@ set_num,name,year,theme_id,num_parts
 40512-1,Fun and Funky VIP Add On Pack,2021,598,148
 40513-1,Spooky VIP Add On Pack,2021,598,119
 40514-1,Winter Wonderland VIP Add On Pack,2021,598,139
-40515-1,Pirates and Treasure VIP Add On Pack,2021,598,103
+40515-1,Pirates and Treasure VIP Add On Pack,2022,598,103
 40516-1,Everyone Is Awesome,2021,673,346
+40518-1,High-Speed Train,2022,22,0
+40519-1,New York Postcard,2022,22,0
+40520-1,Beijing Postcard,2022,22,0
 4052-1,Director,2001,273,4
 40521734-1,Friends: Girls Rock Lunch Box,2019,501,0
+40524-1,Sunflowers,2022,22,0
 4053-1,Cameraman,2001,273,5
+40539-1,Ahsoka Tano,2022,610,0
+40540-1,Lion Dance Guy,2022,610,0
+40543-1,St. Bernard,2022,610,0
+40544-1,French Bulldog,2022,610,0
 4055-1,Medium Bucket,1997,399,329
+40557-1,Defence of Hoth,2022,158,0
+40558-1,Clone Trooper Command Station,2022,158,0
 4056-1,Color Light,2001,273,13
 40561734-1,Friends: Girls Rock Drinking Bottle,2019,501,0
 4057-1,Spot Light,2001,273,10
@@ -5852,6 +5878,14 @@ set_num,name,year,theme_id,num_parts
 4169306b-1,Snowman Ornament,2005,227,36
 4169306c-1,Santa Claus Ornament,2005,227,36
 41693-1,Surfer Beachfront,2021,494,685
+41695-1,Pet Clinic,2022,494,0
+41697-1,Turtle Protection Vehicle,2022,494,0
+41700-1,Beach Glamping,2022,494,0
+41701-1,Street Food Market,2022,494,0
+41702-1,Canal Houseboat,2022,494,0
+41703-1,Friendship Tree House,2022,494,0
+41704-1,Main Street Building,2022,494,0
+41707-1,Tree-Planting Vehicle,2022,494,0
 4171-1,Spot & Friends,2001,674,53
 4172-1,Tina's House,2001,674,44
 417-3,Cornerbricks (The Building Toy),1966,371,5
@@ -5945,6 +5979,11 @@ set_num,name,year,theme_id,num_parts
 41939-1,Bag Tag Dragon,2021,688,82
 41940-1,Bag Tag Unicorn,2021,688,80
 4194-1,Whitecap Bay,2011,263,751
+41943-1,Gamer Bracelet with Charms,2022,688,0
+41944-1,Candy Kitty Bracelet & Bag Tag,2022,688,0
+41945-1,Neon Tiger Bracelet & Bag Tag,2022,688,0
+41946-1,Extra DOTS – Series 6,2022,688,0
+41948-1,Cute Banana Pen Holder,2022,688,0
 4195-1,Queen Anne's Revenge,2011,263,1097
 4195641-1,Star Wars Co-Pack,2002,158,0
 41999-1,4 x 4 Crawler Exclusive Edition,2013,1,1584
@@ -6109,6 +6148,11 @@ set_num,name,year,theme_id,num_parts
 4213-1,Super Set 200,1998,470,519
 42131-1,Cat D11 Bulldozer,2021,1,3854
 4213160-1,Xtreme Skateboard Key Chain,2003,503,0
+42132-1,Motorcycle,2022,1,0
+42134-1,Monster Jam Megalodon,2022,1,0
+42135-1,Monster Jam El Toro Loco,2022,1,0
+42137-1,Formula E Porsche 99X Electric,2022,1,0
+42138-1,Ford Mustang Shelby GT500,2022,1,0
 4214-1,Medium Bucket,1998,470,264
 4215-1,Starter Set 300,1998,470,264
 4215789-1,Bionicle Rahkshi Buildable Watch,2003,501,22
@@ -6304,9 +6348,13 @@ set_num,name,year,theme_id,num_parts
 43195-1,Belle and Rapunzel's Royal Stables,2021,579,254
 43196-1,Belle and the Beast's Castle,2021,579,505
 43197-1,The Ice Castle,2021,687,1709
+43198-1,Anna’s Castle Courtyard,2022,687,0
+43199-1,Elsa’s Castle Courtyard,2022,687,0
 43200-1,Antonio's Magical Door,2021,608,98
 43201-1,Isabela's Magical Door,2021,608,113
 43202-1,The Madrigal House,2021,608,586
+43203-1,"Aurora, Merida and Tiana’s Enchanted Creations",2022,579,0
+43208-1,Jasmine and Mulan’s Adventure,2022,579,0
 432-1,Road Signs (The Building Toy),1966,371,8
 433-1,6 Street Lamps with Curved Top (The Building Toy),1966,371,6
 4335-1,Black Robots Pod,2004,478,50
@@ -7943,7 +7991,7 @@ set_num,name,year,theme_id,num_parts
 5006002-1,Illustration Wooden Toy Hen and Chicks,2019,683,0
 5006003-1,Australian Patent LEGO Minifigure 1977,2019,683,0
 5006004-1,"1st Edition Print British Patent, 1968",2020,683,0
-5006005-1,Yellow Spread LEGO System Brochure 1958,2019,683,0
+5006005-1,Yellow Spread LEGO System Brochure 1958,2021,683,0
 5006006-1,German Patent LEGO Toy Car 1963,2020,683,0
 5006007-1,Japanese Patent LEGO DUPLO Brick 1968 Art Print,2019,683,1
 5006008-1,VIP Gifting Set,2019,501,0
@@ -8031,6 +8079,7 @@ set_num,name,year,theme_id,num_parts
 5006307-1,"Fiat Art Print: ""Modern""",2020,501,0
 5006309-1,"Fiat Art Print: ""Florentine""",2020,501,0
 5006310-1,"Fiat Art Print: ""Nuova Russo""",2020,501,0
+5006328-1,Storage Brick Drawer (4-Stud Dark Bluish Gray),2021,501,0
 5006329-1,Storage Brick Drawer (8-Stud Dark Bluish Gray),2021,501,0
 5006330-1,VIP Metal Key Chain,2020,503,0
 5006355-1,Small Brick Backpack (Blue),2021,501,0
@@ -9506,7 +9555,7 @@ set_num,name,year,theme_id,num_parts
 60292-1,Town Center,2021,52,791
 60293-1,Stunt Park,2021,52,170
 60294-1,Stunt Show Truck,2021,52,420
-60295-1,Stunt Show Arena,2021,52,667
+60295-1,Stunt Show Arena,2021,52,668
 60296-1,Wheelie Stunt Bike,2021,52,14
 60297-1,Demolition Stunt Bike,2021,52,12
 60298-1,Rocket Stunt Bike,2021,52,14
@@ -9526,18 +9575,39 @@ set_num,name,year,theme_id,num_parts
 60310-1,Chicken Stunt Bike,2021,52,10
 6031-1,Fright Force,1998,195,28
 60311-1,Fire Stunt Bike,2021,52,11
+60312-1,Police Car,2022,52,0
 6031370-1,The Stig Key Chain,2012,503,0
+60314-1,Ice Cream Truck Police Chase,2022,52,0
+60315-1,Police Mobile Command Truck,2022,52,0
+60316-1,Police Station,2022,52,0
 6031636-1,Friends Promotional Pack,2013,494,4
 6031640-1,Chima Promotional Pack,2013,571,1
 6031641-1,Lion Tribe Ripcord and Topper,2013,572,1
 6031645-1,City Promotional Pack,2013,501,0
 6031646-1,Duplo Memory Card Game 3 - Animal Memory,2013,504,15
+60317-1,Police Chase at the Bank,2022,52,0
+60318-1,Fire Helicopter,2022,52,0
+60319-1,Fire Rescue & Police Chase,2022,52,0
+60320-1,Fire Station,2022,52,0
 6032-1,Catapult Crusher,2000,197,57
+60321-1,Fire Brigade,2022,52,0
+60322-1,Race Car,2022,52,0
+60323-1,Stunt Plane,2022,52,0
+60324-1,Mobile Crane,2022,52,0
 6032459-1,Friends (DVD),2012,501,0
+60325-1,Cement Mixer Truck,2022,52,0
+60326-1,Picnic in the Park,2022,52,0
+60327-1,Horse Transporter,2022,52,0
+60328-1,Beach Lifeguard Station,2022,52,0
+60329-1,School Day,2022,52,0
 603-3,Vintage Car,1970,423,36
+60330-1,Hospital,2022,52,0
 6033-1,Treasure Transport,1998,434,60
 6034-1,Black Monarch's Ghost,1990,188,48
+60343-1,Rescue Helicopter Transport,2022,52,0
+60350-1,Lunar Research Base,2022,52,0
 6035-1,Castle Guard,1987,187,52
+60351-1,Rocket Launch Center,2022,52,0
 6036-1,Skeleton Surprise,1995,201,74
 6037-1,Witch's Windship,1997,195,60
 6038-1,Wolfpack Renegades,1992,203,98
@@ -12262,8 +12332,17 @@ set_num,name,year,theme_id,num_parts
 71754-1,Water Dragon,2021,435,737
 71755-1,Temple of the Endless Sea,2021,435,1061
 71756-1,Hydro Bounty,2021,435,1165
+71757-1,Lloyd's Ninja Mech,2022,435,0
+71760-1,Jay’s Thunder Dragon EVO,2022,435,0
 7176-1,Watermelon - Capespan Promotional,2007,22,21
+71761-1,Zane’s Power Up Mech EVO,2022,435,0
+71762-1,Kai’s Fire Dragon EVO,2022,435,0
+71763-1,Lloyd’s Race Car EVO,2022,435,0
+71765-1,Ninja Ultra Combo Mech,2022,435,0
+71766-1,Lloyd’s Legendary Dragon,2022,435,0
+71767-1,Ninja Dojo Temple,2022,435,0
 7177-1,Orange,2007,22,8
+71776-1,Jay and Nya's Race Car EVO,2022,435,0
 7178-1,Chef,2007,22,5
 7179-1,Dunkan Bulk and Vapor,2010,401,89
 7180-1,B-wing at Rebel Control Center,2000,158,346
@@ -13246,6 +13325,7 @@ set_num,name,year,theme_id,num_parts
 76202-1,Wolverine Mech Armor,2022,696,0
 76203-1,Iron Man Mech Armor,2022,696,0
 76204-1,Black Panther Mech Armor,2022,696,0
+76205-1,Gargantos Showdown,2022,696,0
 76206-1,Iron Man Figure,2022,696,0
 7621-1,Indiana Jones and the Lost Tomb,2008,264,277
 7622-1,Race for the Stolen Treasure,2008,264,275
@@ -13714,14 +13794,14 @@ set_num,name,year,theme_id,num_parts
 80025-1,Sandy's Power Loader Mech,2021,693,519
 80026-1,Pigsy’s Noodle Tank,2021,693,663
 80028-1,The Bone Demon,2021,693,1376
-80030-1,Monkie Kid's Staff Creations,2022,693,9
+80030-1,Monkie Kid's Staff Creations,2022,693,308
 8003-1,Volcano Climber,2000,16,35
-80031-1,Mei’s Dragon Car,2022,693,21
-80032-1,Chang’e Moon Cake Factory,2022,693,14
+80031-1,Mei’s Dragon Car,2022,693,449
+80032-1,Chang’e Moon Cake Factory,2022,693,610
 80033-1,Evil Macaque’s Mech,2022,693,0
-80034-1,Nezha’s Fire Ring,2022,693,40
+80034-1,Nezha’s Fire Ring,2022,693,930
 80035-1,Monkie Kid's Galactic Explorer,2022,693,0
-80036-1,The City of Lanterns,2022,693,0
+80036-1,The City of Lanterns,2022,693,2137
 8004-1,Dirt Bike,2000,16,32
 8005-1,Ice Explorer,2000,16,34
 8006-1,Swamp Craft,2000,16,25
@@ -14872,7 +14952,7 @@ set_num,name,year,theme_id,num_parts
 852941-1,Nizam Key Chain,2010,503,0
 852942-1,Prince of Persia Magnet Set,2010,501,23
 852944-1,Luke Skywalker Key Chain,2010,503,0
-852945-1,Kit Fisto Key Chain,2021,503,0
+852945-1,Kit Fisto Key Chain,2010,503,0
 852946-1,R4-P44 Key Chain,2010,503,0
 852947-1,"Magnet Set, Star Wars - Kit Fisto, Barriss Offee, Captain Jag",2010,501,19
 852948-1,Female Minifigure Magnet Set,2010,501,20

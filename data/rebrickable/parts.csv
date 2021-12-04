@@ -1762,6 +1762,7 @@ part_num,name,part_cat_id,part_material
 11439pat0002,Weapon Sword with Jagged Edges and Marbled Trans Medium Blue Pattern,27,Plastic
 11439pat0003,Weapon Sword with Jagged Edges and Marbled White Pattern,27,Plastic
 11439pat0004,Weapon Sword with Jagged Edges and Marbled Trans Black Pattern,27,Plastic
+11439pat0005,Weapon Sword with Jagged Edges and Marbled Yellowish-Green Pattern,27,Plastic
 11455,Technic Pin Connector Perpendicular 2 x 4 Bent - Beam with 90 Hole Ø 4.8,12,Plastic
 11458,Plate Special 1 x 2 with Pin Hole on Top,9,Plastic
 11459,Equipment Plunger (Soft Plastic) [Plain],27,Plastic
@@ -2980,8 +2981,6 @@ part_num,name,part_cat_id,part_material
 15118,Ladder 16 x 2.5,32,Plastic
 15144,Sticker Sheet 1 for Set 10240-1,58,Plastic
 1516cdb01,"Backdrop, Fabuland Theatre Print",17,Cardboard/Paper
-1517pr0001,"Plate Special Book 11 x 16 with 2 x 4 Studs on 1 Edge, Hole with 'Antonia',  Animals on Dark Turquoise Background print",9,Plastic
-1517pr0002,"Plate Special Book 11 x 16 with 2 x 4 Studs on 1 Edge, Hole with 'Isabella', Gil on Bright Pink Background print",9,Plastic
 15207,Panel 1 x 4 x 1 with Rounded Corners [Thin Wall],23,Plastic
 15208,Plate Special 1 x 2 with Three Teeth [Tri-Tooth],9,Plastic
 15209,Plate 1 x 2 Special with Two Vertical Teeth,9,Plastic
@@ -3223,14 +3222,14 @@ part_num,name,part_cat_id,part_material
 15532,Equipment Ball and Chain with 1 x 1 Round Plate,27,Plastic
 15533,Brick Special 1 x 4 with Masonry Brick Profile,5,Plastic
 15534,Tool Grappling Hook with 90° Shaft,27,Plastic
-15535,Tile 2 x 2 Round with Hole,15,Plastic
-15535pr0001,Tile 2 x 2 Round with Hole w Turbine print,15,Plastic
-15535pr0002,Tile 2 x 2 Round with Hole and Propeller with 3 Blades Print,15,Plastic
-15535pr0004,"Tile 2 x 2 Round with Hole with Orange Circles, Dark Bluish Gray Circuity prin",15,Plastic
-15535pr0005,"Tile 2 x 2 Round with Hole with Blue Circles, Dark Bluish Gray Circuity print",15,Plastic
-15535pr0006,Tile 2 x 2 Round with Hole and Donut with Brown Icing Print,15,Plastic
-15535pr0007,Tile 2 x 2 Round with Hole and Donut with Pink Icing Print,15,Plastic
-15535pr0008,Tile 2 x 2 Round with Hole and Tamborine Print,15,Plastic
+15535,Tile Round 2 x 2 with Hole,15,Plastic
+15535pr0001,Tile Round 2 x 2 with Hole w Turbine print,15,Plastic
+15535pr0002,Tile Round 2 x 2 with Hole and Propeller with 3 Blades Print,15,Plastic
+15535pr0004,"Tile Round 2 x 2 with Hole with Orange Circles, Dark Bluish Gray Circuity prin",15,Plastic
+15535pr0005,"Tile Round 2 x 2 with Hole with Blue Circles, Dark Bluish Gray Circuity print",15,Plastic
+15535pr0006,Tile Round 2 x 2 with Hole and Donut with Brown Icing Print,15,Plastic
+15535pr0007,Tile Round 2 x 2 with Hole and Donut with Pink Icing Print,15,Plastic
+15535pr0008,Tile Round 2 x 2 with Hole and Tamborine Print,15,Plastic
 15536,Train Front 6 x 14 x 7 1/3,47,Plastic
 15537,Glass For Train Front 6 x 14 x 7 1/3,47,Plastic
 1553pr0001,Modulex Window 1 x 5 x 3 with White Border Print,66,Plastic
@@ -5128,6 +5127,7 @@ part_num,name,part_cat_id,part_material
 21019c00pat004pr2056,"Legs and Hips with Black Boots Pattern with Bright Light Orange Robe End, White Knee Straps and Sash Belt Print",61,Plastic
 21019c00pat004pr2057,"Legs and Hips with Black Boots Pattern, Gold and Black Belt, Gold Knee Straps, and Gold Toes Print",61,Plastic
 21019c00pat004pr2122,Legs and Hips with Black Boots Pattern with Metallic Silver Belt and Stripes Print,61,Plastic
+21019c00pat004pr6397,"Legs and Hips with Black Boots Pattern, Dark Turquoise Pockets and Belt, White and Yellow Knees and Toes Print",61,Plastic
 21019c00pat004pr9923,"Legs and Hips with Black Boots Pattern and Jacket / Coat, Pockets, Belt Print",61,Plastic
 21019c00pat004pr9930,Legs and Hips with Black Boots Pattern with Black and Dark Bluish Gray Print and Gun Print on Right Side (Winter Soldier),61,Plastic
 21019c00pat004pr9931,"Legs and Hips with Black Boots Pattern with Dark Brown Pockets, Blue Sash (Wong)",61,Plastic
@@ -6509,6 +6509,7 @@ part_num,name,part_cat_id,part_material
 24309pr0005,"Slope Curved 3 x 2 No Studs with Dark Blue Stripes, Droid Decoration",37,Plastic
 24309pr0006,"Slope Curved 3 x 2 No Studs with Hatch, Red Triangle print",37,Plastic
 24309pr0007,"Slope Curved 3 x 2 No Studs with Silver Square, Red Arrow print",37,Plastic
+24309pr6366619,Slope Curved 3 x 2 No Studs with Monkey Head Print,37,Plastic
 2431,Tile 1 x 4 with Groove,19,Plastic
 24311pr0001,"Minifig Head Special, Robot with 2 Handles, Black Eyes and Mouth Print (Cyberman)",59,Plastic
 24312,Equipment Medical Wheelchair with Clips for Wheels,27,Plastic
@@ -17271,6 +17272,14 @@ part_num,name,part_cat_id,part_material
 3626cpr3599,"Minifig Head Joker, White Face Paint with Green Eyes, Red Scars, Open / Closed Mouth Print",59,Plastic
 3626cpr3605,"Minifig Head Boba Fett, Tan and Dark Orange Lines and Scars, Serious Print",59,Plastic
 3626cpr3626,"Minifig Head Pajama Kid, Brown Eyebrows, Small Smile Print",59,Plastic
+3626cpr6366620,"Minifig Head Mei, Eyelashes, Bright Pink Lips, Closed Mouth / Open Mouth Print",59,Plastic
+3626cpr6366624,"Minifig Head Savage, Gold Eyes, Red Face Markings Print",59,Plastic
+3626cpr6366626,"Minifig Head Chang'e, Gold Headdress with Dark Turquoise Jewel, Dark Turqiouse Lips, Stern / Right Eye Winking Print",59,Plastic
+3626cpr6366631,"Minifig Head Lunar Rabbit Robot, Light Blue HUD with Bunny Face / Black and Red Angry Face Print",59,Plastic
+3626cpr6366636,"Minifig Head Evil Macaque, Dark Red Around Gold Eyes, Smirk Showing 1 Fang / Angry Showing Teeth Print",59,Plastic
+3626cpr6366645,"Minifig Head Nezha, Big Eyebrows, Red Forehead Markings, Stern  / Smirk with Raise Left Eyebrow Print",59,Plastic
+3626cpr6366649,"Minifig Head Monkie Kid, Red Visor with Gold Frame / Angry Open Mouth Print",59,Plastic
+3626cpr6366655,"Minifig Head Monkie Kid, Sunglasses with Gold Frames and Smile with Star / Big Eyebrows and Smirk Print",59,Plastic
 3626cpr8997,"Minifig Head, Dark Tan Eyebrows, Wink, Teeth Smile print",59,Plastic
 3626cpr8998,"Minifig Head Royal Guard / Soldier, Dual Sided, Balaclava, Orange Face, Dark Red Eyebrows and Cheek Lines, Smiling / Open Mouth Scowl Print",59,Plastic
 3626cpr8999,"Minifig Head Spider-Man, Large White Eyes, Black Web print",59,Plastic
@@ -23547,6 +23556,7 @@ part_num,name,part_cat_id,part_material
 53077,Sticker Sheet 1 for Set 7244-1,58,Plastic
 53094pr0001,"Minifig Hair and Sideburns, with Tan Ears Print",65,Plastic
 53094pr0002,"Minifig Hair and Sideburns, with Flesh Ears Print",65,Plastic
+53094pr0003,"Minifig Hair and Sideburns, with Red Ears Print",65,Plastic
 53102,Sticker Sheet for Set 8649-1,58,Plastic
 53117pat0001,"Minifig Helmet and Hair, with Bright Light Yellow Long Hair",65,Plastic
 53117pat0002,"Minifig Helmet and Hair, with Dark Red Long Hair",65,Plastic
@@ -26052,6 +26062,7 @@ part_num,name,part_cat_id,part_material
 636,"Conveyor Belt, Axle",34,Plastic
 6360,Duplo Building Door Frame / Entryway 4 x 4 x 5,4,Plastic
 6361,Duplo Airport Tower Glass Enclosure,4,Plastic
+6361361,Equipment Chopsticks,27,Plastic
 6361pr0001,Duplo Airport Tower Glass Enclosure with Window Frame Print,4,Plastic
 6363,Duplo Toolo Hydro Nozzle,4,Plastic
 63658,Sticker Sheet for Set 7673-1,58,Plastic
@@ -26083,6 +26094,7 @@ part_num,name,part_cat_id,part_material
 63710pr35509,"Duplo Figure with Cap Red, with Orange Vest over Green Long Sleeve Shirt - Medium Blue Legs",57,Plastic
 63719,Sticker Sheet for Set 8635-1,58,Plastic
 63720,Sticker Sheet for Set 8635-1,58,Plastic
+6375190,"Neckwear Cape, Two Long Tails, Pointed",38,Plastic
 6376,"Duplo Train Tracks, Crossrails",4,Plastic
 6377,Duplo Train Track Straight (short),4,Plastic
 63776,"Arm, Right, Juvenile (Rotta)",60,Plastic
@@ -27319,6 +27331,7 @@ part_num,name,part_cat_id,part_material
 67684,"Minifig Mask Mouse, Black Eyes, Nose, Whiskers",65,Plastic
 67687,Plate Special 2 x 2 with Wheel Holders with Cross (+) Slots on Pins,9,Plastic
 67688,Plate Special 2 x 2 with Wheel Holder with Widened Center Pin,9,Plastic
+67696,"Technic Brick Special 2 x 2 with Ball Receptacle Wide and Axle Hole, No Arm Holes",26,Plastic
 676pr0001,"Road Sign Rectangle, Axle Pole with Snack Bar Print",38,Plastic
 67702a,Flag with Red and Dark Turquoise Print,38,Plastic
 67702b,"Large Figure Skirt, Center Panel, with Red and Dark Turquoise Print",38,Plastic
@@ -27681,6 +27694,7 @@ part_num,name,part_cat_id,part_material
 69730,"Motor, Large Angular Position, Light Bluish Gray Housing, Black Wire",45,Plastic
 6974,"Scala, Equipment Toilet Bowl",42,Plastic
 6975,"Scala, Equipment Toilet Seat & Lid",42,Plastic
+69754,"Launcher, Plate Special 1 x 2 with Mini Blaster Square",68,Plastic
 69755,"Launcher Trigger, Weapon Gun Trigger",68,Plastic
 69767,"Launcher, Weapon Gun / Blaster / Shooter Square",68,Plastic
 69819,Technic Axle and Pin Connector Perpendicular Double Split [Reinforced],12,Plastic
@@ -28915,6 +28929,7 @@ part_num,name,part_cat_id,part_material
 777,"Flag on Flagpole Type 2 classic,ho,h0 scale",38,Plastic
 77710pr0001,"Hat, Large, with Luigi Logo Print",24,Plastic
 77743,Sticker Sheet for Set 60294-1,58,Plastic
+77757,Sticker Sheet for Set 60295-1,58,Plastic
 77765,"Technic Pin Long 3l, No Friction Ridges, with Stop and Hole",53,Plastic
 77787,"Bow, Dark Pink with White Spots Print",38,Plastic
 777pr0001,"Flag on Flagpole, Wave with Germany Print",38,Plastic
@@ -28936,6 +28951,7 @@ part_num,name,part_cat_id,part_material
 777pr0017,"Flag on Flagpole, Wave with Lego Logo Print, Ridged Flagpole",38,Plastic
 777pr0018,"Flag on Flagpole, Wave with Lego Logo in Red Ellipse Print",38,Plastic
 777pr0019,"Flag on Flagpole, Wave with Canada Print",38,Plastic
+77803,Brick Special 1 x 2 Rounded  with Center Bars,5,Plastic
 77864pr0001,"Animal, Monkey / Ape / Orangutan, One Arm Out, with Light Flesh Face Print",28,Plastic
 77864pr0002,"Animal, Monkey / Ape / Orangutan, One Arm Out, with Light Bluish Gray Face Print",28,Plastic
 77873pr0001,"Mario Legs and Overalls with Two Front Studs and Reddish Brown Feet, with Internal Prongs for Luigi Suit",24,Plastic
@@ -29000,6 +29016,7 @@ part_num,name,part_cat_id,part_material
 78594,Panel 2 x 2 x 5 Corner,23,Plastic
 78611,Boat / Rubber Raft / Dinghy 6 x 12,35,Plastic
 7864,"Electric Adapter / Transformer, Train 12V, 220V Type 1",45,Plastic
+78642pr0001,"Minifig Helmet, Raised Centre Ridgem Eye Slot, with Black Faceguard Print",65,Plastic
 78643pr0001,Minifig Neckwear Armor Shoulder Pads with Skull and '99' Print,27,Plastic
 78643pr0002,Minifig Neckwear Armor Shoulder Pads with Control Panel with Red Buttons Print,27,Plastic
 78643pr0003,Minifig Neckwear Armor Shoulder Pads with Control Panel Print,27,Plastic
@@ -29008,7 +29025,6 @@ part_num,name,part_cat_id,part_material
 78689,Sticker Sheet 1 for Set 76905-1,58,Plastic
 78690,Duplo Curtain for Car Wash,4,Cloth
 787,"Fabuland, Roof Support Slope 6 x 2",42,Plastic
-78757pr0001,"Minifig Helmet, Raised Centre Ridgem Eye Slot, with Black Faceguard Print",65,Plastic
 78793,Sticker Sheet 1 for Set 75309-1,58,Plastic
 78794,Sticker Sheet for Set 75296-1,58,Plastic
 78795,Sticker Sheet for Set 75314-1,58,Plastic
@@ -29138,6 +29154,7 @@ part_num,name,part_cat_id,part_material
 79819,"MOTOR, NO. 13",45,Plastic
 79822,Sticker Sheet 1 for Set 10279-1,58,Plastic
 79831,Sticker Sheet 2 for Set 10279-1,58,Plastic
+79846,Plate Angled 2 x 2 with Step and Hole in Center,49,Plastic
 79850,"Brick Round 4 x 4 Dome Top with Round 2 x 2 Cutout, 4 Studs",20,Plastic
 79851,"Bar, Ring 7L Diameter, with 2 Axle Connectors",26,Plastic
 79866,Sticker Sheet 1 for Set 10290-1,58,Plastic
@@ -29170,6 +29187,7 @@ part_num,name,part_cat_id,part_material
 80475,Sticker Sheet for Set 76185-1,58,Plastic
 80484,Sticker Sheet for Set 10282-1,58,Plastic
 805,Vehicle Base 4 x 16 for Steering Gear,36,Plastic
+80519,Wave / Flame with Clip,27,Plastic
 80540,Sticker Sheet for Set 10292-1,58,Plastic
 806,Vehicle Base 6 x 17 for Steering Gear,36,Plastic
 80622,Sticker Sheet for Set 76237-1,58,Plastic
@@ -29177,12 +29195,17 @@ part_num,name,part_cat_id,part_material
 80660,Sticker Sheet for Set 76941-1,58,Plastic
 80661,Sticker Sheet for Set 76942-1,58,Plastic
 80674,"Animal, Butterfly",28,Plastic
+80792,"Minifig Hair, Two Top Buns",65,Plastic
+80796,Brick Special 1 x 2 x 1 2/3 with Four Studs on 2 Sides,5,Plastic
 80801pr0001,"Minifig Helmet, Curly Black Hair, Gold Face, Dark Purple/Bright Pink Eyes, Grill print",65,Plastic
+80831,Minifig Hair with Medium Azure Horns Print,65,Plastic
 809,Baseplate 24 x 40 Gravel Quarry with Sets 360 / 580 Dots Print,1,Plastic
-80908,Minifig Hair Mid-Length Curly with Front Center Part,65,Plastic
-80909,Plate Special Book 11 x 16 with 2 x 4 Container,9,Plastic
+80908,Minifig Hair Mid-Length Curly with Front Center Part,65,Rubber
+80909,"Plate Special Book 11 x 16 with 2 x 4 Container, 2 x 4 Studs on Edge, Hole",9,Plastic
+80909pr0001,"Plate Special Book 11 x 16 with 2 x 4 Container, 2 x 4 Studs on Edge, Hole with 'Antonia',  Animals on Dark Turquoise Background print",9,Plastic
+80909pr0002,"Plate Special Book 11 x 16 with 2 x 4 Container, 2 x 4 Studs on Edge, Hole with 'Isabella', Gil on Bright Pink Background print",9,Plastic
 80910,"Technic Connector 1 x 2 x 4 with 2 Pin Holes, 2 Axle Holes",12,Plastic
-80911,Minifig Hair Short Curly,65,Plastic
+80911,Minifig Hair Short Curly,65,Rubber
 810205,Sticker Sheet 1 for Set 9550-3,58,Plastic
 810206,Sticker Sheet 1 for Set 9550-1 - Alternate Version,58,Plastic
 810305,Sticker Sheet 2 for Set 9550-3,58,Plastic
@@ -29211,6 +29234,7 @@ part_num,name,part_cat_id,part_material
 820,Baseplate Raised 8 x 18 with Garage Floor Plate (Old style),1,Plastic
 820000,Sticker Sheet 1 for Set 9550-1,58,Plastic
 820001,Sticker Sheet 2 for Set 9550-1,58,Plastic
+82059,"Minifig Hair and Sideburns, Messy with Flesh Ears Print",65,Plastic
 820670,"Sticker Sheet for Sets 8094-1, 9752-1, 9753-1",58,Plastic
 820671,Sticker Sheet for Set 6540-1,58,Plastic
 820672,Sticker Sheet for Set 6541-1,58,Plastic
@@ -29617,6 +29641,7 @@ part_num,name,part_cat_id,part_material
 85952,Sticker Sheet for Set 8967-1,58,Plastic
 85954,Sticker Sheet for Set 7752-1,58,Plastic
 85956,Sticker Sheet for Set 8970-1,58,Plastic
+85959,Wave / Flame Rounded Large [Plain],27,Plastic
 85959pat0001,Wave / Flame Rounded Large with Marbled Trans-Orange Pattern,27,Plastic
 85959pat0002,Wave / Flame Rounded Large with Marbled Trans Clear Pattern,27,Plastic
 85959pat0003,Wave / Flame Rounded Large with Marbled Trans-Yellow Pattern,27,Plastic
@@ -30329,9 +30354,11 @@ part_num,name,part_cat_id,part_material
 88323,"Technic Link Tread Wide with Two Pin Holes, Reinforced",26,Plastic
 88379pr0001,Duplo Animal Cow Baby (Calf) Front Leg Forward with White Blaze Print,4,Plastic
 88393,Brick Special 1 x 2 x 5 with Groove,5,Plastic
+88403,Sticker Sheet for Set 80032-1,58,Plastic
 88431,Equipment Shovel [Flat Stem End],27,Plastic
 88432,Food Turkey Drumstick [Long],27,Plastic
 88489,Minifig Hat Forestmen's (Reissue with Blind Hole for Feather),65,Plastic
+88491,Sticker Sheet for Set 40518-1,58,Plastic
 88496,"Launcher, Air Blast Injector [Racers]",68,Plastic
 884a,"Hub, RCX 1.0, with Power Jack [Complete Assembly]",45,Plastic
 884b,"Hub, RCX 1.0, No Power Jack [Complete Assembly]",45,Plastic
@@ -30346,8 +30373,10 @@ part_num,name,part_cat_id,part_material
 88528,Sticker Sheet for Set 8088-1,58,Plastic
 88529,Sticker Sheet for Set 10212-1,58,Plastic
 88530,Sticker Sheet for Set 8091-1,58,Plastic
+88531,Sticker Sheet for Set 80034-1,58,Plastic
 88542,Sticker Sheet for Set 8056-1,58,Plastic
 88550,Sticker Sheet for Set 8057-1,58,Plastic
+88606,Sticker Sheet for Set,58,Plastic
 88618pr0001,"Animal, Bird, Ostrich with White Tail and Wingtips / Light Flesh Legs and Head [Complete Assembly]",28,Plastic
 88646,Plate Special 3 x 4 with 1 x 4 Center Studs [Plain],9,Plastic
 88646pr0001,Plate Special 3 x 4 with 1 x 4 Center Studs and 'TEAM GB' and Olympic Rings Print,9,Plastic
@@ -31806,6 +31835,7 @@ part_num,name,part_cat_id,part_material
 93598pr0009,Windscreen 2 x 3 x 2 with 2 x 4 Base with Brown Eyes on White Background Print (Luigi),47,Plastic
 93598pr0010,Windscreen 2 x 3 x 2 with 2 x 4 Base with Back Window print,47,Plastic
 93598pr0011,"Windscreen 2 x 3 x 2 with 2 x 4 Base with Green Eyes on White Background, Right Brow Arched Print (Mater)",47,Plastic
+93599,Sticker Sheet for Set,58,Plastic
 93604,Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs,37,Plastic
 93604pr0001,"Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs and Half Open Eyes, Flowers, and Headlights Print (Fillmore)",37,Plastic
 93604pr0002,Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs and Armor Plates and Grille with Vent Print,37,Plastic
@@ -31815,6 +31845,7 @@ part_num,name,part_cat_id,part_material
 93604pr0006,Slope Curved 3 x 4 x 2/3 Triple Curved with 3 Black Eyelashes print,37,Plastic
 93604pr0007,Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs with Iron Man Reactor print,37,Plastic
 93604pr0008,"Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs with Cat Face, Dark Pink Nose, Bright Light Orange Eyes print",37,Plastic
+93605,Sticker Sheet for Set,58,Plastic
 93606,Slope Curved 4 x 2 No Studs,37,Plastic
 93606pr0001,Slope Curved 4 x 2 No Studs with Smiling Mouth Right Half Print (L. McQueen),37,Plastic
 93606pr0002,Slope Curved 4 x 2 No Studs with Smiling Mouth Left Half Print (L. McQueen),37,Plastic
@@ -33149,6 +33180,12 @@ part_num,name,part_cat_id,part_material
 970c00pr2184,"Legs and Hips, Dark Brown Belt, Black Robe, Gold Knee Caps print",61,Plastic
 970c00pr2345,"Legs and Hips with Green and Copper Armor, Knee Straps and Black Zoris Print",61,Plastic
 970c00pr2551,Legs and Hips with Dark Brown Belt Print (Owen Grady),61,Plastic
+970c00pr6366623,Legs and Hips with White Panels and Gold Trim Print,61,Plastic
+970c00pr6366629,"Legs and Hips with Skirt Hem, Gold Sash, Medium Azure Armor Panels and Toes Print Print",61,Plastic
+970c00pr6366638,"Legs and Hips with Dark Red and Gold Armor, Bright Light Orange Sash, Ornate Belt Print",61,Plastic
+970c00pr6366646,"Legs and Hips with Dark Red, Gold, and Dark Turquoise Armor, Gold Toes Print",61,Plastic
+970c00pr6366648,Legs and Hips with Gold and Lavender Armor Print,61,Plastic
+970c00pr6379353,"Legs and Hips with Pockets, White Belt, Headphones with Dark Turquoise Cable Print",61,Plastic
 970c00pr6630,"Legs and Hips with Black Sash, Armor, Blue Knee Straps and Black Zoris Print",61,Plastic
 970c00pr8998,"Legs and Hips, Red/Black Spider-Man Webbing print",61,Plastic
 970c00pr8999,"Legs and Hips, Black Zebra Stripes print",61,Plastic
@@ -34162,6 +34199,9 @@ part_num,name,part_cat_id,part_material
 973c01h01pr5641,"Torso Vest, Sand Blue Handkerchief, Reddish Brown Bag Strap print, Yellow Arms and Hands",60,Plastic
 973c01h01pr5661,"Torso Pixelated White Fur, Black Leopard Spots print, Yellow Arms and Hands",60,Plastic
 973c01h01pr5721,"Torso Vest with Bowl of Noodles, Dark Turquoise Chopsticks, and Red Hearts Print, Yellow Arms and Hands",60,Plastic
+973c01h01pr6375608,"Torso Armor with Gold Trim, Medium Azure Belly, Crescent Moon Emblem Print, Yellow Arms and Hands",60,Plastic
+973c01h01pr6376221,"Torso Tunic with Yellow Trim, Red Sash Belt / Monkie Head Print, Yellow Arms and Hands",60,Plastic
+973c01h01pr6376476,"Torso Armor, Gold, Lavender, and Dark Turquoise Panels Print, Yellow Arms and Hands",60,Plastic
 973c01h01pr9673,"Torso Tank Top with Windsurfer / '2013 The LEGO Store Edmonton, AB' Back Print, Yellow Arms and Hands",60,Plastic
 973c01h01pr9675,"Torso Blouse with Gold Sash and Flowers / '2013 The LEGO Store Edmonton, AB' on Back Print, Yellow Arms and Hands",60,Plastic
 973c01h01pr9677,"Torso Shirt 3 Flowers over Yellow and Silver Stripe / '2011 The LEGO Store Alderwood Mall, Lynnwood, WA' on Back Print, Yellow Arms and Hands",60,Plastic
@@ -34852,6 +34892,7 @@ part_num,name,part_cat_id,part_material
 973c03h12pr9715,"Torso Armour, Gold Straps, Light Flesh Neck Print (Black Widow), Black Arms, Dark Bluish Gray Hands",60,Plastic
 973c03h13pr1496,"Torso Layered Shirt and Red Belt Print, Black Arms, Flesh Hands",60,Plastic
 973c03h13pr4754,"Torso Open Shirt, Bare Chest with Hair, Sweat Print, Black Arms, Flesh Hands",60,Plastic
+973c03h13pr6375837,"Torso Armor, Ornate with Silver, Gold, and Dark Red Panels Print, Black Arms, Flesh Hands",60,Plastic
 973c03h13pr9863,"Torso Open Jacket over Open Shirt, Hairy Chest, Belt and Pendent Print (Ian Malcolm), Black Arms, Flesh Hands",60,Plastic
 973c03h14pr0071,"Torso Layered Shirt, Robe Tie Print, Black Arms, Light Bluish Gray Hands",60,Plastic
 973c03h14pr2129,"Torso Tailcoat and Vest Formal, White Shirt and Gray Bow Tie Print, Black Arms, Light Bluish Gray Hands",60,Plastic
@@ -35247,6 +35288,7 @@ part_num,name,part_cat_id,part_material
 973c06h01pr3230,"Torso Overalls, Medium Blue, over Plaid Shirt Print, Bright Green Arms, Yellow Hands",60,Plastic
 973c06h01pr3459,"Torso Muscles with Large Yellow Rounded Collar, Belt Print, Bright Green Arms, Yellow Hands",60,Plastic
 973c06h01pr5181,"Torso Jacket with Pointed Collar with Bells and Belt Print (Elf), Bright Green Arms, Yellow Hands",60,Plastic
+973c06h01pr6378414,"Torso Jacket, Light Blue Bag, Yellowish Green Undershirt Print, Bright Green Arms, Yellow Hands",60,Plastic
 973c06h01pr9703,"Torso Hoodie, White Shirt with Red 'T' Print, Bright Green Arms, Yellow Hands",60,Plastic
 973c06h03pr1259,"Torso Robe with Green and Gold Obi Sash Print, Bright Green Arms, Black Hands",60,Plastic
 973c06h03pr2298,"Torso Armor with Galaxy Squad Logo and '30' on Back Print, Bright Green Arms, Black Hands",60,Plastic
@@ -36561,6 +36603,7 @@ part_num,name,part_cat_id,part_material
 973c22h22pr5150,"Torso Robes with Orange/Yellow Energy Print, Red Arms and Hands",60,Plastic
 973c22h22pr5293,"Torso Armor with Siler Plates and White Circle (Arc Reactor) Print (Iron Man), Red Arms and Hands",60,Plastic
 973c22h22pr5550,"Torso Bodysuit, 'DD' Symbol, Muscles, Black Belt print, Red Arms and Hands",60,Plastic
+973c22h22pr6375834,"Torso Armor, Silver Collar and Shoulder Strap with Evil Monkey Head, and Red Swirling Clouds Print, Red Arms and Hands",60,Plastic
 973c22h22pr7004,"Torso Elite Praetorian Guard Armor Print, Red Arms and Hands",60,Plastic
 973c22h22pr9761,"Torso Tank Top with Hairy Chest, Yellow Sash Belt, Lime and Bright Light Orange Pixelated Stains / Pixelated Fish Bone on Back Print, Red Arms and Hands",60,Plastic
 973c22h22pr9921,"Torso Armor with Red Plates and Gold Detailing, Gold Lightning Bolt (Flash Logo) Print, Red Arms and Hands",60,Plastic
@@ -37172,6 +37215,7 @@ part_num,name,part_cat_id,part_material
 973c27h01pr5394,"Torso Shirt, Stars, Horse Heads, Gold Fringe Print, White Arms, Yelow Hands",60,Plastic
 973c27h01pr5417,"Torso Vest, Dark Blue with Radio and Police Badge over Shirt and Tie Print, White Arms, Yellow Hands",60,Plastic
 973c27h01pr5797,"Torso Shirt with Dark Blue Stripes, Dark Blue Sailor Neckerchief Print, White Arms, Yellow Hands",60,Plastic
+973c27h01pr6378366,"Torso Hoodie, Red Half, Pocket, Bright Light Orange Shoulder Bag Print, White Arms, Yellow Hands",60,Plastic
 973c27h01pr9643,"Torso Sweater with '17' with Dark Pink, Lime, and Yellow Background / 'LEGO World Netherlands 2017' Print, White Arms, Yellow Hands",60,Plastic
 973c27h01pr9644,"Torso Corset, Dark Green Side Panels, Red Lace, Trim, White Necklace with Black Pendant Print, White Arms, Yellow Hands",60,Plastic
 973c27h01pr9670,"Torso Chef Jacket with 8 Buttons, Long Red Neckerchief / '2013 The LEGO Store Des Peres, MO' on Back Print, White Arms, Yellow Hands",60,Plastic
@@ -37506,6 +37550,7 @@ part_num,name,part_cat_id,part_material
 973c27h27pr5603,"Torso Astronaut Suit, Hoses, Control Panel print, White Arms and Hands",60,Plastic
 973c27h27pr5621,"Torso Vest Top with Light Bluish Gray Stripe, White Neck print, White Arms and Hands",60,Plastic
 973c27h27pr5733,"Torso Armor, White Bones, Dark Purple and Lavender Stomach Print, White Arms and Hands",60,Plastic
+973c27h27pr6374395,"Torso Armor, Gold Trim, Coral and Dark Turquoise Circuitry Print, White Arms and Hands",60,Plastic
 973c27h27pr9746,"Torso Robe, Necklace with Crystal Pendant, Light Bluish Gray Trim Print, White Arms and Hands",60,Plastic
 973c27h27pr9756,"Torso Robe, Dark Purple Undershirt and Sash Belt with Snack Head Buckle Print, White Arms and Hands",60,Plastic
 973c27h27pr9952,"Torso Armor, Black, Gray and Dark Tan Lines and Tan Dirt Stains Print, White Arms and Hands",60,Plastic
@@ -37526,6 +37571,8 @@ part_num,name,part_cat_id,part_material
 973c27h43pr5144,"Torso Chef Jacket, Dirty Dark Tan Scarf Print, White Arms, Bright Pink Hands",60,Plastic
 973c27h43pr5537,"Torso Tunic with Medium Blue Utility Harness with Hot Dogs, Chopsticks, and Gold Pig Badge Print, White Arms, Bright Pink Hands",60,Plastic
 973c27h43pr5718,"Torso Tunic, Bright Light Blue Utility Harness with Chillie Peppers, Garlic, Salt Shakers, and Gold Pig Buckle Print, White Arms, Bright Pink Hands",60,Plastic
+973c27h43pr6378152,"Torso Chef Jacket, Dirty, Gold Trim, Pig Head Logo Print, White Arms, Bright Pink Hands",60,Plastic
+973c27h46pr6375626,"Torso Spacesuit, Dark Turquoise Trim, Dark Bluish Gray Hose and Vent Print, White Arms, Dark Turquoise Hands",60,Plastic
 973c28h01,"Torso, Blue Arms, Yellow Hands [Plain]",60,Plastic
 973c28h01pr0001,"Torso Jacket, Zipper Curved and Pocket Print (white zipper), Blue Arms, Yellow Hands",60,Plastic
 973c28h01pr0002,"Torso Hoodie, Tracksuit with Light BluePocket and Collar, Zipper Print, Blue Arms, Yellow Hands",60,Plastic
@@ -38243,6 +38290,8 @@ part_num,name,part_cat_id,part_material
 973c38h01pr5452,"Torso Jacket Over Light Blue Undershirt Print, Bright Light Orange Arms, Yellow Hands",60,Plastic
 973c38h01pr5522,"Torso Jacket, with Monkey Face, Open over White and Dark Turquoise Undershirt Print, Bright Light Orange Arms, Yellow Hands",60,Plastic
 973c38h01pr5723,"Torso Jacket, White Zipper, Reddish Brown Collar, Animal Spots Pockets, Badges Print, Bright Light Orange Arms, Yellow Hands",60,Plastic
+973c38h01pr6375831,"Torso Jacket, Dark Turquoise and Red Shoulder Strap, White Undershirt Print, Bright Light Orange Arms with Black Target Circles Print, Yellow Hands",60,Plastic
+973c38h01pr6375861,"Torso Armor, Gold and Dark Red Plating, Circle with Chinese Character Print, Bright Light Orange Arms with Gold, Dark Red, and Dark Turquoise Armor Print, Yellow Hands",60,Plastic
 973c38h01pr9696,"Torso Sweater with Heart in Circle Print, Bright Light Orange Arms, Yellow Hands",60,Plastic
 973c38h01pr9946,"Torso Vest with Fringe over Orange Top with Pink and Lime Swirl Print, Bright Light Orange Arms, Yellow Hands",60,Plastic
 973c38h01pr9999,"Torso Vest with Tassles, Red Bandana, Cowhide Pattern Print, Bright Light Orange Arms, Yellow Hands",60,Plastic
@@ -38443,6 +38492,7 @@ part_num,name,part_cat_id,part_material
 973c61h27pr5693,"Torso Doublet, Light Bluish Gray and Sand Green Trim Print, Glow in the Dark White Arms, White Hands",60,Plastic
 973c61h27pr5734,"Torso Armor, Dark Purple Circle with White Symbol, Ornate White Bones Design Print, Glow in the Dark White Arms, White Hands",60,Plastic
 973c62h02pr0001,"Torso Robe, Gold Trim, Yellow Shirt Print, Light Purple Arms, Light Flesh Hands",60,Plastic
+973c63h46pr6375835,"Torso Armor, White, Dark Turquoise, and White Panels Print, Lemon Arms, Dark Turquoise Hands",60,Plastic
 973d01pr4974,"Torso, Odd Arms and Hands, Robe with Dark Purple Trim, over Robot Panels Print, Left Flat Silver Arm and Dark Purple Hand, Right Black Arm and Hand",60,Plastic
 973d02pr3478,"Torso, Odd Arms and Hands, Armor, Silver Plate Print, Left Dark Bluish Gray Arm and Black Hand, Right Red Arm and Hand with Plates Print",60,Plastic
 973d03pr2759,"Torso, Odd Arms and Hands, Hoodie with Zipper, Torn Shoulder, Bandolier with 3 Toxic Bulbs Print, Left Lime Arm and Hand, Right Dark Bluish Gray Arm and Light Bluish Gray Hand",60,Plastic
@@ -39519,6 +39569,7 @@ part_num,name,part_cat_id,part_material
 98138pr9997,Tile Round 1 x 1 with Closed BrickHeadz Eye Print,67,Plastic
 98138pr9998,Tile Round 1 x 1 with Ninjago Trapped Cole Print,67,Plastic
 98138pr9999,Tile Round 1 x 1 with Ninjago Trapped Kai Print,67,Plastic
+98138prNEW,Tile Round 1 x 1 with Gold Moon Pie Print,67,Plastic
 98139,Weapon Sai,27,Plastic
 98141,Weapon Scythe / Crescent Blade Serrated with Bar,27,Plastic
 98143pr0001,"Minifig Head Special, Snake with Fangs, Red Eyes and Yellow Scales Print",59,Plastic
@@ -40026,6 +40077,7 @@ part_num,name,part_cat_id,part_material
 99242pr0001,Minifig Hair Layered with Silver Zigzag Streaks Print,65,Plastic
 99243,Minifig Headdress - Aztec Quetzal,65,Plastic
 99243pr0001,Minifig Headdress - Aztec Quetzal with Black Feather Tips and Medium Azure Eyes and Cheeks Print,65,Plastic
+99244,Minifig Mask Bunny Ears [Plain],65,Plastic
 99244pr0001,Minifig Mask Bunny Ears with Bright Pink Auricles Print,65,Plastic
 99244pr0002,Minifig Mask Bunny Ears with Dark Tan Auricles Print,65,Plastic
 99245pr0001,Minifig Hair Ocean King with Gold Spiked Tiara Print,65,Plastic
@@ -42938,7 +42990,7 @@ scalaupn0058,"Scala, Crop Top, Child, Tie Front",42,Cloth
 scalaupn0059,"Scala, Sweater, Child, with Yellow X Print",42,Cloth
 scalaupn0060,"Scala, Skirt, Child, Long with Orange Tie",42,Cloth
 scalaupn0061,"Scala, Sweater, Child, Hooded with Horse and Red Stripes Print",42,Cloth
-scalaupn0062,"Scala, Trousers / Pants with Red in Yellow Dots Print",42,Cloth
+scalaupn0062,"Scala, Trousers / Pants with Red Dots in Yellow Flowers Print",42,Cloth
 scalaupn0063,"Scala, Jacket, Open",42,Cloth
 scalaupn0064,"Scala, Sweater with Yellow Flower Print",42,Cloth
 scalaupn0065,"Scala, Trousers / Pants",42,Cloth
