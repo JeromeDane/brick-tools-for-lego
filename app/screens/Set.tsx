@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, } from 'react-native';
+import { ScrollView, Linking, Button } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
@@ -24,11 +24,21 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
           maxWidth={500}
           source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
           style={{marginBottom: 20}} />
-        <View>
+        <View style={{marginBottom: 20}}>
           <Text>Set number: {set.setNum}</Text>
           <Text>{set.name}</Text>
           <Text>{set.numParts.toLocaleString()} parts</Text>
           <Text>Released in {set.year}</Text>
+        </View>
+        <View style={{marginBottom: 20}}>
+          <Button onPress={() =>
+            Linking.openURL('https://brickset.com/sets/' + set.setNum)
+          } title="Brickset" />
+        </View>
+        <View style={{marginBottom: 20}}>
+          <Button onPress={() =>
+            Linking.openURL('https://rebrickable.com/sets/' + set.setNum)
+          } title="Rebrickable" />
         </View>
       </ScrollView>
     </View>
