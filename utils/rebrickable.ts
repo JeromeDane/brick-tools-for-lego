@@ -75,7 +75,7 @@ const toKeyed = (input: any[], key: string) => input.reduce(
     return acc
   }, {})
 
-const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+))?/
+const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^\/]|$))?/
 
 export const buildJson = async () => {
   const themes = await csvToJson('themes'),
