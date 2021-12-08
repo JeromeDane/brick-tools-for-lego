@@ -1,6 +1,6 @@
-import React from 'react';
-import { Image, Switch } from 'react-native';
-import { Text, View } from './Themed';
+import React from 'react'
+import { Image, Switch } from 'react-native'
+import { Text, View } from './Themed'
 import inventoryParts from '../data/inventory_parts.json'
 import {getElement} from '../data/elements'
 import partsByNumber from '../data/parts-by-number.json'
