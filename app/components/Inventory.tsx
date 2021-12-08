@@ -6,31 +6,7 @@ import {getElement} from '../data/elements'
 import partsByNumber from '../data/parts-by-number.json'
 import colors from '../data/colors-by-id.json'
 import partCategories from'../data/part_categories-by-id.json'
-
-const getSort = (x: any, keys: string[]) =>
-  keys
-    .map(key =>
-      key.indexOf('.') > 0
-        ? x[key.split('.')[0]][key.split('.')[1]]
-        : x[key]
-    )
-    .map(v => {
-      const number = parseInt(v)
-      return isNaN(number)
-        ? v
-        : number < 10
-          ? '00' + number
-          : number < 99
-            ? '0' + number
-            : number
-    })
-    .join('  |  ')
-
-const by = (keys: string[]) =>
-  (first: any, second: any) => {
-    const [a, b] = [first, second].map(x => getSort(x, keys))
-    return a > b ? 1 : a < b ? -1 : 0
-  }
+import sortBy from 'sort-by'
 
 const Inventory = ({id}: {id: string, setNum: string}) => {
   const parts = inventoryParts[id]?.map((part: any) => {
@@ -42,7 +18,7 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
   const sortOrder = ['category.name', 'width', 'length', 'height', 'nameSort', 'color.order']
   return (
     <View>
-      {parts.sort(by(sortOrder))
+      {parts.sort(sortBy.apply(sortBy, sortOrder))
         .map((part: any, i: number) =>
           <View key={i} style={{flex: 1, flexDirection: 'row', marginBottom: 10}}>
             <Image
