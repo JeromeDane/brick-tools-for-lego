@@ -3,6 +3,7 @@ import fetch from 'cross-fetch'
 import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path';
 import {promisify} from 'util'
+import colorOrder from './color-order'
 
 const csv = require('csvtojson')
 const gUnzip = require('gunzip-file')
@@ -55,27 +56,62 @@ export const updateCsvData = async () => {
   rmSync(tmpDir, {recursive: true})
 }
 
-const saveData = (type: string, data: Object) =>
+const saveData = (type: string, data: Object) => {
+  process.stdout.write(`Saving ${type} ...`)
   writeFileSync(
     path.join(__dirname, `../app/data/${type}.json`),
     JSON.stringify(data, null, 2))
+  process.stdout.write(` done.\n`)
+}
 
 const csvToJson = (type: string) =>
   csv()
     .fromFile(path.join(csvDir, type + '.csv'))
     .then(camelize)
 
+const toKeyed = (input: any[], key: string) => input.reduce(
+  (acc: any, element: any) => {
+    acc[element[key]] = element
+    return acc
+  }, {})
+
+const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+))?/
+
 export const buildJson = async () => {
   const themes = await csvToJson('themes'),
-        colors = await csvToJson('colors'),
+        colors = await csvToJson('colors').map((color: any) =>
+          Object.assign(color, {
+            isTrans: color.isTrans == 't',
+            order: colorOrder.indexOf(color.name)
+          })
+        ),
         partCategories = await csvToJson('part_categories'),
-        parts = await csvToJson('parts'),
+        parts = await csvToJson('parts').map((part: any) => {
+          const size = part.name.match(sizeRegex)
+          return Object.assign(part, {
+            nameSort: part.name
+              .replace(sizeRegex, '  ')
+              .replace(/with|w\//, ''),
+              // .replace(/(with|w\/) Solid Stud/i, '')
+              // .replace(/(with|w\/) Inside Stud (Holder)?/i, '')
+              // .replace(/Dome Bottom/i, ''),
+            width: size && (size[1] < size[2] ? size[1] : size[2]),
+            length: size && (size[1] > size[2] ? size[1] : size[2]),
+            height: size && size[4] || ' '
+          })
+        }),
         partRelationships = await csvToJson('part_relationships'),
         elements = await csvToJson('elements'),
         sets = await csvToJson('sets'),
         minifigs = await csvToJson('minifigs'),
         inventories = await csvToJson('inventories'),
-        inventoryParts = await csvToJson('inventory_parts'),
+        inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
+          part.isSpare = part.isSpare == 't'
+          acc[part.inventoryId] = acc[part.inventoryId] || []
+          acc[part.inventoryId].push(part)
+          delete part.inventoryId
+          return acc
+        }, {}),
         inventorySets = await csvToJson('inventory_sets'),
         inventoryMinifigs = await csvToJson('inventory_minifigs')
 
@@ -86,21 +122,35 @@ export const buildJson = async () => {
     return theme
   })
 
-  sets.map((set: any) => {
-    set.setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))
-    set.numParts = parseInt(set.numParts)
-    set.year = parseInt(set.year)
-    if(isNaN(set.setNumSort)) set.setNumSort = set.setNum
-    return set
-  })
-
   saveData('themes', themes)
+  saveData('themes-by-id', toKeyed(themes, 'id'))
   saveData('colors', colors)
+  saveData('colors-by-id', toKeyed(colors, 'id'))
   saveData('part_categories', partCategories)
+  saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
   saveData('parts', parts)
+  saveData('parts-by-number', toKeyed(parts, 'partNum'))
   saveData('part_relationships', partRelationships)
   saveData('elements', elements)
-  saveData('sets', sets)
+  saveData('elements-lookup', elements.reduce((acc: any, {elementId, partNum, colorId}: any) => {
+    acc[partNum + '-' + colorId] = elementId
+    return acc
+  }, {}))
+  saveData('sets', sets.map((set: any) => {
+    const setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))
+    return Object.assign({}, set, {
+      numParts: parseInt(set.numParts),
+      year: parseInt(set.year),
+      setNumSort: isNaN(setNumSort) ? Number.POSITIVE_INFINITY : setNumSort,
+      inventories: inventories
+        .filter(({setNum} : {setNum: string}) => setNum == set.setNum)
+        .map(({id, version}: {id: string, version: string} ) => ({
+          id,
+          version,
+          // parts: inventoryParts.filter(({inventoryId} : {inventoryId: string}) => inventoryId == id)
+        }))
+    })
+  }))
   saveData('minifigs', minifigs)
   saveData('inventories', inventories)
   saveData('inventory_parts', inventoryParts)

@@ -5,6 +5,11 @@ import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
+import inventoryParts from '../data/inventory_parts.json'
+import elements from '../data/elements-lookup.json'
+import partsByNumber from '../data/parts-by-number'
+import colorsById from '../data/colors-by-id'
+import Inventory from '../components/Inventory'
 
 export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
   const {routes, index} = navigation.getState(),
@@ -25,7 +30,7 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
           source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
           style={{marginBottom: 20}} />
         <View style={{marginBottom: 20}}>
-          <Text>Set number: {set.setNum}</Text>
+          <Text>Setsadasdsa number: {set.setNum}</Text>
           <Text>{set.name}</Text>
           <Text>{set.numParts.toLocaleString()} parts</Text>
           <Text>Released in {set.year}</Text>
@@ -40,6 +45,9 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
             Linking.openURL('https://rebrickable.com/sets/' + set.setNum)
           } title="Rebrickable" />
         </View>
+        {set.inventories?.map((inventory: any) =>
+          <Inventory id={inventory.id} key={inventory.id} />
+        )}
       </ScrollView>
     </View>
   );
