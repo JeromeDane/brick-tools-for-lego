@@ -1,24 +1,42 @@
-import React from 'react'
-import { Image, Switch } from 'react-native'
-import { Text, View } from './Themed'
+import React, {useState} from 'react'
+import sortBy from 'sort-by'
+import { Image } from 'react-native'
+import { Picker, Text, View } from './Themed'
 import inventoryParts from '../data/inventory_parts.json'
 import {getElement} from '../data/elements'
 import partsByNumber from '../data/parts-by-number.json'
 import colors from '../data/colors-by-id.json'
 import partCategories from'../data/part_categories-by-id.json'
-import sortBy from 'sort-by'
 
 const Inventory = ({id}: {id: string, setNum: string}) => {
+  const defaultSortOrder = 'category.name,width,length,height,nameSort,color.order',
+        [sortOrder, setSortOrder] = useState(defaultSortOrder)
   const parts = inventoryParts[id]?.map((part: any) => {
     return Object.assign(part, partsByNumber[part.partNum], {
       color: colors[part.colorId],
       category: partCategories[partsByNumber[part.partNum].partCatId]
     })
   })
-  const sortOrder = ['category.name', 'width', 'length', 'height', 'nameSort', 'color.order']
   return (
     <View>
-      {parts.sort(sortBy.apply(sortBy, sortOrder))
+      <View style={{
+          marginBottom: 20,
+          marginTop: 10
+        }}>
+        <Picker
+          label="Sort by"
+          selectedValue={sortOrder}
+          onValueChange={setSortOrder}>
+          <Picker.Item label="Category, size, and color" value={defaultSortOrder} />
+          <Picker.Item label="Color, category, and size" value={'color.order,category.name,width,length,height,nameSort'} />
+          <Picker.Item label="Size, category, and color" value={'width,length,height,category.name,nameSort,color.order'} />
+          <Picker.Item label="Size descending, category, and color" value={'-width,-length,-height,category.name,nameSort,color.order'} />
+          <Picker.Item label="Size, color, and category" value={'width,length,height,color.order,nameSort,category.name'} />
+          <Picker.Item label="Size descending, color, and category" value={'-width,-length,-height,color.order,nameSort,category.name'} />
+        </Picker>
+      </View>
+      {parts
+        .sort(sortBy.apply(sortBy, sortOrder.split(',')))
         .map((part: any, i: number) =>
           <View key={i} style={{flex: 1, flexDirection: 'row', marginBottom: 10}}>
             <Image
