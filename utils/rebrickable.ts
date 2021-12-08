@@ -92,9 +92,6 @@ export const buildJson = async () => {
             nameSort: part.name
               .replace(sizeRegex, '  ')
               .replace(/with|w\//, ''),
-              // .replace(/(with|w\/) Solid Stud/i, '')
-              // .replace(/(with|w\/) Inside Stud (Holder)?/i, '')
-              // .replace(/Dome Bottom/i, ''),
             width: size && (size[1] < size[2] ? size[1] : size[2]),
             length: size && (size[1] > size[2] ? size[1] : size[2]),
             height: size && size[4] || ' '

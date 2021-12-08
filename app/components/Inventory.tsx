@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, Switch } from 'react-native';
 import { Text, View } from './Themed';
 import inventoryParts from '../data/inventory_parts.json'
 import {getElement} from '../data/elements'
@@ -42,8 +42,6 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
   const sortOrder = ['category.name', 'width', 'length', 'height', 'nameSort', 'color.order']
   return (
     <View>
-      {/* {parts.sort(sortBy('category.name', 'nameSort', 'width', 'length', 'height')) */}
-      {/* {parts.sort(sortBy('name')) */}
       {parts.sort(by(sortOrder))
         .map((part: any, i: number) =>
           <View key={i} style={{flex: 1, flexDirection: 'row', marginBottom: 10}}>
@@ -51,7 +49,6 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
               style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
               source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${getElement(part.partNum, part.colorId)}.jpg`}} />
             <View>
-              {/* <Text>{getSort(part, sortOrder) || '?'}</Text> */}
               <Text>Part: {part.partNum} Element: {getElement(part.partNum, part.colorId)}</Text>
               <Text>Category: {part.category.name}</Text>
               <Text>Name: {part.name}</Text>
