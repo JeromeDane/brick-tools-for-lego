@@ -26,7 +26,7 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
           source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
           style={{marginBottom: 20}} />
         <View style={{marginBottom: 20}}>
-          <Text>Setsadasdsa number: {set.setNum}</Text>
+          <Text>Set number: {set.setNum}</Text>
           <Text>{set.name}</Text>
           <Text>{set.numParts.toLocaleString()} parts</Text>
           <Text>Released in {set.year}</Text>
