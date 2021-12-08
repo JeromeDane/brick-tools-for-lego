@@ -10,13 +10,13 @@ import partCategories from'../data/part_categories-by-id.json'
 
 const Inventory = ({id}: {id: string, setNum: string}) => {
   const defaultSortOrder = 'category.name,width,length,height,nameSort,color.order',
-        [sortOrder, setSortOrder] = useState(defaultSortOrder)
-  const parts = inventoryParts[id]?.map((part: any) => {
-    return Object.assign(part, partsByNumber[part.partNum], {
-      color: colors[part.colorId],
-      category: partCategories[partsByNumber[part.partNum].partCatId]
-    })
-  })
+        [sortOrder, setSortOrder] = useState(defaultSortOrder),
+        parts = inventoryParts[id]?.map((part: any) => {
+          return Object.assign(part, partsByNumber[part.partNum], {
+            color: colors[part.colorId],
+            category: partCategories[partsByNumber[part.partNum].partCatId]
+          })
+        })
   return (
     <View>
       <View style={{
