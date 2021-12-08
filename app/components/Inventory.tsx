@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { ScrollView, Linking, Button, Image } from 'react-native';
-import sortBy from 'sort-by'
+import React from 'react';
+import { Image } from 'react-native';
 import { Text, View } from './Themed';
-import ScaledImage from './ScaledImage'
 import inventoryParts from '../data/inventory_parts.json'
 import {getElement} from '../data/elements'
 import partsByNumber from '../data/parts-by-number.json'
 import colors from '../data/colors-by-id.json'
-import themes from '../data/themes-by-id.json'
 import partCategories from'../data/part_categories-by-id.json'
 
 const getSort = (x: any, keys: string[]) =>
@@ -54,7 +51,7 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
               style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
               source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${getElement(part.partNum, part.colorId)}.jpg`}} />
             <View>
-              <Text>{getSort(part, sortOrder) || '?'}</Text>
+              {/* <Text>{getSort(part, sortOrder) || '?'}</Text> */}
               <Text>Part: {part.partNum} Element: {getElement(part.partNum, part.colorId)}</Text>
               <Text>Category: {part.category.name}</Text>
               <Text>Name: {part.name}</Text>
