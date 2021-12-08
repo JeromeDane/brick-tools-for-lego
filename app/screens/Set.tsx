@@ -5,10 +5,6 @@ import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
-import inventoryParts from '../data/inventory_parts.json'
-import elements from '../data/elements-lookup.json'
-import partsByNumber from '../data/parts-by-number'
-import colorsById from '../data/colors-by-id'
 import Inventory from '../components/Inventory'
 
 export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
