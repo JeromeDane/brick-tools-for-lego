@@ -24,6 +24,10 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
   return (
     <NavigationContainer
       linking={LinkingConfiguration}
+      documentTitle={{
+        formatter: (options, route) =>
+          `${options?.title ?? route?.name} - Brick Tools for Lego`,
+      }}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <RootNavigator />
     </NavigationContainer>
