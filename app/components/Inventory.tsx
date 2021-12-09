@@ -36,7 +36,7 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
         </Picker>
       </View>
       {parts
-        .sort(sortBy.apply(sortBy, sortOrder.split(',')))
+        ?.sort(sortBy.apply(sortBy, sortOrder.split(',')))
         .map((part: any, i: number) =>
           <View key={i} style={{flex: 1, flexDirection: 'row', marginBottom: 10}}>
             <Image
