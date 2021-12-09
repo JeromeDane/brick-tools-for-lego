@@ -5,6 +5,7 @@ import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
 import sets from '../data/sets.json'
+import themes from '../data/themes-by-id.json'
 import Inventory from '../components/Inventory'
 
 export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
@@ -27,6 +28,7 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
           style={{marginBottom: 20}} />
         <View style={{marginBottom: 20}}>
           <Text>Set number: {set.setNum}</Text>
+          <Text>Theme: {themes[set.themeId].name}</Text>
           <Text>{set.name}</Text>
           <Text>{set.numParts.toLocaleString()} parts</Text>
           <Text>Released in {set.year}</Text>
