@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
-    "version": "1.0.0",
+    "name": "Brick Tools for Lego",
+    "slug": "brickToolsForLego",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "brick-tools-for-lego",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
