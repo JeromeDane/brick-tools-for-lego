@@ -1,0 +1,35 @@
+{
+  "files": {
+    "app.js": "/brick-tools-for-lego/static/js/app.62ca8c6e.chunk.js",
+    "app.js.map": "/brick-tools-for-lego/static/js/app.62ca8c6e.chunk.js.map",
+    "runtime~app.js": "/brick-tools-for-lego/static/js/runtime~app.df27c12f.js",
+    "runtime~app.js.map": "/brick-tools-for-lego/static/js/runtime~app.df27c12f.js.map",
+    "static/js/2.b1cc452a.chunk.js": "/brick-tools-for-lego/static/js/2.b1cc452a.chunk.js",
+    "static/js/2.b1cc452a.chunk.js.map": "/brick-tools-for-lego/static/js/2.b1cc452a.chunk.js.map",
+    "fonts/AntDesign.ttf": "/brick-tools-for-lego/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/brick-tools-for-lego/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/brick-tools-for-lego/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/brick-tools-for-lego/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/brick-tools-for-lego/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/brick-tools-for-lego/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/brick-tools-for-lego/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/brick-tools-for-lego/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/brick-tools-for-lego/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/brick-tools-for-lego/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/brick-tools-for-lego/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/brick-tools-for-lego/./fonts/SimpleLineIcons.ttf",
+    "fonts/SpaceMono-Regular.ttf": "/brick-tools-for-lego/./fonts/SpaceMono-Regular.ttf",
+    "favicon-16.png": "/brick-tools-for-lego/favicon-16.png",
+    "favicon-32.png": "/brick-tools-for-lego/favicon-32.png",
+    "favicon.ico": "/brick-tools-for-lego/favicon.ico",
+    "index.html": "/brick-tools-for-lego/index.html",
+    "manifest.json": "/brick-tools-for-lego/manifest.json",
+    "serve.json": "/brick-tools-for-lego/serve.json",
+    "static/js/2.b1cc452a.chunk.js.LICENSE.txt": "/brick-tools-for-lego/static/js/2.b1cc452a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.df27c12f.js",
+    "static/js/2.b1cc452a.chunk.js",
+    "static/js/app.62ca8c6e.chunk.js"
+  ]
+}
