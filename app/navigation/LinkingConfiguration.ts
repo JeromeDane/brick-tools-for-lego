@@ -10,17 +10,18 @@ import * as Linking from 'expo-linking';
 import { RootStackParamList } from '../types';
 
 const linking: LinkingOptions<RootStackParamList> = {
-  prefixes: [Linking.makeUrl('/')],
+  prefixes: [Linking.makeUrl('https://jeromedane.github.io/')],
   config: {
     screens: {
       Root: {
+        path: 'brick-tools-for-lego',
         screens: {
           Themes: 'themes',
           Sets: 'sets',
         },
       },
-      Set: 'set',
-      Modal: 'modal',
+      Set: 'brick-tools-for-lego/set/:id',
+      Modal: 'brick-tools-for-lego/modal',
       NotFound: '*',
     },
   },
