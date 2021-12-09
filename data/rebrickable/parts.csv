@@ -2599,6 +2599,8 @@ part_num,name,part_cat_id,part_material
 14718pr0009,Panel 1 x 4 x 2 with Side Supports - Hollow Studs with 'LEGO EDINBURGH 2021' Print,23,Plastic
 14718pr0010,Panel 1 x 4 x 2 with Side Supports - Hollow Studs with 'LEGO STUTTGART 2021' print,23,Plastic
 14718pr0011,"Panel 1 x 4 x 2 with Side Supports - Hollow Studs with Light Bluish Grey Shield, 'H. G.', Black Decorations print",23,Plastic
+14718pr9995,"Panel 1 x 4 x 2 with Side Supports - Hollow Studs with ""LEGO WROCLAW 2021"" print",23,Plastic
+14718pr9996,"Panel 1 x 4 x 2 with Side Supports - Hollow Studs with ""LEGO MALL OF BERLIN 2021"" print",23,Plastic
 14718pr9997,"Panel 1 x 4 x 2 with Side Supports - Hollow Studs with ""LEGO BONN 2021"" print",23,Plastic
 14718pr9998,"Panel 1 x 4 x 2 with Side Supports - Hollow Studs with ""LEGO BARCELONA 2021"" print",23,Plastic
 14718pr9999,Panel 1 x 4 x 2 with Side Supports - Hollow Studs with 'Ice Cream' print,23,Plastic
@@ -2835,6 +2837,7 @@ part_num,name,part_cat_id,part_material
 14769pr1222,Tile Round 2 x 2 with Leaf / Water Lily print,67,Plastic
 14769pr1223,Tile Round 2 x 2 with Bottom Stud Holder and T-Rex Skeleton Silhouette (Jurassic Park Logo) Print,67,Plastic
 14769pr1227,Tile Round 2 x 2 with Circles / Bolts Print,67,Plastic
+14769pr6366174,"Tile Round 2 x 2 with Gold H, 5 Stars print",67,Plastic
 14769pr9992,Tile Round 2 x 2 with Bottom Stud Holder and Mushroom and Barcode Print (Sticker),67,Plastic
 14769pr9993,Tile Round 2 x 2 with Bottom Stud Holder and Fly Guy and Barcode Print (Sticker),67,Plastic
 14769pr9995,Tile Round 2 x 2 with Bottom Stud Holder with Peepa and Barcode Print (Sticker),67,Plastic
@@ -2990,7 +2993,7 @@ part_num,name,part_cat_id,part_material
 15210pr0002,Road Sign Clip-on with Blue and Orange Space Screen print,38,Plastic
 15210pr0003,"Road Sign Clip-on 2 x 2 Square With Blue Field, 'Bus Stop'",38,Plastic
 15210pr0004,Road Sign Clip-on 2 x 2 Square With Gold Diamond print,38,Plastic
-15210pr0005,Road Sign Clip-on 2 x 2 Square with Curved Blue Lines and Small Black Squares Print,38,Plastic
+15210pr0005,Road Sign Clip-on 2 x 2 Square [Thick Open O Clip] with Curved Blue Lines and Small Black Squares Print,38,Plastic
 15210pr0006,Road Sign Clip-on 2 x 2 Square [Thick Open O Clip] with Pedestrian Crossing on Blue Background Print,38,Plastic
 15210pr0007,Road Sign Clip-on 2 x 2 Square with 'RABBIT SEASON'' print,38,Plastic
 15210pr9998,Road Sign Clip-on 2 x 2 Square [Thick Open O Clip] with Computer Screen Print,38,Plastic
@@ -7687,6 +7690,8 @@ part_num,name,part_cat_id,part_material
 26603pr0060,Tile 2 x 3 with Yellow 'TITANIC' print,19,Plastic
 26603pr0061,"Tile 2 x 3 with Guitar Finger Board, Frets, Position Markers print",19,Plastic
 26603pr0147,Tile 2 x 3 with Dark Tan Mark Print (Kylo Ren),19,Plastic
+26603pr6366169,Tile 2 x 3 with Mirror print,19,Plastic
+26603pr6378425,Tile 2 x 3 with Dark Tan Squares print,19,Plastic
 26603pr9999,Tile 2 x 3 with Lily & James Potter Photo print,19,Plastic
 26604,Brick Special 1 x 1 with Studs on 2 Adjacent Sides,5,Plastic
 2661,"Minnie Mouse Figure with Red Dress, Yellow Sleeves, and Red Shoes",57,Plastic
@@ -11163,6 +11168,7 @@ part_num,name,part_cat_id,part_material
 3068bpr0552,"Tile 2 x 2 with Groove with Goomba Face with Low Furrowed Brow, Open Mouth  Print",19,Plastic
 3068bpr0553,Tile 2 x 2 with Bowser print,19,Plastic
 3068bpr2562,Tile 2 x 2 with Groove and Circle inside Square Print,19,Plastic
+3068bpr6366172,"Tile 2 x 2 with Guest Book, 'VISITORS' print",19,Plastic
 3068bpr9704,Tile 2 x 2 with VIDIYO print (43108-12),19,Plastic
 3068bpr9705,Tile 2 x 2 with VIDIYO print (43108-11),19,Plastic
 3068bpr9706,Tile 2 x 2 with VIDIYO print (43108-10),19,Plastic
@@ -17276,6 +17282,7 @@ part_num,name,part_cat_id,part_material
 3626cpr6366624,"Minifig Head Savage, Gold Eyes, Red Face Markings Print",59,Plastic
 3626cpr6366626,"Minifig Head Chang'e, Gold Headdress with Dark Turquoise Jewel, Dark Turqiouse Lips, Stern / Right Eye Winking Print",59,Plastic
 3626cpr6366631,"Minifig Head Lunar Rabbit Robot, Light Blue HUD with Bunny Face / Black and Red Angry Face Print",59,Plastic
+3626cpr6366633,"Minifig Head Sandy, Bushy Orange Eyebrows and Beard",59,Plastic
 3626cpr6366636,"Minifig Head Evil Macaque, Dark Red Around Gold Eyes, Smirk Showing 1 Fang / Angry Showing Teeth Print",59,Plastic
 3626cpr6366645,"Minifig Head Nezha, Big Eyebrows, Red Forehead Markings, Stern  / Smirk with Raise Left Eyebrow Print",59,Plastic
 3626cpr6366649,"Minifig Head Monkie Kid, Red Visor with Gold Frame / Angry Open Mouth Print",59,Plastic
@@ -19466,6 +19473,7 @@ part_num,name,part_cat_id,part_material
 4162pr0150,Tile 1 x 8 with Ruler CM 19 - 24 Pattern,19,Plastic
 4162pr0151,Tile 1 x 8 with Ruler CM 25 - 30 Pattern,19,Plastic
 4162pr0999,Tile 1 x 8 with 'Kladno Campus 2015' Print,19,Plastic
+4162pr6366690,Tile 1 x 8 with 'SINGAPORE' print,19,Plastic
 4162pr9988,"Tile 1 x 8 with Numbers 1,2,3,4,5,6,7,8 print",19,Plastic
 4162pr9989,"Tile 1 x 8 with Numbers 9,10,11,12,13,14,15,16 print",19,Plastic
 4162pr9990,"Tile 1 x 8 with ""LEGO Store BEIJING 1 YEAR Anniversary"" Print",19,Plastic
@@ -21025,7 +21033,7 @@ part_num,name,part_cat_id,part_material
 4555c03pr0012,"Duplo Figure, Early, Hair Bob Light Gray, Yellow Legs, White Collar and Buttons, Glasses Print",57,Plastic
 4555c03pr0013,"Duplo Figure, Early, Hair Bob Light Gray, Black Legs, White Collar and Buttons, Glasses Print",57,Plastic
 4555c03pr0014,"Duplo Figure, Early, Hair Bob Black, White Legs, Two Red Buttons and Blue EMT Star of Life Print",57,Plastic
-4555c03pr0015,"Duplo Figure, Early, Hair Bob Black, Brown Legs, Rag Shirt with Necklace Print (Caveman)",57,Plastic
+4555c03pr0015,"Duplo Figure, Early, Hair Bob Black, Brown Legs, Rag Shirt, Eyelashes with Necklace Print (Caveman)",57,Plastic
 4555c03pr0016,"Duplo Figure, Early, Hair Bob Brown, Blue Legs, Blue Overalls, Turned Up Nose Print",57,Plastic
 4555c03pr0017,"Duplo Figure, Early, Hair Bob Brown, Red Legs, Red Buttons and Gray Wrench, Turned Up Nose Print",57,Plastic
 4555c03pr0018,"Duplo Figure, Early, Hair Bob Light Gray, Light Green Legs, White Collar and Pink Pendant, Glasses Print",57,Plastic
@@ -22523,7 +22531,7 @@ part_num,name,part_cat_id,part_material
 4883c02,Duplo Car Base 2 x 6 with Red Wheels and Old Style Closed Hitch End,4,Plastic
 48842pr0001,"Duplo Figure with Cap Black, with Black Legs, Black and White Striped Top with '62019', Black Arms (Prisoner)",57,Plastic
 48842pr0002,"Duplo Figure with Cap Blue, with Blue Legs, Green Top with Yellow Scarf, and Curly Mustache Print (Train Engineer)",57,Plastic
-48842pr0003,"Duplo Figure with Cap Blue, Blue Legs, Black Vest, Mustache Print",57,Plastic
+48842pr0003,"Duplo Figure with Cap Blue, Dark Blue Legs, Black Vest, Mustache Print",57,Plastic
 4885,Duplo Chair with 1 Stud,4,Plastic
 4886,"Duplo Bed, Bunk",4,Plastic
 4886pr0001,"Duplo Bed, Bunk with Cat Print",4,Plastic
@@ -24923,6 +24931,7 @@ part_num,name,part_cat_id,part_material
 60601pr0006,Glass for Window 1 x 2 x 2 with Black and White Logo for St. John Ambulance print,16,Plastic
 60601pr0007,Glass for Window 1 x 2 x 2 Flat with Newspapers print,16,Plastic
 60601pr0008,Glass for Window 1 x 2 x 2 Flat with Newspapers print,16,Plastic
+60601pr6366171,Glass for Window 1 x 2 x 2 Flat with Woman Playing Piano print,16,Plastic
 60602,Glass for Window 1 x 2 x 3 Flat Front,16,Plastic
 60603,Glass for Window 1 x 4 x 3 [Opening],16,Plastic
 60603pr0001,"Glass for Window 1 x 4 x 3 - Opening with Map, Minifig Silhouette and Exclamation Mark Print",16,Plastic
@@ -25443,6 +25452,7 @@ part_num,name,part_cat_id,part_material
 6179pr0028,Plates Special 4 x 4 with Studs on One Edge and '20 Years LEGO Star Wars 1999-2019 Princes Leia' print,9,Plastic
 6179pr0029,Plates Special 4 x 4 with Studs on One Edge and '20 Years LEGO Star Wars 1999-2019 Obi Wan Kenobi' Print,9,Plastic
 6179pr0130,Plates Special 4 x 4 with Studs on One Edge and 'Lego Star Wars' Logo Print,9,Plastic
+6179pr6366170,Plate Special 4 x 4 with Studs on One Edge with Bulletin Board print,9,Plastic
 6179pr9983,Plate Special 4 x 4 with Studs on One Edge and Star Wars Celebration Anaheim 2015 Print,9,Plastic
 6179pr9984,Plates Special 4 x 4 with Studs on One Edge and Ocean Pirate Treasure Map Right-Half Print,9,Plastic
 6179pr9985,Plates Special 4 x 4 with Studs on One Edge and Ocean Pirate Treasure Map Left-Half Print,9,Plastic
@@ -26065,6 +26075,7 @@ part_num,name,part_cat_id,part_material
 6361361,Equipment Chopsticks,27,Plastic
 6361pr0001,Duplo Airport Tower Glass Enclosure with Window Frame Print,4,Plastic
 6363,Duplo Toolo Hydro Nozzle,4,Plastic
+6365679,Unknown,26,Plastic
 63658,Sticker Sheet for Set 7673-1,58,Plastic
 63659,Sticker Sheet for Set 8160-1,58,Plastic
 63672,Sticker Sheet for Set 7627-1,58,Plastic
@@ -26650,7 +26661,7 @@ part_num,name,part_cat_id,part_material
 65140,Plate Rounded Corners 8 x 8,21,Plastic
 65146,Turntable Snap,18,Plastic
 6515,Duplo Technic Brick 2 x 10 with 9 holes,4,Plastic
-65151,Shock Absorber 11L with Internal Spring,25,Plastic
+65151,Technic Shock Absorber 11L with Internal Spring,25,Plastic
 65156,"Duplo Support 2 x 4 x 3, Girder",4,Plastic
 65157pr0001,"Duplo Food 2 x 2 Round Cake with Stud on Top, Strawberry Print",4,Plastic
 65157pr0002,"Duplo Food 2 x 2 Round Cake with Stud on Top, Rainbow and Unicorn Face Print",4,Plastic
@@ -27227,7 +27238,7 @@ part_num,name,part_cat_id,part_material
 67137,Sticker Sheet for Set 60257-1,58,Plastic
 67138,Plane Fuselage 26 x 24 x 1 2/3,35,Plastic
 67139,Technic Panel 3 x 5 with Wall Mount Hole,40,Plastic
-67140,"Tyre 94.2 x 22 Motorcycle Racing Tread, Narrow",29,Plastic
+67140,Tyre 94.2 x 22 Motorcycle Racing Tread,29,Plastic
 67141,"Technic Panel Car Mudguard Arched 15 x 2 x 5, Arched Top",40,Plastic
 67142,"Technic Panel Curved 5 x 13 x 2 Tapered, Left",40,Plastic
 67144,Windscreen with Red Border,38,Plastic
@@ -28466,7 +28477,7 @@ part_num,name,part_cat_id,part_material
 75126pr0008,"Duplo Figure Side Parted Hair Black, with Flesh Legs, Reddish Brown Hips, Tooth Necklace Print, Black Beard, Flesh Face and Hands (Caveman)",57,Plastic
 75126pr0009,"Duplo Figure Side Parted Hair Black, with Orange Legs, with ID Badge and EMT Star of Life, Moustache Print (Medic)",57,Plastic
 75126pr0010,"Duplo Figure Side Parted Hair Black, with Blue Legs, Shirt with Rag Print, Brown Eyes, Tan Hands",57,Plastic
-75126pr0011,"75126pr0001 Duplo Figure Side Parted Hair Black, Dark Blue Legs, Open Shirt with 'VIP' Badge Print",57,Plastic
+75126pr0011,"Duplo Figure Side Parted Hair Black, Dark Blue Legs, Open Shirt with 'VIP' Badge Print",57,Plastic
 752,"Hose, Flexible 8.5L, End 1 x 1 x 2/3 Tabless",24,Plastic
 75215,Pneumatic Switch with Top Studs,22,Plastic
 75264,Sticker Sheet for Set 43187-1,58,Plastic
@@ -28881,6 +28892,7 @@ part_num,name,part_cat_id,part_material
 77486,Tile Pack 169 - Letters,67,Plastic
 77493a,"Sail, Scalloped with 2 Holes and Gold Dragon Print",38,Plastic
 77493b,"Wing, with Black Bony Spines and Yellowish Green and Lavender Print",38,Plastic
+77493c01,Sail and Dragon Wings [Complete Set],38,Plastic
 77520pr0001,"Animal, Horse with Raised Leg, White Braided Mane and Tail, White Spots print",28,Plastic
 77520pr0002,"Animal, Horse with Raised Leg, White Braided Mane and Tail  print",28,Plastic
 77528,Sticker Sheet for Set 41685-1,58,Plastic
@@ -29087,6 +29099,7 @@ part_num,name,part_cat_id,part_material
 79007,Sticker Sheet for Set 76193-1,58,Plastic
 791,Window 1 x 3 x 5 Shutter,16,Plastic
 79100,Sticker Sheet for Set 40479-1,58,Plastic
+79106,Sticker Sheet for Set 40484-1,58,Plastic
 79110,Sticker Sheet for Set 40493-1,58,Plastic
 79111,Sticker Sheet for Set 40494-1,58,Plastic
 79118,"Minidoll Hat and Hair, Two Braids with Magenta Hat Pattern",65,Plastic
@@ -29146,8 +29159,10 @@ part_num,name,part_cat_id,part_material
 79730,Door 4 x 6 with Pet Door,16,Plastic
 79736,"Equipment, Watering Can",27,Plastic
 79741,Equipment Cutlery - Fork,27,Plastic
+79743,Cupcake,27,Plastic
 79750,"Feet, 2 x 2 x 2/3, Front Left Foot Forward with 4 Studs on Top",61,Plastic
 79751,"Cloak, Large, Two Holes",38,Cloth
+79756,"Brick Curved 1 x 4 x 2/3 Double Curved Top, No Studs",37,Plastic
 79786,Minifig Neckwear Cape and Collar (Doctor Strange),27,Plastic
 79790,"Book, Knights' Kingdom II: The Quest for the Heart",17,Plastic
 79811,"Equipment Cleaver, 2 Holes",27,Plastic
@@ -29700,6 +29715,7 @@ part_num,name,part_cat_id,part_material
 85984pr0027,"Slope 30° 1 x 2 x 2/3 with Open Black Mouth, Yellow Teeth print",3,Plastic
 85984pr0028,"Slope 30° 1 x 2 x 2/3 with White Eyre, Bright Light Orange Eyelids print",3,Plastic
 85984pr0143,Slope 30° 1 x 2 x 2/3 with 2 Gauges print,3,Plastic
+85984pr6366029,Slope 30° 1 x 2 x 2/3 with Black Tiger Stripes Print,3,Plastic
 85984pr9997,Slope 30° 1 x 2 x 2/3 with Rotary Phone Print,3,Plastic
 85984pr9998,Slope 30° 1 x 2 x 2/3 with Typewriter Print,3,Plastic
 85984pr9999,"Slope 30° 1 x 2 x 2/3 with Bookmark, Teeth with Gums print",3,Plastic
@@ -29981,6 +29997,8 @@ part_num,name,part_cat_id,part_material
 87079pr0254,"Tile 2 x 4 with Dark Brown Pixels, Bright Pink Eyes print",19,Plastic
 87079pr0256,Tile 2 x 4 with White 'LEGO'  print,19,Plastic
 87079pr0414,Tile 2 x 4 with Groove with Lego Logo and #LEGOSDCC Print,19,Plastic
+87079pr6366173,Tile 2 x 4 with Abstract Art (Galidor) print,19,Plastic
+87079pr6366175,Tile 2 x 4 with Gold 'EL CUBO FINE ART' print,19,Plastic
 87079pr9973,Tile 2 x 4 with 'THANK YOU! LEGO STORE' print,19,Plastic
 87079pr9974,Tile 2 x 4 with 'I LOVE LEGO STORE EDINBURGH' print,19,Plastic
 87079pr9975,Tile 2 x 4 with Gold 'LEG GODT 2021' print,19,Plastic
@@ -30364,7 +30382,7 @@ part_num,name,part_cat_id,part_material
 884b,"Hub, RCX 1.0, No Power Jack [Complete Assembly]",45,Plastic
 884c,"Hub, RCX 2.0, No Power Jack [Complete Assembly]",45,Plastic
 88514,"Large Figure Head, Spidermonkey with Blue Face Print",41,Plastic
-88516,Tyre 94.2 x 22 Motorcycle Racing Tread,29,Rubber
+88516,"Tyre 94.2 x 22 Motorcycle Racing Tread, Narrow",29,Rubber
 88517,Wheel 75 x 17 Motorcycle,29,Plastic
 88519,"Large Figure Head, Swampfire with Black Face Print",41,Plastic
 88521pr0001,"Large Figure Head, Humungousaur with White Teeth Print",41,Plastic
@@ -30376,7 +30394,7 @@ part_num,name,part_cat_id,part_material
 88531,Sticker Sheet for Set 80034-1,58,Plastic
 88542,Sticker Sheet for Set 8056-1,58,Plastic
 88550,Sticker Sheet for Set 8057-1,58,Plastic
-88606,Sticker Sheet for Set,58,Plastic
+88606,Sticker Sheet 1 for Set 80036-1,58,Plastic
 88618pr0001,"Animal, Bird, Ostrich with White Tail and Wingtips / Light Flesh Legs and Head [Complete Assembly]",28,Plastic
 88646,Plate Special 3 x 4 with 1 x 4 Center Studs [Plain],9,Plastic
 88646pr0001,Plate Special 3 x 4 with 1 x 4 Center Studs and 'TEAM GB' and Olympic Rings Print,9,Plastic
@@ -31835,7 +31853,7 @@ part_num,name,part_cat_id,part_material
 93598pr0009,Windscreen 2 x 3 x 2 with 2 x 4 Base with Brown Eyes on White Background Print (Luigi),47,Plastic
 93598pr0010,Windscreen 2 x 3 x 2 with 2 x 4 Base with Back Window print,47,Plastic
 93598pr0011,"Windscreen 2 x 3 x 2 with 2 x 4 Base with Green Eyes on White Background, Right Brow Arched Print (Mater)",47,Plastic
-93599,Sticker Sheet for Set,58,Plastic
+93599,Sticker Sheet 2 for Set 80036-1,58,Plastic
 93604,Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs,37,Plastic
 93604pr0001,"Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs and Half Open Eyes, Flowers, and Headlights Print (Fillmore)",37,Plastic
 93604pr0002,Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs and Armor Plates and Grille with Vent Print,37,Plastic
@@ -31845,7 +31863,7 @@ part_num,name,part_cat_id,part_material
 93604pr0006,Slope Curved 3 x 4 x 2/3 Triple Curved with 3 Black Eyelashes print,37,Plastic
 93604pr0007,Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs with Iron Man Reactor print,37,Plastic
 93604pr0008,"Slope Curved 3 x 4 x 2/3 Triple Curved with 2 Sunk Studs with Cat Face, Dark Pink Nose, Bright Light Orange Eyes print",37,Plastic
-93605,Sticker Sheet for Set,58,Plastic
+93605,Sticker Sheet 3 for Set 80036-1,58,Plastic
 93606,Slope Curved 4 x 2 No Studs,37,Plastic
 93606pr0001,Slope Curved 4 x 2 No Studs with Smiling Mouth Right Half Print (L. McQueen),37,Plastic
 93606pr0002,Slope Curved 4 x 2 No Studs with Smiling Mouth Left Half Print (L. McQueen),37,Plastic
@@ -33182,6 +33200,7 @@ part_num,name,part_cat_id,part_material
 970c00pr2551,Legs and Hips with Dark Brown Belt Print (Owen Grady),61,Plastic
 970c00pr6366623,Legs and Hips with White Panels and Gold Trim Print,61,Plastic
 970c00pr6366629,"Legs and Hips with Skirt Hem, Gold Sash, Medium Azure Armor Panels and Toes Print Print",61,Plastic
+970c00pr6366635,Legs and Hips,61,Plastic
 970c00pr6366638,"Legs and Hips with Dark Red and Gold Armor, Bright Light Orange Sash, Ornate Belt Print",61,Plastic
 970c00pr6366646,"Legs and Hips with Dark Red, Gold, and Dark Turquoise Armor, Gold Toes Print",61,Plastic
 970c00pr6366648,Legs and Hips with Gold and Lavender Armor Print,61,Plastic
@@ -36804,6 +36823,7 @@ part_num,name,part_cat_id,part_material
 973c25h25pr9709,"Torso Muscles, Silver Rock Necklace Print, Sand Green Arms and Hands",60,Plastic
 973c25h26pr1985,"Torso Vest and Camouflage Shirt and Dark Bluish Gray Undershirt Print, Sand Green Arms, Tan Hands",60,Plastic
 973c25h26pr2015,"Torso Shirt, Camouflage with Weapon and Ammunition Belts Print, Sand Green Arms, Tan Hands",60,Plastic
+973c25h27pr6385228,"Torso, Picollo Suit, Gold Buttons, Dark Green Trim print, Sand Green Arms, White Hands",60,Plastic
 973c25h37pr3014,"Torso Armor, Muscles with Gold and Magenta Print (Vision), Sand Green Arms, Magenta Hands",60,Plastic
 973c26h01,"Torso, Tan Arms, Yellow Hands [Plain]",60,Plastic
 973c26h01pr0001,"Torso Jacket, White Shirt, Clamps, Grinning Monkey Print, Tan Arms, Yellow Hands",60,Plastic
@@ -37412,7 +37432,7 @@ part_num,name,part_cat_id,part_material
 973c27h10pr9999,"Torso Jacket with Honey Stain, and Honeycomb Logo Print, White Arms, Dark Red Hands",60,Plastic
 973c27h11pr4410,"Torso Armor with Red Buttons, Belt Print, White Arms, Dark Tan Hands",60,Plastic
 973c27h11pr4664,"Torso Armour, Red Lights, Utility Belt Print (Stormtrooper), White Arms, Dark Tan Hands",60,Plastic
-973c27h11pr5740,"MINI UPPER PART, NO. 5740",60,Plastic
+973c27h11pr5740,"Torso Armour, Red Lights, Utility Belt, Red and Blue Rank Insignia Badge Print (Stormtrooper), White Arms, Dark Tan Hands",60,Plastic
 973c27h12pr1201,"Torso Overalls with Blue Stripes Print, White Arms, Dark Bluish Gray Hands",60,Plastic
 973c27h12pr1427,"Torso Hospital Lab Coat, Open Collar, Stethoscope, Pocket Pen and Thermometer Print, White Arms, Dark Bluish Gray Hands",60,Plastic
 973c27h12pr1695,"Torso Spacesuit with Space Logo and Equipment Print Front and Back, White Arms, Dark Bluish Gray Hands",60,Plastic
@@ -38377,6 +38397,7 @@ part_num,name,part_cat_id,part_material
 973c42h25pr4147,"Torso Vest with Pockets and Medium Azure Shirt Print (Greedo), Medium Azure Arms, Sand Green Hands",60,Plastic
 973c42h27pr1954,"Torso V-Neck Scrubs with Wrinkles Print (Surgeon), Medium Azure Arms, White Hands",60,Plastic
 973c42h27pr5059,"Torso Jacket, Pockets, Buttons, Dark Red and Yellow Checkered Lapels, Yellow Vest, White Shirt / Yellow Patch on Back Print, Medium Azure Arms, White Hands",60,Plastic
+973c42h42pr6376474,"Torso Bare Chest, Magenta Necklace Print, Medium Azure Arms and Hands",60,Plastic
 973c43h01pr0601,"Torso Sweater, Cat Head and Bum-Bag / Fanny-Pack Print, Bright Pink Arms, Yellow Hands",60,Plastic
 973c43h01pr1077,"Torso Cupcake over Heart and Stars Print, Bright Pink Arms, Yellow Hands",60,Plastic
 973c43h01pr1577,"Torso Nightgown with White Lace and Blue Ribbon Print, Bright Pink Arms, Yellow Hands",60,Plastic
@@ -40396,9 +40417,15 @@ brickslot2x3b,Brick 2 x 3 with 2 Slots Right,11,Plastic
 brickslot2x3c,Brick 2 x 3 with 2 Slots Left,11,Plastic
 brickslot2x4,"Brick 2 x 4 without Bottom Tubes, Slotted (with 1 slot)",11,Plastic
 brickslot2x4a,"Brick 2 x 4 without Bottom Tubes, Slotted (with 2 slots)",11,Plastic
+brickslot2x4b,"Brick 2 x 4 without Bottom Tubes, Slotted (with 2 slots, opposite corner right)",11,Plastic
+brickslot2x4c,"Brick 2 x 4 without Bottom Tubes, Slotted (with 2 slots, opposite corner left)",11,Plastic
+brickslot2x4d,"Brick 2 x 4 without Bottom Tubes, Slotted (with 2 slots, near corner right)",11,Plastic
+brickslot2x4e,"Brick 2 x 4 without Bottom Tubes, Slotted (with 2 slots, near corner left)",11,Plastic
 brickslot2x8,"Brick 2 x 8 without Bottom Tubes, Slotted (with 1 slot)",11,Plastic
 brickslot2x8a,Brick 2 x 8 with 2 Slots,11,Plastic
-brickslot4x4,Brick 4 x 4 Corner Right with 2 Slots,11,Plastic
+brickslot4x4a,"Brick 4 x 4 Corner without Bottom Tubes, Slotted (with 1 slot, right side)",11,Plastic
+brickslot4x4b,"Brick 4 x 4 Corner without Bottom Tubes, Slotted (with 1 slot, left side)",11,Plastic
+brickslot4x4c,Brick 4 x 4 Corner Right with 2 Slots,11,Plastic
 carbasemi,"Vehicle Base, Minitalia Brick Special 16 x 6 with 4 wheels",36,Plastic
 carbasemia,"Vehicle Base, Minitalia Brick Special 16 x 6 with 4 Wheels for 132-old Tires",36,Plastic
 cardupn0025pr0001,"Trading Card, Create the World - Lily",17,Cardboard/Paper
