@@ -2,3 +2,4 @@ node_modules
 .yarn
 utils/tmp
 .expo
+data
