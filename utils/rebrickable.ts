@@ -18,8 +18,8 @@ mkdirSync(tmpDir, {recursive: true})
 
 const downloadGzAndExtract = async (url: string, ) =>
   new Promise(resolve => {
-    const gZipDest = path.join(tmpDir, 'parts.csv.gz')
     const outFile = (url.match(/\/([^\/]+)\.gz/) || '')[1]
+    const gZipDest = path.join(tmpDir, outFile + '.gz')
     process.stdout.write('Downloading ' + outFile + '...')
     fetch(url)
       .then(x => x.arrayBuffer())

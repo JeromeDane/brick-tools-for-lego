@@ -24,21 +24,18 @@ const api = (method: string, data: Object) =>
     .catch(e => console.log(e))
 
 const run = async () => {
-  const {hash} = await api('login', {
-    username: process.env.BRICKSET_USERNAME,
-    password: process.env.BRICKSET_PASSWORD
-  })
-  console.log(hash)
-  const result = await api('getSets', {
-    hash,
-    params: {}
-  })
-  console.log(result)
+  if(argv.updateData) await updateCsvData()
+  await buildJson()
+  // const {hash} = await api('login', {
+  //   username: process.env.BRICKSET_USERNAME,
+  //   password: process.env.BRICKSET_PASSWORD
+  // })
+  // console.log(hash)
+  // const result = await api('getSets', {
+  //   hash,
+  //   params: {}
+  // })
+  // console.log(result)
 }
 
-// run()
-
-if(argv.updateData) {
-  updateCsvData()
-}
-buildJson()
+run()
