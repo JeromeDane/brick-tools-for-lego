@@ -86,17 +86,7 @@ export const buildJson = async () => {
           })
         ),
         partCategories = await csvToJson('part_categories'),
-        parts = await csvToJson('parts').map((part: any) => {
-          const size = part.name.match(sizeRegex)
-          return Object.assign(part, {
-            nameSort: part.name
-              .replace(sizeRegex, '  ')
-              .replace(/with|w\//, ''),
-            width: size && (size[1] < size[2] ? size[1] : size[2]),
-            length: size && (size[1] > size[2] ? size[1] : size[2]),
-            height: size && size[4] || ' '
-          })
-        }),
+        parts = await csvToJson('parts'),
         partRelationships = await csvToJson('part_relationships'),
         elements = await csvToJson('elements'),
         sets = await csvToJson('sets'),
@@ -126,7 +116,6 @@ export const buildJson = async () => {
   saveData('part_categories', partCategories)
   saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
   saveData('parts', parts)
-  saveData('parts-by-number', toKeyed(parts, 'partNum'))
   saveData('part_relationships', partRelationships)
   saveData('elements', elements)
   saveData('elements-lookup', elements.reduce((acc: any, {elementId, partNum, colorId}: any) => {

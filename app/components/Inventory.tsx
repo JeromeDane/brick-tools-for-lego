@@ -4,7 +4,7 @@ import { Image } from 'react-native'
 import { Picker, Text, View } from './Themed'
 import inventoryParts from '../data/inventory_parts.json'
 import {getElement} from '../data/elements'
-import partsByNumber from '../data/parts-by-number.json'
+import partsByNumber from '../data/parts'
 import colors from '../data/colors-by-id.json'
 import partCategories from'../data/part_categories-by-id.json'
 
