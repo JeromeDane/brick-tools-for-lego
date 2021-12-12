@@ -19,8 +19,33 @@ const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^\/]|$))?/
 
 const getSubCategory = ({name, partCatId} : PartData) => {
   switch(partCatId) {
+    case '3': // Bricks Sloped
+      if(name.match(/Inverted/i)) return 'Inverted'
+      break
+      case '5': // "Bricks Special
+      if(name.match(/Bar|Handle/i)) return 'Bar'
+      if(name.match(/Clip/i)) return 'Clip'
+      if(name.match(/Headlight/i)) return 'Headlight'
+      if(name.match(/Masonry/i)) return 'Masonry'
+      if(name.match(/Studs.+(1|one)\sSide/i)) return 'SNOT'
+      if(name.match(/Studs.+(2|two)\sSide/i)) return 'SNOT, 2 sided'
+      if(name.match(/Studs.+(3|three)\sSide/i)) return 'SNOT, 3 sided'
+      if(name.match(/Studs.+(4|four)\sSide/i)) return 'SNOT, 4 sided'
+      break
+    case '7': // Containers
+      if(name.match(/Cupboard/i)) return 'Cupboard'
+      if(name.match(/Drawer/i)) return 'Drawer'
+      break
+    case '27': // Minifig Accessories
+      if(name.match(/Cup/i)) return 'Cup'
+      if(name.match(/Flame/i)) return 'Flame'
+      if(name.match(/Footwear/i)) return 'Footwear'
+      if(name.match(/Gun/i)) return 'Gun'
+      if(name.match(/Pan/i)) return 'Pan'
+       break;
     case '14': // Plates
-      if(name.match(/corner/i)) return 'Corner'
+      if(name.match(/Corner/i)) return 'Corner'
+      break
     case '9': // Plates Special
       if(name.match(/Bar|Handle/i)) return 'Bar'
       if(name.match(/Bracket/i)) return 'Bracket'
@@ -30,13 +55,16 @@ const getSubCategory = ({name, partCatId} : PartData) => {
       if(name.match(/Pin\sHole/i)) return 'Pin Hole'
       if(name.match(/Rail/i)) return 'Rail'
       if(name.match(/Tooth/i)) return 'Tooth'
+      break
     case '21': // Plates Round Curved and Dishes
       if(name.match(/Axle\sHole/i)) return 'Axle Hole'
       if(name.match(/Boat\sStud/i)) return 'Boat Stud'
       if(name.match(/Radar/i)) return 'Radar'
+      break
     case '31': // String, Bands and Reels
       if(name.match(/Chain/i)) return 'Chain'
       if(name.match(/String.+Studs.+Grip/i)) return 'Studded String with Grips'
+      break
     case '15': // Tiles Special
       if(name.match(/Clip/i)) return 'Clip'
       if(name.match(/Grille/i)) return 'Grille'
@@ -44,10 +72,12 @@ const getSubCategory = ({name, partCatId} : PartData) => {
       if(name.match(/Hole/i)) return 'Hole'
       if(name.match(/Hollow\sBar/i)) return 'Hollow Bar'
       if(name.match(/Inverted/i)) return 'Inverted'
+      break
     case '67': // Tiles Round and Curved
       if(name.match(/Half\sCircle/i)) return 'Half Circle'
       if(name.match(/Macaroni/i)) return 'Macaroni'
       if(name.match(/Quarter/i)) return 'Quarter'
+      break
     default: return ''
   }
 }
