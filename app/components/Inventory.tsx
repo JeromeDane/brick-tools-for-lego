@@ -9,7 +9,7 @@ import colors from '../data/colors'
 import partCategories from'../data/part_categories-by-id.json'
 
 const Inventory = ({id}: {id: string, setNum: string}) => {
-  const defaultSortOrder = 'category.name,width,length,height,nameSort,color.sortOrder',
+  const defaultSortOrder = 'category.name,subCategory,width,length,height,nameSort,color.sortOrder',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         parts = inventoryParts[id]?.map((part: any) => {
           return Object.assign(part, partsByNumber[part.partNum], {
@@ -28,11 +28,11 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
           selectedValue={sortOrder}
           onValueChange={setSortOrder}>
           <Picker.Item label="Category, size, and color" value={defaultSortOrder} />
-          <Picker.Item label="Color, category, and size" value={'color.sortOrder,category.name,width,length,height,nameSort'} />
-          <Picker.Item label="Size, category, and color" value={'width,length,height,category.name,nameSort,color.sortOrder'} />
-          <Picker.Item label="Size descending, category, and color" value={'-width,-length,-height,category.name,nameSort,color.sortOrder'} />
-          <Picker.Item label="Size, color, and category" value={'width,length,height,color.sortOrder,nameSort,category.name'} />
-          <Picker.Item label="Size descending, color, and category" value={'-width,-length,-height,color.sortOrder,nameSort,category.name'} />
+          <Picker.Item label="Color, category, and size" value={'color.sortOrder,category.name,subCategory,width,length,height,nameSort'} />
+          <Picker.Item label="Size, category, and color" value={'width,length,height,category.name,subCategory,nameSort,color.sortOrder'} />
+          <Picker.Item label="Size descending, category, and color" value={'-width,-length,-height,category.name,subCategory,nameSort,color.sortOrder'} />
+          <Picker.Item label="Size, color, and category" value={'width,length,height,color.sortOrder,nameSort,category.name,subCategory'} />
+          <Picker.Item label="Size descending, color, and category" value={'-width,-length,-height,color.sortOrder,nameSort,category.name,subCategory'} />
         </Picker>
       </View>
       {parts
@@ -44,7 +44,7 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
               source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${getElement(part.partNum, part.colorId)}.jpg`}} />
             <View>
               <Text>Part: {part.partNum} Element: {getElement(part.partNum, part.colorId)}</Text>
-              <Text>Category: {part.category.name}</Text>
+              <Text>Category: {part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
               <Text>Name: {part.name}</Text>
               <Text>Color: {part.color.name} ({part.colorId})</Text>
               <Text>Quantity: {part.quantity}</Text>
