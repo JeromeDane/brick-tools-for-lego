@@ -48,6 +48,9 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
       break
     case '9': // Plates Special
       if(name.match(/Bar|Handle/i)) return 'Bar'
+      if(name.match(/Bracket.+Inverted/i)) return 'Bracket Inverted'
+      if(name.match(/Bracket.+Pin.+Bottom/i)) return 'Bracket Pin Bottom'
+      if(name.match(/Bracket.+Vertical.+Studs/i)) return 'Bracket Vertical Studs'
       if(name.match(/Bracket/i)) return 'Bracket'
       if(name.match(/Clip/i)) return 'Clip'
       if(name.match(/Jumper/i)) return 'Jumper'
