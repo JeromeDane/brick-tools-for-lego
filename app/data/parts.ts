@@ -41,8 +41,13 @@ const getSubCategory = ({name, partCatId} : PartData) => {
       if(name.match(/Clip/i)) return 'Clip'
       if(name.match(/Grille/i)) return 'Grille'
       if(name.match(/Gold\sBar/i)) return 'Gold Bar'
+      if(name.match(/Hole/i)) return 'Hole'
       if(name.match(/Hollow\sBar/i)) return 'Hollow Bar'
       if(name.match(/Inverted/i)) return 'Inverted'
+    case '67': // Tiles Round and Curved
+      if(name.match(/Half\sCircle/i)) return 'Half Circle'
+      if(name.match(/Macaroni/i)) return 'Macaroni'
+      if(name.match(/Quarter/i)) return 'Quarter'
     default: return ''
   }
 }
