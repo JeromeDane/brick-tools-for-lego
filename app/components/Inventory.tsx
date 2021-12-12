@@ -9,7 +9,7 @@ import colors from '../data/colors'
 import partCategories from'../data/part_categories-by-id.json'
 
 const Inventory = ({id}: {id: string, setNum: string}) => {
-  const defaultSortOrder = 'category.name,subCategory,width,length,height,nameSort,color.sortOrder',
+  const defaultSortOrder = 'category.name,subCategory,width,length,height,color.sortOrder',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false),
         parts = inventoryParts[id]?.map((part: any) => {
@@ -29,11 +29,11 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
           selectedValue={sortOrder}
           onValueChange={setSortOrder}>
           <Picker.Item label="Category, size, and color" value={defaultSortOrder} />
-          <Picker.Item label="Color, category, and size" value={'color.sortOrder,category.name,subCategory,width,length,height,nameSort'} />
-          <Picker.Item label="Size, category, and color" value={'width,length,height,category.name,subCategory,nameSort,color.sortOrder'} />
-          <Picker.Item label="Size descending, category, and color" value={'-width,-length,-height,category.name,subCategory,nameSort,color.sortOrder'} />
-          <Picker.Item label="Size, color, and category" value={'width,length,height,color.sortOrder,nameSort,category.name,subCategory'} />
-          <Picker.Item label="Size descending, color, and category" value={'-width,-length,-height,color.sortOrder,nameSort,category.name,subCategory'} />
+          <Picker.Item label="Color, category, and size" value={'color.sortOrder,category.name,subCategory,width,length,height'} />
+          <Picker.Item label="Size, category, and color" value={'width,length,height,category.name,subCategory,color.sortOrder'} />
+          <Picker.Item label="Size descending, category, and color" value={'-width,-length,-height,category.name,subCategory,color.sortOrder'} />
+          <Picker.Item label="Size, color, and category" value={'width,length,height,color.sortOrder,category.name,subCategory'} />
+          <Picker.Item label="Size descending, color, and category" value={'-width,-length,-height,color.sortOrder,category.name,subCategory'} />
         </Picker>
       </View>
       <View style={{marginBottom: 20}}>

@@ -17,7 +17,7 @@ export interface Part extends PartData {
 
 const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^\/]|$))?/
 
-const getSubCategory = ({name, partCatId} : PartData) => {
+const getSubCategory = ({name, partCatId} : PartData) : string => {
   switch(partCatId) {
     case '3': // Bricks Sloped
       if(name.match(/Inverted/i)) return 'Inverted'
@@ -78,8 +78,8 @@ const getSubCategory = ({name, partCatId} : PartData) => {
       if(name.match(/Macaroni/i)) return 'Macaroni'
       if(name.match(/Quarter/i)) return 'Quarter'
       break
-    default: return ''
   }
+  return ''
 }
 
 export default (partsData as PartData[]).reduce(
