@@ -3,7 +3,6 @@ import fetch from 'cross-fetch'
 import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path';
 import {promisify} from 'util'
-import colorOrder from './color-order'
 
 const csv = require('csvtojson')
 const gUnzip = require('gunzip-file')
@@ -79,12 +78,7 @@ const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^\/]|$))?/
 
 export const buildJson = async () => {
   const themes = await csvToJson('themes'),
-        colors = await csvToJson('colors').map((color: any) =>
-          Object.assign(color, {
-            isTrans: color.isTrans == 't',
-            order: colorOrder.indexOf(color.name)
-          })
-        ),
+        colors = await csvToJson('colors'),
         partCategories = await csvToJson('part_categories'),
         parts = await csvToJson('parts'),
         partRelationships = await csvToJson('part_relationships'),
@@ -112,7 +106,6 @@ export const buildJson = async () => {
   saveData('themes', themes)
   saveData('themes-by-id', toKeyed(themes, 'id'))
   saveData('colors', colors)
-  saveData('colors-by-id', toKeyed(colors, 'id'))
   saveData('part_categories', partCategories)
   saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
   saveData('parts', parts)
