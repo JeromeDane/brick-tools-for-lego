@@ -56,7 +56,7 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
           />
         </View>
       </View>
-      {(showSpareParts ? parts : parts.filter((p: any) => p.isSpare))
+      {(showSpareParts ? parts : parts.filter((p: any) => !p.isSpare))
         ?.sort(sortBy.apply(sortBy, sortOrder.split(',')))
         .map((part: any, i: number) =>
           <View key={i} style={{flex: 1, flexDirection: 'row', flexGrow: 1, marginBottom: 10}}>
@@ -65,11 +65,10 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
               source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${getElement(part.partNum, part.colorId)}.jpg`}} />
             <View>
               <Text>Part: {part.partNum} Element: {getElement(part.partNum, part.colorId)}</Text>
-              <Text>Category: {part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
-              <Text>Name: {part.name}</Text>
-              <Text>Color: {part.color.name} ({part.colorId})</Text>
-              <Text>Quantity: {part.quantity}</Text>
-              <Text>{part.isSpare ? 'Spare part' : ''}</Text>
+              <Text>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
+              <Text>{part.name}</Text>
+              <Text>{part.color.name} ({part.colorId})</Text>
+              <Text>Qty: {part.quantity}{part.isSpare ? ' (spare part)' : ''}</Text>
             </View>
           </View>
         )
