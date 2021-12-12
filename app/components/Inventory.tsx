@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import sortBy from 'sort-by'
-import { Image } from 'react-native'
+import { Image, Switch, TouchableOpacity } from 'react-native'
 import { Picker, Text, View } from './Themed'
 import inventoryParts from '../data/inventory_parts.json'
 import {getElement} from '../data/elements'
@@ -11,6 +11,7 @@ import partCategories from'../data/part_categories-by-id.json'
 const Inventory = ({id}: {id: string, setNum: string}) => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height,nameSort,color.sortOrder',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
+        [showSpareParts, setShowSpareParts] = useState(false),
         parts = inventoryParts[id]?.map((part: any) => {
           return Object.assign(part, partsByNumber[part.partNum], {
             color: colors[part.colorId],
@@ -35,10 +36,30 @@ const Inventory = ({id}: {id: string, setNum: string}) => {
           <Picker.Item label="Size descending, color, and category" value={'-width,-length,-height,color.sortOrder,nameSort,category.name,subCategory'} />
         </Picker>
       </View>
-      {parts
+      <View style={{marginBottom: 20}}>
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <TouchableOpacity
+            style={{
+              paddingRight: 10,
+              flexGrow: 1
+            }}
+            onPress={() => setShowSpareParts(!showSpareParts)}
+          >
+            <Text style={{textAlign: 'right'}}>Show spare parts</Text>
+          </TouchableOpacity>
+          <Switch
+            trackColor={{ false: "#767577", true: "#81b0ff" }}
+            thumbColor={showSpareParts ? "#f5dd4b" : "#f4f3f4"}
+            ios_backgroundColor="#3e3e3e"
+            onValueChange={setShowSpareParts}
+            value={showSpareParts}
+          />
+        </View>
+      </View>
+      {(showSpareParts ? parts : parts.filter((p: any) => p.isSpare))
         ?.sort(sortBy.apply(sortBy, sortOrder.split(',')))
         .map((part: any, i: number) =>
-          <View key={i} style={{flex: 1, flexDirection: 'row', marginBottom: 10}}>
+          <View key={i} style={{flex: 1, flexDirection: 'row', flexGrow: 1, marginBottom: 10}}>
             <Image
               style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
               source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${getElement(part.partNum, part.colorId)}.jpg`}} />
