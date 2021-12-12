@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/brick-tools-for-lego/static/js/app.4f441ca3.chunk.js",
-    "app.js.map": "/brick-tools-for-lego/static/js/app.4f441ca3.chunk.js.map",
+    "app.js": "/brick-tools-for-lego/static/js/app.766e468e.chunk.js",
+    "app.js.map": "/brick-tools-for-lego/static/js/app.766e468e.chunk.js.map",
     "runtime~app.js": "/brick-tools-for-lego/static/js/runtime~app.df27c12f.js",
     "runtime~app.js.map": "/brick-tools-for-lego/static/js/runtime~app.df27c12f.js.map",
     "static/js/2.e139063e.chunk.js": "/brick-tools-for-lego/static/js/2.e139063e.chunk.js",
@@ -30,6 +30,6 @@
   "entrypoints": [
     "static/js/runtime~app.df27c12f.js",
     "static/js/2.e139063e.chunk.js",
-    "static/js/app.4f441ca3.chunk.js"
+    "static/js/app.766e468e.chunk.js"
   ]
 }
