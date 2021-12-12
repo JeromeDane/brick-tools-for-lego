@@ -13,6 +13,7 @@ const corrections = {
   '3821-4': '4537987', // red 1x3x1 door right
   '3821-15': '4537987', // white 1x3x1 door right
   '14769-72': '4620079', // dark bluish gray 2x2 tile round
+  '18677-70': '6192310', // reddish brown 1x2 plate-special with pin hole underneath
   '32028-72': '4543086', // light bluish gray 1x2 plate with door grove
   '32028-19': '4160483', // tan 1x2 plate with door grove
   '32039-0': '6331716', // black technic axle connector with axle hole
