@@ -34,12 +34,12 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>)
         {filteredPartNumbers.length
           ? filteredPartNumbers
             .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
-            .map(part => {
-              return <View style={styles.part}>
+            .map((part, i: number) => {
+              return <View style={styles.part} key={i}>
                 <View>
-                  {part.colors.slice(0, 1).map(color => {
+                  {part.colors.slice(0, 1).map((color, i: number) => {
                     const element = getElementByPartAndColor(part.partNum, color.id)
-                    return <View>
+                    return <View key={i}>
                       <Image
                         style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
                         source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
