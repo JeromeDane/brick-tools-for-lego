@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { ScrollView, StyleSheet, Image } from 'react-native'
+import { ScrollView, StyleSheet, Image, Switch, TouchableOpacity } from 'react-native'
 import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
@@ -11,6 +11,7 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [partCategory, setPartCategory] = useState(''),
+        [showPrints, setShowPrints] = useState(false),
         [pageSize, setPageSize] = useState(25),
         [currentPage, setCurrentPage] = useState(0),
         [filterBy, setFilterBy] = useState(''),
@@ -18,7 +19,8 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
         filteredPartNumbers = partsList.filter(part => {
           return (part.colors.length > 0) &&
                  (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase())) &&
-                 (!partCategory || part.category.id == partCategory)
+                 (!partCategory || part.category.id == partCategory) &&
+                 (showPrints || !part.partNum.match('pr'))
         })
   return (
     <View style={styles.container}>
@@ -57,6 +59,28 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
             )}
           </Picker>
         </View>
+        <View style={{marginBottom: 20}}>
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <TouchableOpacity
+            style={{
+              paddingRight: 10,
+              flexGrow: 1
+            }}
+            onPress={() => setShowPrints(!showPrints)}
+            >
+            <Text style={{textAlign: 'right'}}>Show printed parts</Text>
+          </TouchableOpacity>
+          <Switch
+            trackColor={{ false: "#767577", true: "#81b0ff" }}
+            thumbColor={showPrints ? "#f5dd4b" : "#f4f3f4"}
+            ios_backgroundColor="#3e3e3e"
+            onValueChange={setShowPrints}
+            value={showPrints}
+          />
+          {/*
+          */}
+        </View>
+      </View>
         {filteredPartNumbers.length
           ? filteredPartNumbers
             .sort(sortBy.apply(sortBy, sortOrder.split(',')))
