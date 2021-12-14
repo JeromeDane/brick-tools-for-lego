@@ -1,4 +1,4 @@
-import elementsData from '../data/elements.json'
+import elementsData from './raw/elements.json'
 import type {Color} from './colors'
 import type {Part} from './parts'
 import colors from './colors'

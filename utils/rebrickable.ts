@@ -9,7 +9,7 @@ const gUnzip = require('gunzip-file')
 const writeFilePromise = promisify(writeFile);
 
 const csvDir = path.join(__dirname, '../data/rebrickable')
-const dataDir = path.join(__dirname, '../app/data/')
+const dataDir = path.join(__dirname, '../app/data/raw')
 const tmpDir = path.join(__dirname, 'tmp')
 mkdirSync(csvDir, {recursive: true})
 mkdirSync(dataDir, {recursive: true})
@@ -58,7 +58,7 @@ export const updateCsvData = async () => {
 const saveData = (type: string, data: Object) => {
   process.stdout.write(`Saving ${type} ...`)
   writeFileSync(
-    path.join(__dirname, `../app/data/${type}.json`),
+    path.join(dataDir, type + '.json'),
     JSON.stringify(data, null, 2))
   process.stdout.write(` done.\n`)
 }

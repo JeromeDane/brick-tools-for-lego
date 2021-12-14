@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import sortBy from 'sort-by'
 import { Image, Switch, TouchableOpacity } from 'react-native'
 import { Picker, Text, View } from './Themed'
-import inventoryParts from '../data/inventory_parts.json'
+import inventoryParts from '../data/raw/inventory_parts.json'
 import {getElement} from '../data/elements'
 import partsByNumber from '../data/parts'
 import colors from '../data/colors'
-import partCategories from'../data/part_categories-by-id.json'
+import partCategories from'../data/raw/part_categories-by-id.json'
 
 const Inventory = ({id}: {id: string, setNum: string}) => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height,color.sortOrder',

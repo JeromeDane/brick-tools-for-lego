@@ -4,8 +4,8 @@ import { ScrollView, Linking, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
-import sets from '../data/sets.json'
-import themes from '../data/themes-by-id.json'
+import sets from '../data/raw/sets.json'
+import themes from '../data/raw/themes-by-id.json'
 import Inventory from '../components/Inventory'
 
 export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {

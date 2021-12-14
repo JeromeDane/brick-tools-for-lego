@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, ViewPropTypes } from 'react-native'
 import sortBy from 'sort-by'
 import { Text, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
-import themes from '../data/themes.json'
+import themes from '../data/raw/themes.json'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>) {
   return (

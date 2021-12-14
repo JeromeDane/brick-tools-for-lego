@@ -1,4 +1,4 @@
-import colorsData from './colors.json'
+import colorsData from './raw/colors.json'
 import colorOrder from './color-order'
 
 type ColorData = {

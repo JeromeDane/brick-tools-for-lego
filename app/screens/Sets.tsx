@@ -4,7 +4,7 @@ import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
-import sets from '../data/sets.json'
+import sets from '../data/raw/sets.json'
 
 export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProps<'Sets'>) {
   const [sortField, setSortField] = useState('-year'),

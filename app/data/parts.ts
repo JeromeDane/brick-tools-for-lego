@@ -1,4 +1,4 @@
-import partsData from './parts.json'
+import partsData from './raw/parts.json'
 import type {Color} from './colors'
 
 type PartData = {
