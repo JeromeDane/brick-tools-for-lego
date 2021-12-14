@@ -16,6 +16,7 @@ const linking: LinkingOptions<RootStackParamList> = {
       Root: {
         path: 'brick-tools-for-lego',
         screens: {
+          Parts: 'parts',
           Themes: 'themes',
           Sets: 'sets',
         },

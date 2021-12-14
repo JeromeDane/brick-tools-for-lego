@@ -15,6 +15,7 @@ import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import ThemesScreen from '../screens/Themes';
+import PartsScreen from '../screens/Parts'
 import SetsScreen from '../screens/Sets';
 import SetScreen from '../screens/Set';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
@@ -69,14 +70,6 @@ function BottomTabNavigator() {
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
       <BottomTab.Screen
-        name="Sets"
-        component={SetsScreen}
-        options={{
-          title: 'Sets',
-          tabBarIcon: ({ color }) => <TabBarIcon name="cubes" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
         name="Themes"
         component={ThemesScreen}
         options={({navigation}: RootTabScreenProps<'Themes'>) => ({
@@ -97,6 +90,22 @@ function BottomTabNavigator() {
             </Pressable>
           ),
         })}
+      />
+      <BottomTab.Screen
+        name="Sets"
+        component={SetsScreen}
+        options={{
+          title: 'Sets',
+          tabBarIcon: ({ color }) => <TabBarIcon name="cubes" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Parts"
+        component={PartsScreen}
+        options={{
+          title: 'Parts',
+          tabBarIcon: ({ color }) => <TabBarIcon name="cube" color={color} />,
+        }}
       />
     </BottomTab.Navigator>
   );
