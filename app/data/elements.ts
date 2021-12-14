@@ -65,9 +65,7 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
     '70': '6192310'
   },
   '32028': { // light bluish gray 1x2 plate with door grove
-    '72': '4543086'
-  },
-  '32028': { // tan 1x2 plate with door grove
+    '72': '4543086',
     '19': '4160483'
   },
   '32039': { // black technic axle connector with axle hole
