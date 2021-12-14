@@ -1,13 +1,15 @@
 import React, { useRef, useState } from 'react'
 import { ScrollView, StyleSheet, Image } from 'react-native'
 import sortBy from 'sort-by'
-import { Paginator, Text, TextInput, View } from '../components/Themed'
+import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
 import {partsList} from '../data/parts'
 import { getElementByPartAndColor } from '../data/elements'
 
 const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
-  const [pageSize, setPageSize] = useState(25),
+  const defaultSortOrder = 'category.name,subCategory,width,length,height',
+        [sortOrder, setSortOrder] = useState(defaultSortOrder),
+        [pageSize, setPageSize] = useState(25),
         [currentPage, setCurrentPage] = useState(0),
         [filterBy, setFilterBy] = useState(''),
         scrollRef = useRef(),
@@ -31,8 +33,19 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
               setFilterBy(value)
             }} />
         </View>
+        <View style={{marginBottom: 20}}>
+          <Picker
+            label="Sort by"
+            selectedValue={sortOrder}
+            onValueChange={setSortOrder}>
+            <Picker.Item label="Category, size" value={defaultSortOrder} />
+            <Picker.Item label="Size, category" value={'width,length,height,category.name,subCategory'} />
+            <Picker.Item label="Size descending, category" value={'-width,-length,-height,category.name,subCategory'} />
+          </Picker>
+        </View>
         {filteredPartNumbers.length
           ? filteredPartNumbers
+            .sort(sortBy.apply(sortBy, sortOrder.split(',')))
             .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
             .map((part, i: number) => {
               return <View style={styles.part} key={i}>
@@ -47,6 +60,7 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
                   })}
                 </View>
                 <View>
+                  <Text>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
                   <Text>{part.name} #{part.partNum}</Text>
                   <Text>{part.colors.length} color{part.colors.length == 1 ? '' : 's'}</Text>
                 </View>
