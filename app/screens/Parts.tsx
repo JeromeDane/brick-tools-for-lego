@@ -5,17 +5,20 @@ import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
 import {partsList} from '../data/parts'
 import { getElementByPartAndColor } from '../data/elements'
+import {partCategoriesList} from '../data/part-categories'
 
 const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
+        [partCategory, setPartCategory] = useState(''),
         [pageSize, setPageSize] = useState(25),
         [currentPage, setCurrentPage] = useState(0),
         [filterBy, setFilterBy] = useState(''),
         scrollRef = useRef(),
         filteredPartNumbers = partsList.filter(part => {
           return (part.colors.length > 0) &&
-                 (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase()))
+                 (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase())) &&
+                 (!partCategory || part.category.id == partCategory)
         })
   return (
     <View style={styles.container}>
@@ -41,6 +44,17 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
             <Picker.Item label="Category, size" value={defaultSortOrder} />
             <Picker.Item label="Size, category" value={'width,length,height,category.name,subCategory'} />
             <Picker.Item label="Size descending, category" value={'-width,-length,-height,category.name,subCategory'} />
+          </Picker>
+        </View>
+        <View style={{marginBottom: 20}}>
+          <Picker
+            label="Category"
+            selectedValue={partCategory}
+            onValueChange={setPartCategory}>
+            <Picker.Item label="All categories" value="" />
+            {partCategoriesList.map(({id, name}, i) =>
+              <Picker.Item label={name} value={id} key={i} />
+            )}
           </Picker>
         </View>
         {filteredPartNumbers.length
