@@ -22,15 +22,17 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
         padding: 20,
         paddingBottom: 100,
       }}>
-        <TextInput
-          label="Search Sets"
-          onChangeText={value => {
-            setCurrentPage(0)
-            setFilterBy(value)
-          }} />
+        <View>
+          <TextInput
+            label="Search Sets"
+            onChangeText={value => {
+              setCurrentPage(0)
+              setFilterBy(value)
+            }} />
+        </View>
         <View style={{
           marginBottom: 20,
-          marginTop: 10
+          marginTop: 20
         }}>
           <Picker
             label="Sort by"
