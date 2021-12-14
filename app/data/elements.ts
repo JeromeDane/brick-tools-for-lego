@@ -2,7 +2,7 @@ import elementsData from './raw/elements.json'
 import type {Color} from './colors'
 import type {Part} from './parts'
 import colors from './colors'
-import parts from './parts'
+import {getPart} from './parts'
 
 type ElementData = {
   i: string, // elementId
@@ -10,7 +10,7 @@ type ElementData = {
   c: string // colorId
 }
 
-type Element = {
+export type Element = {
   id: string,
   part: Part,
   color: Color
@@ -19,7 +19,7 @@ type Element = {
 const partColors : {[keys: string]: {[keys: string]: Element}} = {}
 
 export const elements = (elementsData as ElementData[]).reduce((acc, {i, p, c}) => {
-  const part = parts[p],
+  const part = getPart(p),
         color = colors[c]
   part.colors.push(color)
   const element = {
@@ -37,8 +37,8 @@ export const getElementByPartAndColor = (partNum: string, colorId: string) =>
   (corrections[partNum] && corrections[partNum][colorId] && elements[corrections[partNum][colorId]]) ||
   (partColors[partNum] && partColors[partNum][colorId]) ||
   {
-    id: '', // element not found
-    part: parts[partNum],
+    id: '-1', // element not found
+    part: getPart(partNum),
     color: colors[colorId]
   }
 

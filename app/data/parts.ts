@@ -1,5 +1,7 @@
 import partsData from './raw/parts.json'
 import type {Color} from './colors'
+import type {PartCategory} from './part-categories'
+import {getPartCategory} from './part-categories'
 
 type PartData = {
   partNum: string,
@@ -13,6 +15,7 @@ export interface Part extends PartData {
   width: number,
   length: number,
   height: number,
+  category: PartCategory,
   subCategory: string,
   colors: Color[]
 }
@@ -103,6 +106,7 @@ const parts = (partsData as PartData[]).reduce(
       width,
       length,
       height,
+      category: getPartCategory(partData.partCatId),
       subCategory: getSubCategory(partData),
       colors: []
     } as Part
@@ -114,3 +118,18 @@ const parts = (partsData as PartData[]).reduce(
 export const partsList = Object.keys(parts).map(partNum => parts[partNum])
 
 export default parts
+
+export const getPart = (partNum: string) =>
+  parts[partNum] || {
+    partNum: '-1',
+    name: 'unknown part',
+    partCatId: '',
+    partMaterial: '',
+    nameSort: '',
+    width: 0,
+    length: 0,
+    height: 0,
+    category: {},
+    subCategory: '',
+    colors: []
+  }
