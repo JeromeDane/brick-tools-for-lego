@@ -88,7 +88,7 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
   return ''
 }
 
-export default (partsData as PartData[]).reduce(
+const parts = (partsData as PartData[]).reduce(
   (acc: {[key: string]: Part}, partData: PartData) => {
     const size = partData.name.match(sizeRegex),
         width = size ? parseInt(size[1].padStart(2) < size[2].padStart(2) ? size[1] : size[2]) : 0,
@@ -110,3 +110,7 @@ export default (partsData as PartData[]).reduce(
   },
   {}
 )
+
+export const partsList = Object.keys(parts).map(partNum => parts[partNum])
+
+export default parts

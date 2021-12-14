@@ -3,17 +3,15 @@ import { ScrollView, StyleSheet, Image } from 'react-native'
 import sortBy from 'sort-by'
 import { Paginator, Text, TextInput, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
-import parts from '../data/parts'
+import {partsList} from '../data/parts'
 import { getElement } from '../data/elements'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>) {
   const [pageSize, setPageSize] = useState(25),
         [currentPage, setCurrentPage] = useState(0),
         [filterBy, setFilterBy] = useState(''),
-        partNumbers = Object.keys(parts),
         scrollRef = useRef(),
-        filteredPartNumbers = partNumbers.filter(partNum => {
-          const part = parts[partNum]
+        filteredPartNumbers = partsList.filter(part => {
           return (part.colors.length > 0) &&
                  (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase()))
         })
@@ -36,8 +34,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>)
         {filteredPartNumbers.length
           ? filteredPartNumbers
             .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
-            .map(partNum => {
-              const part = parts[partNum]
+            .map(part => {
               return <View style={styles.part}>
                 <View>
                   {part.colors.slice(0, 1).map(color => {
