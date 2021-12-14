@@ -4,7 +4,7 @@ import sortBy from 'sort-by'
 import { Paginator, Text, TextInput, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
 import {partsList} from '../data/parts'
-import { getElement } from '../data/elements'
+import { getElementByPartAndColor } from '../data/elements'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>) {
   const [pageSize, setPageSize] = useState(25),
@@ -38,7 +38,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>)
               return <View style={styles.part}>
                 <View>
                   {part.colors.slice(0, 1).map(color => {
-                    const element = getElement(part.partNum, color.id)
+                    const element = getElementByPartAndColor(part.partNum, color.id)
                     return <View>
                       <Image
                         style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}

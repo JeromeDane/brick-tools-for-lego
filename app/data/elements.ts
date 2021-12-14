@@ -33,9 +33,14 @@ export const elements = (elementsData as ElementData[]).reduce((acc, {i, p, c}) 
   return acc
 }, {} as {[key: string]: Element})
 
-export const getElement = (partNum: string, c: string) =>
-  (corrections[partNum] && corrections[partNum][c] && elements[corrections[partNum][c]]) ||
-  partColors[partNum][c]
+export const getElementByPartAndColor = (partNum: string, colorId: string) =>
+  (corrections[partNum] && corrections[partNum][colorId] && elements[corrections[partNum][colorId]]) ||
+  (partColors[partNum] && partColors[partNum][colorId]) ||
+  {
+    id: '', // element not found
+    part: parts[partNum],
+    color: colors[colorId]
+  }
 
 const corrections : {[keys: string]: {[keys: string]: string}} = {
   '3005': { // sand green 1x1 brick
