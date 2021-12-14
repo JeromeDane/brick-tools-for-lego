@@ -5,12 +5,14 @@ import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
 import {partsList} from '../data/parts'
 import { getElementByPartAndColor } from '../data/elements'
+import { colorsList } from '../data/colors'
 import {partCategoriesList} from '../data/part-categories'
 
 const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [partCategory, setPartCategory] = useState(''),
+        [colorFilter, setColorFilter] = useState(''),
         [showPrints, setShowPrints] = useState(false),
         [pageSize, setPageSize] = useState(25),
         [currentPage, setCurrentPage] = useState(0),
@@ -20,9 +22,10 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
           return (part.colors.length > 0) &&
                  (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase())) &&
                  (!partCategory || part.category.id == partCategory) &&
-                 (showPrints || !part.partNum.match('pr'))
+                 (showPrints || !part.partNum.match('pr')) &&
+                 (!colorFilter || part.colors.find(({id}) => id == colorFilter))
         }),
-        defaultColorId = '0' // black
+        defaultColorId = colorFilter || colorsList[0].id
   return (
     <View style={styles.container}>
       <ScrollView ref={scrollRef} style={{
@@ -43,7 +46,10 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
           <Picker
             label="Sort by"
             selectedValue={sortOrder}
-            onValueChange={setSortOrder}>
+            onValueChange={value => {
+              setCurrentPage(0)
+              setSortOrder(value)
+            }}>
             <Picker.Item label="Category, size" value={defaultSortOrder} />
             <Picker.Item label="Size, category" value={'width,length,height,category.name,subCategory'} />
             <Picker.Item label="Size descending, category" value={'-width,-length,-height,category.name,subCategory'} />
@@ -53,9 +59,26 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
           <Picker
             label="Category"
             selectedValue={partCategory}
-            onValueChange={setPartCategory}>
+            onValueChange={value => {
+              setCurrentPage(0)
+              setPartCategory(value)
+            }}>
             <Picker.Item label="All categories" value="" />
             {partCategoriesList.map(({id, name}, i) =>
+              <Picker.Item label={name} value={id} key={i} />
+            )}
+          </Picker>
+        </View>
+        <View style={{marginBottom: 20}}>
+          <Picker
+            label="Color"
+            selectedValue={colorFilter}
+            onValueChange={value => {
+              setCurrentPage(0)
+              setColorFilter(value)
+            }}>
+            <Picker.Item label="All available colors" value="" />
+            {colorsList.map(({id, name}, i) =>
               <Picker.Item label={name} value={id} key={i} />
             )}
           </Picker>
@@ -98,7 +121,7 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
                 <View>
                   <Text>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
                   <Text>{part.name}</Text>
-                  <Text>Part Number:{part.partNum}</Text>
+                  <Text>Part Number: {part.partNum}</Text>
                   <Text>Colors: {part.colors.length}</Text>
                 </View>
               </View>

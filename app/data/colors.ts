@@ -1,3 +1,4 @@
+import sortBy from 'sort-by'
 import colorsData from './raw/colors.json'
 import colorOrder from './color-order'
 
@@ -16,7 +17,7 @@ export type Color = {
   sortOrder: number
 }
 
-export default (colorsData as ColorData[])
+const colors = (colorsData as ColorData[])
   .reduce((acc: {[key: string]: Color}, colorData) => {
     const colorIndex = colorOrder.indexOf(colorData.name)
     return Object.assign(acc, {[colorData.id]:
@@ -29,3 +30,9 @@ export default (colorsData as ColorData[])
   },
   {}
 )
+
+export default colors
+
+export const colorsList = Object.keys(colors)
+  .map(id => colors[id])
+  .sort(sortBy('name'))
