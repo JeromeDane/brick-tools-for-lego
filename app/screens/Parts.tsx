@@ -6,7 +6,7 @@ import { RootTabScreenProps } from '../types'
 import {partsList} from '../data/parts'
 import { getElementByPartAndColor } from '../data/elements'
 
-export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>) {
+const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
   const [pageSize, setPageSize] = useState(25),
         [currentPage, setCurrentPage] = useState(0),
         [filterBy, setFilterBy] = useState(''),
@@ -69,6 +69,8 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>)
     </View>
   )
 }
+
+export default TabsScreen
 
 const styles = StyleSheet.create({
   container: {
