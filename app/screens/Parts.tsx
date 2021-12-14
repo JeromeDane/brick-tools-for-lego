@@ -21,7 +21,8 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
                  (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase())) &&
                  (!partCategory || part.category.id == partCategory) &&
                  (showPrints || !part.partNum.match('pr'))
-        })
+        }),
+        defaultColorId = '0' // black
   return (
     <View style={styles.container}>
       <ScrollView ref={scrollRef} style={{
@@ -86,17 +87,14 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
             .sort(sortBy.apply(sortBy, sortOrder.split(',')))
             .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
             .map((part, i: number) => {
+              const defaultColor = part.colors.find(({id}) => id == defaultColorId) || part.colors[0],
+                    element = defaultColor && getElementByPartAndColor(part.partNum, defaultColor.id)
               return <View style={styles.part} key={i}>
-                <View>
-                  {part.colors.slice(0, 1).map((color, i: number) => {
-                    const element = getElementByPartAndColor(part.partNum, color.id)
-                    return <View key={i}>
-                      <Image
-                        style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
-                        source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
-                    </View>
-                  })}
-                </View>
+                {element &&
+                  <Image
+                    style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
+                    source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
+                }
                 <View>
                   <Text>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
                   <Text>{part.name}</Text>
