@@ -75,8 +75,9 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
                 </View>
                 <View>
                   <Text>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
-                  <Text>{part.name} #{part.partNum}</Text>
-                  <Text>{part.colors.length} color{part.colors.length == 1 ? '' : 's'}</Text>
+                  <Text>{part.name}</Text>
+                  <Text>Part Number:{part.partNum}</Text>
+                  <Text>Colors: {part.colors.length}</Text>
                 </View>
               </View>
             })
