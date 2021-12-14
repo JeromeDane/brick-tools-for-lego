@@ -1,4 +1,5 @@
 import partsData from './parts.json'
+import type {Color} from './colors'
 
 type PartData = {
   partNum: string,
@@ -12,7 +13,8 @@ export interface Part extends PartData {
   width: number,
   length: number,
   height: number,
-  subCategory: string
+  subCategory: string,
+  colors: Color[]
 }
 
 const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^\/]|$))?/
@@ -53,6 +55,7 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
       if(name.match(/Bracket.+Vertical.+Studs/i)) return 'Bracket Vertical Studs'
       if(name.match(/Bracket/i)) return 'Bracket'
       if(name.match(/Clip/i)) return 'Clip'
+      if(name.match(/Jumper/i) && name.match(/Round/i)) return 'Jumper Round'
       if(name.match(/Jumper/i)) return 'Jumper'
       if(name.match(/pin\sHole\s(on\s)Top/i)) return 'Pin Hole Top'
       if(name.match(/Pin\sHole/i)) return 'Pin Hole'
@@ -72,9 +75,9 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
       if(name.match(/Clip/i)) return 'Clip'
       if(name.match(/Grille/i)) return 'Grille'
       if(name.match(/Gold\sBar/i)) return 'Gold Bar'
+      if(name.match(/Inverted/i)) return 'Inverted' // must go before hole
       if(name.match(/Hole/i)) return 'Hole'
       if(name.match(/Hollow\sBar/i)) return 'Hollow Bar'
-      if(name.match(/Inverted/i)) return 'Inverted'
       break
     case '67': // Tiles Round and Curved
       if(name.match(/Half\sCircle/i)) return 'Half Circle'
@@ -100,7 +103,8 @@ export default (partsData as PartData[]).reduce(
       width,
       length,
       height,
-      subCategory: getSubCategory(partData)
+      subCategory: getSubCategory(partData),
+      colors: []
     } as Part
     return acc
   },

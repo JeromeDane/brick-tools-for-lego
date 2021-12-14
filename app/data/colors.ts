@@ -8,7 +8,7 @@ type ColorData = {
   isTrans: string
 }
 
-type Color = {
+export type Color = {
   id: string,
   name: string,
   rgb: string,

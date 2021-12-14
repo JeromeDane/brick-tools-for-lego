@@ -110,11 +110,11 @@ export const buildJson = async () => {
   saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
   saveData('parts', parts)
   saveData('part_relationships', partRelationships)
-  saveData('elements', elements)
-  saveData('elements-lookup', elements.reduce((acc: any, {elementId, partNum, colorId}: any) => {
-    acc[partNum + '-' + colorId] = elementId
-    return acc
-  }, {}))
+  saveData('elements', elements.map((e: any) => ({
+    i: e.elementId,
+    p: e.partNum,
+    c: e.colorId
+  })))
   saveData('sets', sets.map((set: any) => {
     const setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))
     return Object.assign({}, set, {
