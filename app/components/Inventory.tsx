@@ -3,8 +3,6 @@ import sortBy from 'sort-by'
 import { Image, Switch, TouchableOpacity } from 'react-native'
 import { Picker, Text, View } from './Themed'
 import inventoryParts from '../data/inventory-parts'
-import type {Element} from '../data/elements'
-import {getElementByPartAndColor} from '../data/elements'
 
 const Inventory = ({id}: {id: string, setNum: string}) => {
   const defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder',
