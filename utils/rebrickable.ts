@@ -87,7 +87,6 @@ export const buildJson = async () => {
         minifigs = await csvToJson('minifigs'),
         inventories = await csvToJson('inventories'),
         inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
-          part.isSpare = part.isSpare == 't'
           acc[part.inventoryId] = acc[part.inventoryId] || []
           acc[part.inventoryId].push({
             p: part.partNum,
