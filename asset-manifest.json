@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/brick-tools-for-lego/static/js/app.1dcb4a3b.chunk.js",
-    "app.js.map": "/brick-tools-for-lego/static/js/app.1dcb4a3b.chunk.js.map",
+    "app.js": "/brick-tools-for-lego/static/js/app.23e2b7ab.chunk.js",
+    "app.js.map": "/brick-tools-for-lego/static/js/app.23e2b7ab.chunk.js.map",
     "runtime~app.js": "/brick-tools-for-lego/static/js/runtime~app.df27c12f.js",
     "runtime~app.js.map": "/brick-tools-for-lego/static/js/runtime~app.df27c12f.js.map",
-    "static/js/2.7e171268.chunk.js": "/brick-tools-for-lego/static/js/2.7e171268.chunk.js",
-    "static/js/2.7e171268.chunk.js.map": "/brick-tools-for-lego/static/js/2.7e171268.chunk.js.map",
+    "static/js/2.19f7bdcb.chunk.js": "/brick-tools-for-lego/static/js/2.19f7bdcb.chunk.js",
+    "static/js/2.19f7bdcb.chunk.js.map": "/brick-tools-for-lego/static/js/2.19f7bdcb.chunk.js.map",
     "fonts/AntDesign.ttf": "/brick-tools-for-lego/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/brick-tools-for-lego/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/brick-tools-for-lego/./fonts/Feather.ttf",
@@ -25,11 +25,11 @@
     "index.html": "/brick-tools-for-lego/index.html",
     "manifest.json": "/brick-tools-for-lego/manifest.json",
     "serve.json": "/brick-tools-for-lego/serve.json",
-    "static/js/2.7e171268.chunk.js.LICENSE.txt": "/brick-tools-for-lego/static/js/2.7e171268.chunk.js.LICENSE.txt"
+    "static/js/2.19f7bdcb.chunk.js.LICENSE.txt": "/brick-tools-for-lego/static/js/2.19f7bdcb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.df27c12f.js",
-    "static/js/2.7e171268.chunk.js",
-    "static/js/app.1dcb4a3b.chunk.js"
+    "static/js/2.19f7bdcb.chunk.js",
+    "static/js/app.23e2b7ab.chunk.js"
   ]
 }
