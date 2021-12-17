@@ -89,7 +89,12 @@ export const buildJson = async () => {
         inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
           part.isSpare = part.isSpare == 't'
           acc[part.inventoryId] = acc[part.inventoryId] || []
-          acc[part.inventoryId].push(part)
+          acc[part.inventoryId].push({
+            p: part.partNum,
+            c: part.colorId,
+            q: parseInt(part.quantity),
+            s: part.isSpare == 't' ? 1 : 0
+          })
           delete part.inventoryId
           return acc
         }, {}),
