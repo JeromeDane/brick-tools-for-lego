@@ -71,7 +71,7 @@ const MenuButton = ({navigation}: any) => {
 const DrawerContent = (props: any) => {
   return (
     <DrawerContentScrollView {...props}>
-      <Text style={{padding: 20, fontWeight: 'bold'}}>Brick Tools for LEGO</Text>
+      <Text style={{padding: 20, fontWeight: 'bold'}}>Brick Tools for LEGO®</Text>
       <DrawerItemList {...props} />
       <DrawerItem
         label="Project Homepage"
