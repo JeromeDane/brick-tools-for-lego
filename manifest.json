@@ -2,8 +2,8 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "lang": "en",
-  "name": "Brick Tools for Lego",
-  "short_name": "Brick Tools for Lego",
+  "name": "Brick Tools for LEGO®",
+  "short_name": "Brick Tools for LEGO®",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
   "icons": [
