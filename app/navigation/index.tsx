@@ -18,6 +18,7 @@ import { ColorSchemeName, Pressable, Linking } from 'react-native';
 import { Text } from '../components/Themed'
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import AboutScreen from '../screens/AboutScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import ThemesScreen from '../screens/Themes';
 import PartsScreen from '../screens/Parts'
@@ -40,7 +41,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
       linking={LinkingConfiguration}
       documentTitle={{
         formatter: (options, route) =>
-          `${options?.title ?? route?.name} - Brick Tools for Lego`,
+          `${options?.title ?? route?.name} - Brick Tools for LEGO®`,
       }}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack.Navigator>
@@ -89,24 +90,28 @@ const DrawerNav = () => {
       options={({navigation}) => ({
         drawerIcon: ({color}) => <FontAwesome name="cubes" size={20} color={color} />,
         headerLeft: () => <MenuButton {...{navigation}} />
-      })}
-    />
+      })} />
     <Drawer.Screen
       name="Themes"
       component={ThemesScreen}
       options={({navigation}) => ({
         drawerIcon: ({color}) => <AntDesign name="picture" size={25} color={color} />,
         headerLeft: () => <MenuButton {...{navigation}} />
-      })}
-    />
+      })} />
     <Drawer.Screen
       name="Parts"
       component={PartsScreen}
       options={({navigation}) => ({
         drawerIcon: ({color}) => <MaterialCommunityIcons name="puzzle" size={25} color={color} />,
         headerLeft: () => <MenuButton {...{navigation}} />
-      })}
-    />
+      })} />
+    <Drawer.Screen
+      name="About"
+      component={AboutScreen}
+      options={({navigation}) => ({
+        drawerIcon: ({color}) => <AntDesign name="infocirlce" size={25} color={color} />,
+        headerLeft: () => <MenuButton {...{navigation}} />
+      })} />
   </Drawer.Navigator>
 }
 

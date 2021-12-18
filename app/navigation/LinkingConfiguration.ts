@@ -19,6 +19,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           Parts: 'parts',
           Themes: 'themes',
           Sets: 'sets',
+          About: 'about',
         },
       },
       Set: 'brick-tools-for-lego/set/:id',

@@ -24,12 +24,21 @@ export type RootStackParamList = {
   Modal: undefined;
   Set: {id: number};
   NotFound: undefined;
+  About: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
   RootStackParamList,
   Screen
 >;
+
+export type RootTabParamList = {
+  Parts: undefined;
+  Themes: undefined;
+  Sets: undefined;
+  About: undefined;
+};
+
 export type RootDrawerScreenProps<Screen extends keyof RootDrawerParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootDrawerParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
