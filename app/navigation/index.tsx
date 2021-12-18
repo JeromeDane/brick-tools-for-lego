@@ -3,23 +3,36 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
-import { FontAwesome } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import 'react-native-gesture-handler'
+import {
+  AntDesign,
+  FontAwesome,
+  MaterialIcons,
+  MaterialCommunityIcons
+} from '@expo/vector-icons';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import { createDrawerNavigator, DrawerItem, DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { ColorSchemeName, Pressable } from 'react-native';
-
+import { ColorSchemeName, Pressable, Linking } from 'react-native';
+import { Text } from '../components/Themed'
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import ThemesScreen from '../screens/Themes';
 import PartsScreen from '../screens/Parts'
 import SetsScreen from '../screens/Sets';
 import SetScreen from '../screens/Set';
-import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import { RootStackParamList, RootDrawerParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+
+/**
+ * A root stack navigator is often used for displaying modals on top of all other content.
+ * https://reactnavigation.org/docs/modal
+ */
+ const Stack = createNativeStackNavigator<RootStackParamList>();
+
+ const Drawer = createDrawerNavigator<RootDrawerParamList>()
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -30,93 +43,73 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
           `${options?.title ?? route?.name} - Brick Tools for Lego`,
       }}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <RootNavigator />
+      <Stack.Navigator>
+        <Stack.Screen name="Root" component={DrawerNav} options={{ headerShown: false }} />
+        <Stack.Screen name="Set" component={SetScreen} options={{ }} />
+        <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-/**
- * A root stack navigator is often used for displaying modals on top of all other content.
- * https://reactnavigation.org/docs/modal
- */
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const MenuButton = ({navigation}: any) => {
+  const colorScheme = useColorScheme();
+  console.log(colorScheme, Colors, Colors[colorScheme])
+  return  <Pressable
+    onPress={() => navigation.toggleDrawer()}
+    style={({ pressed }) => ({opacity: pressed ? 0.5 : 1})}>
+    <MaterialIcons
+      name="menu"
+      size={25}
+      style={{marginLeft: 20}}
+      color={Colors[colorScheme].text}
+    />
+  </Pressable>
+}
 
-function RootNavigator() {
+const DrawerContent = (props: any) => {
   return (
-    <Stack.Navigator initialRouteName="Root">
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
-      <Stack.Screen name="Set" component={SetScreen} options={{ }} />
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-      <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
-      </Stack.Group>
-    </Stack.Navigator>
+    <DrawerContentScrollView {...props}>
+      <Text style={{padding: 20, fontWeight: 'bold'}}>Brick Tools for LEGO</Text>
+      <DrawerItemList {...props} />
+      <DrawerItem
+        label="Project Homepage"
+        icon={({color}) => <AntDesign name="github" size={25} color={color} />}
+        onPress={() => Linking.openURL('https://github.com/JeromeDane/brick-tools-for-lego/')}
+      />
+    </DrawerContentScrollView>
   );
 }
 
-/**
- * A bottom tab navigator displays tab buttons on the bottom of the display to switch screens.
- * https://reactnavigation.org/docs/bottom-tab-navigator
- */
-const BottomTab = createBottomTabNavigator<RootTabParamList>();
-
-function BottomTabNavigator() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <BottomTab.Navigator
-      initialRouteName="Sets"
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
-      }}>
-      <BottomTab.Screen
-        name="Themes"
-        component={ThemesScreen}
-        options={({navigation}: RootTabScreenProps<'Themes'>) => ({
-          title: 'Themes',
-          tabBarIcon: ({ color }) => <TabBarIcon name="picture-o" color={color} />,
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Modal')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
-        })}
-      />
-      <BottomTab.Screen
-        name="Sets"
-        component={SetsScreen}
-        options={{
-          title: 'Sets',
-          tabBarIcon: ({ color }) => <TabBarIcon name="cubes" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Parts"
-        component={PartsScreen}
-        options={{
-          title: 'Parts',
-          tabBarIcon: ({ color }) => <TabBarIcon name="cube" color={color} />,
-        }}
-      />
-    </BottomTab.Navigator>
-  );
+const DrawerNav = () => {
+  return <Drawer.Navigator initialRouteName="Sets" drawerContent={(props) => <DrawerContent {...props} />}>
+    <Drawer.Screen
+      name="Sets"
+      component={SetsScreen}
+      options={({navigation}) => ({
+        drawerIcon: ({color}) => <FontAwesome name="cubes" size={20} color={color} />,
+        headerLeft: () => <MenuButton {...{navigation}} />
+      })}
+    />
+    <Drawer.Screen
+      name="Themes"
+      component={ThemesScreen}
+      options={({navigation}) => ({
+        drawerIcon: ({color}) => <AntDesign name="picture" size={25} color={color} />,
+        headerLeft: () => <MenuButton {...{navigation}} />
+      })}
+    />
+    <Drawer.Screen
+      name="Parts"
+      component={PartsScreen}
+      options={({navigation}) => ({
+        drawerIcon: ({color}) => <MaterialCommunityIcons name="puzzle" size={25} color={color} />,
+        headerLeft: () => <MenuButton {...{navigation}} />
+      })}
+    />
+  </Drawer.Navigator>
 }
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
-}
