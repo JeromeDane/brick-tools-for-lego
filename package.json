@@ -6,7 +6,8 @@
   "author": "Jerome Dane <jerome.dane@gmail.com>",
   "scripts": {
     "cli": "ts-node ./utils/cli.ts",
-    "update-data": "ts-node ./utils/cli.ts --updateData"
+    "update-data": "ts-node ./utils/cli.ts --updateData",
+    "release": "yarn update-data && cd app && yarn deploy"
   },
   "devDependencies": {
     "@types/node": "^16.11.10",
