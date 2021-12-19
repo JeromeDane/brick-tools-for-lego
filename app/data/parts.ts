@@ -32,14 +32,23 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
       if(name.match(/Stair/i)) return 'Stair'
       if(name.match(/Stop\sRing/i)) return 'Stop Ring'
       break;
+    case '37': // Bricks Curved
+      if(name.match(/Arch/i)) return 'Arch'
+      break;
+    case '20': // Bricks Round and Cones
+      if(name.match(/Cone/i)) return 'Cone'
+      if(name.match(/Dome/i)) return 'Dome'
+      break;
     case '3': // Bricks Sloped
       if(name.match(/Inverted/i)) return 'Inverted'
+      if(name.match(/Slots/i)) return 'Slots'
       break
     case '5': // "Bricks Special
       if(name.match(/Bar|Handle/i)) return 'Bar'
       if(name.match(/Clip/i)) return 'Clip'
       if(name.match(/Headlight/i)) return 'Headlight'
       if(name.match(/Masonry/i)) return 'Masonry'
+      if(name.match(/Pins/i)) return 'Pins'
       if(name.match(/Studs.+(1|one)\sSide/i)) return 'SNOT'
       if(name.match(/Studs.+(2|two)\sSide/i)) return 'SNOT, 2 sided'
       if(name.match(/Studs.+(3|three)\sSide/i)) return 'SNOT, 3 sided'
