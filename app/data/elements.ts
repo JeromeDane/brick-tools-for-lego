@@ -43,8 +43,9 @@ export const getElementByPartAndColor = (partNum: string, colorId: string) =>
   }
 
 const corrections : {[keys: string]: {[keys: string]: string}} = {
-  '3005': { // sand green 1x1 brick
-    '378': '4521948'
+  '3005': { // 1x1 brick
+    '47': '6220959', // trans clear
+    '378': '4521948' // sand green
   },
   '3010': { // sand green 1x3 brick,
     '378': '4521947'
@@ -55,6 +56,9 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
   '3031': { // tan 4/4 plate,
     '19': '4243824',
     '70': '4243838'
+  },
+  '3040b': { // 1x2 sloped brick
+    '15': '4121932' // white
   },
   '3673': { // light bluish gray technic pin without friction ridges
     '71': '4211807'
@@ -68,6 +72,12 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
   },
   '18677': { // reddish brown 1x2 plate-special with pin hole underneath
     '70': '6192310'
+  },
+  '30361c': { // Brick Round 2 x 2 x 2 Robot Body - with Bottom Axle Holder x Shape + O
+    '0': '4194008' // black
+  },
+  '30374': { // Bar 4L (Lightsaber Blade / Wand)
+    '70': '6116613' // reddish brown
   },
   '32028': { // light bluish gray 1x2 plate with door grove
     '72': '4543086',
@@ -88,4 +98,7 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
   '4740': { // green 2x2 dish
     '2': '4567908'
   },
+  '54200': { // cheese wedge
+    '46': '6245272' // trans yellow
+  }
 }
