@@ -24,10 +24,18 @@ const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^\/]|$))?/
 
 const getSubCategory = ({name, partCatId} : PartData) : string => {
   switch(partCatId) {
+    case '32': // Bars, Ladders, and Fences
+      if(name.match(/Clip/i)) return 'Clip'
+      if(name.match(/Eye/i)) return 'Eye'
+      if(name.match(/Fence/i)) return 'Fence'
+      if(name.match(/Lever/i)) return 'Lever'
+      if(name.match(/Stair/i)) return 'Stair'
+      if(name.match(/Stop\sRing/i)) return 'Stop Ring'
+      break;
     case '3': // Bricks Sloped
       if(name.match(/Inverted/i)) return 'Inverted'
       break
-      case '5': // "Bricks Special
+    case '5': // "Bricks Special
       if(name.match(/Bar|Handle/i)) return 'Bar'
       if(name.match(/Clip/i)) return 'Clip'
       if(name.match(/Headlight/i)) return 'Headlight'
