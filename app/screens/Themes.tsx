@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, ViewPropTypes } from 'react-native'
 import sortBy from 'sort-by'
 import { Text, View } from '../components/Themed'
-import { RootTabScreenProps } from '../types'
+import { RootDrawerParamList } from '../types'
 import themes from '../data/raw/themes.json'
 
-export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>) {
+export default function TabsScreen({ navigation }: RootDrawerParamList<'Themes'>) {
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -26,7 +26,6 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Themes'>)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'flex-start',
     padding: 20
   },
   theme: {
