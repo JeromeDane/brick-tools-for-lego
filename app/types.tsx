@@ -16,7 +16,8 @@ declare global {
 export type RootDrawerParamList = {
   Sets: undefined,
   Themes: undefined,
-  Parts: undefined
+  Parts: undefined,
+  About: undefined
 };
 
 export type RootStackParamList = {
