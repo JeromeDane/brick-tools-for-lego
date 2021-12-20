@@ -12,8 +12,10 @@ import { RootStackParamList } from '../types';
 const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [Linking.makeUrl('https://jeromedane.github.io/')],
   config: {
+    initialRouteName: 'Root',
     screens: {
       Root: {
+        initialRouteName: 'Sets',
         path: 'brick-tools-for-lego',
         screens: {
           Parts: 'parts',
@@ -26,7 +28,7 @@ const linking: LinkingOptions<RootStackParamList> = {
       Modal: 'brick-tools-for-lego/modal',
       NotFound: '*',
     },
-  },
+  }
 };
 
 export default linking;
