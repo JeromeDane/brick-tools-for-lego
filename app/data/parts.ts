@@ -69,27 +69,36 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
       if(name.match(/Corner/i)) return 'Corner'
       break
     case '9': // Plates Special
+      if(name.match(/Arm\sUp/i)) return 'Arm Up'
       if(name.match(/Bar|Handle/i)) return 'Bar'
       if(name.match(/Bracket.+Inverted/i)) return 'Bracket Inverted'
       if(name.match(/Bracket.+Pin.+Bottom/i)) return 'Bracket Pin Bottom'
       if(name.match(/Bracket.+Vertical.+Studs/i)) return 'Bracket Vertical Studs'
       if(name.match(/Bracket/i)) return 'Bracket'
       if(name.match(/Clip/i)) return 'Clip'
+      if(name.match(/Cutout/i)) return 'Cutout'
+      if(name.match(/Hole/i)) return 'Hole'
       if(name.match(/Jumper/i) && name.match(/Round/i)) return 'Jumper Round'
       if(name.match(/Jumper/i)) return 'Jumper'
+      if(name.match(/Ladder/i)) return 'Ladder'
       if(name.match(/pin\sHole\s(on\s)Top/i)) return 'Pin Hole Top'
       if(name.match(/Pin\sHole/i)) return 'Pin Hole'
       if(name.match(/Rail/i)) return 'Rail'
+      if(name.match(/1.?x.?4\swith\s2\sStuds|Studs.+on.+edges/i)) return 'Studs on Edges'
       if(name.match(/Tooth/i)) return 'Tooth'
+      if(name.match(/Towball/i)) return 'Towball'
       break
     case '21': // Plates Round Curved and Dishes
-      if(name.match(/Axle\sHole/i)) return 'Axle Hole'
+      if(name.match(/Corner/i)) return 'Corner'
       if(name.match(/Boat\sStud/i)) return 'Boat Stud'
       if(name.match(/Radar/i)) return 'Radar'
       break
     case '31': // String, Bands and Reels
       if(name.match(/Chain/i)) return 'Chain'
       if(name.match(/String.+Studs.+Grip/i)) return 'Studded String with Grips'
+      break
+    case '51': // Technic beams
+      if(name.match(/Thin/i)) return 'Thin'
       break
     case '15': // Tiles Special
       if(name.match(/Clip/i)) return 'Clip'
