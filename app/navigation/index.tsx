@@ -11,10 +11,10 @@ import {
   MaterialCommunityIcons
 } from '@expo/vector-icons';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
-import { createDrawerNavigator, DrawerItem, DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { ColorSchemeName, Pressable, Linking } from 'react-native';
+import { ColorSchemeName, Pressable } from 'react-native';
 import { Text } from '../components/Themed'
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -73,11 +73,6 @@ const DrawerContent = (props: any) => {
     <DrawerContentScrollView {...props}>
       <Text style={{padding: 20, fontWeight: 'bold'}}>Brick Tools for LEGO®</Text>
       <DrawerItemList {...props} />
-      <DrawerItem
-        label="Project Homepage"
-        icon={({color}) => <AntDesign name="github" size={25} color={color} />}
-        onPress={() => Linking.openURL('https://github.com/JeromeDane/brick-tools-for-lego/')}
-      />
     </DrawerContentScrollView>
   );
 }
