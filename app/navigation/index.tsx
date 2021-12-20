@@ -10,7 +10,7 @@ import {
   MaterialIcons,
   MaterialCommunityIcons
 } from '@expo/vector-icons';
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme, DarkTheme, useNavigation } from '@react-navigation/native';
 import { createDrawerNavigator, DrawerItem, DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
@@ -46,7 +46,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack.Navigator>
         <Stack.Screen name="Root" component={DrawerNav} options={{ headerShown: false }} />
-        <Stack.Screen name="Set" component={SetScreen} options={{ }} />
+        <Stack.Screen name="Set" component={SetScreen} />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       </Stack.Navigator>
     </NavigationContainer>

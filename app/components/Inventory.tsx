@@ -4,7 +4,7 @@ import { Image, Switch, TouchableOpacity } from 'react-native'
 import { Picker, Text, View } from './Themed'
 import inventoryParts from '../data/inventory-parts'
 
-const Inventory = ({id}: {id: string, setNum: string}) => {
+const Inventory = ({id}: {id: string}) => {
   const defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder,name',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false),
