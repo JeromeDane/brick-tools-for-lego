@@ -63,6 +63,9 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
     '19': '4243824',
     '70': '4243838'
   },
+  '4175': {
+    '0': '6285241' // black
+  },
   '3040b': { // 1x2 sloped brick
     '15': '4121932' // white
   },
