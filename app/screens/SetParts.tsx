@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
+import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
 import { ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
-import { SetTabsParamList } from '../types'
+import { SetTabsParamList } from '../navigation/SetTabs'
 import sets from '../data/raw/sets.json'
 import Inventory from '../components/Inventory'
-import inventoryParts from '../data/inventory-parts'
+import inventoryParts, {InventoryPart} from '../data/inventory-parts'
 
-export default function SetPartsScreen({ navigation }: SetTabsParamList<'Set'>) {
-  const {routes, index} = navigation.getState(),
-        id = routes[index].params.id,
-        set = sets.find(set => set.setNum === id),
+export default function SetPartsScreen({navigation, route: {params: {id}}} : MaterialTopTabScreenProps<SetTabsParamList, 'SetParts'>) {
+  const set = sets.find(set => set.setNum === id),
         inventory = set && set.inventories && set.inventories[0],
         numParts = ((inventory && inventoryParts[inventory.id]) || [])
-          .reduce((count, inventoryPart) => count + inventoryPart.quantity, 0)
+          .reduce((count: number, inventoryPart: InventoryPart) => count + inventoryPart.quantity, 0)
   useEffect(() => {
     navigation.setOptions({
       title: `Parts (${numParts.toLocaleString()})`

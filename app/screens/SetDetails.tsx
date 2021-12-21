@@ -1,15 +1,14 @@
+import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
 import React from 'react';
 import { ScrollView, Linking, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
-import { SetTabsParamList } from '../types'
+import { SetTabsParamList } from '../navigation/SetTabs'
 import sets from '../data/raw/sets.json'
 import themes from '../data/raw/themes-by-id.json'
 
-export default function SetDetailsScreen({ navigation }: SetTabsParamList<'Set'>) {
-  const {routes, index} = navigation.getState(),
-        id = routes[index].params.id,
-        set = sets.find(set => set.setNum === id)
+export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
+  const set = sets.find(set => set.setNum === id)
   return (
     <View>
       {set

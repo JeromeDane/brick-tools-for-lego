@@ -11,7 +11,7 @@ type InventoryPartData = {
   s: number // isSpare
 }
 
-type InventoryPart = {
+export type InventoryPart = {
   part: Part,
   color: Color,
   quantity: number,
