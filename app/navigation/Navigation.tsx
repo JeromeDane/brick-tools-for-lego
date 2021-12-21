@@ -25,8 +25,8 @@ import ElementScreen from '../screens/Element'
 import ThemesScreen from '../screens/Themes';
 import PartsScreen from '../screens/Parts'
 import SetsScreen from '../screens/Sets';
-import { RootStackParamList, RootDrawerParamList } from '../types';
-import LinkingConfiguration from './LinkingConfiguration';
+import { RootStackParamList, RootDrawerParamList } from './types';
+import linking from './linking';
 import SetTabs from './SetTabs'
 
 /**
@@ -40,7 +40,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>(),
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
-      linking={LinkingConfiguration}
+      linking={linking}
       documentTitle={{
         formatter: (options, route) =>
           `${options?.title ?? route?.name} - Brick Tools for LEGO®`,
