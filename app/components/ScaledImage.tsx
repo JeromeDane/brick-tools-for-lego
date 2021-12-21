@@ -12,21 +12,18 @@ interface ImageProps extends DefaultImageProps {
 
 const ScaledImage = (props: ImageProps) => {
   const { style, ...otherProps } = props,
-        [width, setImageWidth] = useState(props.width || 100),
-        [height, setImageHeight] = useState(props.height || 100)
+        [[width, height], setImageSize] = useState([props.width || 100, props.height || 100])
   useEffect(() => {
     DefaultImage.getSize(props.source.uri, (w, h) => {
       if(props.width && !props.height) {
         const newWidth = Math.min(props.width, props.maxWidth || Number.POSITIVE_INFINITY)
-        setImageHeight(h * (newWidth / w))
-        setImageWidth(newWidth)
+        setImageSize([newWidth, h * (newWidth / w)])
       } else if(!props.width && props.height) {
         const newHeight = Math.min(props.height, props.maxHeight || Number.POSITIVE_INFINITY)
-        setImageHeight(newHeight)
-        setImageWidth(w * (newHeight / h))
+        setImageSize([w * (newHeight / h), newHeight])
       }
     })
-  }, [props.width, props.height])
+  }, [])
   return <DefaultImage style={[{
     backgroundColor: Colors[useColorScheme()].background,
     width,

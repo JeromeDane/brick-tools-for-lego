@@ -10,20 +10,15 @@ import Inventory from '../components/Inventory'
 
 export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
   const {routes, index} = navigation.getState(),
-        [viewWidth, setViewWidth] = useState(0),
         set = sets.find(set => set.setNum === routes[index].params.id)
   useEffect(() => {
-    navigation.setOptions({title: set.setNum + ' ' + set.name})
+    navigation.setOptions({title: set?.setNum + ' ' + set?.name})
   }, [set])
-  return (
+  return set && (
     <View>
-      <ScrollView style={{padding: 20}}
-        onLayout={({nativeEvent}) =>
-          setViewWidth(nativeEvent.layout.width - 40)
-        }>
+      <ScrollView style={{padding: 20}}>
         <ScaledImage
-          width={viewWidth}
-          maxWidth={500}
+          width={500}
           source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
           style={{marginBottom: 20}} />
         <View style={{marginBottom: 20}}>
