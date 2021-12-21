@@ -34,5 +34,8 @@ export default {
     extra: {
       BRICKSET_API_KEY: process.env.BRICKSET_API_KEY,
     },
+    ios: {
+      "bundleIdentifier": "com.jeromedane.bricktoolsforlego"
+    }
   }
 }
