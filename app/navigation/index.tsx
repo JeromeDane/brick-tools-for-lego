@@ -55,7 +55,6 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 
 const MenuButton = ({navigation}: any) => {
   const colorScheme = useColorScheme();
-  console.log(colorScheme, Colors, Colors[colorScheme])
   return  <Pressable
     onPress={() => navigation.toggleDrawer()}
     style={({ pressed }) => ({opacity: pressed ? 0.5 : 1})}>
