@@ -29,6 +29,7 @@ const linking: LinkingOptions<RootStackParamList> = {
         path: 'brick-tools-for-lego/set/:id',
         screens: {
           SetDetails: 'details',
+          SetInstructions: 'instructions',
           SetParts: 'parts'
         }
       },

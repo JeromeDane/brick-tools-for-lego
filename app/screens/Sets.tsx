@@ -15,7 +15,6 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
         filteredSets = filterBy
           ? sets.filter(({name, setNum}) => (setNum + name).toLowerCase().match(filterBy.toLowerCase()))
           : sets
-
   return (
     <ScrollView ref={scrollRef} style={{
       padding: 20,
