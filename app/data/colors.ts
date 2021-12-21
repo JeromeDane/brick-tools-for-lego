@@ -2,19 +2,36 @@ import sortBy from 'sort-by'
 import colorsData from './raw/colors.json'
 import colorOrder from './color-order'
 
-type ColorData = {
+type ThirdPartyColor = {
   id: string,
-  name: string,
-  rgb: string,
-  isTrans: string
+  name: string
+}
+
+type ColorData = {
+  id: string;
+  name: string;
+  rgb: string;
+  isTrans: string;
+  firstYear: number;
+  lastYear: number;
+  lego: ThirdPartyColor;
+  lDraw: ThirdPartyColor;
+  brickLink: ThirdPartyColor;
+  brickOwl: ThirdPartyColor;
 }
 
 export type Color = {
-  id: string,
-  name: string,
-  rgb: string,
-  isTrans: boolean,
-  sortOrder: number
+  id: string;
+  name: string;
+  rgb: string;
+  isTrans: boolean;
+  sortOrder: number;
+  firstYear: number;
+  lastYear: number;
+  lego: ThirdPartyColor;
+  lDraw: ThirdPartyColor;
+  brickLink: ThirdPartyColor;
+  brickOwl: ThirdPartyColor;
 }
 
 const colors = (colorsData as ColorData[])
