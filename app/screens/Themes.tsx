@@ -7,19 +7,17 @@ import themes from '../data/raw/themes.json'
 
 export default function TabsScreen({ navigation }: RootDrawerParamList<'Themes'>) {
   return (
-    <View style={styles.container}>
-      <ScrollView>
-        {themes
-          .filter(({parentId}) => !parentId)
-          .sort(sortBy('name'))
-          .map(theme =>
-            <Text key={theme.id} style={styles.theme}>
-              {theme.name} ({theme.numSets} sets)
-            </Text>
-          )
-        }
-      </ScrollView>
-    </View>
+    <ScrollView style={styles.container}>
+      {themes
+        .filter(({parentId}) => !parentId)
+        .sort(sortBy('name'))
+        .map(theme =>
+          <Text key={theme.id} style={styles.theme}>
+            {theme.name} ({theme.numSets} sets)
+          </Text>
+        )
+      }
+    </ScrollView>
   )
 }
 
