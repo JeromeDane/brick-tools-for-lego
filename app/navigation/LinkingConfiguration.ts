@@ -24,6 +24,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           About: 'about',
         },
       },
+      Element: 'brick-tools-for-lego/element/:id',
       Set: 'brick-tools-for-lego/set/:id',
       Modal: 'brick-tools-for-lego/modal',
       NotFound: '*',

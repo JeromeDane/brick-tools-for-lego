@@ -20,6 +20,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import AboutScreen from '../screens/AboutScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
+import ElementScreen from '../screens/Element'
 import ThemesScreen from '../screens/Themes';
 import PartsScreen from '../screens/Parts'
 import SetsScreen from '../screens/Sets';
@@ -46,6 +47,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack.Navigator>
         <Stack.Screen name="Root" component={DrawerNav} options={{ headerShown: false }} />
+        <Stack.Screen name="Element" component={ElementScreen} />
         <Stack.Screen name="Set" component={SetScreen} />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       </Stack.Navigator>

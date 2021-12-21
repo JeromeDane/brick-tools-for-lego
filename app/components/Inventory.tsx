@@ -4,7 +4,7 @@ import { Image, Switch, TouchableOpacity } from 'react-native'
 import { Picker, Text, View } from './Themed'
 import inventoryParts from '../data/inventory-parts'
 
-const Inventory = ({id}: {id: string}) => {
+const Inventory = ({id, navigation: {navigate}}) => {
   const defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder,name',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false),
@@ -50,7 +50,8 @@ const Inventory = ({id}: {id: string}) => {
       {(showSpareParts ? setInventoryParts : setInventoryParts.filter(({isSpare}) => !isSpare))
         .sort(sortBy.apply(sortBy, sortOrder.split(',')))
         .map(({element: {id, part, color}, quantity, isSpare}, i: number) => {
-          return <View key={i} style={{flex: 1, flexDirection: 'row', flexGrow: 1, marginBottom: 10}}>
+          return <TouchableOpacity key={i} style={{flex: 1, flexDirection: 'row', flexGrow: 1, marginBottom: 10}}
+            onPress={() => { navigate('Element', {id}) }}>
             <Image
               style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
               source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${id}.jpg`}} />
@@ -61,7 +62,7 @@ const Inventory = ({id}: {id: string}) => {
               <Text>{color.name} ({color.id})</Text>
               <Text>Qty: {quantity}{isSpare ? ' (spare part)' : ''}</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         })
       }
     </View>

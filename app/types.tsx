@@ -23,6 +23,7 @@ export type RootDrawerParamList = {
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootDrawerParamList> | undefined;
   Modal: undefined;
+  Element: {id: string};
   Set: {id: string};
   NotFound: undefined;
 };

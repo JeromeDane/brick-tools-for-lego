@@ -39,7 +39,7 @@ export default function SetScreen({ navigation }: RootTabScreenProps<'Set'>) {
           } title="Rebrickable" />
         </View>
         {set.inventories?.map((inventory: any) =>
-          <Inventory id={inventory.id} key={inventory.id} />
+          <Inventory id={inventory.id} key={inventory.id} navigation={navigation} />
         )}
       </ScrollView>
     </View>
