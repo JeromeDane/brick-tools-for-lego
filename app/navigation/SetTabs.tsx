@@ -2,7 +2,7 @@ import { MaterialTopTabScreenProps, createMaterialTopTabNavigator } from '@react
 import React, {useEffect} from 'react';
 import SetDetailsScreen from '../screens/SetDetails';
 import SetPartsScreen from '../screens/SetParts';
-import sets from '../data/raw/sets.json'
+import sets from '../data/sets'
 import {RootStackParamList} from './types'
 
 export type SetTabsParamList = {
@@ -13,7 +13,7 @@ export type SetTabsParamList = {
 const Tab = createMaterialTopTabNavigator()
 
 const SetTabs = ({navigation: {setOptions}, route: {params: {id}}}: MaterialTopTabScreenProps<RootStackParamList, 'Set'>) => {
-  const set = sets.find(set => set.setNum === id)
+  const set = sets[id]
   useEffect(() => {
     setOptions({title: set?.setNum + ' ' + set?.name})
   }, [set])

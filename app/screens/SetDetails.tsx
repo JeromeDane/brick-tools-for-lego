@@ -4,11 +4,10 @@ import { ScrollView, Linking, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { SetTabsParamList } from '../navigation/SetTabs'
-import sets from '../data/raw/sets.json'
-import themes from '../data/raw/themes-by-id.json'
+import sets from '../data/sets'
 
 export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
-  const set = sets.find(set => set.setNum === id)
+  const set = sets[id]
   return (
     <View>
       {set
@@ -19,7 +18,7 @@ export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTa
             style={{marginBottom: 20}} />
           <View style={{marginBottom: 20}}>
             <Text>Set number: {set.setNum}</Text>
-            <Text>Theme: {themes[set.themeId].name}</Text>
+            <Text>Theme: {set.theme.name}</Text>
             <Text>{set.name}</Text>
             <Text>{set.numParts.toLocaleString()} parts</Text>
             <Text>Released in {set.year}</Text>
