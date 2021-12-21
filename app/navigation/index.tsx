@@ -12,6 +12,7 @@ import {
 } from '@expo/vector-icons';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createDrawerNavigator, DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
@@ -24,17 +25,17 @@ import ElementScreen from '../screens/Element'
 import ThemesScreen from '../screens/Themes';
 import PartsScreen from '../screens/Parts'
 import SetsScreen from '../screens/Sets';
-import SetScreen from '../screens/Set';
 import { RootStackParamList, RootDrawerParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import SetTabs from './SetTabs'
 
 /**
  * A root stack navigator is often used for displaying modals on top of all other content.
  * https://reactnavigation.org/docs/modal
  */
- const Stack = createNativeStackNavigator<RootStackParamList>();
-
- const Drawer = createDrawerNavigator<RootDrawerParamList>()
+const Stack = createNativeStackNavigator<RootStackParamList>(),
+      Drawer = createDrawerNavigator<RootDrawerParamList>(),
+      Tab = createMaterialTopTabNavigator()
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -48,7 +49,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
       <Stack.Navigator>
         <Stack.Screen name="Root" component={DrawerNav} options={{ headerShown: false }} />
         <Stack.Screen name="Element" component={ElementScreen} />
-        <Stack.Screen name="Set" component={SetScreen} />
+        <Stack.Screen name="Set" component={SetTabs} />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       </Stack.Navigator>
     </NavigationContainer>
