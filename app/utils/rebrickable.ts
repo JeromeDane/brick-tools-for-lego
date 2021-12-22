@@ -1,6 +1,6 @@
 import camelize from 'camelcase-keys'
 import fetch from 'cross-fetch'
-import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
+import {existsSync, mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path';
 import {promisify} from 'util'
 
@@ -9,7 +9,7 @@ const gUnzip = require('gunzip-file')
 const writeFilePromise = promisify(writeFile);
 
 const csvDir = path.join(__dirname, '../data/rebrickable')
-const dataDir = path.join(__dirname, '../app/data/raw')
+const dataDir = path.join(__dirname, '../data/raw')
 const tmpDir = path.join(__dirname, 'tmp')
 mkdirSync(csvDir, {recursive: true})
 mkdirSync(dataDir, {recursive: true})
@@ -63,10 +63,11 @@ const saveData = (type: string, data: Object) => {
   process.stdout.write(` done.\n`)
 }
 
-const csvToJson = (type: string) =>
-  csv()
-    .fromFile(path.join(csvDir, type + '.csv'))
-    .then(camelize)
+const csvToJson = (type: string) => {
+  const csvFilePath = path.join(csvDir, type + '.csv')
+  process.stdout.write('Opening CSV ' + csvFilePath + '\n')
+  return csv().fromFile(csvFilePath).then(camelize)
+}
 
 const toKeyed = (input: any[], key: string) => input.reduce(
   (acc: any, element: any) => {

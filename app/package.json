@@ -9,8 +9,13 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
+    "prebuild": "yarn update-data",
+    "eas-build-pre-install": "yarn install && yarn prebuild",
     "deploy": "yarn build:web && gh-pages -d web-build",
-    "build:web": "expo build:web && cp web-build/index.html web-build/404.html"
+    "build:web": "expo build:web && cp web-build/index.html web-build/404.html",
+    "cli": "ts-node ./utils/cli.ts",
+    "update-data": "ts-node ./utils/cli.ts --updateData",
+    "release": "yarn update-data && cd app && yarn deploy"
   },
   "jest": {
     "preset": "jest-expo"
@@ -56,7 +61,15 @@
     "@types/react-native": "~0.64.12",
     "gh-pages": "^3.2.3",
     "jest-expo": "~43.0.0",
-    "typescript": "~4.3.5"
+    "@types/node": "^16.11.10",
+    "camelcase-keys": "^7.0.1",
+    "cross-fetch": "^3.1.4",
+    "csvtojson": "^2.0.10",
+    "form-urlencoded": "^6.0.5",
+    "gunzip-file": "^0.1.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2",
+    "yargs": "^17.2.1"
   },
   "private": true
 }
