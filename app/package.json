@@ -10,7 +10,7 @@
     "eject": "expo eject",
     "test": "jest --watchAll",
     "prebuild": "yarn update-data",
-    "eas-build-pre-install": "yarn install && yarn prebuild",
+    "eas-build-pre-install": "export NODE_OPTIONS=--max_old_space_size=8192 && yarn install && yarn prebuild",
     "deploy": "yarn build:web && gh-pages -d web-build",
     "build:web": "expo build:web && cp web-build/index.html web-build/404.html",
     "cli": "ts-node ./utils/cli.ts",
