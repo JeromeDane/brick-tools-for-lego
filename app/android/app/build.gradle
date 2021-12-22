@@ -154,6 +154,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file("$signingKey")
+            storePassword "$signingKeyPassword"
+            keyAlias "$signingKeyAlias"
+            keyPassword "$signingKeyAliasPassword"
+        }
     }
     buildTypes {
         debug {
