@@ -78,7 +78,7 @@ const toKeyed = (input: any[], key: string) => input.reduce(
 export const buildJson = async () => {
   const themes = await csvToJson('themes'),
         colors = await csvToJson('colors'),
-        colorDetails = await csvToJson('color-details'),
+        // colorDetails = await csvToJson('color-details'),
         partCategories = await csvToJson('part_categories'),
         parts = await csvToJson('parts'),
         partRelationships = await csvToJson('part_relationships'),
@@ -123,21 +123,27 @@ export const buildJson = async () => {
         name: match && match[2]
       }
     }
-    const {
-      firstYear,
-      lastYear,
-      lego,
-      lDraw,
-      brickLink,
-      brickOwl
-    } = colorDetails.find(({id}: any) => id == color.id) || {}
+    // const {
+    //   firstYear,
+    //   lastYear,
+    //   lego,
+    //   lDraw,
+    //   brickLink,
+    //   brickOwl
+    // } = colorDetails.find(({id}: any) => id == color.id) || {}
     return Object.assign(color, {
-      firstYear: firstYear && parseInt(firstYear),
-      lastYear: lastYear && parseInt(lastYear),
-      lego: split(lego),
-      lDraw: split(lDraw),
-      brickLink: split(brickLink),
-      brickOwl: split(brickOwl)
+      // firstYear: firstYear && parseInt(firstYear),
+      // lastYear: lastYear && parseInt(lastYear),
+      // lego: split(lego),
+      // lDraw: split(lDraw),
+      // brickLink: split(brickLink),
+      // brickOwl: split(brickOwl)
+      firstYear: 2000,
+      lastYear: 2000,
+      lego: {id: '1', name: 'name'},
+      lDraw: {id: '1', name: 'name'},
+      brickLink: {id: '1', name: 'name'},
+      brickOwl: {id: '1', name: 'name'}
     })
   }))
   saveData('part_categories', partCategories)
