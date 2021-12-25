@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
+    "@react-native-async-storage/async-storage": "^1.15.14",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-picker/picker": "^2.2.1",
     "@react-navigation/bottom-tabs": "^6.0.5",
@@ -58,16 +59,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@types/node": "^16.11.10",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
-    "gh-pages": "^3.2.3",
-    "jest-expo": "~43.0.0",
-    "@types/node": "^16.11.10",
     "camelcase-keys": "^7.0.1",
     "cross-fetch": "^3.1.4",
     "csvtojson": "^2.0.10",
     "form-urlencoded": "^6.0.5",
+    "gh-pages": "^3.2.3",
     "gunzip-file": "^0.1.1",
+    "jest-expo": "~43.0.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.2",
     "yargs": "^17.2.1"

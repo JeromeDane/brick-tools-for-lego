@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
 import { Text, TextInput, View } from '../components/Themed';
 import { RootStackScreenProps } from '../navigation/types';
