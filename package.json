@@ -13,6 +13,7 @@
     "eas-build-pre-install": "export NODE_OPTIONS=--max_old_space_size=8192 && yarn install && yarn prebuild",
     "deploy": "yarn build:web && gh-pages -d web-build",
     "build:web": "expo build:web && cp web-build/index.html web-build/404.html",
+    "build:android": "cd android && ./gradlew :app:bundleRelease",
     "cli": "ts-node ./utils/cli.ts",
     "update-data": "ts-node ./utils/cli.ts --updateData",
     "release": "yarn update-data && cd app && yarn deploy"
