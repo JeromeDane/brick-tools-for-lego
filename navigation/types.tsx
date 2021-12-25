@@ -18,6 +18,7 @@ export type RootDrawerParamList = {
   Themes: undefined;
   Parts: undefined;
   About: undefined;
+  Settings: undefined;
 };
 
 export type RootStackParamList = {
@@ -25,6 +26,7 @@ export type RootStackParamList = {
   Modal: undefined;
   Element: {id: string};
   Set: {id: string};
+  Settings: undefined;
   NotFound: undefined;
 };
 

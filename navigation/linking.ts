@@ -33,6 +33,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           SetParts: 'parts'
         }
       },
+      Settings: 'settings',
       Modal: 'brick-tools-for-lego/modal',
       NotFound: '*',
     },

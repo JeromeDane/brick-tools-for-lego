@@ -25,6 +25,7 @@ import ElementScreen from '../screens/Element'
 import ThemesScreen from '../screens/Themes';
 import PartsScreen from '../screens/Parts'
 import SetsScreen from '../screens/Sets';
+import SettingsScreen from '../screens/Settings'
 import { RootStackParamList, RootDrawerParamList } from './types';
 import linking from './linking';
 import SetTabs from './SetTabs'
@@ -100,6 +101,13 @@ const DrawerNav = () => {
       component={PartsScreen}
       options={({navigation}) => ({
         drawerIcon: ({color}) => <MaterialCommunityIcons name="puzzle" size={25} color={color} />,
+        headerLeft: () => <MenuButton {...{navigation}} />
+      })} />
+    <Drawer.Screen
+      name="Settings"
+      component={SettingsScreen}
+      options={({navigation}) => ({
+        drawerIcon: ({color}) => <FontAwesome name="gear" size={25} color={color} />,
         headerLeft: () => <MenuButton {...{navigation}} />
       })} />
     <Drawer.Screen

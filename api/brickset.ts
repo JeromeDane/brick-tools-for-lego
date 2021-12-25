@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import Constants from 'expo-constants'
 import formUrlEncode from 'form-urlencoded'
 
@@ -21,5 +22,26 @@ const api = (method: string, data: Object) => {
       }
     })
 }
+
+export const useApi = () => {
+  const [userHash, setUserHash] = useState(''),
+        login = (username: string, password: string) =>
+          new Promise((resolve, reject) =>
+            api('login', {username, password})
+              .then(({status, hash} : {status: string, hash: string}) => {
+                if(status === 'success') setUserHash(hash)
+                // TODO: Add error handling
+                resolve(null)
+              })
+          ),
+        logOut = () => setUserHash('')
+  return {
+    api,
+    login,
+    logOut,
+    isLoggedIn: Boolean(userHash)
+  }
+}
+
 
 export default api
