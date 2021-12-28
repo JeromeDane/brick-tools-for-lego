@@ -4,7 +4,7 @@ import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
-import sets from '../data/raw/sets.json'
+import {setsList} from '../data/sets'
 
 export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProps<'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
@@ -13,8 +13,8 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
         [currentPage, setCurrentPage] = useState(0),
         scrollRef = useRef(),
         filteredSets = filterBy
-          ? sets.filter(({name, setNum}) => (setNum + name).toLowerCase().match(filterBy.toLowerCase()))
-          : sets
+          ? setsList.filter(({name, setNum}) => (setNum + name).toLowerCase().match(filterBy.toLowerCase()))
+          : setsList
   return (
     <ScrollView ref={scrollRef} style={{
       padding: 20,
@@ -65,6 +65,7 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
               <View>
                 <Text>{set.setNum}</Text>
                 <Text>{set.name}</Text>
+                <Text>{set.theme.name}</Text>
                 <Text>{set.numParts.toLocaleString()} parts</Text>
                 <Text>Released in {set.year}</Text>
               </View>
