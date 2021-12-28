@@ -83,7 +83,7 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
               <ScaledImage
                 style={styles.image}
                 width={100}
-                source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}} />
+                source={{uri: set.image.imageURL}} />
               <View>
                 <Text>{set.setNum}</Text>
                 <Text>{set.name}</Text>

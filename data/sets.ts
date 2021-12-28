@@ -40,6 +40,10 @@ type Set = {
   }
   ownedBy: number
   wantedBy: number
+  image: {
+    imageURL: string
+    thumbnailURL: string
+  }
 }
 
 const emptyLEGOCom = {
@@ -64,8 +68,12 @@ export const setsList: Set[] = (setsData as SetData[]).map(setData => {
       CA: emptyLEGOCom,
       DE: emptyLEGOCom
     },
-    ownedBy: bricksetSet ? bricksetSet.collections.ownedBy : 0,
-    wantedBy: bricksetSet ? bricksetSet.collections.wantedBy : 0,
+    ownedBy: bricksetSet ? (bricksetSet.collections.ownedBy || 0) : 0,
+    wantedBy: bricksetSet ? (bricksetSet.collections.wantedBy || 0) : 0,
+    image: {
+      imageURL: (bricksetSet && bricksetSet.image && bricksetSet.imageURL) || `https://images.brickset.com/sets/images/${setData.setNum}.jpg`,
+      thumbnailURL: (bricksetSet && bricksetSet.image && bricksetSet.thumbnailURL) || `https://images.brickset.com/sets/images/${setData.setNum}.jpg`,
+    }
   }
 })
 

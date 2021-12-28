@@ -12,7 +12,7 @@ export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTa
     ? <ScrollView style={{padding: 20}}>
       <ScaledImage
         width={500}
-        source={{uri: `https://images.brickset.com/sets/images/${set.setNum}.jpg`}}
+        source={{uri: set.image.imageURL}}
         style={{marginBottom: 20}} />
       <View style={{marginBottom: 20}}>
         <Text>Set number: {set.setNum}</Text>
