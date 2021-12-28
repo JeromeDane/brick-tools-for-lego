@@ -31,7 +31,7 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
         <Text>
           Released in {set.year}
           {set.LEGOCom.US.retailPrice ?
-            ` - $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
+            ` at $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
             : ''
           }
         </Text>

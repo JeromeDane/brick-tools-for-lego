@@ -71,39 +71,43 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
           await AsyncStorage.setItem(BRICKSET_KEYS.userHash, '')
           setUserHash('')
         },
-        loadCollection = () => new Promise((resolve, reject) => {
+        loadCollection = () => new Promise(async (resolve, reject) => {
           console.log('loading collection')
-          api('getSets', {params: JSON.stringify({owned: 1, pageSize: 500})})
-            .then(async result => {
-              console.log('Found ', result.length, 'owned sets')
-              if(result.status === 'success') {
-                const setsData = result.sets.reduce((acc: {[key: string]: any}, set: any) => {
-                  acc[set.number + '-' + set.numberVariant] = set.collection
-                  return acc
-                }, {} as {[key: string]: any})
-                await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(setsData))
-                setCollection(setsData)
-                resolve(null)
-              }
-              else {
-                console.log(JSON.stringify(result, null, 2))
-                reject(null)
-              }
-              // TODO: Add error handling
-            })
-            .catch(e => {
-              console.error('Error fetching collection')
-              console.error(e)
-              reject(e)
-            })
+          const parseCollection = async (result: any) => {
+            if(result.status === 'success') {
+              const setsData = result.sets.reduce((acc: {[key: string]: any}, set: any) => {
+                acc[set.number + '-' + set.numberVariant] = set.collection
+                return acc
+              }, {} as {[key: string]: any})
+              await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(setsData))
+              return setsData
+            }
+            else {
+              console.log(JSON.stringify(result, null, 2))
+              reject(null)
+            }
+          }
+          const ownedResult = await api('getSets', {params: JSON.stringify({owned: 1, pageSize: 500})})
+            .then(parseCollection)
+          console.log(`Found ${Object.keys(ownedResult).length} owned sets`)
+          const wantedResult = await api('getSets', {params: JSON.stringify({wanted: 1, pageSize: 500})})
+            .then(parseCollection)
+          console.log(`Found ${Object.keys(wantedResult).length} wanted sets`)
+          setCollection(Object.keys(wantedResult).reduce((acc, setNum) => {
+            if(acc[setNum]) acc[setNum].wanted = true
+            else acc[setNum] = wantedResult[setNum]
+            return acc
+          }, Object.assign({}, ownedResult)))
+          resolve(null)
         })
+      console.log(JSON.stringify(collection['10297-1'], null, 2))
       useEffect(() => {
-      if(!storageRead) {
-        storageRead = true
-        AsyncStorage.getItem(BRICKSET_KEYS.userHash)
-          .then(hash => setUserHash(hash || ''))
-        AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
-          .then(result => setCollection(JSON.parse(result || '{}')))
+        if(!storageRead) {
+          storageRead = true
+          AsyncStorage.getItem(BRICKSET_KEYS.userHash)
+            .then(hash => setUserHash(hash || ''))
+          AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
+            .then(result => setCollection(JSON.parse(result || '{}')))
         }
       }, [])
   return <ApiContext.Provider value={{

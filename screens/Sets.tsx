@@ -15,7 +15,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
         [theme, setTheme] = useState(''),
-        [ownedOnly, setOwnedOnly] = useState(false),
+        [collectionFilter, setCollectionFilter] = useState(''),
         [currentPage, setCurrentPage] = useState(0),
         isLoggedIn = useIsLoggedIn(),
         scrollRef = useRef(),
@@ -23,7 +23,11 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
         filteredSets = setsList.filter(set =>
           (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
           (!theme || set.theme.id == theme) &&
-          (!isLoggedIn || !ownedOnly || set.collection.qtyOwned > 0)
+          (!isLoggedIn || !collectionFilter ||
+            (collectionFilter == 'owned' && set.collection.qtyOwned > 0) ||
+            (collectionFilter == 'not-owned' && set.collection.qtyOwned === 0) ||
+            (collectionFilter == 'wanted' && set.collection.wanted)
+          )
         )
   return (
     <ScrollView ref={scrollRef} style={{
@@ -38,10 +42,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             setFilterBy(value)
           }} />
       </View>
-      <View style={{
-        marginBottom: 20,
-        marginTop: 20
-      }}>
+      <View style={{marginVertical: 20}}>
         <Picker
           label="Theme"
           prompt="Theme"
@@ -78,20 +79,29 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
           <Picker.Item label="Year Released" value="year" />
           <Picker.Item label="Year Released (desc)" value="-year" />
         </Picker>
-        <View style={{alignItems: 'flex-end'}}>
-          {isLoggedIn
-            ? <Switch
-                label="Owned only"
-                onValueChange={setOwnedOnly}
-                value={ownedOnly} />
-            : <TextLink
-              style={{marginTop: 10, marginBottom: 20}}
-              onPress={() => navigation.navigate('Settings')}>
-              Log into Brickset to filter by sets you own.
-            </TextLink>
-          }
-        </View>
       </View>
+      {isLoggedIn
+        ? <View style={{marginVertical: 20}}>
+          <Picker
+            label="Collection"
+            prompt="Collection"
+            selectedValue={collectionFilter}
+            onValueChange={(value: string) => {
+              setCurrentPage(0)
+              setCollectionFilter(value)
+            }}>
+            <Picker.Item label="Any" value="" />
+            <Picker.Item label="Owned" value="owned" />
+            <Picker.Item label="Not owned" value="not-owned" />
+            <Picker.Item label="Wanted" value="wanted" />
+          </Picker>
+        </View>
+        : <TextLink
+          style={{marginTop: 10, marginBottom: 20}}
+          onPress={() => navigation.navigate('Settings')}>
+          Log into Brickset to filter by sets you own.
+        </TextLink>
+      }
       {filteredSets.length
         ? filteredSets
           .sort(sortBy.apply(sortBy, sortField.split(',')))
@@ -112,7 +122,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
                 <Text>
                   Released in {set.year}
                   {set.LEGOCom.US.retailPrice ?
-                    ` - $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
+                    ` at $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
                     : ''
                   }
                 </Text>

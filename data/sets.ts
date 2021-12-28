@@ -68,11 +68,9 @@ export const useSets = () => {
           list: [] as Set[]
         })
   useEffect(() => {
-    console.log('parsing sets')
     const list : Set[] = (setsData as SetData[]).map(setData => {
       const bricksetSet = bricksetSets[setData.setNum],
             myCollection = collection[setData.setNum]
-      if(setData.setNum == '10243-1') console.log('myCollection', myCollection, myCollection?.qtyOwned)
       return {
         setNum: setData.setNum,
         name: setData.name,
