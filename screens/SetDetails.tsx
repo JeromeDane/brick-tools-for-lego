@@ -5,9 +5,12 @@ import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { SetTabsParamList } from '../navigation/SetTabs'
 import {useSets} from '../data/sets'
+import { useIsLoggedIn } from '../api/brickset';
+import TextLink from '../components/TextLink';
 
-export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
-  const set = useSets().sets[id]
+export default function SetDetailsScreen({ navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
+  const set = useSets().sets[id],
+        isLoggedIn = useIsLoggedIn()
   return set
     ? <ScrollView style={{padding: 20}}>
       <ScaledImage
@@ -34,7 +37,14 @@ export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTa
         </Text>
         <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
         <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
-        <Text>You own {set.collection.qtyOwned.toLocaleString()}</Text>
+        {isLoggedIn
+          ? <Text>You own {set.collection.qtyOwned.toLocaleString()}</Text>
+          : <TextLink
+            style={{marginTop: 10}}
+            onPress={() => navigation.navigate('Settings')}>
+            Log into Brickset to track how of this set many you own.
+          </TextLink>
+        }
       </View>
       <View style={{marginBottom: 20}}>
         <Button onPress={() =>
