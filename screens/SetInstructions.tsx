@@ -5,15 +5,16 @@ import WebView from 'react-native-webview'
 import { Text, View } from '../components/Themed';
 import { SetTabsParamList } from '../navigation/SetTabs'
 import sets from '../data/sets'
-import brickset from '../api/brickset'
+import {useApi} from '../api/brickset'
 
 export default function SetInstructionsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
   const set = sets[id],
         [instructions, setInstructions] = useState(null),
         [downloadUrl, setDownloadUrl] = useState(''),
-        [error, setError] = useState(false)
+        [error, setError] = useState(false),
+        {api} = useApi()
   useEffect(() => {
-    brickset('getInstructions2', {setNumber: id})
+    api('getInstructions2', {setNumber: id})
       .then(response => {
         console.log(response?.instructions)
         setInstructions(response?.instructions)
