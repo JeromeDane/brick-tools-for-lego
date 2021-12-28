@@ -3,6 +3,7 @@ import fetch from 'cross-fetch'
 import {existsSync, mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path';
 import {promisify} from 'util'
+import bricksetApi from './brickset-api'
 
 const csv = require('csvtojson')
 const gUnzip = require('gunzip-file')
@@ -106,6 +107,16 @@ export const buildJson = async () => {
     , 0)
     return theme
   })
+  const bricksetThemes = await bricksetApi('getThemes')
+  bricksetThemes.themes.forEach((bricksetTheme : any) => {
+    const theme = themes.find(({name} : any) => name === bricksetTheme.theme)
+    if(theme) {
+      theme.yearFrom = bricksetTheme.yearFrom
+      theme.yearTo = bricksetTheme.yearTo
+    }
+  })
+  console.log(JSON.stringify(bricksetThemes, null, 2))
+
 
   saveData('themes', themes)
   saveData('themes-by-id', toKeyed(themes, 'id'))
