@@ -2,6 +2,7 @@ import React, {useContext, createContext, useEffect, useState} from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Constants from 'expo-constants'
 import formUrlEncode from 'form-urlencoded'
+import {Set} from '../data/sets'
 
 const apiKey = Constants.manifest.extra.BRICKSET_API_KEY
 
@@ -13,10 +14,15 @@ type CollectionItem = {
   notes: string;
 }
 
-type Collection = {[key: string]: CollectionItem}
+export type Collection = {[key: string]: CollectionItem}
 let storageRead = false
 
-const ApiContext = React.createContext({});
+const ApiContext = createContext({
+  collection: {} as Collection,
+  sets: {} as {[key: string]: Set},
+  setsList: [] as Set[],
+  setWanted: async ({bricksetID, setNum}: Set, wanted: boolean) => {}
+})
 
 export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.Element}) => {
   const BRICKSET_KEYS = {
@@ -25,6 +31,10 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
         },
         [userHash, setUserHash] = useState(''),
         [collection, setCollection] = useState({} as Collection),
+        saveCollection = async (updatedCollection: Collection) => {
+          setCollection(Object.assign({}, updatedCollection))
+          await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
+        },
         api = (method: string, data: Object) => {
           return new Promise((resolve, reject) =>
             fetch('https://brickset.com/api/v3.asmx/' + method, {
@@ -41,6 +51,7 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
             })
               .then(async response => {
                 const text = await response.text() || '{error: "No response body"}'
+                // console.log(text)
                 try {
                   resolve(JSON.parse(text))
                 } catch(e) {
@@ -48,6 +59,11 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
                   console.warn(text)
                   reject(e)
                 }
+              })
+              .catch(e => {
+                console.log('ERROR: API request failed')
+                console.log(e)
+                reject(e)
               })
           )
         },
@@ -79,7 +95,6 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
                 acc[set.number + '-' + set.numberVariant] = set.collection
                 return acc
               }, {} as {[key: string]: any})
-              await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(setsData))
               return setsData
             }
             else {
@@ -93,29 +108,48 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
           const wantedResult = await api('getSets', {params: JSON.stringify({wanted: 1, pageSize: 500})})
             .then(parseCollection)
           console.log(`Found ${Object.keys(wantedResult).length} wanted sets`)
-          setCollection(Object.keys(wantedResult).reduce((acc, setNum) => {
+          saveCollection(Object.keys(wantedResult).reduce((acc, setNum) => {
             if(acc[setNum]) acc[setNum].wanted = true
             else acc[setNum] = wantedResult[setNum]
             return acc
           }, Object.assign({}, ownedResult)))
           resolve(null)
+        }),
+      setWanted = async ({bricksetID, setNum}: Set, wanted: boolean) =>
+        api('setCollection', {
+          SetID: bricksetID,
+          params: JSON.stringify({want: wanted ? 1 : 0})
         })
-      console.log(JSON.stringify(collection['10297-1'], null, 2))
-      useEffect(() => {
-        if(!storageRead) {
-          storageRead = true
-          AsyncStorage.getItem(BRICKSET_KEYS.userHash)
-            .then(hash => setUserHash(hash || ''))
-          AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
-            .then(result => setCollection(JSON.parse(result || '{}')))
-        }
-      }, [])
+          .then((response : any) => {
+            if(response.status == 'success') {
+              collection[setNum] = collection[setNum] || {
+                owned: false,
+                wanted: false,
+                qtyOwned: 0,
+                rating: 0,
+                notes: ''
+              }
+              collection[setNum].wanted = wanted
+              console.log(`setting ${setNum} as wanted: ${wanted}`)
+              saveCollection(collection)
+            }
+          })
+  useEffect(() => {
+    if(!storageRead) {
+      storageRead = true
+      AsyncStorage.getItem(BRICKSET_KEYS.userHash)
+        .then(hash => setUserHash(hash || ''))
+      AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
+        .then(result => setCollection(JSON.parse(result || '{}')))
+    }
+  }, [])
   return <ApiContext.Provider value={{
     isLoggedIn: Boolean(userHash),
     login,
     logOut,
     loadCollection,
     collection,
+    setWanted,
     api
   }}>
     {children}
@@ -128,3 +162,4 @@ export const useLogin = () => useContext(ApiContext).login
 export const useLogOut = () => useContext(ApiContext).logOut
 export const useIsLoggedIn = () => useContext(ApiContext).isLoggedIn
 export const useLoadCollection = () => useContext(ApiContext).loadCollection
+export const useSetWanted = () => useContext(ApiContext).setWanted

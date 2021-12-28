@@ -23,7 +23,7 @@ type LEGOComPrice = {
   dateLastAvailable?: string
 }
 
-type Set = {
+export type Set = {
   setNum: string;
   name: string;
   year: number;
@@ -53,6 +53,7 @@ type Set = {
     rating: number
     notes: string
   }
+  bricksetID: number
 }
 
 const emptyLEGOCom = {
@@ -97,7 +98,8 @@ export const useSets = () => {
           qtyOwned: myCollection ? myCollection.qtyOwned : 0,
           rating: myCollection ? myCollection.rating : 0,
           notes: myCollection ? myCollection.notes : ''
-        }
+        },
+        bricksetID: bricksetSet ? bricksetSet.setID : -1
       }
     })
     setSets({
@@ -107,8 +109,5 @@ export const useSets = () => {
       list
     })
   }, [collection])
-  return {
-    sets: sets.byId,
-    setsList: sets.list
-  }
+  return sets
 }

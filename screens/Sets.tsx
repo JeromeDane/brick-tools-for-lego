@@ -8,7 +8,6 @@ import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
 import { useIsLoggedIn } from '../api/brickset'
 import TextLink from '../components/TextLink'
-import Switch from '../components/Switch'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
@@ -19,8 +18,8 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
         [currentPage, setCurrentPage] = useState(0),
         isLoggedIn = useIsLoggedIn(),
         scrollRef = useRef(),
-        {setsList} = useSets(),
-        filteredSets = setsList.filter(set =>
+        {list} = useSets(),
+        filteredSets = list.filter(set =>
           (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
           (!theme || set.theme.id == theme) &&
           (!isLoggedIn || !collectionFilter ||
@@ -138,7 +137,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             </TouchableOpacity>
           )
         : <Text style={{textAlign: 'center'}}>
-          {setsList.length
+          {list.length
             ? 'No results match your search criteria'
             : 'Loading sets ...'
           }

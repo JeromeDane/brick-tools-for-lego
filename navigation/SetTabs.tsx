@@ -15,7 +15,7 @@ export type SetTabsParamList = {
 const Tab = createMaterialTopTabNavigator()
 
 const SetTabs = ({navigation: {setOptions}, route: {params: {id}}}: MaterialTopTabScreenProps<RootStackParamList, 'Set'>) => {
-  const set = useSets().sets[id]
+  const set = useSets().byId[id]
   useEffect(() => {
     setOptions({title: set?.setNum.replace(/-.*$/, '') + ' ' + set?.name})
   }, [set])

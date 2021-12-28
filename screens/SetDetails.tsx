@@ -4,13 +4,15 @@ import { ScrollView, Linking, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { SetTabsParamList } from '../navigation/SetTabs'
+import { useIsLoggedIn, useSetWanted} from '../api/brickset';
 import {useSets} from '../data/sets'
-import { useIsLoggedIn } from '../api/brickset';
 import TextLink from '../components/TextLink';
+import CheckBox from '../components/Checkbox';
 
 export default function SetDetailsScreen({ navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
-  const set = useSets().sets[id],
-        isLoggedIn = useIsLoggedIn()
+  const set = useSets().byId[id],
+        isLoggedIn = useIsLoggedIn(),
+        setWanted = useSetWanted()
   return set
     ? <ScrollView style={{padding: 20}}>
       <ScaledImage
@@ -38,7 +40,19 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
         <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
         <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
         {isLoggedIn
-          ? <Text>You own {set.collection.qtyOwned.toLocaleString()}</Text>
+          ? <View style={{marginTop: 20}}>
+              <Text style={{fontWeight: 'bold', marginBottom: 10}}>Collection</Text>
+              <Text>You own {set.collection.qtyOwned.toLocaleString()}</Text>
+              <View>
+                <CheckBox
+                  label="I want this set"
+                  value={set.collection.wanted}
+                  onValueChange={(newValue) =>
+                    setWanted(set, newValue)
+                  }
+                />
+              </View>
+            </View>
           : <TextLink
             style={{marginTop: 10}}
             onPress={() => navigation.navigate('Settings')}>

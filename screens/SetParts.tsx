@@ -8,7 +8,7 @@ import Inventory from '../components/Inventory'
 import inventoryParts, {InventoryPart} from '../data/inventory-parts'
 
 export default function SetPartsScreen({navigation, route: {params: {id}}} : MaterialTopTabScreenProps<SetTabsParamList, 'SetParts'>) {
-  const set = useSets().sets[id],
+  const set = useSets().byId[id],
         inventory = set && set.inventories && set.inventories[0],
         numParts = ((inventory && inventoryParts[inventory.id]) || [])
           .reduce((count: number, inventoryPart: InventoryPart) => count + inventoryPart.quantity, 0)

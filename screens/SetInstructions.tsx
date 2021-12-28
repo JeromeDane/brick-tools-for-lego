@@ -8,7 +8,7 @@ import {useSets} from '../data/sets'
 import {useApi} from '../api/brickset'
 
 export default function SetInstructionsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
-  const set = useSets().sets[id],
+  const set = useSets().byId[id],
         [instructions, setInstructions] = useState(null),
         [downloadUrl, setDownloadUrl] = useState(''),
         [error, setError] = useState(false),
