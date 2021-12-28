@@ -63,6 +63,12 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
     '19': '4243824',
     '70': '4243838'
   },
+  '3032': { // 4 x 6 plate
+    '72': '4211115' // dark bluish gray
+  },
+  '3622': { // 1 x 3 brick
+    '484': '6263221' // dark orange
+  },
   '4175': {
     '0': '6285241' // black
   },
@@ -71,6 +77,9 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
   },
   '3673': { // light bluish gray technic pin without friction ridges
     '71': '4211807'
+  },
+  '3679': { // Turntable 2 x 2 plate top
+    '71': '4540203' // light bluish gray
   },
   '3821': { // 1x3x1 door right
     '4': '4537987', // red
@@ -97,6 +106,12 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
   '30361c': { // Brick Round 2 x 2 x 2 Robot Body - with Bottom Axle Holder x Shape + O
     '0': '4194008' // black
   },
+  '3062b': { // 1 x 1 round brick
+    '14': '306224', // yellow
+  },
+  '3069b': {  // 1 x 2 tile with groove
+    '47': '6251294' // trans-clear
+  },
   '30374': { // Bar 4L (Lightsaber Blade / Wand)
     '70': '6116613' // reddish brown
   },
@@ -117,18 +132,35 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
   '4536': { // white Cupboard 2 x 3 Drawer
     '15': '4520636'
   },
+  '4595': { // Brick special 1x1 with studs on sides
+    '0': '4523339' // black
+  },
   '4740': { // green 2x2 dish
     '2': '4567908'
+  },
+  '32000': { // 1 x 2 technic brick holes through side
+    '15': '3200001'
+  },
+  '44294': { // technic axle 7L
+    '71': '4211805'
   },
   '44728': { // Bracket 1 x 2 - 2 x 2
     '72': '6117972' // dark bluish gray
   },
   '54200': { // cheese wedge
+    '0': '4504382', // black
+    '14': '4504381', // yellow
     '46': '6245272' // trans yellow
+  },
+  '60032': {
+    '0': '4539128' // wall panel single hole
   },
   '60583b': { // 1x1x3 brick special with 2 clips
     '0': '6320325', // black
     '4': '6320327' // red
+  },
+  '60596': { // door frame
+    '15': '6262945'
   },
   '60601': { // Glass for Window 1 x 2 x 2 Flat
     '47': '6254552'
@@ -138,5 +170,11 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
   },
   '85557': { // Train Wheel RC Train, Spoked with Technic Axle Hole and Counterweight, 37 mm diameter [Flanged Driver]
     '4': '6148307' // 'red
+  },
+  '87994': { // Bar 3L
+    '71': '6093527'
+  },
+  '92690': { // Light Bluish Gray Bar 1L with Top Stud and 2 Side
+    '71': '4640844'
   }
 }
