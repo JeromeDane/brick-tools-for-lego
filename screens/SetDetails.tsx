@@ -19,7 +19,13 @@ export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTa
         <Text>Theme: {set.theme.name}</Text>
         <Text>{set.name}</Text>
         <Text>{set.numParts.toLocaleString()} parts</Text>
-        <Text>Released in {set.year}</Text>
+        <Text>
+          Released in {set.year}
+          {set.LEGOCom.US.retailPrice ?
+            ` - $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
+            : ''
+          }
+        </Text>
       </View>
       <View style={{marginBottom: 20}}>
         <Button onPress={() =>

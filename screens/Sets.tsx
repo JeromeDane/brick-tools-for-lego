@@ -46,6 +46,8 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
           <Picker.Item label="Name (desc)" value="-name" />
           <Picker.Item label="Parts" value="numParts" />
           <Picker.Item label="Parts (desc)" value="-numParts" />
+          <Picker.Item label="Retail Price" value="-LEGOCom.US.retailPrice" />
+          <Picker.Item label="Retail Price (desc)" value="-LEGOCom.US.retailPrice" />
           <Picker.Item label="Year Released" value="year" />
           <Picker.Item label="Year Released (desc)" value="-year" />
         </Picker>
@@ -67,7 +69,13 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
                 <Text>{set.name}</Text>
                 <Text>{set.theme.name}</Text>
                 <Text>{set.numParts.toLocaleString()} parts</Text>
-                <Text>Released in {set.year}</Text>
+                <Text>
+                  Released in {set.year}
+                  {set.LEGOCom.US.retailPrice ?
+                    ` - $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
+                    : ''
+                  }
+                </Text>
               </View>
             </TouchableOpacity>
           )
