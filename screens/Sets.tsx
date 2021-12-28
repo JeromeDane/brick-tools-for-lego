@@ -7,6 +7,7 @@ import { RootTabScreenProps } from '../types'
 import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
 import { useIsLoggedIn } from '../api/brickset'
+import TextLink from '../components/TextLink'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
   const [, updateState] = useState({}),
@@ -92,7 +93,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
               value={ownedOnly}
             />
           </View>
-          : <Text
+          : <TextLink
             style={{
               marginTop: 10,
               textAlign: 'right',
@@ -100,7 +101,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             }}
             onPress={() => navigation.navigate('Settings')}>
             Log into Brickset to filter by sets you own.
-          </Text>
+          </TextLink>
         }
       </View>
       {filteredSets.length

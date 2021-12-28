@@ -3,6 +3,7 @@ import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
 import { Text, TextInput, View } from '../components/Themed';
 import { RootStackScreenProps } from '../navigation/types';
 import { useCollection, useIsLoggedIn, useLoadCollection, useLogin, useLogOut } from '../api/brickset';
+import TextLink from '../components/TextLink';
 
 export default function SettingsScreen({ navigation }: RootStackScreenProps<'Settings'>) {
   const [isLoading, setIsLoading] = useState(false),
@@ -36,8 +37,9 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
         : <View>
           <Text style={{marginBottom: 10}}>
             Log into your{' '}
-            <Text onPress={() => Linking.openURL('https://www.brickset.com')} style={{color: 'blue'}}>Brickset.com</Text>{' '}
-            account to access your personal data.
+            <TextLink url="https://www.brickset.com">Brickset.com</TextLink>{' '}
+            account to access your personal data. If you don't already have one, you'll need to{' '}
+            <TextLink url="https://brickset.com/signup">create an account</TextLink>.
           </Text>
           <TextInput label="username" onChangeText={setUsername} style={{marginBottom: 10}} />
           <TextInput label="password" secureTextEntry={true} onChangeText={setPassword} style={{marginBottom: 10}} />

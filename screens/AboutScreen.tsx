@@ -11,7 +11,7 @@ export default function AboutScreen({ navigation }: RootStackScreenProps<'About'
     <View style={styles.container}>
       <Text style={styles.paragraph}>
         This project is free and maintained by out of a love of all things LEGO®.{' '}
-        <TextLink url={'mailto:jerome.dane@gmail.com'}>
+        <TextLink url="mailto:jerome.dane@gmail.com">
           Send me an email
         </TextLink>{' '}
         if you have feedback or would like to get involved, {' '}
@@ -26,16 +26,16 @@ export default function AboutScreen({ navigation }: RootStackScreenProps<'About'
       </View>
       <Text style={styles.paragraph}>
         Author:{' '}
-        <TextLink url={'https://www.linkedin.com/in/JeromeDane/'}>
+        <TextLink url="https://www.linkedin.com/in/JeromeDane/">
           Jerome Dane
         </TextLink>
       </Text>
       <Text style={styles.paragraph}>Version {version}</Text>
       <Text style={styles.paragraph}>
         Powered by data from{' '}
-        <TextLink url={'https://www.brickset.com/'}>Brickset.com</TextLink>
+        <TextLink url="https://www.brickset.com/">Brickset.com</TextLink>
         {' '}and{' '}
-        <TextLink url={'https://www.rebrickable.com/'}>Rebrickable.com</TextLink>
+        <TextLink url="https://www.rebrickable.com/">Rebrickable.com</TextLink>
       </Text>
       <Text style={styles.paragraph}>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project.</Text>
     </View>
