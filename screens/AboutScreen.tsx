@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, Linking, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
+import TextLink from '../components/TextLink'
 import {version} from '../package.json'
 
 import { RootStackScreenProps } from '../types';
@@ -8,16 +9,15 @@ import { RootStackScreenProps } from '../types';
 export default function AboutScreen({ navigation }: RootStackScreenProps<'About'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.paragraph}>Version {version}</Text>
       <Text style={styles.paragraph}>
-        This project is free, open source, and maintained by volunteers out of a love of all things LEGO®. If you would like to get involved, please check out the{' '}
-        <Text style={styles.linkText}
-              onPress={() => Linking.openURL('https://github.com/JeromeDane/brick-tools-for-lego/')}>
-          project on GitHub
-        </Text>.
+        This project is free and maintained by out of a love of all things LEGO®.{' '}
+        <TextLink url={'mailto:jerome.dane@gmail.com'}>
+          Send me an email
+        </TextLink>{' '}
+        if you have feedback or would like to get involved, {' '}
       </Text>
       <Text style={styles.paragraph}>
-        Show your ❤️ and support for this project and help keep it alive:
+        Show your ❤️ for this project:
       </Text>
       <View style={styles.paragraph}>
         <Button
@@ -26,17 +26,16 @@ export default function AboutScreen({ navigation }: RootStackScreenProps<'About'
       </View>
       <Text style={styles.paragraph}>
         Author:{' '}
-        <Text style={styles.linkText}
-              onPress={() => Linking.openURL('https://www.linkedin.com/in/JeromeDane/')}>
+        <TextLink url={'https://www.linkedin.com/in/JeromeDane/'}>
           Jerome Dane
-        </Text>
+        </TextLink>
       </Text>
+      <Text style={styles.paragraph}>Version {version}</Text>
       <Text style={styles.paragraph}>
         Powered by data from{' '}
-        <Text style={styles.linkText}
-              onPress={() => Linking.openURL('https://rebrickable.com/downloads/')}>
-          Rebrickable.com
-        </Text>
+        <TextLink url={'https://www.brickset.com/'}>Brickset.com</TextLink>
+        {' '}and{' '}
+        <TextLink url={'https://www.rebrickable.com/'}>Rebrickable.com</TextLink>
       </Text>
       <Text style={styles.paragraph}>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project.</Text>
     </View>
