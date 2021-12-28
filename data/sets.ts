@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useApi } from '../api/brickset'
+import { useCollection } from '../api/brickset'
 import setsData from '../data/raw/sets.json'
 import bricksetSets from './brickset/sets.json'
 import themes, {Theme} from './themes'
@@ -62,7 +62,7 @@ const emptyLEGOCom = {
 }
 
 export const useSets = () => {
-  const {collection} = useApi(),
+  const collection = useCollection(),
         [sets, setSets] = useState({
           byId: {} as {[key: string]: Set},
           list: [] as Set[]

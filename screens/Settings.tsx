@@ -2,13 +2,17 @@ import React, {useState} from 'react';
 import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
 import { Text, TextInput, View } from '../components/Themed';
 import { RootStackScreenProps } from '../navigation/types';
-import { useApi } from '../api/brickset';
+import { useCollection, useIsLoggedIn, useLoadCollection, useLogin, useLogOut } from '../api/brickset';
 
 export default function SettingsScreen({ navigation }: RootStackScreenProps<'Settings'>) {
   const [isLoading, setIsLoading] = useState(false),
         [username, setUsername] = useState(''),
         [password, setPassword] = useState(''),
-        {api, collection, login, logOut, loadCollection, isLoggedIn} = useApi()
+        collection = useCollection(),
+        login = useLogin(),
+        logOut = useLogOut(),
+        isLoggedIn = useIsLoggedIn(),
+        loadCollection = useLoadCollection()
   return (
     <ScrollView style={{padding: 20}}>
       <Text style={styles.heading}>Brickset</Text>

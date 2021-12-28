@@ -12,7 +12,7 @@ export default function SetInstructionsScreen({ route: {params: {id}}}: Material
         [instructions, setInstructions] = useState(null),
         [downloadUrl, setDownloadUrl] = useState(''),
         [error, setError] = useState(false),
-        {api} = useApi()
+        api = useApi()
   useEffect(() => {
     api('getInstructions2', {setNumber: id})
       .then(response => {

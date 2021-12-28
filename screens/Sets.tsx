@@ -6,16 +6,17 @@ import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
 import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
-import { useApi } from '../api/brickset'
+import { useIsLoggedIn } from '../api/brickset'
 
-export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProps<'Sets'>) {
-  const [sortField, setSortField] = useState('-year'),
+export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
+  const [, updateState] = useState({}),
+        [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
         [theme, setTheme] = useState(''),
         [ownedOnly, setOwnedOnly] = useState(false),
         [currentPage, setCurrentPage] = useState(0),
-        {isLoggedIn} = useApi(),
+        isLoggedIn = useIsLoggedIn(),
         scrollRef = useRef(),
         {setsList} = useSets(),
         filteredSets = setsList.filter(set =>
@@ -91,7 +92,15 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
               value={ownedOnly}
             />
           </View>
-          : <Text style={{marginTop: 10}}>Log into Brickset to filter by sets you own.</Text>
+          : <Text
+            style={{
+              marginTop: 10,
+              textAlign: 'right',
+              marginBottom: 20
+            }}
+            onPress={() => navigation.navigate('Settings')}>
+            Log into Brickset to filter by sets you own.
+          </Text>
         }
       </View>
       {filteredSets.length
@@ -100,7 +109,7 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
           .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
           .map(set =>
             <TouchableOpacity key={set.setNum} style={styles.set} onPress={() => {
-              navigate('Set', {id: set.setNum})
+              navigation.navigate('Set', {id: set.setNum})
             }}>
               <ScaledImage
                 style={styles.image}

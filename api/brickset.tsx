@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, createContext, useEffect, useState} from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Constants from 'expo-constants'
 import formUrlEncode from 'form-urlencoded'
-import { rejects } from 'assert'
 
 const apiKey = Constants.manifest.extra.BRICKSET_API_KEY
 
@@ -15,8 +14,11 @@ type CollectionItem = {
 }
 
 type Collection = {[key: string]: CollectionItem}
+let storageRead = false
 
-export const useApi = () => {
+const ApiContext = React.createContext({});
+
+export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.Element}) => {
   const BRICKSET_KEYS = {
           userHash: 'bricktools-brickset-user-hash',
           ownedSets: 'bricktools-brickset-owned-set-numbers'
@@ -95,21 +97,30 @@ export const useApi = () => {
               reject(e)
             })
         })
-  useEffect(() => {
-    AsyncStorage.getItem(BRICKSET_KEYS.userHash)
-      .then(hash => setUserHash(hash || ''))
-    AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
-      .then(result => {
-        setCollection(JSON.parse(result || '{}'))
-      })
-  }, [])
-  console.log('userHash', userHash)
-  return {
-    api,
-    collection,
+      useEffect(() => {
+      if(!storageRead) {
+        storageRead = true
+        AsyncStorage.getItem(BRICKSET_KEYS.userHash)
+          .then(hash => setUserHash(hash || ''))
+        AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
+          .then(result => setCollection(JSON.parse(result || '{}')))
+        }
+      }, [])
+  return <ApiContext.Provider value={{
+    isLoggedIn: Boolean(userHash),
     login,
     logOut,
     loadCollection,
-    isLoggedIn: Boolean(userHash)
-  }
+    collection,
+    api
+  }}>
+    {children}
+  </ApiContext.Provider>
 }
+
+export const useApi = () => useContext(ApiContext).api
+export const useCollection = () => useContext(ApiContext).collection
+export const useLogin = () => useContext(ApiContext).login
+export const useLogOut = () => useContext(ApiContext).logOut
+export const useIsLoggedIn = () => useContext(ApiContext).isLoggedIn
+export const useLoadCollection = () => useContext(ApiContext).loadCollection
