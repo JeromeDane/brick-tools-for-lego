@@ -65,9 +65,9 @@ export const useApi = () => {
                 }
               })
           ),
-        logOut = () => {
+        logOut = async () => {
+          await AsyncStorage.setItem(BRICKSET_KEYS.userHash, '')
           setUserHash('')
-          AsyncStorage.setItem(BRICKSET_KEYS.userHash, '')
         },
         loadCollection = () => new Promise((resolve, reject) => {
           console.log('loading collection')
@@ -103,6 +103,7 @@ export const useApi = () => {
         setCollection(JSON.parse(result || '{}'))
       })
   }, [])
+  console.log('userHash', userHash)
   return {
     api,
     collection,
