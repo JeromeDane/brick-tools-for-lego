@@ -32,6 +32,8 @@ export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTa
             : ''
           }
         </Text>
+        <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
+        <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
       </View>
       <View style={{marginBottom: 20}}>
         <Button onPress={() =>

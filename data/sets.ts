@@ -31,13 +31,15 @@ type Set = {
   inventories: {
     id: string;
     version: string;
-  }[],
+  }[]
   LEGOCom: {
     US: LEGOComPrice;
     UK: LEGOComPrice;
     CA: LEGOComPrice;
     DE: LEGOComPrice;
   }
+  ownedBy: number
+  wantedBy: number
 }
 
 const emptyLEGOCom = {
@@ -61,7 +63,9 @@ export const setsList: Set[] = (setsData as SetData[]).map(setData => {
       UK: emptyLEGOCom,
       CA: emptyLEGOCom,
       DE: emptyLEGOCom
-    }
+    },
+    ownedBy: bricksetSet ? bricksetSet.collections.ownedBy : 0,
+    wantedBy: bricksetSet ? bricksetSet.collections.wantedBy : 0,
   }
 })
 

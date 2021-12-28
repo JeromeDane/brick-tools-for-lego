@@ -42,6 +42,8 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
           }}>
           <Picker.Item label="Set Number" value="setNumSort" />
           <Picker.Item label="Set Number (desc)" value="-setNumSort" />
+          <Picker.Item label="Most Owned" value="-ownedBy" />
+          <Picker.Item label="Most Wanted" value="-wantedBy" />
           <Picker.Item label="Name" value="name" />
           <Picker.Item label="Name (desc)" value="-name" />
           <Picker.Item label="Parts" value="numParts" />
@@ -76,6 +78,14 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
                     : ''
                   }
                 </Text>
+                {sortField == '-ownedBy'
+                  ? <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
+                  : null
+                }
+                {sortField == '-wantedBy'
+                  ? <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
+                  : null
+                }
               </View>
             </TouchableOpacity>
           )
