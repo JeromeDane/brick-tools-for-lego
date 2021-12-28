@@ -18,7 +18,13 @@ export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTa
         <Text>Set number: {set.setNum}</Text>
         <Text>Theme: {set.theme.name}</Text>
         <Text>{set.name}</Text>
-        <Text>{set.numParts.toLocaleString()} parts</Text>
+        <Text>
+          {set.numParts.toLocaleString()} parts
+          {set.LEGOCom.US.retailPrice ?
+            ` - $${(set.LEGOCom.US.retailPrice / set.numParts).toFixed(2)} USD per part`
+            : ''
+          }
+        </Text>
         <Text>
           Released in {set.year}
           {set.LEGOCom.US.retailPrice ?
