@@ -13,7 +13,11 @@ export default function TabsScreen({ navigation }: RootDrawerParamList<'Themes'>
         .sort(sortBy('name'))
         .map(theme =>
           <Text key={theme.id} style={styles.theme}>
-            {theme.name} ({theme.numSets} sets)
+            {theme.name} (
+              {theme.yearFrom ? '' + theme.yearFrom + '' : ''}
+              {theme.yearTo ? '-' + theme.yearTo + '' : ''}
+              {(theme.yearFrom || theme.yearTo) ? ', ' : ''}
+              {theme.numSets} sets)
           </Text>
         )
       }

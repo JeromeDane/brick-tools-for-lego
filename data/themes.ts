@@ -1,17 +1,21 @@
 import themesData from '../data/raw/themes.json'
 
 type ThemeData = {
-  id: string;
-  name: string;
-  parentId: string;
+  id: string
+  name: string
+  parentId: string
   numSets: number
+  yearFrom: number
+  yearTo: number
 }
 
 export type Theme = {
-  id: string;
-  name: string;
-  parentId: string;
+  id: string
+  name: string
+  parentId: string
   numSets: number
+  yearFrom: number
+  yearTo: number
 }
 
 export const themesList: Theme[] = (themesData as ThemeData[])
