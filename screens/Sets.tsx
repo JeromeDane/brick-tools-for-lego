@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { ScrollView, StyleSheet, Switch, TouchableOpacity } from 'react-native'
+import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
 import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
@@ -8,10 +8,10 @@ import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
 import { useIsLoggedIn } from '../api/brickset'
 import TextLink from '../components/TextLink'
+import Switch from '../components/Switch'
 
 export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
-  const [, updateState] = useState({}),
-        [sortField, setSortField] = useState('-year'),
+  const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
         [theme, setTheme] = useState(''),
@@ -23,7 +23,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
         filteredSets = setsList.filter(set =>
           (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
           (!theme || set.theme.id == theme) &&
-          (!ownedOnly || set.collection.qtyOwned > 0)
+          (!isLoggedIn || !ownedOnly || set.collection.qtyOwned > 0)
         )
   return (
     <ScrollView ref={scrollRef} style={{
@@ -78,31 +78,19 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
           <Picker.Item label="Year Released" value="year" />
           <Picker.Item label="Year Released (desc)" value="-year" />
         </Picker>
-        {isLoggedIn
-          ? <View style={{flex: 1, flexDirection: 'row', marginTop: 10}}>
-            <TouchableOpacity
-              style={{paddingRight: 10, flexGrow: 1}}
-              onPress={() => setOwnedOnly(!ownedOnly)}>
-              <Text style={{textAlign: 'right'}}>Owned only</Text>
-            </TouchableOpacity>
-            <Switch
-              trackColor={{ false: "#767577", true: "#81b0ff" }}
-              thumbColor={ownedOnly ? "#f5dd4b" : "#f4f3f4"}
-              ios_backgroundColor="#3e3e3e"
-              onValueChange={setOwnedOnly}
-              value={ownedOnly}
-            />
-          </View>
-          : <TextLink
-            style={{
-              marginTop: 10,
-              textAlign: 'right',
-              marginBottom: 20
-            }}
-            onPress={() => navigation.navigate('Settings')}>
-            Log into Brickset to filter by sets you own.
-          </TextLink>
-        }
+        <View style={{alignItems: 'flex-end'}}>
+          {isLoggedIn
+            ? <Switch
+                label="Owned only"
+                onValueChange={setOwnedOnly}
+                value={ownedOnly} />
+            : <TextLink
+              style={{marginTop: 10, marginBottom: 20}}
+              onPress={() => navigation.navigate('Settings')}>
+              Log into Brickset to filter by sets you own.
+            </TextLink>
+          }
+        </View>
       </View>
       {filteredSets.length
         ? filteredSets

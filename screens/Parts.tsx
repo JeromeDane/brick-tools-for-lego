@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { ScrollView, StyleSheet, Image, Switch, TouchableOpacity } from 'react-native'
+import { ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import { RootTabScreenProps } from '../types'
@@ -7,6 +7,7 @@ import {partsList} from '../data/parts'
 import { getElementByPartAndColor } from '../data/elements'
 import { colorsList } from '../data/colors'
 import {partCategoriesList} from '../data/part-categories'
+import Switch from '../components/Switch'
 
 const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
@@ -83,25 +84,11 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
         </Picker>
       </View>
       <View style={{marginBottom: 20}}>
-      <View style={{flex: 1, flexDirection: 'row'}}>
-        <TouchableOpacity
-          style={{
-            paddingRight: 10,
-            flexGrow: 1
-          }}
-          onPress={() => setShowPrints(!showPrints)}
-          >
-          <Text style={{textAlign: 'right'}}>Show printed parts</Text>
-        </TouchableOpacity>
+      <View style={{alignItems: 'flex-end'}}>
         <Switch
-          trackColor={{ false: "#767577", true: "#81b0ff" }}
-          thumbColor={showPrints ? "#f5dd4b" : "#f4f3f4"}
-          ios_backgroundColor="#3e3e3e"
+          label="Show printed parts"
           onValueChange={setShowPrints}
-          value={showPrints}
-        />
-        {/*
-        */}
+          value={showPrints} />
       </View>
     </View>
       {filteredPartNumbers.length

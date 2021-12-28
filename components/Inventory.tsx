@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import sortBy from 'sort-by'
-import { Image, Switch, TouchableOpacity } from 'react-native'
+import { Image, TouchableOpacity } from 'react-native'
 import { Picker, Text, View } from './Themed'
 import inventoryParts from '../data/inventory-parts'
+import Switch from './Switch'
 
 const Inventory = ({id, navigation: {navigate}}) => {
   const defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder,name',
@@ -11,10 +12,7 @@ const Inventory = ({id, navigation: {navigate}}) => {
         setInventoryParts = inventoryParts[id] || []
   return (
     <View>
-      <View style={{
-          marginBottom: 20,
-          marginTop: 10
-        }}>
+      <View style={{marginVertical: 10}}>
         <Picker
           label="Sort by"
           selectedValue={sortOrder}
@@ -27,25 +25,11 @@ const Inventory = ({id, navigation: {navigate}}) => {
           <Picker.Item label="Size descending, color, and category" value={'-element.part.width,-element.part.length,-element.part.height,element.color.sortOrder,element.part.category.name,element.part.subCategory,name'} />
         </Picker>
       </View>
-      <View style={{marginBottom: 20}}>
-        <View style={{flex: 1, flexDirection: 'row'}}>
-          <TouchableOpacity
-            style={{
-              paddingRight: 10,
-              flexGrow: 1
-            }}
-            onPress={() => setShowSpareParts(!showSpareParts)}
-          >
-            <Text style={{textAlign: 'right'}}>Show spare parts</Text>
-          </TouchableOpacity>
-          <Switch
-            trackColor={{ false: "#767577", true: "#81b0ff" }}
-            thumbColor={showSpareParts ? "#f5dd4b" : "#f4f3f4"}
-            ios_backgroundColor="#3e3e3e"
-            onValueChange={setShowSpareParts}
-            value={showSpareParts}
-          />
-        </View>
+      <View style={{marginBottom: 20, alignItems: 'flex-end'}}>
+        <Switch
+          label="Show spare parts"
+          onValueChange={setShowSpareParts}
+          value={showSpareParts} />
       </View>
       {(showSpareParts ? setInventoryParts : setInventoryParts.filter(({isSpare}) => !isSpare))
         .sort(sortBy.apply(sortBy, sortOrder.split(',')))
