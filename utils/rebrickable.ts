@@ -115,7 +115,6 @@ export const buildJson = async () => {
       theme.yearTo = bricksetTheme.yearTo
     }
   })
-  console.log(JSON.stringify(bricksetThemes, null, 2))
 
 
   saveData('themes', themes)

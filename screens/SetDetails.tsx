@@ -4,10 +4,10 @@ import { ScrollView, Linking, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { SetTabsParamList } from '../navigation/SetTabs'
-import sets from '../data/sets'
+import {useSets} from '../data/sets'
 
 export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
-  const set = sets[id]
+  const set = useSets().sets[id]
   return set
     ? <ScrollView style={{padding: 20}}>
       <ScaledImage
@@ -34,6 +34,7 @@ export default function SetDetailsScreen({ route: {params: {id}}}: MaterialTopTa
         </Text>
         <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
         <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
+        <Text>You own {set.collection.qtyOwned.toLocaleString()}</Text>
       </View>
       <View style={{marginBottom: 20}}>
         <Button onPress={() =>

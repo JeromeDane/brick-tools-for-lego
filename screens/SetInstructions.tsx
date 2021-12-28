@@ -4,11 +4,11 @@ import { ScrollView, Button, } from 'react-native';
 import WebView from 'react-native-webview'
 import { Text, View } from '../components/Themed';
 import { SetTabsParamList } from '../navigation/SetTabs'
-import sets from '../data/sets'
+import {useSets} from '../data/sets'
 import {useApi} from '../api/brickset'
 
 export default function SetInstructionsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
-  const set = sets[id],
+  const set = useSets().sets[id],
         [instructions, setInstructions] = useState(null),
         [downloadUrl, setDownloadUrl] = useState(''),
         [error, setError] = useState(false),
@@ -16,7 +16,6 @@ export default function SetInstructionsScreen({ route: {params: {id}}}: Material
   useEffect(() => {
     api('getInstructions2', {setNumber: id})
       .then(response => {
-        console.log(response?.instructions)
         setInstructions(response?.instructions)
       })
       .catch(() => setError(true))

@@ -4,7 +4,7 @@ import sortBy from 'sort-by'
 import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
-import {setsList} from '../data/sets'
+import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
 
 export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProps<'Sets'>) {
@@ -14,6 +14,7 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
         [theme, setTheme] = useState(''),
         [currentPage, setCurrentPage] = useState(0),
         scrollRef = useRef(),
+        {setsList} = useSets(),
         filteredSets = setsList.filter(set =>
           (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
           (!theme || set.theme.id == theme)
@@ -108,7 +109,10 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
             </TouchableOpacity>
           )
         : <Text style={{textAlign: 'center'}}>
-          No results match your search criteria
+          {setsList.length
+            ? 'No results match your search criteria'
+            : 'Loading sets ...'
+          }
         </Text>
       }
       <View style={{height: 20}} />

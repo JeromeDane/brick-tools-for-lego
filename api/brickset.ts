@@ -79,7 +79,6 @@ export const useApi = () => {
                   acc[set.number + '-' + set.numberVariant] = set.collection
                   return acc
                 }, {} as {[key: string]: any})
-                console.log(JSON.stringify(setsData, null, 2))
                 await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(setsData))
                 setCollection(setsData)
                 resolve(null)
@@ -101,7 +100,6 @@ export const useApi = () => {
       .then(hash => setUserHash(hash || ''))
     AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
       .then(result => {
-        console.log('result', result)
         setCollection(JSON.parse(result || '{}'))
       })
   }, [])
