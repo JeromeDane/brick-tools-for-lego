@@ -5,16 +5,19 @@ import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
 import { RootTabScreenProps } from '../types'
 import {setsList} from '../data/sets'
+import {themesList} from '../data/themes'
 
 export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProps<'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
+        [theme, setTheme] = useState(''),
         [currentPage, setCurrentPage] = useState(0),
         scrollRef = useRef(),
-        filteredSets = filterBy
-          ? setsList.filter(({name, setNum}) => (setNum + name).toLowerCase().match(filterBy.toLowerCase()))
-          : setsList
+        filteredSets = setsList.filter(set =>
+          (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
+          (!theme || set.theme.id == theme)
+        )
   return (
     <ScrollView ref={scrollRef} style={{
       padding: 20,
@@ -32,6 +35,21 @@ export default function TabsScreen({ navigation: {navigate} }: RootTabScreenProp
         marginBottom: 20,
         marginTop: 20
       }}>
+        <Picker
+          label="Theme"
+          prompt="Theme"
+          selectedValue={theme}
+          onValueChange={(theme: string) => {
+            setCurrentPage(0)
+            setTheme(theme)
+          }}>
+          <Picker.Item label="All themes" value="" />
+          {themesList.sort(sortBy('name')).map(theme =>
+            <Picker.Item key={theme.name} label={`${theme.name} (${theme.numSets.toLocaleString()} sets)`} value={theme.id} />
+          )}
+        </Picker>
+      </View>
+      <View style={{marginBottom: 20}}>
         <Picker
           label="Sort by"
           prompt="Sort by"
