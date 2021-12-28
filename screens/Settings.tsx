@@ -2,21 +2,31 @@ import React, {useState} from 'react';
 import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
 import { Text, TextInput, View } from '../components/Themed';
 import { RootStackScreenProps } from '../navigation/types';
-import api, { useApi } from '../api/brickset';
+import { useApi } from '../api/brickset';
 
 export default function SettingsScreen({ navigation }: RootStackScreenProps<'Settings'>) {
   const [isLoading, setIsLoading] = useState(false),
         [username, setUsername] = useState(''),
         [password, setPassword] = useState(''),
-        {login, logOut, isLoggedIn} = useApi()
+        {api, collection, login, logOut, loadCollection, isLoggedIn} = useApi()
   return (
     <ScrollView style={{padding: 20}}>
       <Text style={styles.heading}>Brickset</Text>
       {isLoggedIn
         ? <View>
           <Text style={{marginBottom: 10}}>
-            Successfully logged in. Nothing is implemented to use this yet, but stay tuned!
+            Found {Object.keys(collection || {}).length.toLocaleString()} sets in your Brickset collection.
           </Text>
+          <View style={{marginBottom: 20}}>
+            <Button
+              disabled={isLoading}
+              title={isLoading ? 'loading ...' : 'Reload Collection'} onPress={() => {
+              setIsLoading(true)
+              loadCollection()
+                .then(() => setIsLoading(false))
+                .catch(() => setIsLoading(false))
+            }}/>
+          </View>
           <Button title="Log out" onPress={logOut} />
         </View>
         : <View>
@@ -31,6 +41,7 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
             setIsLoading(true)
             login(username, password)
               .then(() => setIsLoading(false))
+              .catch(() => setIsLoading(false))
           }}/>
         </View>
         }
