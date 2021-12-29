@@ -51,7 +51,7 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
                   label="I want this set"
                   value={set.collection.wanted}
                   onValueChange={(newValue) => {
-                    setLoadingMessage('Saving to Brickset ...')
+                    setLoadingMessage(`Saving as ${newValue ? '' : 'not '}wanted on Brickset ...`)
                     setWanted(set, newValue)
                       .then(() => setLoadingMessage(''))
                       .then(() => setLoadingMessage(''))

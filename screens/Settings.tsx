@@ -23,11 +23,11 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
       {isLoggedIn
         ? <View>
           <Text style={{marginBottom: 10}}>
-            Found {Object.keys(collection || {}).length.toLocaleString()} sets in your Brickset collection.
+            Found {Object.keys(collection || {}).length.toLocaleString()} sets you have tracked on Brickset.
           </Text>
           <View style={{marginBottom: 20}}>
             <Button
-              title="Update collection from Brickset" onPress={() => {
+              title="Import my collection from Brickset" onPress={() => {
                 setLoadingMessage('Importing collection from Brickset ...')
                 loadCollection()
                   .then(() => setLoadingMessage(''))
