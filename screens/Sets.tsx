@@ -25,7 +25,9 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
           (!isLoggedIn || !collectionFilter ||
             (collectionFilter == 'owned' && set.collection.qtyOwned > 0) ||
             (collectionFilter == 'not-owned' && set.collection.qtyOwned === 0) ||
-            (collectionFilter == 'wanted' && set.collection.wanted)
+            (collectionFilter == 'wanted' && set.collection.wanted) ||
+            (collectionFilter == 'not-wanted' && !set.collection.wanted) ||
+            (collectionFilter == 'not-wanted-not-owned' && !set.collection.wanted && set.collection.qtyOwned === 0)
           )
         )
   return (
@@ -93,6 +95,8 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
             <Picker.Item label="Owned" value="owned" />
             <Picker.Item label="Not owned" value="not-owned" />
             <Picker.Item label="Wanted" value="wanted" />
+            <Picker.Item label="Not Wanted" value="not-wanted" />
+            <Picker.Item label="Not Wanted and Not Owned" value="not-wanted-not-owned" />
           </Picker>
         </View>
         : <TextLink

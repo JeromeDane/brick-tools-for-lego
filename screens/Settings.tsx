@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
 import { Text, TextInput, View } from '../components/Themed';
+import Spinner from '../components/Spinner'
 import { RootStackScreenProps } from '../navigation/types';
 import { useCollection, useIsLoggedIn, useLoadCollection, useLogin, useLogOut } from '../api/brickset';
 import TextLink from '../components/TextLink';
@@ -9,6 +10,7 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
   const [isLoading, setIsLoading] = useState(false),
         [username, setUsername] = useState(''),
         [password, setPassword] = useState(''),
+        [loadingMessage, setLoadingMessage] = useState(''),
         collection = useCollection(),
         login = useLogin(),
         logOut = useLogOut(),
@@ -16,6 +18,7 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
         loadCollection = useLoadCollection()
   return (
     <ScrollView style={{padding: 20}}>
+      <Spinner visible={Boolean(loadingMessage)} textContent={loadingMessage} />
       <Text style={styles.heading}>Brickset</Text>
       {isLoggedIn
         ? <View>
@@ -24,15 +27,19 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
           </Text>
           <View style={{marginBottom: 20}}>
             <Button
-              disabled={isLoading}
-              title={isLoading ? 'loading ...' : 'Reload Collection'} onPress={() => {
-              setIsLoading(true)
-              loadCollection()
-                .then(() => setIsLoading(false))
-                .catch(() => setIsLoading(false))
-            }}/>
+              title="Update collection from Brickset" onPress={() => {
+                setLoadingMessage('Importing collection from Brickset ...')
+                loadCollection()
+                  .then(() => setLoadingMessage(''))
+                  .catch(() => setLoadingMessage(''))
+              }}/>
           </View>
-          <Button title="Log out" onPress={logOut} />
+          <Button title="Log out" onPress={() => {
+            setLoadingMessage('Logging out from Brickset ...')
+            logOut()
+              .then(() => setLoadingMessage(''))
+              .catch(() => setLoadingMessage(''))
+          }} />
         </View>
         : <View>
           <Text style={{marginBottom: 10}}>
@@ -43,11 +50,11 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
           </Text>
           <TextInput label="username" onChangeText={setUsername} style={{marginBottom: 10}} />
           <TextInput label="password" secureTextEntry={true} onChangeText={setPassword} style={{marginBottom: 10}} />
-          <Button disabled={isLoading} title={isLoading ? 'loading ...' : 'Login'} onPress={() => {
-            setIsLoading(true)
+          <Button disabled={isLoading} title="Login" onPress={() => {
+            setLoadingMessage('Logging in to Brickset ...')
             login(username, password)
-              .then(() => setIsLoading(false))
-              .catch(() => setIsLoading(false))
+              .then(() => setLoadingMessage(''))
+              .catch(() => setLoadingMessage(''))
           }}/>
         </View>
         }

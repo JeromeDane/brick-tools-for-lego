@@ -1,5 +1,6 @@
 import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
-import React from 'react';
+import React, { useState } from 'react';
+import Spinner from '../components/Spinner'
 import { ScrollView, Linking, Button } from 'react-native';
 import { Text, View } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
@@ -11,10 +12,12 @@ import CheckBox from '../components/Checkbox';
 
 export default function SetDetailsScreen({ navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
   const set = useSets().byId[id],
+        [loadingMessage, setLoadingMessage] = useState(''),
         isLoggedIn = useIsLoggedIn(),
         setWanted = useSetWanted()
   return set
     ? <ScrollView style={{padding: 20}}>
+      <Spinner visible={Boolean(loadingMessage)} textContent={loadingMessage} />
       <ScaledImage
         width={500}
         source={{uri: set.image.imageURL}}
@@ -47,9 +50,12 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
                 <CheckBox
                   label="I want this set"
                   value={set.collection.wanted}
-                  onValueChange={(newValue) =>
+                  onValueChange={(newValue) => {
+                    setLoadingMessage('Saving to Brickset ...')
                     setWanted(set, newValue)
-                  }
+                      .then(() => setLoadingMessage(''))
+                      .then(() => setLoadingMessage(''))
+                  }}
                 />
               </View>
             </View>

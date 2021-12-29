@@ -70,15 +70,16 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
         login = (username: string, password: string) =>
           new Promise((resolve, reject) =>
             api('login', {username, password})
-              .then(async ({status, hash} : {status: string, hash: string}) => {
-                if(status === 'success') {
-                  setUserHash(hash)
-                  await AsyncStorage.setItem(BRICKSET_KEYS.userHash, hash)
+              .then(async (response: any) => {
+                if(response.status === 'success') {
+                  setUserHash(response.hash)
+                  await AsyncStorage.setItem(BRICKSET_KEYS.userHash, response.hash)
                   resolve(null)
                 }
                 else {
                   // TODO: Add error handling
                   console.error('Error logging in to Brickset')
+                  console.warn(JSON.stringify(response, null, 2))
                   reject(null)
                 }
               })
