@@ -22,8 +22,9 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
       <Text style={styles.heading}>Brickset</Text>
       {isLoggedIn
         ? <View>
-          <Text style={{marginBottom: 10}}>
-            Found {Object.keys(collection || {}).length.toLocaleString()} sets you have tracked on Brickset.
+          <Text style={{marginBottom: 20}}>
+            Found {Object.keys(collection || {}).length.toLocaleString()} sets you have tracked on Brickset. Any changes
+            you make in this app will be automatically synced back to Brickset as long as you remain logged in.
           </Text>
           <View style={{marginBottom: 20}}>
             <Button
@@ -34,7 +35,7 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
                   .catch(() => setLoadingMessage(''))
               }}/>
           </View>
-          <Button title="Log out" onPress={() => {
+          <Button title="Log out from Brickset" onPress={() => {
             setLoadingMessage('Logging out from Brickset ...')
             logOut()
               .then(() => setLoadingMessage(''))
