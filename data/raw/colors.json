@@ -1,0 +1,4366 @@
+[
+  {
+    "id": "-1",
+    "name": "[Unknown]",
+    "rgb": "0033B2",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "0",
+    "name": "Black",
+    "rgb": "05131D",
+    "isTrans": "f",
+    "firstYear": 1957,
+    "lastYear": 2022,
+    "lego": {
+      "id": "26",
+      "name": "Black"
+    },
+    "lDraw": {
+      "id": "0",
+      "name": "Black"
+    },
+    "brickLink": {
+      "id": "11",
+      "name": "Black"
+    },
+    "brickOwl": {
+      "id": "38",
+      "name": "Black"
+    }
+  },
+  {
+    "id": "1",
+    "name": "Blue",
+    "rgb": "0055BF",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 2022,
+    "lego": {
+      "id": "23",
+      "name": "Bright Blue"
+    },
+    "lDraw": {
+      "id": "1",
+      "name": "Blue"
+    },
+    "brickLink": {
+      "id": "7",
+      "name": "Blue"
+    },
+    "brickOwl": {
+      "id": "39",
+      "name": "Blue"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Green",
+    "rgb": "237841",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 2022,
+    "lego": {
+      "id": "28",
+      "name": "Dark green"
+    },
+    "lDraw": {
+      "id": "2",
+      "name": "Green"
+    },
+    "brickLink": {
+      "id": "6",
+      "name": "Green"
+    },
+    "brickOwl": {
+      "id": "61",
+      "name": "Green"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Dark Turquoise",
+    "rgb": "008F9B",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2022,
+    "lego": {
+      "id": "107",
+      "name": "Bright bluish green"
+    },
+    "lDraw": {
+      "id": "3",
+      "name": "Dark_Turquoise"
+    },
+    "brickLink": {
+      "id": "39",
+      "name": "Dark Turquoise"
+    },
+    "brickOwl": {
+      "id": "58",
+      "name": "Dark Turquoise"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Red",
+    "rgb": "C91A09",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 2022,
+    "lego": {
+      "id": "21",
+      "name": "Bright red"
+    },
+    "lDraw": {
+      "id": "4",
+      "name": "Red"
+    },
+    "brickLink": {
+      "id": "5",
+      "name": "Red"
+    },
+    "brickOwl": {
+      "id": "81",
+      "name": "Red"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Dark Pink",
+    "rgb": "C870A0",
+    "isTrans": "f",
+    "firstYear": 1994,
+    "lastYear": 2022,
+    "lego": {
+      "id": "221",
+      "name": "Bright Purple"
+    },
+    "lDraw": {
+      "id": "5",
+      "name": "Dark_Pink"
+    },
+    "brickLink": {
+      "id": "47",
+      "name": "Dark Pink"
+    },
+    "brickOwl": {
+      "id": "17",
+      "name": "Dark Pink"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Brown",
+    "rgb": "583927",
+    "isTrans": "f",
+    "firstYear": 1974,
+    "lastYear": 2008,
+    "lego": {
+      "id": "187",
+      "name": "Sand Yellow Metallic"
+    },
+    "lDraw": {
+      "id": "6",
+      "name": "Brown"
+    },
+    "brickLink": {
+      "id": "8",
+      "name": "Brown"
+    },
+    "brickOwl": {
+      "id": "46",
+      "name": "Brown"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Light Gray",
+    "rgb": "9BA19D",
+    "isTrans": "f",
+    "firstYear": 1954,
+    "lastYear": 2006,
+    "lego": {
+      "id": "2",
+      "name": "Grey"
+    },
+    "lDraw": {
+      "id": "7",
+      "name": "Light_Gray"
+    },
+    "brickLink": {
+      "id": "9",
+      "name": "Light Gray"
+    },
+    "brickOwl": {
+      "id": "66",
+      "name": "Light Gray"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Dark Gray",
+    "rgb": "6D6E5C",
+    "isTrans": "f",
+    "firstYear": 1978,
+    "lastYear": 2006,
+    "lego": {
+      "id": "27",
+      "name": "Dark grey"
+    },
+    "lDraw": {
+      "id": "8",
+      "name": "Dark_Gray"
+    },
+    "brickLink": {
+      "id": "10",
+      "name": "Dark Gray"
+    },
+    "brickOwl": {
+      "id": "53",
+      "name": "Dark Gray"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Light Blue",
+    "rgb": "B4D2E3",
+    "isTrans": "f",
+    "firstYear": 1995,
+    "lastYear": 2007,
+    "lego": {
+      "id": "45",
+      "name": "Light blue"
+    },
+    "lDraw": {
+      "id": "9",
+      "name": "Light_Blue"
+    },
+    "brickLink": {
+      "id": "62",
+      "name": "Light Blue"
+    },
+    "brickOwl": {
+      "id": "63",
+      "name": "Light Blue"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Bright Green",
+    "rgb": "4B9F4A",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 2022,
+    "lego": {
+      "id": "37",
+      "name": "Bright Green"
+    },
+    "lDraw": {
+      "id": "10",
+      "name": "Bright_Green"
+    },
+    "brickLink": {
+      "id": "36",
+      "name": "Bright Green"
+    },
+    "brickOwl": {
+      "id": "41",
+      "name": "Bright Green"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Light Turquoise",
+    "rgb": "55A5AF",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2004,
+    "lego": {
+      "id": "116",
+      "name": "Med. bluish green"
+    },
+    "lDraw": {
+      "id": "11",
+      "name": "Light_Turquoise"
+    },
+    "brickLink": {
+      "id": "40",
+      "name": "Light Turquoise"
+    },
+    "brickOwl": {
+      "id": "12",
+      "name": "Light Turquoise"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Salmon",
+    "rgb": "F2705E",
+    "isTrans": "f",
+    "firstYear": 1997,
+    "lastYear": 2004,
+    "lego": {
+      "id": "4",
+      "name": "Brick Red"
+    },
+    "lDraw": {
+      "id": "12",
+      "name": "Salmon"
+    },
+    "brickLink": {
+      "id": "25",
+      "name": "Salmon"
+    },
+    "brickOwl": {
+      "id": "84",
+      "name": "Salmon"
+    }
+  },
+  {
+    "id": "13",
+    "name": "Pink",
+    "rgb": "FC97AC",
+    "isTrans": "f",
+    "firstYear": 1991,
+    "lastYear": 2006,
+    "lego": {
+      "id": "1007",
+      "name": "L.REDVIOL"
+    },
+    "lDraw": {
+      "id": "13",
+      "name": "Pink"
+    },
+    "brickLink": {
+      "id": "23",
+      "name": "Pink"
+    },
+    "brickOwl": {
+      "id": "3",
+      "name": "Pink"
+    }
+  },
+  {
+    "id": "14",
+    "name": "Yellow",
+    "rgb": "F2CD37",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 2022,
+    "lego": {
+      "id": "24",
+      "name": "Bright yellow"
+    },
+    "lDraw": {
+      "id": "14",
+      "name": "Yellow"
+    },
+    "brickLink": {
+      "id": "3",
+      "name": "Yellow"
+    },
+    "brickOwl": {
+      "id": "93",
+      "name": "Yellow"
+    }
+  },
+  {
+    "id": "15",
+    "name": "White",
+    "rgb": "FFFFFF",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 2022,
+    "lego": {
+      "id": "1",
+      "name": "White"
+    },
+    "lDraw": {
+      "id": "15",
+      "name": "White"
+    },
+    "brickLink": {
+      "id": "1",
+      "name": "White"
+    },
+    "brickOwl": {
+      "id": "92",
+      "name": "White"
+    }
+  },
+  {
+    "id": "17",
+    "name": "Light Green",
+    "rgb": "C2DAB8",
+    "isTrans": "f",
+    "firstYear": 1992,
+    "lastYear": 2005,
+    "lego": {
+      "id": "6",
+      "name": "Light green"
+    },
+    "lDraw": {
+      "id": "17",
+      "name": "Light_Green"
+    },
+    "brickLink": {
+      "id": "38",
+      "name": "Light Green"
+    },
+    "brickOwl": {
+      "id": "11",
+      "name": "Light Green"
+    }
+  },
+  {
+    "id": "18",
+    "name": "Light Yellow",
+    "rgb": "FBE696",
+    "isTrans": "f",
+    "firstYear": 1993,
+    "lastYear": 2006,
+    "lego": {
+      "id": "3",
+      "name": "Light yellow"
+    },
+    "lDraw": {
+      "id": "18",
+      "name": "Light_Yellow"
+    },
+    "brickLink": {
+      "id": "33",
+      "name": "Light Yellow"
+    },
+    "brickOwl": {
+      "id": "9",
+      "name": "Light Yellow"
+    }
+  },
+  {
+    "id": "19",
+    "name": "Tan",
+    "rgb": "E4CD9E",
+    "isTrans": "f",
+    "firstYear": 1982,
+    "lastYear": 2022,
+    "lego": {
+      "id": "5",
+      "name": "Brick yellow"
+    },
+    "lDraw": {
+      "id": "19",
+      "name": "Tan"
+    },
+    "brickLink": {
+      "id": "2",
+      "name": "Tan"
+    },
+    "brickOwl": {
+      "id": "89",
+      "name": "Tan"
+    }
+  },
+  {
+    "id": "20",
+    "name": "Light Violet",
+    "rgb": "C9CAE2",
+    "isTrans": "f",
+    "firstYear": 1994,
+    "lastYear": 2005,
+    "lego": {
+      "id": "39",
+      "name": "Light bluish violet"
+    },
+    "lDraw": {
+      "id": "20",
+      "name": "Light_Violet"
+    },
+    "brickLink": {
+      "id": "44",
+      "name": "Light Violet"
+    },
+    "brickOwl": {
+      "id": "16",
+      "name": "Light Violet"
+    }
+  },
+  {
+    "id": "21",
+    "name": "Glow In Dark Opaque",
+    "rgb": "D4D5C9",
+    "isTrans": "f",
+    "firstYear": 1990,
+    "lastYear": 2011,
+    "lego": {
+      "id": "50",
+      "name": "Phosp. White"
+    },
+    "lDraw": {
+      "id": "21",
+      "name": "Glow_In_Dark_Opaque"
+    },
+    "brickLink": {
+      "id": "46",
+      "name": "Glow In Dark Opaque"
+    },
+    "brickOwl": {
+      "id": "127",
+      "name": "Glow in the Dark Opaque"
+    }
+  },
+  {
+    "id": "22",
+    "name": "Purple",
+    "rgb": "81007B",
+    "isTrans": "f",
+    "firstYear": 1996,
+    "lastYear": 2006,
+    "lego": {
+      "id": "104",
+      "name": "Bright violet"
+    },
+    "lDraw": {
+      "id": "22",
+      "name": "Purple"
+    },
+    "brickLink": {
+      "id": "24",
+      "name": "Purple"
+    },
+    "brickOwl": {
+      "id": "4",
+      "name": "Purple"
+    }
+  },
+  {
+    "id": "23",
+    "name": "Dark Blue-Violet",
+    "rgb": "2032B0",
+    "isTrans": "f",
+    "firstYear": 2004,
+    "lastYear": 2006,
+    "lego": {
+      "id": "196",
+      "name": "Dark Royal blue"
+    },
+    "lDraw": {
+      "id": "23",
+      "name": "Dark_Blue_Violet"
+    },
+    "brickLink": {
+      "id": "109",
+      "name": "Dark Blue-Violet"
+    },
+    "brickOwl": {
+      "id": "49",
+      "name": "Dark Royal Blue"
+    }
+  },
+  {
+    "id": "25",
+    "name": "Orange",
+    "rgb": "FE8A18",
+    "isTrans": "f",
+    "firstYear": 1997,
+    "lastYear": 2022,
+    "lego": {
+      "id": "106",
+      "name": "Bright orange"
+    },
+    "lDraw": {
+      "id": "25",
+      "name": "Orange"
+    },
+    "brickLink": {
+      "id": "4",
+      "name": "Orange"
+    },
+    "brickOwl": {
+      "id": "80",
+      "name": "Orange"
+    }
+  },
+  {
+    "id": "26",
+    "name": "Magenta",
+    "rgb": "923978",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2022,
+    "lego": {
+      "id": "124",
+      "name": "Bright reddish violet"
+    },
+    "lDraw": {
+      "id": "26",
+      "name": "Magenta"
+    },
+    "brickLink": {
+      "id": "71",
+      "name": "Magenta"
+    },
+    "brickOwl": {
+      "id": "72",
+      "name": "Magenta"
+    }
+  },
+  {
+    "id": "27",
+    "name": "Lime",
+    "rgb": "BBE90B",
+    "isTrans": "f",
+    "firstYear": 1982,
+    "lastYear": 2022,
+    "lego": {
+      "id": "119",
+      "name": "Br. yellowish green"
+    },
+    "lDraw": {
+      "id": "27",
+      "name": "Lime"
+    },
+    "brickLink": {
+      "id": "34",
+      "name": "Lime"
+    },
+    "brickOwl": {
+      "id": "70",
+      "name": "Lime"
+    }
+  },
+  {
+    "id": "28",
+    "name": "Dark Tan",
+    "rgb": "958A73",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2022,
+    "lego": {
+      "id": "138",
+      "name": "Sand yellow"
+    },
+    "lDraw": {
+      "id": "28",
+      "name": "Dark_Tan"
+    },
+    "brickLink": {
+      "id": "69",
+      "name": "Dark Tan"
+    },
+    "brickOwl": {
+      "id": "57",
+      "name": "Dark Tan"
+    }
+  },
+  {
+    "id": "29",
+    "name": "Bright Pink",
+    "rgb": "E4ADC8",
+    "isTrans": "f",
+    "firstYear": 2003,
+    "lastYear": 2022,
+    "lego": {
+      "id": "222",
+      "name": "Light Purple"
+    },
+    "lDraw": {
+      "id": "29",
+      "name": "Bright_Pink"
+    },
+    "brickLink": {
+      "id": "104",
+      "name": "Bright Pink"
+    },
+    "brickOwl": {
+      "id": "45",
+      "name": "Bright Pink"
+    }
+  },
+  {
+    "id": "30",
+    "name": "Medium Lavender",
+    "rgb": "AC78BA",
+    "isTrans": "f",
+    "firstYear": 2011,
+    "lastYear": 2022,
+    "lego": {
+      "id": "324",
+      "name": "Medium Lavender"
+    },
+    "lDraw": {
+      "id": "30",
+      "name": "Medium_Lavender"
+    },
+    "brickLink": {
+      "id": "157",
+      "name": "Medium Lavender"
+    },
+    "brickOwl": {
+      "id": "76",
+      "name": "Medium Lavender"
+    }
+  },
+  {
+    "id": "31",
+    "name": "Lavender",
+    "rgb": "E1D5ED",
+    "isTrans": "f",
+    "firstYear": 2011,
+    "lastYear": 2022,
+    "lego": {
+      "id": "325",
+      "name": "Lavender"
+    },
+    "lDraw": {
+      "id": "31",
+      "name": "Lavender"
+    },
+    "brickLink": {
+      "id": "154",
+      "name": "Lavender"
+    },
+    "brickOwl": {
+      "id": "36",
+      "name": "Lavender"
+    }
+  },
+  {
+    "id": "32",
+    "name": "Trans-Black IR Lens",
+    "rgb": "635F52",
+    "isTrans": "t",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "33",
+    "name": "Trans-Dark Blue",
+    "rgb": "0020A0",
+    "isTrans": "t",
+    "firstYear": 1965,
+    "lastYear": 2022,
+    "lego": {
+      "id": "43",
+      "name": "Tr. Blue"
+    },
+    "lDraw": {
+      "id": "33",
+      "name": "Trans_Dark_Blue"
+    },
+    "brickLink": {
+      "id": "14",
+      "name": "Trans-Dark Blue"
+    },
+    "brickOwl": {
+      "id": "98",
+      "name": "Transparent Dark Blue"
+    }
+  },
+  {
+    "id": "34",
+    "name": "Trans-Green",
+    "rgb": "84B68D",
+    "isTrans": "t",
+    "firstYear": 1969,
+    "lastYear": 2022,
+    "lego": {
+      "id": "48",
+      "name": "Tr. Green"
+    },
+    "lDraw": {
+      "id": "34",
+      "name": "Trans_Green"
+    },
+    "brickLink": {
+      "id": "20",
+      "name": "Trans-Green"
+    },
+    "brickOwl": {
+      "id": "100",
+      "name": "Transparent Green"
+    }
+  },
+  {
+    "id": "35",
+    "name": "Trans-Bright Green",
+    "rgb": "D9E4A7",
+    "isTrans": "t",
+    "firstYear": 2010,
+    "lastYear": 2022,
+    "lego": {
+      "id": "311",
+      "name": "Transparent Bright Green"
+    },
+    "lDraw": {
+      "id": "35",
+      "name": "Trans_Bright_Green"
+    },
+    "brickLink": {
+      "id": "108",
+      "name": "Trans-Bright Green"
+    },
+    "brickOwl": {
+      "id": "96",
+      "name": "Transparent Bright Green"
+    }
+  },
+  {
+    "id": "36",
+    "name": "Trans-Red",
+    "rgb": "C91A09",
+    "isTrans": "t",
+    "firstYear": 1969,
+    "lastYear": 2022,
+    "lego": {
+      "id": "41",
+      "name": "Tr. Red"
+    },
+    "lDraw": {
+      "id": "36",
+      "name": "Trans_Red"
+    },
+    "brickLink": {
+      "id": "17",
+      "name": "Trans-Red"
+    },
+    "brickOwl": {
+      "id": "108",
+      "name": "Transparent Red"
+    }
+  },
+  {
+    "id": "40",
+    "name": "Trans-Black",
+    "rgb": "635F52",
+    "isTrans": "t",
+    "firstYear": 1999,
+    "lastYear": 2022,
+    "lego": {
+      "id": "111",
+      "name": "Tr. Brown"
+    },
+    "lDraw": {
+      "id": "40",
+      "name": "Trans_Black"
+    },
+    "brickLink": {
+      "id": "13",
+      "name": "Trans-Black"
+    },
+    "brickOwl": {
+      "id": "95",
+      "name": "Transparent Black"
+    }
+  },
+  {
+    "id": "41",
+    "name": "Trans-Light Blue",
+    "rgb": "AEEFEC",
+    "isTrans": "t",
+    "firstYear": 1985,
+    "lastYear": 2022,
+    "lego": {
+      "id": "42",
+      "name": "Tr. Lg blue"
+    },
+    "lDraw": {
+      "id": "43",
+      "name": "Trans_Medium_Blue"
+    },
+    "brickLink": {
+      "id": "15",
+      "name": "Trans-Light Blue"
+    },
+    "brickOwl": {
+      "id": "101",
+      "name": "Transparent Light Blue"
+    }
+  },
+  {
+    "id": "42",
+    "name": "Trans-Neon Green",
+    "rgb": "F8F184",
+    "isTrans": "t",
+    "firstYear": 1988,
+    "lastYear": 2021,
+    "lego": {
+      "id": "49",
+      "name": "Tr. Flu. Green"
+    },
+    "lDraw": {
+      "id": "42",
+      "name": "Trans_Neon_Green"
+    },
+    "brickLink": {
+      "id": "16",
+      "name": "Trans-Neon Green"
+    },
+    "brickOwl": {
+      "id": "103",
+      "name": "Transparent Neon Green"
+    }
+  },
+  {
+    "id": "43",
+    "name": "Trans-Very Lt Blue",
+    "rgb": "C1DFF0",
+    "isTrans": "t",
+    "firstYear": 2003,
+    "lastYear": 2006,
+    "lego": {
+      "id": "229",
+      "name": "Transparent Light Bluish Green"
+    },
+    "lDraw": {
+      "id": "39",
+      "name": "Trans_Light_Blue"
+    },
+    "brickLink": {
+      "id": "113",
+      "name": "Trans-Aqua"
+    },
+    "brickOwl": {
+      "id": "25",
+      "name": "Transparent Very Light Blue"
+    }
+  },
+  {
+    "id": "45",
+    "name": "Trans-Dark Pink",
+    "rgb": "DF6695",
+    "isTrans": "t",
+    "firstYear": 1998,
+    "lastYear": 2022,
+    "lego": {
+      "id": "113",
+      "name": "Tr. Medi. reddish violet"
+    },
+    "lDraw": {
+      "id": "37",
+      "name": "Trans_Dark_Pink"
+    },
+    "brickLink": {
+      "id": "50",
+      "name": "Trans-Dark Pink"
+    },
+    "brickOwl": {
+      "id": "99",
+      "name": "Transparent Dark Pink"
+    }
+  },
+  {
+    "id": "46",
+    "name": "Trans-Yellow",
+    "rgb": "F5CD2F",
+    "isTrans": "t",
+    "firstYear": 1969,
+    "lastYear": 2022,
+    "lego": {
+      "id": "44",
+      "name": "Tr. Yellow"
+    },
+    "lDraw": {
+      "id": "46",
+      "name": "Trans_Yellow"
+    },
+    "brickLink": {
+      "id": "19",
+      "name": "Trans-Yellow"
+    },
+    "brickOwl": {
+      "id": "109",
+      "name": "Transparent Yellow"
+    }
+  },
+  {
+    "id": "47",
+    "name": "Trans-Clear",
+    "rgb": "FCFCFC",
+    "isTrans": "t",
+    "firstYear": 1954,
+    "lastYear": 2022,
+    "lego": {
+      "id": "40",
+      "name": "Transparent"
+    },
+    "lDraw": {
+      "id": "47",
+      "name": "Trans_Clear"
+    },
+    "brickLink": {
+      "id": "12",
+      "name": "Trans-Clear"
+    },
+    "brickOwl": {
+      "id": "97",
+      "name": "Transparent"
+    }
+  },
+  {
+    "id": "52",
+    "name": "Trans-Purple",
+    "rgb": "A5A5CB",
+    "isTrans": "t",
+    "firstYear": 2000,
+    "lastYear": 2022,
+    "lego": {
+      "id": "126",
+      "name": "Tr. Bright bluish violet"
+    },
+    "lDraw": {
+      "id": "52",
+      "name": "Trans_Purple"
+    },
+    "brickLink": {
+      "id": "51",
+      "name": "Trans-Purple"
+    },
+    "brickOwl": {
+      "id": "107",
+      "name": "Transparent Purple"
+    }
+  },
+  {
+    "id": "54",
+    "name": "Trans-Neon Yellow",
+    "rgb": "DAB000",
+    "isTrans": "t",
+    "firstYear": 2001,
+    "lastYear": 2006,
+    "lego": {
+      "id": "157",
+      "name": "Transparent Fluorescent Yellow"
+    },
+    "lDraw": {
+      "id": "54",
+      "name": "Trans_Neon_Yellow"
+    },
+    "brickLink": {
+      "id": "121",
+      "name": "Trans-Neon Yellow"
+    },
+    "brickOwl": {
+      "id": "104",
+      "name": "Transparent Neon Yellow"
+    }
+  },
+  {
+    "id": "57",
+    "name": "Trans-Neon Orange",
+    "rgb": "FF800D",
+    "isTrans": "t",
+    "firstYear": 1993,
+    "lastYear": 2022,
+    "lego": {
+      "id": "47",
+      "name": "Tr. Flu. Reddish orange"
+    },
+    "lDraw": {
+      "id": "38",
+      "name": "Trans_Neon_Orange"
+    },
+    "brickLink": {
+      "id": "18",
+      "name": "Trans-Neon Orange"
+    },
+    "brickOwl": {
+      "id": "161",
+      "name": "Transparent Neon Reddish Orange"
+    }
+  },
+  {
+    "id": "60",
+    "name": "Chrome Antique Brass",
+    "rgb": "645A4C",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2005,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "60",
+      "name": "Chrome_Antique_Brass"
+    },
+    "brickLink": {
+      "id": "57",
+      "name": "Chrome Antique Brass"
+    },
+    "brickOwl": {
+      "id": "110",
+      "name": "Chrome Brass"
+    }
+  },
+  {
+    "id": "61",
+    "name": "Chrome Blue",
+    "rgb": "6C96BF",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2006,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "61",
+      "name": "Chrome_Blue"
+    },
+    "brickLink": {
+      "id": "52",
+      "name": "Chrome Blue"
+    },
+    "brickOwl": {
+      "id": "112",
+      "name": "Chrome Blue"
+    }
+  },
+  {
+    "id": "62",
+    "name": "Chrome Green",
+    "rgb": "3CB371",
+    "isTrans": "f",
+    "firstYear": 1999,
+    "lastYear": 1999,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "62",
+      "name": "Chrome_Green"
+    },
+    "brickLink": {
+      "id": "64",
+      "name": "Chrome Green"
+    },
+    "brickOwl": {
+      "id": "113",
+      "name": "Chrome Green"
+    }
+  },
+  {
+    "id": "63",
+    "name": "Chrome Pink",
+    "rgb": "AA4D8E",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2018,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "63",
+      "name": "Chrome_Pink"
+    },
+    "brickLink": {
+      "id": "82",
+      "name": "Chrome Pink"
+    },
+    "brickOwl": {
+      "id": "114",
+      "name": "Chrome Pink"
+    }
+  },
+  {
+    "id": "64",
+    "name": "Chrome Black",
+    "rgb": "1B2A34",
+    "isTrans": "f",
+    "firstYear": 2008,
+    "lastYear": 2020,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "64",
+      "name": "Chrome_Black"
+    },
+    "brickLink": {
+      "id": "122",
+      "name": "Chrome Black"
+    },
+    "brickOwl": {
+      "id": "111",
+      "name": "Chrome Black"
+    }
+  },
+  {
+    "id": "68",
+    "name": "Very Light Orange",
+    "rgb": "F3CF9B",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2000,
+    "lego": {
+      "id": "36",
+      "name": "Light Yellowish Orange"
+    },
+    "lDraw": {
+      "id": "68",
+      "name": "Very_Light_Orange"
+    },
+    "brickLink": {
+      "id": "96",
+      "name": "Very Light Orange"
+    },
+    "brickOwl": {
+      "id": "91",
+      "name": "Very Light Orange"
+    }
+  },
+  {
+    "id": "69",
+    "name": "Light Purple",
+    "rgb": "CD6298",
+    "isTrans": "f",
+    "firstYear": 2003,
+    "lastYear": 2007,
+    "lego": {
+      "id": "198",
+      "name": "Bright Reddish Lilac"
+    },
+    "lDraw": {
+      "id": "69",
+      "name": "Light_Purple"
+    },
+    "brickLink": {
+      "id": "93",
+      "name": "Light Purple"
+    },
+    "brickOwl": {
+      "id": "69",
+      "name": "Light Purple"
+    }
+  },
+  {
+    "id": "70",
+    "name": "Reddish Brown",
+    "rgb": "582A12",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2022,
+    "lego": {
+      "id": "192",
+      "name": "Reddish Brown"
+    },
+    "lDraw": {
+      "id": "70",
+      "name": "Reddish_Brown"
+    },
+    "brickLink": {
+      "id": "88",
+      "name": "Reddish Brown"
+    },
+    "brickOwl": {
+      "id": "82",
+      "name": "Reddish Brown"
+    }
+  },
+  {
+    "id": "71",
+    "name": "Light Bluish Gray",
+    "rgb": "A0A5A9",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2022,
+    "lego": {
+      "id": "194",
+      "name": "Medium stone grey"
+    },
+    "lDraw": {
+      "id": "71",
+      "name": "Light_Bluish_Gray"
+    },
+    "brickLink": {
+      "id": "86",
+      "name": "Light Bluish Gray"
+    },
+    "brickOwl": {
+      "id": "64",
+      "name": "Medium Stone Gray"
+    }
+  },
+  {
+    "id": "72",
+    "name": "Dark Bluish Gray",
+    "rgb": "6C6E68",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2022,
+    "lego": {
+      "id": "199",
+      "name": "Dark stone grey"
+    },
+    "lDraw": {
+      "id": "72",
+      "name": "Dark_Bluish_Gray"
+    },
+    "brickLink": {
+      "id": "85",
+      "name": "Dark Bluish Gray"
+    },
+    "brickOwl": {
+      "id": "50",
+      "name": "Dark Stone Gray"
+    }
+  },
+  {
+    "id": "73",
+    "name": "Medium Blue",
+    "rgb": "5A93DB",
+    "isTrans": "f",
+    "firstYear": 1984,
+    "lastYear": 2022,
+    "lego": {
+      "id": "102",
+      "name": "Medium blue"
+    },
+    "lDraw": {
+      "id": "73",
+      "name": "Medium_Blue"
+    },
+    "brickLink": {
+      "id": "42",
+      "name": "Medium Blue"
+    },
+    "brickOwl": {
+      "id": "14",
+      "name": "Medium Blue"
+    }
+  },
+  {
+    "id": "74",
+    "name": "Medium Green",
+    "rgb": "73DCA1",
+    "isTrans": "f",
+    "firstYear": 1994,
+    "lastYear": 2005,
+    "lego": {
+      "id": "29",
+      "name": "Medium green"
+    },
+    "lDraw": {
+      "id": "74",
+      "name": "Medium_Green"
+    },
+    "brickLink": {
+      "id": "37",
+      "name": "Medium Green"
+    },
+    "brickOwl": {
+      "id": "10",
+      "name": "Medium Green"
+    }
+  },
+  {
+    "id": "75",
+    "name": "Speckle Black-Copper",
+    "rgb": "05131D",
+    "isTrans": "f",
+    "firstYear": 2006,
+    "lastYear": 2006,
+    "lego": {
+      "id": "75",
+      "name": "COP. DIF."
+    },
+    "lDraw": {
+      "id": "75",
+      "name": "Speckle_Black_Copper"
+    },
+    "brickLink": {
+      "id": "116",
+      "name": "Speckle Black-Copper"
+    },
+    "brickOwl": {
+      "id": "133",
+      "name": "Speckle Black Copper"
+    }
+  },
+  {
+    "id": "76",
+    "name": "Speckle DBGray-Silver",
+    "rgb": "6C6E68",
+    "isTrans": "f",
+    "firstYear": 2006,
+    "lastYear": 2006,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "76",
+      "name": "Speckle_Dark_Bluish_Gray_Silver"
+    },
+    "brickLink": {
+      "id": "117",
+      "name": "Speckle DBGray-Silver"
+    },
+    "brickOwl": {
+      "id": "134",
+      "name": "Speckle Gray"
+    }
+  },
+  {
+    "id": "77",
+    "name": "Light Pink",
+    "rgb": "FECCCF",
+    "isTrans": "f",
+    "firstYear": 1994,
+    "lastYear": 2007,
+    "lego": {
+      "id": "223",
+      "name": "Light Pink"
+    },
+    "lDraw": {
+      "id": "77",
+      "name": "Light_Pink"
+    },
+    "brickLink": {
+      "id": "56",
+      "name": "Light Pink"
+    },
+    "brickOwl": {
+      "id": "68",
+      "name": "Light Pink"
+    }
+  },
+  {
+    "id": "78",
+    "name": "Light Flesh",
+    "rgb": "F6D7B3",
+    "isTrans": "f",
+    "firstYear": 1997,
+    "lastYear": 2022,
+    "lego": {
+      "id": "283",
+      "name": "Light Nougat"
+    },
+    "lDraw": {
+      "id": "78",
+      "name": "Light_Flesh"
+    },
+    "brickLink": {
+      "id": "90",
+      "name": "Light Nougat"
+    },
+    "brickOwl": {
+      "id": "65",
+      "name": "Light Flesh"
+    }
+  },
+  {
+    "id": "79",
+    "name": "Milky White",
+    "rgb": "FFFFFF",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 2008,
+    "lego": {
+      "id": "20",
+      "name": "Nature"
+    },
+    "lDraw": {
+      "id": "79",
+      "name": "Milky_White"
+    },
+    "brickLink": {
+      "id": "60",
+      "name": "Milky White"
+    },
+    "brickOwl": {
+      "id": "130",
+      "name": "Translucent White"
+    }
+  },
+  {
+    "id": "80",
+    "name": "Metallic Silver",
+    "rgb": "A5A9B4",
+    "isTrans": "f",
+    "firstYear": 1957,
+    "lastYear": 2022,
+    "lego": {
+      "id": "298",
+      "name": "Cool silver"
+    },
+    "lDraw": {
+      "id": "80",
+      "name": "Metallic_Silver"
+    },
+    "brickLink": {
+      "id": "67",
+      "name": "Metallic Silver"
+    },
+    "brickOwl": {
+      "id": "126",
+      "name": "Metallic Silver"
+    }
+  },
+  {
+    "id": "81",
+    "name": "Metallic Green",
+    "rgb": "899B5F",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2003,
+    "lego": {
+      "id": "200",
+      "name": "Lemon Metallic"
+    },
+    "lDraw": {
+      "id": "81",
+      "name": "Metallic_Green"
+    },
+    "brickLink": {
+      "id": "70",
+      "name": "Metallic Green"
+    },
+    "brickOwl": {
+      "id": "125",
+      "name": "Metallic Green"
+    }
+  },
+  {
+    "id": "82",
+    "name": "Metallic Gold",
+    "rgb": "DBAC34",
+    "isTrans": "f",
+    "firstYear": 1997,
+    "lastYear": 2022,
+    "lego": {
+      "id": "1004",
+      "name": "W.GOLD, DR.LA."
+    },
+    "lDraw": {
+      "id": "82",
+      "name": "Metallic_Gold"
+    },
+    "brickLink": {
+      "id": "65",
+      "name": "Metallic Gold"
+    },
+    "brickOwl": {
+      "id": "124",
+      "name": "Metallic Gold"
+    }
+  },
+  {
+    "id": "84",
+    "name": "Medium Dark Flesh",
+    "rgb": "CC702A",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2022,
+    "lego": {
+      "id": "312",
+      "name": "Medium Nougat"
+    },
+    "lDraw": {
+      "id": "84",
+      "name": "Medium_Dark_Flesh"
+    },
+    "brickLink": {
+      "id": "150",
+      "name": "Medium Nougat"
+    },
+    "brickOwl": {
+      "id": "74",
+      "name": "Medium Dark Flesh"
+    }
+  },
+  {
+    "id": "85",
+    "name": "Dark Purple",
+    "rgb": "3F3691",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2022,
+    "lego": {
+      "id": "268",
+      "name": "Medium Lilac"
+    },
+    "lDraw": {
+      "id": "85",
+      "name": "Dark_Purple"
+    },
+    "brickLink": {
+      "id": "89",
+      "name": "Dark Purple"
+    },
+    "brickOwl": {
+      "id": "55",
+      "name": "Dark Purple"
+    }
+  },
+  {
+    "id": "86",
+    "name": "Dark Flesh",
+    "rgb": "7C503A",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2006,
+    "lego": {
+      "id": "86",
+      "name": "BROWN"
+    },
+    "lDraw": {
+      "id": "86",
+      "name": "Dark_Flesh"
+    },
+    "brickLink": {
+      "id": "91",
+      "name": "Medium Brown"
+    },
+    "brickOwl": {
+      "id": "52",
+      "name": "Dark Flesh"
+    }
+  },
+  {
+    "id": "89",
+    "name": "Royal Blue",
+    "rgb": "4C61DB",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "92",
+    "name": "Flesh",
+    "rgb": "D09168",
+    "isTrans": "f",
+    "firstYear": 1979,
+    "lastYear": 2022,
+    "lego": {
+      "id": "18",
+      "name": "Nougat"
+    },
+    "lDraw": {
+      "id": "92",
+      "name": "Flesh"
+    },
+    "brickLink": {
+      "id": "28",
+      "name": "Nougat"
+    },
+    "brickOwl": {
+      "id": "6",
+      "name": "Flesh"
+    }
+  },
+  {
+    "id": "100",
+    "name": "Light Salmon",
+    "rgb": "FEBABD",
+    "isTrans": "f",
+    "firstYear": 1997,
+    "lastYear": 1999,
+    "lego": {
+      "id": "100",
+      "name": "Light red"
+    },
+    "lDraw": {
+      "id": "100",
+      "name": "Light_Salmon"
+    },
+    "brickLink": {
+      "id": "26",
+      "name": "Light Salmon"
+    },
+    "brickOwl": {
+      "id": "5",
+      "name": "Light Salmon"
+    }
+  },
+  {
+    "id": "110",
+    "name": "Violet",
+    "rgb": "4354A3",
+    "isTrans": "f",
+    "firstYear": 1999,
+    "lastYear": 2008,
+    "lego": {
+      "id": "110",
+      "name": "Bright Bluish Violet"
+    },
+    "lDraw": {
+      "id": "110",
+      "name": "Violet"
+    },
+    "brickLink": {
+      "id": "43",
+      "name": "Violet"
+    },
+    "brickOwl": {
+      "id": "15",
+      "name": "Violet"
+    }
+  },
+  {
+    "id": "112",
+    "name": "Blue-Violet",
+    "rgb": "6874CA",
+    "isTrans": "f",
+    "firstYear": 2004,
+    "lastYear": 2005,
+    "lego": {
+      "id": "112",
+      "name": "Medium Bluish Violet"
+    },
+    "lDraw": {
+      "id": "112",
+      "name": "Medium_Violet"
+    },
+    "brickLink": {
+      "id": "97",
+      "name": "Blue-Violet"
+    },
+    "brickOwl": {
+      "id": "40",
+      "name": "Royal Blue"
+    }
+  },
+  {
+    "id": "114",
+    "name": "Glitter Trans-Dark Pink",
+    "rgb": "DF6695",
+    "isTrans": "t",
+    "firstYear": 1999,
+    "lastYear": 2021,
+    "lego": {
+      "id": "114",
+      "name": "Tr. Medium Reddish-Violet w. Glitter 2%"
+    },
+    "lDraw": {
+      "id": "114",
+      "name": "Glitter_Trans_Dark_Pink"
+    },
+    "brickLink": {
+      "id": "100",
+      "name": "Glitter Trans-Dark Pink"
+    },
+    "brickOwl": {
+      "id": "132",
+      "name": "Transparent Pink Glitter"
+    }
+  },
+  {
+    "id": "115",
+    "name": "Medium Lime",
+    "rgb": "C7D23C",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2005,
+    "lego": {
+      "id": "115",
+      "name": "Med. yellowish green"
+    },
+    "lDraw": {
+      "id": "115",
+      "name": "Medium_Lime"
+    },
+    "brickLink": {
+      "id": "76",
+      "name": "Medium Lime"
+    },
+    "brickOwl": {
+      "id": "77",
+      "name": "Medium Lime"
+    }
+  },
+  {
+    "id": "117",
+    "name": "Glitter Trans-Clear",
+    "rgb": "FFFFFF",
+    "isTrans": "t",
+    "firstYear": 1999,
+    "lastYear": 2021,
+    "lego": {
+      "id": "117",
+      "name": "Transparent Glitter"
+    },
+    "lDraw": {
+      "id": "117",
+      "name": "Glitter_Trans_Clear"
+    },
+    "brickLink": {
+      "id": "101",
+      "name": "Glitter Trans-Clear"
+    },
+    "brickOwl": {
+      "id": "131",
+      "name": "Transparent Glitter"
+    }
+  },
+  {
+    "id": "118",
+    "name": "Aqua",
+    "rgb": "B3D7D1",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2021,
+    "lego": {
+      "id": "118",
+      "name": "Light bluish green"
+    },
+    "lDraw": {
+      "id": "118",
+      "name": "Aqua"
+    },
+    "brickLink": {
+      "id": "41",
+      "name": "Aqua"
+    },
+    "brickOwl": {
+      "id": "13",
+      "name": "Aqua"
+    }
+  },
+  {
+    "id": "120",
+    "name": "Light Lime",
+    "rgb": "D9E4A7",
+    "isTrans": "f",
+    "firstYear": 1992,
+    "lastYear": 2008,
+    "lego": {
+      "id": "120",
+      "name": "Lig. yellowish green"
+    },
+    "lDraw": {
+      "id": "120",
+      "name": "Light_Lime"
+    },
+    "brickLink": {
+      "id": "35",
+      "name": "Light Lime"
+    },
+    "brickOwl": {
+      "id": "67",
+      "name": "Light Lime"
+    }
+  },
+  {
+    "id": "125",
+    "name": "Light Orange",
+    "rgb": "F9BA61",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2005,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "125",
+      "name": "Light_Orange"
+    },
+    "brickLink": {
+      "id": "32",
+      "name": "Light Orange"
+    },
+    "brickOwl": {
+      "id": "8",
+      "name": "Light Orange"
+    }
+  },
+  {
+    "id": "129",
+    "name": "Glitter Trans-Purple",
+    "rgb": "A5A5CB",
+    "isTrans": "t",
+    "firstYear": 2000,
+    "lastYear": 2022,
+    "lego": {
+      "id": "129",
+      "name": "Tr. Bright Bluish Violet w. Glitter 2%"
+    },
+    "lDraw": {
+      "id": "129",
+      "name": "Glitter_Trans_Purple"
+    },
+    "brickLink": {
+      "id": "102",
+      "name": "Glitter Trans-Purple"
+    },
+    "brickOwl": {
+      "id": "22",
+      "name": "Transparent Purple Glitter"
+    }
+  },
+  {
+    "id": "132",
+    "name": "Speckle Black-Silver",
+    "rgb": "05131D",
+    "isTrans": "f",
+    "firstYear": 2005,
+    "lastYear": 2013,
+    "lego": {
+      "id": "132",
+      "name": "Black Glitter"
+    },
+    "lDraw": {
+      "id": "132",
+      "name": "Speckle_Black_Silver"
+    },
+    "brickLink": {
+      "id": "111",
+      "name": "Speckle Black-Silver"
+    },
+    "brickOwl": {
+      "id": "24",
+      "name": "Speckle Black"
+    }
+  },
+  {
+    "id": "133",
+    "name": "Speckle Black-Gold",
+    "rgb": "05131D",
+    "isTrans": "f",
+    "firstYear": 2010,
+    "lastYear": 2011,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "133",
+      "name": "Speckle_Black_Gold"
+    },
+    "brickLink": {
+      "id": "151",
+      "name": "Speckle Black-Gold"
+    },
+    "brickOwl": {
+      "id": "35",
+      "name": "Speckle Black Gold"
+    }
+  },
+  {
+    "id": "134",
+    "name": "Copper",
+    "rgb": "AE7A59",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2021,
+    "lego": {
+      "id": "346",
+      "name": "Copper Metallic"
+    },
+    "lDraw": {
+      "id": "134",
+      "name": "Copper"
+    },
+    "brickLink": {
+      "id": "84",
+      "name": "Copper"
+    },
+    "brickOwl": {
+      "id": "116",
+      "name": "Copper"
+    }
+  },
+  {
+    "id": "135",
+    "name": "Pearl Light Gray",
+    "rgb": "9CA3A8",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2019,
+    "lego": {
+      "id": "179",
+      "name": "Silver flip/flop"
+    },
+    "lDraw": {
+      "id": "135",
+      "name": "Pearl_Light_Gray"
+    },
+    "brickLink": {
+      "id": "66",
+      "name": "Pearl Light Gray"
+    },
+    "brickOwl": {
+      "id": "122",
+      "name": "Pearl Light Gray"
+    }
+  },
+  {
+    "id": "137",
+    "name": "Metal Blue",
+    "rgb": "7988A1",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2009,
+    "lego": {
+      "id": "145",
+      "name": "Sand blue metallic"
+    },
+    "lDraw": {
+      "id": "137",
+      "name": "Metal_Blue"
+    },
+    "brickLink": {
+      "id": "78",
+      "name": "Metal Blue"
+    },
+    "brickOwl": {
+      "id": "118",
+      "name": "Metallic Blue"
+    }
+  },
+  {
+    "id": "142",
+    "name": "Pearl Light Gold",
+    "rgb": "DCBC81",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2006,
+    "lego": {
+      "id": "127",
+      "name": "Gold"
+    },
+    "lDraw": {
+      "id": "142",
+      "name": "Pearl_Light_Gold"
+    },
+    "brickLink": {
+      "id": "61",
+      "name": "Pearl Light Gold"
+    },
+    "brickOwl": {
+      "id": "121",
+      "name": "Pearl Light Gold"
+    }
+  },
+  {
+    "id": "143",
+    "name": "Trans-Medium Blue",
+    "rgb": "CFE2F7",
+    "isTrans": "t",
+    "firstYear": 2001,
+    "lastYear": 2019,
+    "lego": {
+      "id": "143",
+      "name": "Tr. Flu. Blue"
+    },
+    "lDraw": {
+      "id": null,
+      "name": null
+    },
+    "brickLink": {
+      "id": "74",
+      "name": "Trans-Medium Blue"
+    },
+    "brickOwl": {
+      "id": "102",
+      "name": "Transparent Medium Blue"
+    }
+  },
+  {
+    "id": "148",
+    "name": "Pearl Dark Gray",
+    "rgb": "575857",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2022,
+    "lego": {
+      "id": "316",
+      "name": "Titanium Metallic"
+    },
+    "lDraw": {
+      "id": "83",
+      "name": "Metallic_Black"
+    },
+    "brickLink": {
+      "id": "77",
+      "name": "Pearl Dark Gray"
+    },
+    "brickOwl": {
+      "id": "119",
+      "name": "Pearl Dark Gray"
+    }
+  },
+  {
+    "id": "150",
+    "name": "Pearl Very Light Gray",
+    "rgb": "ABADAC",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2003,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "150",
+      "name": "Pearl_Very_Light_Grey"
+    },
+    "brickLink": {
+      "id": "119",
+      "name": "Pearl Very Light Gray"
+    },
+    "brickOwl": {
+      "id": "27",
+      "name": "Pearl Very Light Gray"
+    }
+  },
+  {
+    "id": "151",
+    "name": "Very Light Bluish Gray",
+    "rgb": "E6E3E0",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2013,
+    "lego": {
+      "id": "208",
+      "name": "Light stone grey"
+    },
+    "lDraw": {
+      "id": "151",
+      "name": "Very_Light_Bluish_Gray"
+    },
+    "brickLink": {
+      "id": "99",
+      "name": "Very Light Bluish Gray"
+    },
+    "brickOwl": {
+      "id": "90",
+      "name": "Light Stone Gray"
+    }
+  },
+  {
+    "id": "158",
+    "name": "Yellowish Green",
+    "rgb": "DFEEA5",
+    "isTrans": "f",
+    "firstYear": 2012,
+    "lastYear": 2022,
+    "lego": {
+      "id": "326",
+      "name": "Spring Yellow Green"
+    },
+    "lDraw": {
+      "id": "326",
+      "name": "Yellowish_Green"
+    },
+    "brickLink": {
+      "id": "158",
+      "name": "Yellowish Green"
+    },
+    "brickOwl": {
+      "id": "94",
+      "name": "Yellowish Green"
+    }
+  },
+  {
+    "id": "178",
+    "name": "Flat Dark Gold",
+    "rgb": "B48455",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2007,
+    "lego": {
+      "id": "1001",
+      "name": "Gold Metallic"
+    },
+    "lDraw": {
+      "id": "178",
+      "name": "Flat_Dark_Gold"
+    },
+    "brickLink": {
+      "id": "81",
+      "name": "Flat Dark Gold"
+    },
+    "brickOwl": {
+      "id": "21",
+      "name": "Flat Dark Gold"
+    }
+  },
+  {
+    "id": "179",
+    "name": "Flat Silver",
+    "rgb": "898788",
+    "isTrans": "f",
+    "firstYear": 1998,
+    "lastYear": 2022,
+    "lego": {
+      "id": "315",
+      "name": "Silver Metallic"
+    },
+    "lDraw": {
+      "id": "179",
+      "name": "Flat_Silver"
+    },
+    "brickLink": {
+      "id": "95",
+      "name": "Flat Silver"
+    },
+    "brickOwl": {
+      "id": "117",
+      "name": "Flat Silver"
+    }
+  },
+  {
+    "id": "182",
+    "name": "Trans-Orange",
+    "rgb": "F08F1C",
+    "isTrans": "t",
+    "firstYear": 2002,
+    "lastYear": 2022,
+    "lego": {
+      "id": "182",
+      "name": "Tr. Bright Orange"
+    },
+    "lDraw": {
+      "id": "57",
+      "name": "Trans_Orange"
+    },
+    "brickLink": {
+      "id": "98",
+      "name": "Trans-Orange"
+    },
+    "brickOwl": {
+      "id": "105",
+      "name": "Transparent Orange"
+    }
+  },
+  {
+    "id": "183",
+    "name": "Pearl White",
+    "rgb": "F2F3F2",
+    "isTrans": "f",
+    "firstYear": 2003,
+    "lastYear": 2006,
+    "lego": {
+      "id": "183",
+      "name": "Metallic White"
+    },
+    "lDraw": {
+      "id": "183",
+      "name": "Pearl_White"
+    },
+    "brickLink": {
+      "id": "83",
+      "name": "Pearl White"
+    },
+    "brickOwl": {
+      "id": "123",
+      "name": "Pearlescent"
+    }
+  },
+  {
+    "id": "191",
+    "name": "Bright Light Orange",
+    "rgb": "F8BB3D",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2022,
+    "lego": {
+      "id": "191",
+      "name": "Flame yellowish orange"
+    },
+    "lDraw": {
+      "id": "191",
+      "name": "Bright_Light_Orange"
+    },
+    "brickLink": {
+      "id": "110",
+      "name": "Bright Light Orange"
+    },
+    "brickOwl": {
+      "id": "43",
+      "name": "Bright Light Orange"
+    }
+  },
+  {
+    "id": "212",
+    "name": "Bright Light Blue",
+    "rgb": "9FC3E9",
+    "isTrans": "f",
+    "firstYear": 2004,
+    "lastYear": 2022,
+    "lego": {
+      "id": "212",
+      "name": "Light Royal blue"
+    },
+    "lDraw": {
+      "id": "212",
+      "name": "Bright_Light_Blue"
+    },
+    "brickLink": {
+      "id": "105",
+      "name": "Bright Light Blue"
+    },
+    "brickOwl": {
+      "id": "42",
+      "name": "Bright Light Blue"
+    }
+  },
+  {
+    "id": "216",
+    "name": "Rust",
+    "rgb": "B31004",
+    "isTrans": "f",
+    "firstYear": 1991,
+    "lastYear": 2001,
+    "lego": {
+      "id": "216",
+      "name": "Rust"
+    },
+    "lDraw": {
+      "id": "216",
+      "name": "Rust"
+    },
+    "brickLink": {
+      "id": "27",
+      "name": "Rust"
+    },
+    "brickOwl": {
+      "id": "83",
+      "name": "Rust"
+    }
+  },
+  {
+    "id": "226",
+    "name": "Bright Light Yellow",
+    "rgb": "FFF03A",
+    "isTrans": "f",
+    "firstYear": 2004,
+    "lastYear": 2022,
+    "lego": {
+      "id": "226",
+      "name": "Cool Yellow"
+    },
+    "lDraw": {
+      "id": "226",
+      "name": "Bright_Light_Yellow"
+    },
+    "brickLink": {
+      "id": "103",
+      "name": "Bright Light Yellow"
+    },
+    "brickOwl": {
+      "id": "44",
+      "name": "Bright Light Yellow"
+    }
+  },
+  {
+    "id": "230",
+    "name": "Trans-Pink",
+    "rgb": "E4ADC8",
+    "isTrans": "t",
+    "firstYear": 2000,
+    "lastYear": 2006,
+    "lego": {
+      "id": "230",
+      "name": "TR. BR. PURPLE"
+    },
+    "lDraw": {
+      "id": "45",
+      "name": "Trans_Pink"
+    },
+    "brickLink": {
+      "id": "107",
+      "name": "Trans-Pink"
+    },
+    "brickOwl": {
+      "id": "106",
+      "name": "Transparent Pink"
+    }
+  },
+  {
+    "id": "232",
+    "name": "Sky Blue",
+    "rgb": "7DBFDD",
+    "isTrans": "f",
+    "firstYear": 2003,
+    "lastYear": 2007,
+    "lego": {
+      "id": "232",
+      "name": "Dove blue"
+    },
+    "lDraw": {
+      "id": "232",
+      "name": "Sky_Blue"
+    },
+    "brickLink": {
+      "id": "87",
+      "name": "Sky Blue"
+    },
+    "brickOwl": {
+      "id": "88",
+      "name": "Sky Blue"
+    }
+  },
+  {
+    "id": "236",
+    "name": "Trans-Light Purple",
+    "rgb": "96709F",
+    "isTrans": "t",
+    "firstYear": 2000,
+    "lastYear": 2006,
+    "lego": {
+      "id": "284",
+      "name": "TR. RED-LILAC"
+    },
+    "lDraw": {
+      "id": "44",
+      "name": "Trans_Light_Purple"
+    },
+    "brickLink": {
+      "id": "114",
+      "name": "Trans-Light Purple"
+    },
+    "brickOwl": {
+      "id": "26",
+      "name": "Transparent Light Purple"
+    }
+  },
+  {
+    "id": "272",
+    "name": "Dark Blue",
+    "rgb": "0A3463",
+    "isTrans": "f",
+    "firstYear": 1997,
+    "lastYear": 2022,
+    "lego": {
+      "id": "140",
+      "name": "Earth blue"
+    },
+    "lDraw": {
+      "id": "272",
+      "name": "Dark_Blue"
+    },
+    "brickLink": {
+      "id": "63",
+      "name": "Dark Blue"
+    },
+    "brickOwl": {
+      "id": "48",
+      "name": "Dark Blue"
+    }
+  },
+  {
+    "id": "288",
+    "name": "Dark Green",
+    "rgb": "184632",
+    "isTrans": "f",
+    "firstYear": 1999,
+    "lastYear": 2022,
+    "lego": {
+      "id": "141",
+      "name": "Earth Green"
+    },
+    "lDraw": {
+      "id": "288",
+      "name": "Dark_Green"
+    },
+    "brickLink": {
+      "id": "80",
+      "name": "Dark Green"
+    },
+    "brickOwl": {
+      "id": "20",
+      "name": "Dark Green"
+    }
+  },
+  {
+    "id": "294",
+    "name": "Glow In Dark Trans",
+    "rgb": "BDC6AD",
+    "isTrans": "t",
+    "firstYear": 2005,
+    "lastYear": 2011,
+    "lego": {
+      "id": "294",
+      "name": "Phosphorescent Green"
+    },
+    "lDraw": {
+      "id": "294",
+      "name": "Glow_In_Dark_Trans"
+    },
+    "brickLink": {
+      "id": "118",
+      "name": "Glow In Dark Trans"
+    },
+    "brickOwl": {
+      "id": "128",
+      "name": "Glow in the Dark Transparent"
+    }
+  },
+  {
+    "id": "297",
+    "name": "Pearl Gold",
+    "rgb": "AA7F2E",
+    "isTrans": "f",
+    "firstYear": 2002,
+    "lastYear": 2022,
+    "lego": {
+      "id": "297",
+      "name": "Warm Gold"
+    },
+    "lDraw": {
+      "id": "297",
+      "name": "Pearl_Gold"
+    },
+    "brickLink": {
+      "id": "115",
+      "name": "Pearl Gold"
+    },
+    "brickOwl": {
+      "id": "120",
+      "name": "Pearl Gold"
+    }
+  },
+  {
+    "id": "308",
+    "name": "Dark Brown",
+    "rgb": "352100",
+    "isTrans": "f",
+    "firstYear": 2008,
+    "lastYear": 2022,
+    "lego": {
+      "id": "308",
+      "name": "Dark Brown"
+    },
+    "lDraw": {
+      "id": "308",
+      "name": "Dark_Brown"
+    },
+    "brickLink": {
+      "id": "120",
+      "name": "Dark Brown"
+    },
+    "brickOwl": {
+      "id": "51",
+      "name": "Dark Brown"
+    }
+  },
+  {
+    "id": "313",
+    "name": "Maersk Blue",
+    "rgb": "3592C3",
+    "isTrans": "f",
+    "firstYear": 1974,
+    "lastYear": 2006,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "313",
+      "name": "Maersk_Blue"
+    },
+    "brickLink": {
+      "id": "72",
+      "name": "Maersk Blue"
+    },
+    "brickOwl": {
+      "id": "71",
+      "name": "Maersk Blue"
+    }
+  },
+  {
+    "id": "320",
+    "name": "Dark Red",
+    "rgb": "720E0F",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2022,
+    "lego": {
+      "id": "154",
+      "name": "Dark red"
+    },
+    "lDraw": {
+      "id": "320",
+      "name": "Dark_Red"
+    },
+    "brickLink": {
+      "id": "59",
+      "name": "Dark Red"
+    },
+    "brickOwl": {
+      "id": "56",
+      "name": "Dark Red"
+    }
+  },
+  {
+    "id": "321",
+    "name": "Dark Azure",
+    "rgb": "078BC9",
+    "isTrans": "f",
+    "firstYear": 2011,
+    "lastYear": 2022,
+    "lego": {
+      "id": "321",
+      "name": "Dark Azur"
+    },
+    "lDraw": {
+      "id": "321",
+      "name": "Dark_Azure"
+    },
+    "brickLink": {
+      "id": "153",
+      "name": "Dark Azure"
+    },
+    "brickOwl": {
+      "id": "47",
+      "name": "Dark Azure"
+    }
+  },
+  {
+    "id": "322",
+    "name": "Medium Azure",
+    "rgb": "36AEBF",
+    "isTrans": "f",
+    "firstYear": 2012,
+    "lastYear": 2022,
+    "lego": {
+      "id": "322",
+      "name": "Medium Azure"
+    },
+    "lDraw": {
+      "id": "322",
+      "name": "Medium_Azure"
+    },
+    "brickLink": {
+      "id": "156",
+      "name": "Medium Azure"
+    },
+    "brickOwl": {
+      "id": "73",
+      "name": "Medium Azure"
+    }
+  },
+  {
+    "id": "323",
+    "name": "Light Aqua",
+    "rgb": "ADC3C0",
+    "isTrans": "f",
+    "firstYear": 2011,
+    "lastYear": 2022,
+    "lego": {
+      "id": "323",
+      "name": "Aqua"
+    },
+    "lDraw": {
+      "id": "323",
+      "name": "Light_Aqua"
+    },
+    "brickLink": {
+      "id": "152",
+      "name": "Light Aqua"
+    },
+    "brickOwl": {
+      "id": "62",
+      "name": "Light Aqua"
+    }
+  },
+  {
+    "id": "326",
+    "name": "Olive Green",
+    "rgb": "9B9A5A",
+    "isTrans": "f",
+    "firstYear": 2012,
+    "lastYear": 2022,
+    "lego": {
+      "id": "330",
+      "name": "Olive Green"
+    },
+    "lDraw": {
+      "id": "330",
+      "name": "Olive_Green"
+    },
+    "brickLink": {
+      "id": "155",
+      "name": "Olive Green"
+    },
+    "brickOwl": {
+      "id": "79",
+      "name": "Olive Green"
+    }
+  },
+  {
+    "id": "334",
+    "name": "Chrome Gold",
+    "rgb": "BBA53D",
+    "isTrans": "f",
+    "firstYear": 1989,
+    "lastYear": 2021,
+    "lego": {
+      "id": "310",
+      "name": "Metalized Gold"
+    },
+    "lDraw": {
+      "id": "334",
+      "name": "Chrome_Gold"
+    },
+    "brickLink": {
+      "id": "21",
+      "name": "Chrome Gold"
+    },
+    "brickOwl": {
+      "id": "2",
+      "name": "Chrome Gold"
+    }
+  },
+  {
+    "id": "335",
+    "name": "Sand Red",
+    "rgb": "D67572",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2004,
+    "lego": {
+      "id": "153",
+      "name": "Sand red"
+    },
+    "lDraw": {
+      "id": "335",
+      "name": "Sand_Red"
+    },
+    "brickLink": {
+      "id": "58",
+      "name": "Sand Red"
+    },
+    "brickOwl": {
+      "id": "87",
+      "name": "Sand Red"
+    }
+  },
+  {
+    "id": "351",
+    "name": "Medium Dark Pink",
+    "rgb": "F785B1",
+    "isTrans": "f",
+    "firstYear": 1992,
+    "lastYear": 2003,
+    "lego": {
+      "id": "22",
+      "name": "Medium Reddish Violet"
+    },
+    "lDraw": {
+      "id": "351",
+      "name": "Medium_Dark_Pink"
+    },
+    "brickLink": {
+      "id": "94",
+      "name": "Medium Dark Pink"
+    },
+    "brickOwl": {
+      "id": "75",
+      "name": "Medium Dark Pink"
+    }
+  },
+  {
+    "id": "366",
+    "name": "Earth Orange",
+    "rgb": "FA9C1C",
+    "isTrans": "f",
+    "firstYear": 1982,
+    "lastYear": 2006,
+    "lego": {
+      "id": "128",
+      "name": "Dark Nougat"
+    },
+    "lDraw": {
+      "id": "366",
+      "name": "Earth_Orange"
+    },
+    "brickLink": {
+      "id": "29",
+      "name": "Earth Orange"
+    },
+    "brickOwl": {
+      "id": "59",
+      "name": "Earth Orange"
+    }
+  },
+  {
+    "id": "373",
+    "name": "Sand Purple",
+    "rgb": "845E84",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2003,
+    "lego": {
+      "id": "136",
+      "name": "Sand violet"
+    },
+    "lDraw": {
+      "id": "373",
+      "name": "Sand_Purple"
+    },
+    "brickLink": {
+      "id": "54",
+      "name": "Sand Purple"
+    },
+    "brickOwl": {
+      "id": "86",
+      "name": "Sand Purple"
+    }
+  },
+  {
+    "id": "378",
+    "name": "Sand Green",
+    "rgb": "A0BCAC",
+    "isTrans": "f",
+    "firstYear": 2000,
+    "lastYear": 2022,
+    "lego": {
+      "id": "151",
+      "name": "Sand green"
+    },
+    "lDraw": {
+      "id": "378",
+      "name": "Sand_Green"
+    },
+    "brickLink": {
+      "id": "48",
+      "name": "Sand Green"
+    },
+    "brickOwl": {
+      "id": "18",
+      "name": "Sand Green"
+    }
+  },
+  {
+    "id": "379",
+    "name": "Sand Blue",
+    "rgb": "6074A1",
+    "isTrans": "f",
+    "firstYear": 2001,
+    "lastYear": 2022,
+    "lego": {
+      "id": "135",
+      "name": "Sand blue"
+    },
+    "lDraw": {
+      "id": "379",
+      "name": "Sand_Blue"
+    },
+    "brickLink": {
+      "id": "55",
+      "name": "Sand Blue"
+    },
+    "brickOwl": {
+      "id": "85",
+      "name": "Sand Blue"
+    }
+  },
+  {
+    "id": "383",
+    "name": "Chrome Silver",
+    "rgb": "E0E0E0",
+    "isTrans": "f",
+    "firstYear": 1977,
+    "lastYear": 2018,
+    "lego": {
+      "id": "309",
+      "name": "Metalized Silver"
+    },
+    "lDraw": {
+      "id": "383",
+      "name": "Chrome_Silver"
+    },
+    "brickLink": {
+      "id": "22",
+      "name": "Chrome Silver"
+    },
+    "brickOwl": {
+      "id": "115",
+      "name": "Chrome Silver"
+    }
+  },
+  {
+    "id": "450",
+    "name": "Fabuland Brown",
+    "rgb": "B67B50",
+    "isTrans": "f",
+    "firstYear": 1979,
+    "lastYear": 1997,
+    "lego": {
+      "id": "12",
+      "name": "Light Orange Brown"
+    },
+    "lDraw": {
+      "id": "450",
+      "name": "Fabuland_Brown"
+    },
+    "brickLink": {
+      "id": "106",
+      "name": "Fabuland Brown"
+    },
+    "brickOwl": {
+      "id": "23",
+      "name": "Fabuland Brown"
+    }
+  },
+  {
+    "id": "462",
+    "name": "Medium Orange",
+    "rgb": "FFA70B",
+    "isTrans": "f",
+    "firstYear": 1996,
+    "lastYear": 2008,
+    "lego": {
+      "id": "105",
+      "name": "Br. yellowish orange"
+    },
+    "lDraw": {
+      "id": "462",
+      "name": "Medium_Orange"
+    },
+    "brickLink": {
+      "id": "31",
+      "name": "Medium Orange"
+    },
+    "brickOwl": {
+      "id": "7",
+      "name": "Medium Orange"
+    }
+  },
+  {
+    "id": "484",
+    "name": "Dark Orange",
+    "rgb": "A95500",
+    "isTrans": "f",
+    "firstYear": 1979,
+    "lastYear": 2022,
+    "lego": {
+      "id": "38",
+      "name": "Dark Orange"
+    },
+    "lDraw": {
+      "id": "484",
+      "name": "Dark_Orange"
+    },
+    "brickLink": {
+      "id": "68",
+      "name": "Dark Orange"
+    },
+    "brickOwl": {
+      "id": "54",
+      "name": "Dark Orange"
+    }
+  },
+  {
+    "id": "503",
+    "name": "Very Light Gray",
+    "rgb": "E6E3DA",
+    "isTrans": "f",
+    "firstYear": 1997,
+    "lastYear": 2004,
+    "lego": {
+      "id": "103",
+      "name": "Light grey"
+    },
+    "lDraw": {
+      "id": "503",
+      "name": "Very_Light_Gray"
+    },
+    "brickLink": {
+      "id": "49",
+      "name": "Very Light Gray"
+    },
+    "brickOwl": {
+      "id": "19",
+      "name": "Very Light Gray"
+    }
+  },
+  {
+    "id": "1000",
+    "name": "Glow in Dark White",
+    "rgb": "D9D9D9",
+    "isTrans": "f",
+    "firstYear": 2004,
+    "lastYear": 2022,
+    "lego": {
+      "id": "329",
+      "name": "WHITE GLOW"
+    },
+    "lDraw": {
+      "id": "329",
+      "name": "Glow_In_Dark_White"
+    },
+    "brickLink": {
+      "id": "159",
+      "name": "Glow in Dark White"
+    },
+    "brickOwl": {
+      "id": "129",
+      "name": "Glow in the Dark White"
+    }
+  },
+  {
+    "id": "1001",
+    "name": "Medium Violet",
+    "rgb": "9391E4",
+    "isTrans": "f",
+    "firstYear": 1999,
+    "lastYear": 2005,
+    "lego": {
+      "id": "219",
+      "name": "Lilac"
+    },
+    "lDraw": {
+      "id": "219",
+      "name": "Lilac"
+    },
+    "brickLink": {
+      "id": "73",
+      "name": "Medium Violet"
+    },
+    "brickOwl": {
+      "id": "78",
+      "name": "Medium Violet"
+    }
+  },
+  {
+    "id": "1002",
+    "name": "Glitter Trans-Neon Green",
+    "rgb": "C0F500",
+    "isTrans": "t",
+    "firstYear": 2015,
+    "lastYear": 2018,
+    "lego": {
+      "id": "339",
+      "name": "TR.FL.GRE W/GLI"
+    },
+    "lDraw": {
+      "id": "339",
+      "name": "Glitter_Trans_Neon_Green"
+    },
+    "brickLink": {
+      "id": "163",
+      "name": "Glitter Trans-Neon Green"
+    },
+    "brickOwl": {
+      "id": "167",
+      "name": "Transparent Neon Green Glitter"
+    }
+  },
+  {
+    "id": "1003",
+    "name": "Glitter Trans-Light Blue",
+    "rgb": "68BCC5",
+    "isTrans": "t",
+    "firstYear": 2015,
+    "lastYear": 2021,
+    "lego": {
+      "id": "302",
+      "name": "PCTR LI.BLUE W/"
+    },
+    "lDraw": {
+      "id": "302",
+      "name": "Glitter_Trans_Light_Blue"
+    },
+    "brickLink": {
+      "id": "162",
+      "name": "Glitter Trans-Light Blue"
+    },
+    "brickOwl": {
+      "id": "165",
+      "name": "Transparent Light Blue Glitter"
+    }
+  },
+  {
+    "id": "1004",
+    "name": "Trans-Flame Yellowish Orange",
+    "rgb": "FCB76D",
+    "isTrans": "t",
+    "firstYear": 2003,
+    "lastYear": 2006,
+    "lego": {
+      "id": "231",
+      "name": "TR. FL. YEL ORA"
+    },
+    "lDraw": {
+      "id": "231",
+      "name": "Trans_Bright_Light_Orange"
+    },
+    "brickLink": {
+      "id": "164",
+      "name": "Trans Light Orange"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1005",
+    "name": "Trans-Fire Yellow",
+    "rgb": "FBE890",
+    "isTrans": "t",
+    "firstYear": 2001,
+    "lastYear": 2006,
+    "lego": {
+      "id": "234",
+      "name": "TR. FIRE YELL"
+    },
+    "lDraw": {
+      "id": "234",
+      "name": "Trans_Fire_Yellow"
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1006",
+    "name": "Trans-Light Royal Blue",
+    "rgb": "B4D4F7",
+    "isTrans": "t",
+    "firstYear": 2001,
+    "lastYear": 2005,
+    "lego": {
+      "id": "293",
+      "name": "TR. L.ROYAL BLUE"
+    },
+    "lDraw": {
+      "id": "293",
+      "name": "Trans_Light_Blue_Violet"
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1007",
+    "name": "Reddish Lilac",
+    "rgb": "8E5597",
+    "isTrans": "f",
+    "firstYear": 2004,
+    "lastYear": 2005,
+    "lego": {
+      "id": "218",
+      "name": "RED. LILAC"
+    },
+    "lDraw": {
+      "id": "218",
+      "name": "Medium Purple"
+    },
+    "brickLink": {
+      "id": "227",
+      "name": "Clikits Lavender"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1008",
+    "name": "Vintage Blue",
+    "rgb": "039CBD",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 1949,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1009",
+    "name": "Vintage Green",
+    "rgb": "1E601E",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 1949,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1010",
+    "name": "Vintage Red",
+    "rgb": "CA1F08",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 1949,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1011",
+    "name": "Vintage Yellow",
+    "rgb": "F3C305",
+    "isTrans": "f",
+    "firstYear": 1949,
+    "lastYear": 1949,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1012",
+    "name": "Fabuland Orange",
+    "rgb": "EF9121",
+    "isTrans": "f",
+    "firstYear": 1983,
+    "lastYear": 1983,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "160",
+      "name": "Fabuland Orange"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1013",
+    "name": "Modulex White",
+    "rgb": "F4F4F4",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "123",
+      "name": "Mx White"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1014",
+    "name": "Modulex Light Bluish Gray",
+    "rgb": "AfB5C7",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "124",
+      "name": "Mx Light Bluish Gray"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1015",
+    "name": "Modulex Light Gray",
+    "rgb": "9C9C9C",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "125",
+      "name": "Mx Light Gray"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1016",
+    "name": "Modulex Charcoal Gray",
+    "rgb": "595D60",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "126",
+      "name": "Mx Charcoal Gray"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1017",
+    "name": "Modulex Tile Gray",
+    "rgb": "6B5A5A",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "127",
+      "name": "Mx Tile Gray"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1018",
+    "name": "Modulex Black",
+    "rgb": "4D4C52",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "128",
+      "name": "Mx Black"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1019",
+    "name": "Modulex Tile Brown",
+    "rgb": "330000",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "131",
+      "name": "Mx Tile Brown"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1020",
+    "name": "Modulex Terracotta",
+    "rgb": "5C5030",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "134",
+      "name": "Mx Terracotta"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1021",
+    "name": "Modulex Brown",
+    "rgb": "907450",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "132",
+      "name": "Mx Brown"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1022",
+    "name": "Modulex Buff",
+    "rgb": "DEC69C",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "133",
+      "name": "Mx Buff"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1023",
+    "name": "Modulex Red",
+    "rgb": "B52C20",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "129",
+      "name": "Mx Red"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1024",
+    "name": "Modulex Pink Red",
+    "rgb": "F45C40",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "130",
+      "name": "Mx Pink Red"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1025",
+    "name": "Modulex Orange",
+    "rgb": "F47B30",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "135",
+      "name": "Mx Orange"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1026",
+    "name": "Modulex Light Orange",
+    "rgb": "F7AD63",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "136",
+      "name": "Mx Light Orange"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1027",
+    "name": "Modulex Light Yellow",
+    "rgb": "FFE371",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "137",
+      "name": "Mx Light Yellow"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1028",
+    "name": "Modulex Ochre Yellow",
+    "rgb": "FED557",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "138",
+      "name": "Mx Ochre Yellow"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1029",
+    "name": "Modulex Lemon",
+    "rgb": "BDC618",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "139",
+      "name": "Mx Lemon"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1030",
+    "name": "Modulex Pastel Green",
+    "rgb": "7DB538",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "141",
+      "name": "Mx Pastel Green"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1031",
+    "name": "Modulex Olive Green",
+    "rgb": "7C9051",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "140",
+      "name": "Mx Olive Green"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1032",
+    "name": "Modulex Aqua Green",
+    "rgb": "27867E",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "142",
+      "name": "Mx Aqua Green"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1033",
+    "name": "Modulex Teal Blue",
+    "rgb": "467083",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "146",
+      "name": "Mx Teal Blue"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1034",
+    "name": "Modulex Tile Blue",
+    "rgb": "0057A6",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "143",
+      "name": "Mx Tile Blue"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1035",
+    "name": "Modulex Medium Blue",
+    "rgb": "61AFFF",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "144",
+      "name": "Mx Medium Blue"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1036",
+    "name": "Modulex Pastel Blue",
+    "rgb": "68AECE",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "145",
+      "name": "Mx Pastel Blue"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1037",
+    "name": "Modulex Violet",
+    "rgb": "BD7D85",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "147",
+      "name": "Mx Violet"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1038",
+    "name": "Modulex Pink",
+    "rgb": "F785B1",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "148",
+      "name": "Mx Pink"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1039",
+    "name": "Modulex Clear",
+    "rgb": "FFFFFF",
+    "isTrans": "f",
+    "firstYear": 1963,
+    "lastYear": 1963,
+    "lego": {
+      "id": "",
+      "name": ""
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "149",
+      "name": "Mx Clear"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1040",
+    "name": "Modulex Foil Dark Gray",
+    "rgb": "595D60",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1041",
+    "name": "Modulex Foil Light Gray",
+    "rgb": "9C9C9C",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1042",
+    "name": "Modulex Foil Dark Green",
+    "rgb": "006400",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1043",
+    "name": "Modulex Foil Light Green",
+    "rgb": "7DB538",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1044",
+    "name": "Modulex Foil Dark Blue",
+    "rgb": "0057A6",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1045",
+    "name": "Modulex Foil Light Blue",
+    "rgb": "68AECE",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1046",
+    "name": "Modulex Foil Violet",
+    "rgb": "4B0082",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1047",
+    "name": "Modulex Foil Red",
+    "rgb": "8B0000",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1048",
+    "name": "Modulex Foil Yellow",
+    "rgb": "FED557",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1049",
+    "name": "Modulex Foil Orange",
+    "rgb": "F7AD63",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  },
+  {
+    "id": "1050",
+    "name": "Coral",
+    "rgb": "FF698F",
+    "isTrans": "f",
+    "firstYear": 2019,
+    "lastYear": 2022,
+    "lego": {
+      "id": "1017",
+      "name": "CORAL"
+    },
+    "lDraw": {
+      "id": "353",
+      "name": "Coral"
+    },
+    "brickLink": {
+      "id": "220",
+      "name": "Coral"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1051",
+    "name": "Pastel Blue",
+    "rgb": "5AC4DA",
+    "isTrans": "f",
+    "firstYear": 2005,
+    "lastYear": 2011,
+    "lego": {
+      "id": "11",
+      "name": "Pastel Blue"
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "72",
+      "name": "Maersk Blue"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1052",
+    "name": "Glitter Trans-Orange",
+    "rgb": "F08F1C",
+    "isTrans": "t",
+    "firstYear": 2020,
+    "lastYear": 2020,
+    "lego": {
+      "id": "1018",
+      "name": "TR.BR:ORA W/GLI"
+    },
+    "lDraw": {
+      "id": "341",
+      "name": "Glitter_Trans_Orange"
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1053",
+    "name": "Trans-Blue Opal",
+    "rgb": "68BCC5",
+    "isTrans": "t",
+    "firstYear": 2020,
+    "lastYear": 2021,
+    "lego": {
+      "id": "362",
+      "name": "Transparent Blue Opal"
+    },
+    "lDraw": {
+      "id": "362",
+      "name": "Opal_Trans_Light_Blue"
+    },
+    "brickLink": {
+      "id": "223",
+      "name": "Satin Trans-Light Blue"
+    },
+    "brickOwl": {
+      "id": "175",
+      "name": "Transparent Blue Opal"
+    }
+  },
+  {
+    "id": "1054",
+    "name": "Trans-Medium Reddish Violet Opal",
+    "rgb": "CE1D9B",
+    "isTrans": "t",
+    "firstYear": 2020,
+    "lastYear": 2021,
+    "lego": {
+      "id": "362",
+      "name": "Transparent Medium Reddish Violet with Opalescence"
+    },
+    "lDraw": {
+      "id": "364",
+      "name": "Opal_Trans_Dark_Pink"
+    },
+    "brickLink": {
+      "id": "224",
+      "name": "Satin Trans-Dark Pink"
+    },
+    "brickOwl": {
+      "id": "199",
+      "name": "Transparent Dark Pink Opal"
+    }
+  },
+  {
+    "id": "1055",
+    "name": "Trans-Clear Opal",
+    "rgb": "FCFCFC",
+    "isTrans": "t",
+    "firstYear": 2020,
+    "lastYear": 2021,
+    "lego": {
+      "id": "360",
+      "name": "Transparent with Opalescence"
+    },
+    "lDraw": {
+      "id": "360",
+      "name": "Opal_Trans_Clear"
+    },
+    "brickLink": {
+      "id": "228",
+      "name": "Satin White"
+    },
+    "brickOwl": {
+      "id": "193",
+      "name": "Transparent Opal"
+    }
+  },
+  {
+    "id": "1056",
+    "name": "Trans-Brown Opal",
+    "rgb": "583927",
+    "isTrans": "t",
+    "firstYear": 2020,
+    "lastYear": 2021,
+    "lego": {
+      "id": "360",
+      "name": "Transparent Brown with Opalescence"
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "229",
+      "name": "Satin Trans-Black"
+    },
+    "brickOwl": {
+      "id": "201",
+      "name": "Transparent Black Opal"
+    }
+  },
+  {
+    "id": "1057",
+    "name": "Trans-Light Bright Green",
+    "rgb": "C9E788",
+    "isTrans": "t",
+    "firstYear": 2003,
+    "lastYear": 2006,
+    "lego": {
+      "id": "227",
+      "name": "Transparent Bright Yellowish Green"
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "226",
+      "name": "Trans-Light Bright Green"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1058",
+    "name": "Trans-Light Green",
+    "rgb": "94E5AB",
+    "isTrans": "t",
+    "firstYear": 2005,
+    "lastYear": 2006,
+    "lego": {
+      "id": "285",
+      "name": "Transparent Light Green"
+    },
+    "lDraw": {
+      "id": "285",
+      "name": "TranS_Light_Green"
+    },
+    "brickLink": {
+      "id": "221",
+      "name": "Trans-Light Green"
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "1059",
+    "name": "Trans-Purple Opal",
+    "rgb": "8320B7",
+    "isTrans": "t",
+    "firstYear": 2020,
+    "lastYear": 2020,
+    "lego": {
+      "id": "1020",
+      "name": "Tr.Violet Opal"
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "230",
+      "name": "Satin Trans-Purple"
+    },
+    "brickOwl": {
+      "id": "203",
+      "name": "Transparent Purple Opal"
+    }
+  },
+  {
+    "id": "1060",
+    "name": "Trans-Green Opal",
+    "rgb": "84B68D",
+    "isTrans": "t",
+    "firstYear": 2021,
+    "lastYear": 2021,
+    "lego": {
+      "id": "1021",
+      "name": "Tr.Green Opal"
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "233",
+      "name": "Satin Trans-Bright Green"
+    },
+    "brickOwl": {
+      "id": "207",
+      "name": "Transparent Green Opal"
+    }
+  },
+  {
+    "id": "1061",
+    "name": "Trans-Dark Blue Opal",
+    "rgb": "0020A0",
+    "isTrans": "t",
+    "firstYear": 2021,
+    "lastYear": 2022,
+    "lego": {
+      "id": "1019",
+      "name": "Tr.Blue Opal"
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "232",
+      "name": "Satin Trans-Dark Blue"
+    },
+    "brickOwl": {
+      "id": "209",
+      "name": "Transparent Dark Blue Opal"
+    }
+  },
+  {
+    "id": "1062",
+    "name": "Vibrant Yellow",
+    "rgb": "EBD800",
+    "isTrans": "f",
+    "firstYear": 2022,
+    "lastYear": 2022,
+    "lego": {
+      "id": "368",
+      "name": "Vibrant Yellow"
+    },
+    "lDraw": {
+      "id": "",
+      "name": ""
+    },
+    "brickLink": {
+      "id": "",
+      "name": ""
+    },
+    "brickOwl": {
+      "id": "",
+      "name": ""
+    }
+  },
+  {
+    "id": "9999",
+    "name": "[No Color/Any Color]",
+    "rgb": "05131D",
+    "isTrans": "f",
+    "lego": {},
+    "lDraw": {},
+    "brickLink": {},
+    "brickOwl": {}
+  }
+]

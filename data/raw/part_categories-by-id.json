@@ -1,0 +1,266 @@
+{
+  "1": {
+    "id": "1",
+    "name": "Baseplates"
+  },
+  "3": {
+    "id": "3",
+    "name": "Bricks Sloped"
+  },
+  "4": {
+    "id": "4",
+    "name": "Duplo, Quatro and Primo"
+  },
+  "5": {
+    "id": "5",
+    "name": "Bricks Special"
+  },
+  "6": {
+    "id": "6",
+    "name": "Bricks Wedged"
+  },
+  "7": {
+    "id": "7",
+    "name": "Containers"
+  },
+  "8": {
+    "id": "8",
+    "name": "Technic Bricks"
+  },
+  "9": {
+    "id": "9",
+    "name": "Plates Special"
+  },
+  "11": {
+    "id": "11",
+    "name": "Bricks"
+  },
+  "12": {
+    "id": "12",
+    "name": "Technic Connectors"
+  },
+  "13": {
+    "id": "13",
+    "name": "Minifigs"
+  },
+  "14": {
+    "id": "14",
+    "name": "Plates"
+  },
+  "15": {
+    "id": "15",
+    "name": "Tiles Special"
+  },
+  "16": {
+    "id": "16",
+    "name": "Windows and Doors"
+  },
+  "17": {
+    "id": "17",
+    "name": "Non-LEGO"
+  },
+  "18": {
+    "id": "18",
+    "name": "Hinges, Arms and Turntables"
+  },
+  "19": {
+    "id": "19",
+    "name": "Tiles"
+  },
+  "20": {
+    "id": "20",
+    "name": "Bricks Round and Cones"
+  },
+  "21": {
+    "id": "21",
+    "name": "Plates Round Curved and Dishes"
+  },
+  "22": {
+    "id": "22",
+    "name": "Pneumatics"
+  },
+  "23": {
+    "id": "23",
+    "name": "Panels"
+  },
+  "24": {
+    "id": "24",
+    "name": "Other"
+  },
+  "25": {
+    "id": "25",
+    "name": "Technic Steering, Suspension and Engine"
+  },
+  "26": {
+    "id": "26",
+    "name": "Technic Special"
+  },
+  "27": {
+    "id": "27",
+    "name": "Minifig Accessories"
+  },
+  "28": {
+    "id": "28",
+    "name": "Plants and Animals"
+  },
+  "29": {
+    "id": "29",
+    "name": "Wheels and Tyres"
+  },
+  "30": {
+    "id": "30",
+    "name": "Tubes and Hoses"
+  },
+  "31": {
+    "id": "31",
+    "name": "String, Bands and Reels"
+  },
+  "32": {
+    "id": "32",
+    "name": "Bars, Ladders and Fences"
+  },
+  "33": {
+    "id": "33",
+    "name": "Rock"
+  },
+  "34": {
+    "id": "34",
+    "name": "Supports, Girders and Cranes"
+  },
+  "35": {
+    "id": "35",
+    "name": "Transportation - Sea and Air"
+  },
+  "36": {
+    "id": "36",
+    "name": "Transportation - Land"
+  },
+  "37": {
+    "id": "37",
+    "name": "Bricks Curved"
+  },
+  "38": {
+    "id": "38",
+    "name": "Flags, Signs, Plastics and Cloth"
+  },
+  "39": {
+    "id": "39",
+    "name": "Magnets and Holders"
+  },
+  "40": {
+    "id": "40",
+    "name": "Technic Panels"
+  },
+  "41": {
+    "id": "41",
+    "name": "Bionicle, Hero Factory and Constraction"
+  },
+  "42": {
+    "id": "42",
+    "name": "Belville, Scala and Fabuland"
+  },
+  "43": {
+    "id": "43",
+    "name": "Znap"
+  },
+  "44": {
+    "id": "44",
+    "name": "Mechanical"
+  },
+  "45": {
+    "id": "45",
+    "name": "Power Functions, Mindstorms and Electric"
+  },
+  "46": {
+    "id": "46",
+    "name": "Technic Axles"
+  },
+  "47": {
+    "id": "47",
+    "name": "Windscreens and Fuselage"
+  },
+  "48": {
+    "id": "48",
+    "name": "Clikits"
+  },
+  "49": {
+    "id": "49",
+    "name": "Plates Angled"
+  },
+  "50": {
+    "id": "50",
+    "name": "HO Scale"
+  },
+  "51": {
+    "id": "51",
+    "name": "Technic Beams"
+  },
+  "52": {
+    "id": "52",
+    "name": "Technic Gears"
+  },
+  "53": {
+    "id": "53",
+    "name": "Technic Pins"
+  },
+  "54": {
+    "id": "54",
+    "name": "Technic Bushes"
+  },
+  "55": {
+    "id": "55",
+    "name": "Technic Beams Special"
+  },
+  "56": {
+    "id": "56",
+    "name": "Tools"
+  },
+  "57": {
+    "id": "57",
+    "name": "Non-Buildable Figures (Duplo, Fabuland, etc)"
+  },
+  "58": {
+    "id": "58",
+    "name": "Stickers"
+  },
+  "59": {
+    "id": "59",
+    "name": "Minifig Heads"
+  },
+  "60": {
+    "id": "60",
+    "name": "Minifig Upper Body"
+  },
+  "61": {
+    "id": "61",
+    "name": "Minifig Lower Body"
+  },
+  "62": {
+    "id": "62",
+    "name": "Minidoll Heads"
+  },
+  "63": {
+    "id": "63",
+    "name": "Minidoll Upper Body"
+  },
+  "64": {
+    "id": "64",
+    "name": "Minidoll Lower Body"
+  },
+  "65": {
+    "id": "65",
+    "name": "Minifig Headwear"
+  },
+  "66": {
+    "id": "66",
+    "name": "Modulex"
+  },
+  "67": {
+    "id": "67",
+    "name": "Tiles Round and Curved"
+  },
+  "68": {
+    "id": "68",
+    "name": "Projectiles / Launchers"
+  }
+}
