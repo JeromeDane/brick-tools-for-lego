@@ -1,11 +1,11 @@
 import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Spinner from '../components/Spinner'
 import { ScrollView, Linking, Button } from 'react-native';
-import { Text, View } from '../components/Themed';
+import { Text, View, TextInput } from '../components/Themed';
 import ScaledImage from '../components/ScaledImage'
 import { SetTabsParamList } from '../navigation/SetTabs'
-import { useIsLoggedIn, useSetWanted} from '../api/brickset';
+import { useIsLoggedIn, useSetWanted, useSetOwned} from '../api/brickset';
 import {useSets} from '../data/sets'
 import TextLink from '../components/TextLink';
 import CheckBox from '../components/Checkbox';
@@ -14,7 +14,15 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
   const set = useSets().byId[id],
         [loadingMessage, setLoadingMessage] = useState(''),
         isLoggedIn = useIsLoggedIn(),
-        setWanted = useSetWanted()
+        [quantityOwned, setQuantityOwned] = useState(
+          ((isLoggedIn && set && set.collection && set.collection.qtyOwned) || 0).toString()
+        ),
+        setWanted = useSetWanted(),
+        setOwned = useSetOwned()
+  useEffect(() => {
+    if(set && set.collection)
+      setQuantityOwned(set.collection.qtyOwned.toString())
+  }, [set])
   return set
     ? <ScrollView style={{padding: 20}}>
       <Spinner visible={Boolean(loadingMessage)} textContent={loadingMessage} />
@@ -45,8 +53,7 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
         {isLoggedIn
           ? <View style={{marginTop: 20}}>
               <Text style={{fontWeight: 'bold', marginBottom: 10}}>Collection</Text>
-              <Text>You own {set.collection.qtyOwned.toLocaleString()}</Text>
-              <View>
+              <View style={{marginBottom: 10}}>
                 <CheckBox
                   label="I want this set"
                   value={set.collection.wanted}
@@ -58,6 +65,40 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
                   }}
                 />
               </View>
+              <View style={{marginBottom: 10}}>
+                <CheckBox
+                  label="I own this set"
+                  value={set.collection.owned}
+                  onValueChange={(newValue) => {
+                    setLoadingMessage(`Saving as ${newValue ? '' : 'not '}owned on Brickset ...`)
+                    setOwned(set, newValue ? 1 : 0)
+                      .then(() => {
+                        setQuantityOwned('1')
+                        setLoadingMessage('')
+                      })
+                      .then(() => setLoadingMessage(''))
+                  }}
+                />
+              </View>
+              {set.collection.owned
+                ? <TextInput
+                    label="How many copies do I own?"
+                    keyboardType="numeric"
+                    onChangeText={value => {
+                      const int = parseInt(value)
+                      if(!value) setQuantityOwned('')
+                      else if(isNaN(int)) setQuantityOwned('')
+                      else setQuantityOwned(int.toString())
+                    }}
+                    onBlur={() => {
+                      setLoadingMessage(`Saving as ${quantityOwned != '0' ? quantityOwned : 'not'} owned on Brickset ...`)
+                      setOwned(set, parseInt(quantityOwned))
+                        .then(() => setLoadingMessage(''))
+                        .then(() => setLoadingMessage(''))
+                    }}
+                    value={quantityOwned} />
+                : null
+              }
             </View>
           : <TextLink
             style={{marginTop: 10}}

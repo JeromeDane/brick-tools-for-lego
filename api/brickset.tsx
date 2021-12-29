@@ -21,7 +21,8 @@ const ApiContext = createContext({
   collection: {} as Collection,
   sets: {} as {[key: string]: Set},
   setsList: [] as Set[],
-  setWanted: async ({bricksetID, setNum}: Set, wanted: boolean) => {}
+  setWanted: async ({bricksetID, setNum}: Set, wanted: boolean) => {},
+  setOwned: async ({bricksetID, setNum}: Set, qtyOwned: number) => {}
 })
 
 export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.Element}) => {
@@ -134,6 +135,26 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
               console.log(`setting ${setNum} as wanted: ${wanted}`)
               saveCollection(collection)
             }
+          }),
+      setOwned = async ({bricksetID, setNum}: Set, qtyOwned: number) =>
+        api('setCollection', {
+          SetID: bricksetID,
+          params: JSON.stringify({qtyOwned, owned: qtyOwned > 0 ? 1 : 0})
+        })
+          .then((response : any) => {
+            if(response.status == 'success') {
+              collection[setNum] = collection[setNum] || {
+                owned: false,
+                wanted: false,
+                qtyOwned: 0,
+                rating: 0,
+                notes: ''
+              }
+              collection[setNum].qtyOwned = qtyOwned
+              collection[setNum].owned = qtyOwned > 0
+              console.log(`setting ${setNum} as owned: ${qtyOwned}`)
+              saveCollection(collection)
+            }
           })
   useEffect(() => {
     if(!storageRead) {
@@ -151,6 +172,7 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
     loadCollection,
     collection,
     setWanted,
+    setOwned,
     api
   }}>
     {children}
@@ -164,3 +186,5 @@ export const useLogOut = () => useContext(ApiContext).logOut
 export const useIsLoggedIn = () => useContext(ApiContext).isLoggedIn
 export const useLoadCollection = () => useContext(ApiContext).loadCollection
 export const useSetWanted = () => useContext(ApiContext).setWanted
+export const useSetOwned = () => useContext(ApiContext).setOwned
+
