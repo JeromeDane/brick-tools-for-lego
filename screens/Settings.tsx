@@ -28,8 +28,8 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
           </Text>
           <View style={{marginBottom: 20}}>
             <Button
-              title="Import my collection from Brickset" onPress={() => {
-                setLoadingMessage('Importing collection from Brickset ...')
+              title="Re-sync my collection from Brickset" onPress={() => {
+                setLoadingMessage('Syncing collection from Brickset ...')
                 loadCollection()
                   .then(() => setLoadingMessage(''))
                   .catch(() => setLoadingMessage(''))
@@ -54,7 +54,12 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
           <Button disabled={isLoading} title="Login" onPress={() => {
             setLoadingMessage('Logging in to Brickset ...')
             login(username, password)
-              .then(() => setLoadingMessage(''))
+              .then(() => {
+                setLoadingMessage('Importing collection from Brickset ...')
+                loadCollection()
+                  .then(() => setLoadingMessage(''))
+                  .catch(() => setLoadingMessage(''))
+              })
               .catch(() => setLoadingMessage(''))
           }}/>
         </View>

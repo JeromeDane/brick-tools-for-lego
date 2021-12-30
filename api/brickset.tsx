@@ -18,6 +18,7 @@ export type Collection = {[key: string]: CollectionItem}
 let storageRead = false
 
 const ApiContext = createContext({
+  isLoggedIn: false,
   collection: {} as Collection,
   sets: {} as {[key: string]: Set},
   setsList: [] as Set[],
@@ -25,12 +26,16 @@ const ApiContext = createContext({
   setOwned: async ({bricksetID, setNum}: Set, qtyOwned: number) => {}
 })
 
+// Note: Normally I hate mutable variables, but I'll make an exception
+// here so that we don't get into a race condition with `useState` hooks
+let userHash = ''
+
 export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.Element}) => {
   const BRICKSET_KEYS = {
           userHash: 'bricktools-brickset-user-hash',
           ownedSets: 'bricktools-brickset-owned-set-numbers'
         },
-        [userHash, setUserHash] = useState(''),
+        [isLoggedIn, setIsLoggedIn] = useState(false),
         [collection, setCollection] = useState({} as Collection),
         saveCollection = async (updatedCollection: Collection) => {
           setCollection(Object.assign({}, updatedCollection))
@@ -73,7 +78,8 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
             api('login', {username, password})
               .then(async (response: any) => {
                 if(response.status === 'success') {
-                  setUserHash(response.hash)
+                  userHash = response.hash
+                  setIsLoggedIn(true)
                   await AsyncStorage.setItem(BRICKSET_KEYS.userHash, response.hash)
                   resolve(null)
                 }
@@ -87,7 +93,7 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
           ),
         logOut = async () => {
           await AsyncStorage.setItem(BRICKSET_KEYS.userHash, '')
-          setUserHash('')
+          setIsLoggedIn(false)
         },
         loadCollection = () => new Promise(async (resolve, reject) => {
           console.log('loading collection')
@@ -160,13 +166,16 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
     if(!storageRead) {
       storageRead = true
       AsyncStorage.getItem(BRICKSET_KEYS.userHash)
-        .then(hash => setUserHash(hash || ''))
+        .then(hash => {
+          setIsLoggedIn(Boolean(hash))
+          userHash = hash || ''
+        })
       AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
         .then(result => setCollection(JSON.parse(result || '{}')))
     }
   }, [])
   return <ApiContext.Provider value={{
-    isLoggedIn: Boolean(userHash),
+    isLoggedIn,
     login,
     logOut,
     loadCollection,
@@ -187,4 +196,3 @@ export const useIsLoggedIn = () => useContext(ApiContext).isLoggedIn
 export const useLoadCollection = () => useContext(ApiContext).loadCollection
 export const useSetWanted = () => useContext(ApiContext).setWanted
 export const useSetOwned = () => useContext(ApiContext).setOwned
-
