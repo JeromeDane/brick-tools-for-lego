@@ -28,6 +28,7 @@ export type RootStackParamList = {
   Set: {id: string};
   Settings: undefined;
   NotFound: undefined;
+  About: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

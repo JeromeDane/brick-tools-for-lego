@@ -1,21 +1,29 @@
 import * as React from 'react';
-import { StyleSheet, Linking, Button } from 'react-native';
+import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import TextLink from '../components/TextLink'
 import {version} from '../package.json'
-
-import { RootStackScreenProps } from '../types';
+import { RootStackScreenProps } from '../navigation/types';
 
 export default function AboutScreen({ navigation }: RootStackScreenProps<'About'>) {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.paragraph}>
-        This project is free and maintained by out of a love of all things LEGO®.{' '}
-        <TextLink url="mailto:jerome.dane@gmail.com">
-          Send me an email
-        </TextLink>{' '}
-        if you have feedback or would like to get involved, {' '}
+        This project is free, open source, and maintained by out of a love of all things LEGO®.{' '}
+        If you'd like to get involved in any way, check out this project's{' '}
+        <TextLink url="https://github.com/JeromeDane/brick-tools-for-lego">
+          GitHub page
+        </TextLink>.
       </Text>
+      <TextLink style={styles.paragraph} url="https://github.com/JeromeDane/brick-tools-for-lego/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement">
+        Planned features
+      </TextLink>
+      <TextLink style={styles.paragraph} url="https://github.com/JeromeDane/brick-tools-for-lego/issues?q=is%3Aopen+is%3Aissue+label%3Abug">
+        Known bugs
+      </TextLink>
+      <TextLink style={styles.paragraph} url="https://www.reddit.com/r/BrickToolsForLEGO/">
+        r/BrickToolsForLEGO/
+      </TextLink>
       <Text style={styles.paragraph}>
         Show your ❤️ for this project:
       </Text>
@@ -38,15 +46,13 @@ export default function AboutScreen({ navigation }: RootStackScreenProps<'About'
         <TextLink url="https://www.rebrickable.com/">Rebrickable.com</TextLink>
       </Text>
       <Text style={styles.paragraph}>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project.</Text>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     padding: 20,
   },
   linkText: {
