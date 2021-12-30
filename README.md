@@ -40,6 +40,8 @@ This project is open source, and we love contributors! Want to help add a featur
 * Don't use acronyms or abbreviations in your code. They just create ambiguity and the compiler will shorten everything anyway, 🤖 so be clear for the humans!
 * Co-locate code, organizing things by component or where they are used, not what type of file or abstraction they are. This makes it easy to find things that go together, and most importantly makes it easier to avoid dead code when deleting features we no longer want.
 
+_Disclaimer: The code so far was written quickly, and things are not necessarily as clean or well organized as they could/should be. There are only so many hours in the day, and we need to go back and clean things up. Don't let existing bad examples keep you from doing better or leaving things better than you found them!_
+
 ### Development Prerequisites
 
 This project has been developed using a Mac, so any *nix flavor of operating system should work fine for you. We've tried using Linux Subsystem for Windows, but ran into issues with having to tunnel ADB connections, and building release versions seems to be a nightmare.
