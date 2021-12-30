@@ -10,7 +10,7 @@ const {hideBin} = require('yargs/helpers'),
 
 const run = async () => {
   const usageResults = await bricksetApi('getKeyUsageStats')
-  console.log(`Brickset API key usage: \n${JSON.stringify(usageResults.apiKeyUsage, null, 2)}\n`)
+  console.log(`Brickset API key usage today: ${usageResults.apiKeyUsage[0]}\n`)
   // process.exit(0)
   if(argv.updateData) await updateCsvData()
   await buildJson()
