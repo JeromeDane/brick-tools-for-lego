@@ -1,11 +1,11 @@
-import { json } from 'stream/consumers'
+import {json} from 'stream/consumers'
 import {buildJson, updateCsvData} from './rebrickable'
-import { readFileSync, writeFileSync } from 'fs'
+import {readFileSync, writeFileSync} from 'fs'
 import bricksetApi from './brickset-api'
 import path from 'path'
 
 const yargs = require('yargs/yargs')
-const { hideBin } = require('yargs/helpers')
+const {hideBin} = require('yargs/helpers')
 const argv = yargs(hideBin(process.argv)).argv
 
 const run = async () => {

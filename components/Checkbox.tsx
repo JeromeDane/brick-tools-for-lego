@@ -1,8 +1,8 @@
-import * as React from 'react';
+import * as React from 'react'
 import {View} from 'react-native'
 import {Text} from './Themed'
-import DefaultCheckBox, { CheckBoxProps as DefaultCheckBoxProps } from '@react-native-community/checkbox';
-import { relative } from 'path/posix';
+import DefaultCheckBox, {CheckBoxProps as DefaultCheckBoxProps} from '@react-native-community/checkbox'
+import {relative} from 'path/posix'
 
 interface CheckBoxProps extends DefaultCheckBoxProps {
   label: string

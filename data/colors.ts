@@ -46,7 +46,7 @@ const colors = (colorsData as ColorData[])
     })
   },
   {}
-)
+  )
 
 export default colors
 

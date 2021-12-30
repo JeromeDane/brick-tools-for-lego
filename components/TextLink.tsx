@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Linking } from 'react-native';
+import * as React from 'react'
+import {Linking} from 'react-native'
 
-import {Text, TextProps} from './Themed';
+import {Text, TextProps} from './Themed'
 
 interface TextLinkProps extends TextProps {
   url?: string
@@ -12,5 +12,5 @@ export default function(props: TextLinkProps) {
     {...Object.assign({}, props,
       props.url ? {onPress: () => Linking.openURL(props.url!)} : {}
     )}
-    style={[props.style, { color: '#2e78b7' }]} />;
+    style={[props.style, {color: '#2e78b7'}]} />
 }

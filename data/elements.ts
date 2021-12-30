@@ -95,7 +95,7 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
     '15': '4612342' // white
   },
   '6632': { // Technic Beam 1 x 3 Thin
-    '15': '4107826', // white
+    '15': '4107826' // white
   },
   '14769': { // dark bluish gray 2x2 tile round
     '72': '4620079'
@@ -107,7 +107,7 @@ const corrections : {[keys: string]: {[keys: string]: string}} = {
     '0': '4194008' // black
   },
   '3062b': { // 1 x 1 round brick
-    '14': '306224', // yellow
+    '14': '306224' // yellow
   },
   '3069b': {  // 1 x 2 tile with groove
     '47': '6251294' // trans-clear

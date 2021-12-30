@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { ScrollView, Image, Button, Linking } from 'react-native';
-import { Text, View } from '../components/Themed';
-import { RootStackParamList } from '../types'
-import { elements } from '../data/elements'
+import React, {useEffect, useState} from 'react'
+import {ScrollView, Image, Button, Linking} from 'react-native'
+import {Text, View} from '../components/Themed'
+import {RootStackParamList} from '../types'
+import {elements} from '../data/elements'
 import colors from '../data/colors'
 
-export default function Element({ navigation }: RootStackParamList<'Element'>) {
+export default function Element({navigation}: RootStackParamList<'Element'>) {
   const {routes, index} = navigation.getState(),
-        [viewWidth, setViewWidth] = useState(0),
         element = elements[routes[index].params.id],
         {id, part, color} = element
   useEffect(() => {
@@ -37,5 +36,5 @@ export default function Element({ navigation }: RootStackParamList<'Element'>) {
         </View>
       </ScrollView>
     </View>
-  );
+  )
 }

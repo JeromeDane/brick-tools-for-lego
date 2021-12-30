@@ -1,13 +1,13 @@
-import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
-import React, {useEffect, useState} from 'react';
-import { ScrollView, Button, } from 'react-native';
+import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
+import React, {useEffect, useState} from 'react'
+import {ScrollView, Button} from 'react-native'
 import WebView from 'react-native-webview'
-import { Text, View } from '../components/Themed';
-import { SetTabsParamList } from '../navigation/SetTabs'
+import {Text, View} from '../components/Themed'
+import {SetTabsParamList} from '../navigation/SetTabs'
 import {useSets} from '../data/sets'
 import {useApi} from '../api/brickset'
 
-export default function SetInstructionsScreen({ route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
+export default function SetInstructionsScreen({route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
   const set = useSets().byId[id],
         [instructions, setInstructions] = useState(null),
         [downloadUrl, setDownloadUrl] = useState(''),

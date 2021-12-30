@@ -1,8 +1,8 @@
-import { MaterialTopTabScreenProps, createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
-import React, {useEffect} from 'react';
-import SetDetailsScreen from '../screens/SetDetails';
-import SetPartsScreen from '../screens/SetParts';
-import SetInstructionsScreen from '../screens/SetInstructions';
+import {MaterialTopTabScreenProps, createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+import React, {useEffect} from 'react'
+import SetDetailsScreen from '../screens/SetDetails'
+import SetPartsScreen from '../screens/SetParts'
+import SetInstructionsScreen from '../screens/SetInstructions'
 import {useSets} from '../data/sets'
 import {RootStackParamList} from './types'
 

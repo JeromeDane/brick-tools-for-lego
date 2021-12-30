@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { ScrollView, StyleSheet, ViewPropTypes } from 'react-native'
+import React, {useEffect, useState} from 'react'
+import {ScrollView, StyleSheet, ViewPropTypes} from 'react-native'
 import sortBy from 'sort-by'
-import { Text, View } from '../components/Themed'
-import { RootDrawerParamList } from '../types'
+import {Text, View} from '../components/Themed'
+import {RootDrawerParamList} from '../types'
 import themes from '../data/raw/themes.json'
 
-export default function TabsScreen({ navigation }: RootDrawerParamList<'Themes'>) {
+export default function TabsScreen({navigation}: RootDrawerParamList<'Themes'>) {
   return (
     <ScrollView style={styles.container}>
       {themes
@@ -14,10 +14,10 @@ export default function TabsScreen({ navigation }: RootDrawerParamList<'Themes'>
         .map(theme =>
           <Text key={theme.id} style={styles.theme}>
             {theme.name} (
-              {theme.yearFrom ? '' + theme.yearFrom + '' : ''}
-              {theme.yearTo ? '-' + theme.yearTo + '' : ''}
-              {(theme.yearFrom || theme.yearTo) ? ', ' : ''}
-              {theme.numSets} sets)
+            {theme.yearFrom ? '' + theme.yearFrom + '' : ''}
+            {theme.yearTo ? '-' + theme.yearTo + '' : ''}
+            {(theme.yearFrom || theme.yearTo) ? ', ' : ''}
+            {theme.numSets} sets)
           </Text>
         )
       }
@@ -33,5 +33,5 @@ const styles = StyleSheet.create({
   theme: {
     textAlign: 'left',
     paddingVertical: 10
-  },
+  }
 })

@@ -1,13 +1,13 @@
 import camelize from 'camelcase-keys'
 import fetch from 'cross-fetch'
-import {existsSync, mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
-import path from 'path';
+import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
+import path from 'path'
 import {promisify} from 'util'
 import bricksetApi from './brickset-api'
 
 const csv = require('csvtojson')
 const gUnzip = require('gunzip-file')
-const writeFilePromise = promisify(writeFile);
+const writeFilePromise = promisify(writeFile)
 
 const csvDir = path.join(__dirname, '../data/rebrickable')
 const dataDir = path.join(__dirname, '../data/raw')
@@ -16,7 +16,7 @@ mkdirSync(csvDir, {recursive: true})
 mkdirSync(dataDir, {recursive: true})
 mkdirSync(tmpDir, {recursive: true})
 
-const downloadGzAndExtract = async (url: string, ) =>
+const downloadGzAndExtract = async (url: string) =>
   new Promise(resolve => {
     const outFile = (url.match(/\/([^\/]+)\.gz/) || '')[1]
     const gZipDest = path.join(tmpDir, outFile + '.gz')
@@ -61,7 +61,7 @@ const saveData = (type: string, data: Object) => {
   writeFileSync(
     path.join(dataDir, type + '.json'),
     JSON.stringify(data, null, 2))
-  process.stdout.write(` done.\n`)
+  process.stdout.write(' done.\n')
 }
 
 const csvToJson = (type: string) => {
@@ -127,7 +127,7 @@ export const buildJson = async () => {
   // TODO: Automate scraping https://rebrickable.com/colors/
   saveData('colors', colors.map((color: any) => {
     const split = (input: string) => {
-      const match = input && input.match(/^([^\[]+?)\s*\['(.+?)'/)
+      const match = input && input.match(/^([^[]+?)\s*\['(.+?)'/)
       return {
         id: match && match[1],
         name: match && match[2]
@@ -167,9 +167,9 @@ export const buildJson = async () => {
       setNumSort: isNaN(setNumSort) ? Number.POSITIVE_INFINITY : setNumSort,
       inventories: inventories
         .filter(({setNum} : {setNum: string}) => setNum == set.setNum)
-        .map(({id, version}: {id: string, version: string} ) => ({
+        .map(({id, version}: {id: string, version: string}) => ({
           id,
-          version,
+          version
           // parts: inventoryParts.filter(({inventoryId} : {inventoryId: string}) => inventoryId == id)
         }))
     })

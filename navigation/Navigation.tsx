@@ -9,25 +9,24 @@ import {
   FontAwesome,
   MaterialIcons,
   MaterialCommunityIcons
-} from '@expo/vector-icons';
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
-import { createDrawerNavigator, DrawerItemList, DrawerContentScrollView } from '@react-navigation/drawer';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import * as React from 'react';
-import { ColorSchemeName, Pressable } from 'react-native';
-import { Text } from '../components/Themed'
-import Colors from '../constants/Colors';
-import useColorScheme from '../hooks/useColorScheme';
-import AboutScreen from '../screens/AboutScreen';
-import NotFoundScreen from '../screens/NotFoundScreen';
+} from '@expo/vector-icons'
+import {NavigationContainer, DefaultTheme, DarkTheme} from '@react-navigation/native'
+import {createDrawerNavigator, DrawerItemList, DrawerContentScrollView} from '@react-navigation/drawer'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import * as React from 'react'
+import {ColorSchemeName, Pressable} from 'react-native'
+import {Text} from '../components/Themed'
+import Colors from '../constants/Colors'
+import useColorScheme from '../hooks/useColorScheme'
+import AboutScreen from '../screens/AboutScreen'
+import NotFoundScreen from '../screens/NotFoundScreen'
 import ElementScreen from '../screens/Element'
-import ThemesScreen from '../screens/Themes';
+import ThemesScreen from '../screens/Themes'
 import PartsScreen from '../screens/Parts'
-import SetsScreen from '../screens/Sets';
+import SetsScreen from '../screens/Sets'
 import SettingsScreen from '../screens/Settings'
-import { RootStackParamList, RootDrawerParamList } from './types';
-import linking from './linking';
+import {RootStackParamList, RootDrawerParamList} from './types'
+import linking from './linking'
 import SetTabs from './SetTabs'
 
 /**
@@ -35,33 +34,33 @@ import SetTabs from './SetTabs'
  * https://reactnavigation.org/docs/modal
  */
 const Stack = createNativeStackNavigator<RootStackParamList>(),
-      Drawer = createDrawerNavigator<RootDrawerParamList>(),
-      Tab = createMaterialTopTabNavigator()
+      Drawer = createDrawerNavigator<RootDrawerParamList>()
 
-export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+
+export default function Navigation({colorScheme}: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
       linking={linking}
       documentTitle={{
         formatter: (options, route) =>
-          `${options?.title ?? route?.name} - Brick Tools for LEGO®`,
+          `${options?.title ?? route?.name} - Brick Tools for LEGO®`
       }}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack.Navigator>
-        <Stack.Screen name="Root" component={DrawerNav} options={{ headerShown: false }} />
+        <Stack.Screen name="Root" component={DrawerNav} options={{headerShown: false}} />
         <Stack.Screen name="Element" component={ElementScreen} />
         <Stack.Screen name="Set" component={SetTabs} />
-        <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+        <Stack.Screen name="NotFound" component={NotFoundScreen} options={{title: 'Oops!'}} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
 const MenuButton = ({navigation}: any) => {
-  const colorScheme = useColorScheme();
-  return  <Pressable
+  const colorScheme = useColorScheme()
+  return <Pressable
     onPress={() => navigation.toggleDrawer()}
-    style={({ pressed }) => ({opacity: pressed ? 0.5 : 1})}>
+    style={({pressed}) => ({opacity: pressed ? 0.5 : 1})}>
     <MaterialIcons
       name="menu"
       size={25}
@@ -77,7 +76,7 @@ const DrawerContent = (props: any) => {
       <Text style={{padding: 20, fontWeight: 'bold'}}>Brick Tools for LEGO®</Text>
       <DrawerItemList {...props} />
     </DrawerContentScrollView>
-  );
+  )
 }
 
 const DrawerNav = () => {

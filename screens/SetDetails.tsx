@@ -1,16 +1,16 @@
-import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
-import React, { useEffect, useState } from 'react';
+import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
+import React, {useEffect, useState} from 'react'
 import Spinner from '../components/Spinner'
-import { ScrollView, Linking, Button } from 'react-native';
-import { Text, View, TextInput } from '../components/Themed';
+import {ScrollView, Linking, Button} from 'react-native'
+import {Text, View, TextInput} from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
-import { SetTabsParamList } from '../navigation/SetTabs'
-import { useIsLoggedIn, useSetWanted, useSetOwned} from '../api/brickset';
+import {SetTabsParamList} from '../navigation/SetTabs'
+import {useIsLoggedIn, useSetWanted, useSetOwned} from '../api/brickset'
 import {useSets} from '../data/sets'
-import TextLink from '../components/TextLink';
-import CheckBox from '../components/Checkbox';
+import TextLink from '../components/TextLink'
+import CheckBox from '../components/Checkbox'
 
-export default function SetDetailsScreen({ navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
+export default function SetDetailsScreen({navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
   const set = useSets().byId[id],
         [loadingMessage, setLoadingMessage] = useState(''),
         isLoggedIn = useIsLoggedIn(),
@@ -52,54 +52,54 @@ export default function SetDetailsScreen({ navigation, route: {params: {id}}}: M
         <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
         {isLoggedIn
           ? <View style={{marginTop: 20}}>
-              <Text style={{fontWeight: 'bold', marginBottom: 10}}>Collection</Text>
-              <View style={{marginBottom: 10}}>
-                <CheckBox
-                  label="I want this set"
-                  value={set.collection.wanted}
-                  onValueChange={(newValue) => {
-                    setLoadingMessage(`Saving as ${newValue ? '' : 'not '}wanted on Brickset ...`)
-                    setWanted(set, newValue)
-                      .then(() => setLoadingMessage(''))
-                      .then(() => setLoadingMessage(''))
-                  }}
-                />
-              </View>
-              <View style={{marginBottom: 10}}>
-                <CheckBox
-                  label="I own this set"
-                  value={set.collection.owned}
-                  onValueChange={(newValue) => {
-                    setLoadingMessage(`Saving as ${newValue ? '' : 'not '}owned on Brickset ...`)
-                    setOwned(set, newValue ? 1 : 0)
-                      .then(() => {
-                        setQuantityOwned('1')
-                        setLoadingMessage('')
-                      })
-                      .then(() => setLoadingMessage(''))
-                  }}
-                />
-              </View>
-              {set.collection.owned
-                ? <TextInput
-                    label="How many copies do I own?"
-                    keyboardType="numeric"
-                    onChangeText={value => {
-                      const int = parseInt(value)
-                      if(!value) setQuantityOwned('')
-                      else if(isNaN(int)) setQuantityOwned('')
-                      else setQuantityOwned(int.toString())
-                    }}
-                    onBlur={() => {
-                      setLoadingMessage(`Saving as ${quantityOwned != '0' ? quantityOwned : 'not'} owned on Brickset ...`)
-                      setOwned(set, parseInt(quantityOwned))
-                        .then(() => setLoadingMessage(''))
-                        .then(() => setLoadingMessage(''))
-                    }}
-                    value={quantityOwned} />
-                : null
-              }
+            <Text style={{fontWeight: 'bold', marginBottom: 10}}>Collection</Text>
+            <View style={{marginBottom: 10}}>
+              <CheckBox
+                label="I want this set"
+                value={set.collection.wanted}
+                onValueChange={(newValue) => {
+                  setLoadingMessage(`Saving as ${newValue ? '' : 'not '}wanted on Brickset ...`)
+                  setWanted(set, newValue)
+                    .then(() => setLoadingMessage(''))
+                    .then(() => setLoadingMessage(''))
+                }}
+              />
             </View>
+            <View style={{marginBottom: 10}}>
+              <CheckBox
+                label="I own this set"
+                value={set.collection.owned}
+                onValueChange={(newValue) => {
+                  setLoadingMessage(`Saving as ${newValue ? '' : 'not '}owned on Brickset ...`)
+                  setOwned(set, newValue ? 1 : 0)
+                    .then(() => {
+                      setQuantityOwned('1')
+                      setLoadingMessage('')
+                    })
+                    .then(() => setLoadingMessage(''))
+                }}
+              />
+            </View>
+            {set.collection.owned
+              ? <TextInput
+                label="How many copies do I own?"
+                keyboardType="numeric"
+                onChangeText={value => {
+                  const int = parseInt(value)
+                  if(!value) setQuantityOwned('')
+                  else if(isNaN(int)) setQuantityOwned('')
+                  else setQuantityOwned(int.toString())
+                }}
+                onBlur={() => {
+                  setLoadingMessage(`Saving as ${quantityOwned != '0' ? quantityOwned : 'not'} owned on Brickset ...`)
+                  setOwned(set, parseInt(quantityOwned))
+                    .then(() => setLoadingMessage(''))
+                    .then(() => setLoadingMessage(''))
+                }}
+                value={quantityOwned} />
+              : null
+            }
+          </View>
           : <TextLink
             style={{marginTop: 10}}
             onPress={() => navigation.navigate('Settings')}>

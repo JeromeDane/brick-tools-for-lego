@@ -3,13 +3,13 @@
  * https://reactnavigation.org/docs/typescript/
  */
 
-import { DrawerScreenProps } from '@react-navigation/Drawer';
-import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import {DrawerScreenProps} from '@react-navigation/Drawer'
+import {CompositeScreenProps, NavigatorScreenParams} from '@react-navigation/native'
+import {NativeStackScreenProps} from '@react-navigation/native-stack'
 
 declare global {
   namespace ReactNavigation {
-    interface RootParamList extends RootStackParamList {}
+    type RootParamList = RootStackParamList
   }
 }
 

@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
-import { Text, View } from '../components/Themed';
+import * as React from 'react'
+import {StyleSheet, Linking, Button, ScrollView} from 'react-native'
+import {Text, View} from '../components/Themed'
 import TextLink from '../components/TextLink'
 import {version} from '../package.json'
-import { RootStackScreenProps } from '../navigation/types';
 
-export default function AboutScreen({ navigation }: RootStackScreenProps<'About'>) {
+export default function AboutScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.paragraph}>
@@ -50,19 +49,19 @@ export default function AboutScreen({ navigation }: RootStackScreenProps<'About'
       </Text>
       <Text style={styles.paragraph}>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project.</Text>
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    padding: 20
   },
   linkText: {
-    color: '#2e78b7',
+    color: '#2e78b7'
   },
   paragraph: {
     marginBottom: 20,
     textAlign: 'center'
   }
-});
+})

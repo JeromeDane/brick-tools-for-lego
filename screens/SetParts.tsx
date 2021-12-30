@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { MaterialTopTabScreenProps } from '@react-navigation/material-top-tabs'
-import { ScrollView } from 'react-native';
-import { Text, View } from '../components/Themed';
-import { SetTabsParamList } from '../navigation/SetTabs'
+import React, {useEffect} from 'react'
+import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
+import {ScrollView} from 'react-native'
+import {Text} from '../components/Themed'
+import {SetTabsParamList} from '../navigation/SetTabs'
 import {useSets} from '../data/sets'
 import Inventory from '../components/Inventory'
 import inventoryParts, {InventoryPart} from '../data/inventory-parts'
@@ -24,5 +24,5 @@ export default function SetPartsScreen({navigation, route: {params: {id}}} : Mat
         : <Text>Unable to find inventory set number "{id}"</Text>
       }
     </ScrollView>
-  );
+  )
 }

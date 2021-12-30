@@ -24,10 +24,7 @@ const api : any = async (method: string, data: Object = {}) => {
     )
   })
     .then(response => {
-      try {
-        return response.json()
-      } catch(e) {
-      }
+      return response.json()
     })
     .catch(e => console.log(e))
 }

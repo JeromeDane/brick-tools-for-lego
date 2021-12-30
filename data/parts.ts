@@ -31,14 +31,14 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
       if(name.match(/Lever/i)) return 'Lever'
       if(name.match(/Stair/i)) return 'Stair'
       if(name.match(/Stop\sRing/i)) return 'Stop Ring'
-      break;
+      break
     case '37': // Bricks Curved
       if(name.match(/Arch/i)) return 'Arch'
-      break;
+      break
     case '20': // Bricks Round and Cones
       if(name.match(/Cone/i)) return 'Cone'
       if(name.match(/Dome/i)) return 'Dome'
-      break;
+      break
     case '3': // Bricks Sloped
       if(name.match(/Inverted/i)) return 'Inverted'
       if(name.match(/Slots/i)) return 'Slots'
@@ -64,7 +64,7 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
       if(name.match(/Footwear/i)) return 'Footwear'
       if(name.match(/Gun/i)) return 'Gun'
       if(name.match(/Pan/i)) return 'Pan'
-       break;
+      break
     case '14': // Plates
       if(name.match(/Corner/i)) return 'Corner'
       break
@@ -120,15 +120,15 @@ const getSubCategory = ({name, partCatId} : PartData) : string => {
 const parts = (partsData as PartData[]).reduce(
   (acc: {[key: string]: Part}, partData: PartData) => {
     const size = partData.name.match(sizeRegex),
-        width = size ? parseInt(size[1].padStart(2) < size[2].padStart(2) ? size[1] : size[2]) : 0,
-        length = size ? parseInt((size[1].padStart(2) > size[2].padStart(2) ? size[1] : size[2])) : 0,
-        heightParsed = parseInt(size ? size[4] : ''),
-        height = isNaN(heightParsed) ? 0 : heightParsed
+          width = size ? parseInt(size[1].padStart(2) < size[2].padStart(2) ? size[1] : size[2]) : 0,
+          length = size ? parseInt((size[1].padStart(2) > size[2].padStart(2) ? size[1] : size[2])) : 0,
+          heightParsed = parseInt(size ? size[4] : ''),
+          height = isNaN(heightParsed) ? 0 : heightParsed
     acc[partData.partNum] = {
       ...partData,
       nameSort: partData.name
-                  .replace(sizeRegex, '  ')
-                  .replace(/with|w\//, ''),
+        .replace(sizeRegex, '  ')
+        .replace(/with|w\//, ''),
       width,
       length,
       height,

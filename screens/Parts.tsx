@@ -1,15 +1,14 @@
-import React, { useRef, useState } from 'react'
-import { ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import React, {useRef, useState} from 'react'
+import {ScrollView, StyleSheet, Image} from 'react-native'
 import sortBy from 'sort-by'
-import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
-import { RootTabScreenProps } from '../types'
+import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
 import {partsList} from '../data/parts'
-import { getElementByPartAndColor } from '../data/elements'
-import { colorsList } from '../data/colors'
+import {getElementByPartAndColor} from '../data/elements'
+import {colorsList} from '../data/colors'
 import {partCategoriesList} from '../data/part-categories'
 import Switch from '../components/Switch'
 
-const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
+const TabsScreen = () => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [partCategory, setPartCategory] = useState(''),
@@ -84,13 +83,13 @@ const TabsScreen = ({ navigation }: RootTabScreenProps<'Themes'>) => {
         </Picker>
       </View>
       <View style={{marginBottom: 20}}>
-      <View style={{alignItems: 'flex-end'}}>
-        <Switch
-          label="Show printed parts"
-          onValueChange={setShowPrints}
-          value={showPrints} />
+        <View style={{alignItems: 'flex-end'}}>
+          <Switch
+            label="Show printed parts"
+            onValueChange={setShowPrints}
+            value={showPrints} />
+        </View>
       </View>
-    </View>
       {filteredPartNumbers.length
         ? filteredPartNumbers
           .sort(sortBy.apply(sortBy, sortOrder.split(',')))
@@ -143,5 +142,5 @@ const styles = StyleSheet.create({
   image: {
     backgroundColor: 'gray',
     marginRight: 10
-  },
+  }
 })

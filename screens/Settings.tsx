@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import { StyleSheet, Linking, Button, ScrollView } from 'react-native';
-import { Text, TextInput, View } from '../components/Themed';
+import React, {useState} from 'react'
+import {StyleSheet, Linking, Button, ScrollView} from 'react-native'
+import {Text, TextInput, View} from '../components/Themed'
 import Spinner from '../components/Spinner'
-import { RootStackScreenProps } from '../navigation/types';
-import { useCollection, useIsLoggedIn, useLoadCollection, useLogin, useLogOut } from '../api/brickset';
-import TextLink from '../components/TextLink';
+import {RootStackScreenProps} from '../navigation/types'
+import {useCollection, useIsLoggedIn, useLoadCollection, useLogin, useLogOut} from '../api/brickset'
+import TextLink from '../components/TextLink'
 
-export default function SettingsScreen({ navigation }: RootStackScreenProps<'Settings'>) {
+export default function SettingsScreen({navigation}: RootStackScreenProps<'Settings'>) {
   const [isLoading, setIsLoading] = useState(false),
         [username, setUsername] = useState(''),
         [password, setPassword] = useState(''),
@@ -63,17 +63,17 @@ export default function SettingsScreen({ navigation }: RootStackScreenProps<'Set
               .catch(() => setLoadingMessage(''))
           }}/>
         </View>
-        }
+      }
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   linkText: {
-    color: '#2e78b7',
+    color: '#2e78b7'
   },
   heading: {
     marginBottom: 20,
     fontWeight: 'bold'
   }
-});
+})

@@ -3,25 +3,25 @@
  * https://docs.expo.io/guides/color-schemes/
  */
 
-import React from 'react';
-import { FontAwesome } from '@expo/vector-icons';
-import { Text as DefaultText, TouchableOpacity, View as DefaultView, TextInput as DefaultTextInput } from 'react-native';
+import React from 'react'
+import {FontAwesome} from '@expo/vector-icons'
+import {Text as DefaultText, TouchableOpacity, View as DefaultView, TextInput as DefaultTextInput} from 'react-native'
 import {Picker as DefaultPicker, PickerProps} from '@react-native-picker/picker'
 
-import Colors from '../constants/Colors';
-import useColorScheme from '../hooks/useColorScheme';
+import Colors from '../constants/Colors'
+import useColorScheme from '../hooks/useColorScheme'
 
 export function useThemeColor(
   props: { light?: string; dark?: string },
   colorName: keyof typeof Colors.light & keyof typeof Colors.dark
 ) {
-  const theme = useColorScheme();
-  const colorFromProps = props[theme];
+  const theme = useColorScheme()
+  const colorFromProps = props[theme]
 
-  if (colorFromProps) {
-    return colorFromProps;
+  if(colorFromProps) {
+    return colorFromProps
   } else {
-    return Colors[theme][colorName];
+    return Colors[theme][colorName]
   }
 }
 
@@ -34,10 +34,10 @@ export type TextProps = ThemeProps & DefaultText['props'];
 export type ViewProps = ThemeProps & DefaultView['props'];
 
 export function Text(props: TextProps) {
-  const { style, lightColor, darkColor, ...otherProps } = props;
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+  const {style, lightColor, darkColor, ...otherProps} = props
+  const color = useThemeColor({light: lightColor, dark: darkColor}, 'text')
 
-  return <DefaultText style={[{ color }, style]} {...otherProps} />;
+  return <DefaultText style={[{color}, style]} {...otherProps} />
 }
 
 type DefaultTextInputProps = React.ComponentProps<typeof DefaultTextInput>
@@ -45,9 +45,9 @@ interface TextInputProps extends DefaultTextInputProps {
   label?: string;
 }
 
-export function TextInput(props: TextInputProps ) {
-  const { style, ...otherProps } = props;
-  const backgroundColor = useThemeColor({}, 'background');
+export function TextInput(props: TextInputProps) {
+  const {style, ...otherProps} = props
+  const backgroundColor = useThemeColor({}, 'background')
   const color = useThemeColor({}, 'text')
 
   return <View style={[{
@@ -56,18 +56,19 @@ export function TextInput(props: TextInputProps ) {
     flexGrow: 1,
     position: 'relative',
     paddingTop: 8
-  }, props.style]}>
+  },
+  props.style]}>
     {props.label && <Text style={{
-        position: 'absolute',
-        top: 0,
-        left: 6,
-        zIndex: 100,
-        paddingHorizontal: 4,
-        backgroundColor,
-        fontSize: 12
-      }}>
-        {props.label}
-      </Text>
+      position: 'absolute',
+      top: 0,
+      left: 6,
+      zIndex: 100,
+      paddingHorizontal: 4,
+      backgroundColor,
+      fontSize: 12
+    }}>
+      {props.label}
+    </Text>
     }
     <DefaultTextInput style={[{
       backgroundColor,
@@ -77,28 +78,30 @@ export function TextInput(props: TextInputProps ) {
       color,
       padding: 10,
       flexGrow: 1
-    }, style]} {...otherProps} />
+    },
+    style]} {...otherProps} />
   </View>
 }
 
 export function View(props: ViewProps) {
-  const { style, lightColor, darkColor, ...otherProps } = props;
-  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+  const {style, lightColor, darkColor, ...otherProps} = props
+  const backgroundColor = useThemeColor({light: lightColor, dark: darkColor}, 'background')
 
-  return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
+  return <DefaultView style={[{backgroundColor}, style]} {...otherProps} />
 }
 
 export function Picker(props: PickerProps) {
-  const { style, ...otherProps } = props;
-  const backgroundColor = useThemeColor({}, 'background');
-  const color = useThemeColor({}, 'text');
+  const {style, ...otherProps} = props
+  const backgroundColor = useThemeColor({}, 'background')
+  const color = useThemeColor({}, 'text')
 
   return <View style={[{
     flex: 1,
     flexDirection: 'row',
     flexGrow: 1,
     position: 'relative'
-  }, props.style]}>
+  },
+  props.style]}>
     <View style={{
       borderColor: color,
       borderWidth: 1,
@@ -143,7 +146,7 @@ type PaginatorProps = {
 export const Paginator = (props: PaginatorProps) => {
   const numPages = Math.ceil(props.numItems/props.pageSize),
         pickerItems = []
-  for(let i = 0; i < numPages; i++)
+  for (let i = 0; i < numPages; i++)
     pickerItems.push(
       <Picker.Item key={i} label={(i + 1).toString()} value={i} />
     )
@@ -201,5 +204,5 @@ export const Paginator = (props: PaginatorProps) => {
  */
 export function Icon(props: any) {
   const color = useThemeColor({}, 'text')
-  return <FontAwesome size={30}  {...props} style={{ color, ...props.style }}/>;
+  return <FontAwesome size={30}  {...props} style={{color, ...props.style}}/>
 }

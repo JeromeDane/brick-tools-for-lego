@@ -4,10 +4,10 @@
  * https://reactnavigation.org/docs/configuring-links
  */
 
-import { LinkingOptions } from '@react-navigation/native';
-import * as Linking from 'expo-linking';
+import {LinkingOptions} from '@react-navigation/native'
+import * as Linking from 'expo-linking'
 
-import { RootStackParamList } from './types';
+import {RootStackParamList} from './types'
 
 const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [Linking.makeUrl('https://jeromedane.github.io/')],
@@ -21,8 +21,8 @@ const linking: LinkingOptions<RootStackParamList> = {
           Parts: 'parts',
           Themes: 'themes',
           Sets: 'sets',
-          About: 'about',
-        },
+          About: 'about'
+        }
       },
       Element: 'brick-tools-for-lego/element/:id',
       Set: {
@@ -35,9 +35,9 @@ const linking: LinkingOptions<RootStackParamList> = {
       },
       Settings: 'brick-tools-for-lego/settings',
       Modal: 'brick-tools-for-lego/modal',
-      NotFound: '*',
-    },
+      NotFound: '*'
+    }
   }
-};
+}
 
-export default linking;
+export default linking

@@ -1,15 +1,15 @@
-import React, { useRef, useState } from 'react'
-import { ScrollView, StyleSheet, TouchableOpacity } from 'react-native'
+import React, {useRef, useState} from 'react'
+import {ScrollView, StyleSheet, TouchableOpacity} from 'react-native'
 import sortBy from 'sort-by'
-import { Paginator, Picker, Text, TextInput, View } from '../components/Themed'
+import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
-import { RootTabScreenProps } from '../types'
+import {RootTabScreenProps} from '../types'
 import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
-import { useIsLoggedIn } from '../api/brickset'
+import {useIsLoggedIn} from '../api/brickset'
 import TextLink from '../components/TextLink'
 
-export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
+export default function TabsScreen({navigation}: RootTabScreenProps<'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
@@ -33,7 +33,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
   return (
     <ScrollView ref={scrollRef} style={{
       padding: 20,
-      paddingBottom: 100,
+      paddingBottom: 100
     }}>
       <View>
         <TextInput
@@ -150,14 +150,14 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
       <View style={{height: 20}} />
       {filteredSets.length
         ? <Paginator
-            pageSize={pageSize}
-            numItems={filteredSets.length}
-            onPageSizeChange={setPageSize}
-            onPageChange={(val : number) => {
-              scrollRef.current?.scrollTo({y: 0, animated: true})
-              setCurrentPage(val)
-            }}
-            selectedValue={currentPage} />
+          pageSize={pageSize}
+          numItems={filteredSets.length}
+          onPageSizeChange={setPageSize}
+          onPageChange={(val : number) => {
+            scrollRef.current?.scrollTo({y: 0, animated: true})
+            setCurrentPage(val)
+          }}
+          selectedValue={currentPage} />
         : null
       }
       <View style={{height: 50}} />
@@ -182,5 +182,5 @@ const styles = StyleSheet.create({
   image: {
     backgroundColor: 'gray',
     marginRight: 10
-  },
+  }
 })

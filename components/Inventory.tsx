@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import sortBy from 'sort-by'
-import { Image, TouchableOpacity } from 'react-native'
-import { Picker, Text, View } from './Themed'
+import {Image, TouchableOpacity} from 'react-native'
+import {Picker, Text, View} from './Themed'
 import inventoryParts from '../data/inventory-parts'
 import Switch from './Switch'
 

@@ -41,7 +41,7 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
           setCollection(Object.assign({}, updatedCollection))
           await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
         },
-        api = (method: string, data: Object) => {
+        api = (method: string, data: any) => {
           return new Promise((resolve, reject) =>
             fetch('https://brickset.com/api/v3.asmx/' + method, {
               method: 'POST',
@@ -123,45 +123,45 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
           }, Object.assign({}, ownedResult)))
           resolve(null)
         }),
-      setWanted = async ({bricksetID, setNum}: Set, wanted: boolean) =>
-        api('setCollection', {
-          SetID: bricksetID,
-          params: JSON.stringify({want: wanted ? 1 : 0})
-        })
-          .then((response : any) => {
-            if(response.status == 'success') {
-              collection[setNum] = collection[setNum] || {
-                owned: false,
-                wanted: false,
-                qtyOwned: 0,
-                rating: 0,
-                notes: ''
-              }
-              collection[setNum].wanted = wanted
-              console.log(`setting ${setNum} as wanted: ${wanted}`)
-              saveCollection(collection)
-            }
-          }),
-      setOwned = async ({bricksetID, setNum}: Set, qtyOwned: number) =>
-        api('setCollection', {
-          SetID: bricksetID,
-          params: JSON.stringify({qtyOwned, owned: qtyOwned > 0 ? 1 : 0})
-        })
-          .then((response : any) => {
-            if(response.status == 'success') {
-              collection[setNum] = collection[setNum] || {
-                owned: false,
-                wanted: false,
-                qtyOwned: 0,
-                rating: 0,
-                notes: ''
-              }
-              collection[setNum].qtyOwned = qtyOwned
-              collection[setNum].owned = qtyOwned > 0
-              console.log(`setting ${setNum} as owned: ${qtyOwned}`)
-              saveCollection(collection)
-            }
+        setWanted = async ({bricksetID, setNum}: Set, wanted: boolean) =>
+          api('setCollection', {
+            SetID: bricksetID,
+            params: JSON.stringify({want: wanted ? 1 : 0})
           })
+            .then((response : any) => {
+              if(response.status == 'success') {
+                collection[setNum] = collection[setNum] || {
+                  owned: false,
+                  wanted: false,
+                  qtyOwned: 0,
+                  rating: 0,
+                  notes: ''
+                }
+                collection[setNum].wanted = wanted
+                console.log(`setting ${setNum} as wanted: ${wanted}`)
+                saveCollection(collection)
+              }
+            }),
+        setOwned = async ({bricksetID, setNum}: Set, qtyOwned: number) =>
+          api('setCollection', {
+            SetID: bricksetID,
+            params: JSON.stringify({qtyOwned, owned: qtyOwned > 0 ? 1 : 0})
+          })
+            .then((response : any) => {
+              if(response.status == 'success') {
+                collection[setNum] = collection[setNum] || {
+                  owned: false,
+                  wanted: false,
+                  qtyOwned: 0,
+                  rating: 0,
+                  notes: ''
+                }
+                collection[setNum].qtyOwned = qtyOwned
+                collection[setNum].owned = qtyOwned > 0
+                console.log(`setting ${setNum} as owned: ${qtyOwned}`)
+                saveCollection(collection)
+              }
+            })
   useEffect(() => {
     if(!storageRead) {
       storageRead = true

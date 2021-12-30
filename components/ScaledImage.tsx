@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import { Image as DefaultImage } from 'react-native';
-import Colors from '../constants/Colors';
-import useColorScheme from '../hooks/useColorScheme';
+import React, {useEffect, useState} from 'react'
+import {Image as DefaultImage} from 'react-native'
+import Colors from '../constants/Colors'
+import useColorScheme from '../hooks/useColorScheme'
 
 type DefaultImageProps = React.ComponentProps<typeof DefaultImage>
 interface ImageProps extends DefaultImageProps {
@@ -11,7 +11,7 @@ interface ImageProps extends DefaultImageProps {
 }
 
 const ScaledImage = (props: ImageProps) => {
-  const { style, ...otherProps } = props,
+  const {style, ...otherProps} = props,
         [[width, height], setImageSize] = useState([props.width || 100, props.height || 100])
   useEffect(() => {
     DefaultImage.getSize(props.source.uri, (w, h) => {
@@ -28,7 +28,8 @@ const ScaledImage = (props: ImageProps) => {
     backgroundColor: Colors[useColorScheme()].background,
     width,
     height
-  }, style]} {...otherProps} />
+  },
+  style]} {...otherProps} />
 }
 
 export default ScaledImage

@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { useCollection } from '../api/brickset'
+import {useEffect, useState} from 'react'
+import {useCollection} from '../api/brickset'
 import setsData from '../data/raw/sets.json'
 import bricksetSets from './brickset/sets.json'
 import themes, {Theme} from './themes'
@@ -90,7 +90,7 @@ export const useSets = () => {
         wantedBy: bricksetSet ? (bricksetSet.collections.wantedBy || 0) : 0,
         image: {
           imageURL: (bricksetSet && bricksetSet.image && bricksetSet.imageURL) || `https://images.brickset.com/sets/images/${setData.setNum}.jpg`,
-          thumbnailURL: (bricksetSet && bricksetSet.image && bricksetSet.thumbnailURL) || `https://images.brickset.com/sets/images/${setData.setNum}.jpg`,
+          thumbnailURL: (bricksetSet && bricksetSet.image && bricksetSet.thumbnailURL) || `https://images.brickset.com/sets/images/${setData.setNum}.jpg`
         },
         collection: {
           owned: myCollection ? myCollection.owned : false,
