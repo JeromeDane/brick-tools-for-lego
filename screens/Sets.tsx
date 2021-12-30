@@ -75,7 +75,7 @@ export default function TabsScreen({ navigation }: RootTabScreenProps<'Sets'>) {
           <Picker.Item label="Name (desc)" value="-name" />
           <Picker.Item label="Parts" value="numParts" />
           <Picker.Item label="Parts (desc)" value="-numParts" />
-          <Picker.Item label="Retail Price" value="-LEGOCom.US.retailPrice" />
+          <Picker.Item label="Retail Price" value="LEGOCom.US.retailPrice" />
           <Picker.Item label="Retail Price (desc)" value="-LEGOCom.US.retailPrice" />
           <Picker.Item label="Year Released" value="year" />
           <Picker.Item label="Year Released (desc)" value="-year" />
