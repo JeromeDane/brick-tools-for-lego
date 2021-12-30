@@ -8,6 +8,8 @@ LEGO® is a trademark of the LEGO Group of companies which does not sponsor, aut
 
 Show your ❤️ and support for this project and help keep it alive by [making a donation](https://www.paypal.com/donate?hosted_button_id=LWSCPL34NZ6LJ).
 
+Follow the project [on Twitter](https://twitter.com/BrickTools4LEGO) for updates/announcements, or join the Reddit community at [r/BrickToolsForLEGO/](https://www.reddit.com/r/BrickToolsForLEGO/).
+
 ## Features
 
 
