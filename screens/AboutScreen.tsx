@@ -21,8 +21,11 @@ export default function AboutScreen({ navigation }: RootStackScreenProps<'About'
       <TextLink style={styles.paragraph} url="https://github.com/JeromeDane/brick-tools-for-lego/issues?q=is%3Aopen+is%3Aissue+label%3Abug">
         Known bugs
       </TextLink>
+      <TextLink style={styles.paragraph} url="https://twitter.com/BrickTools4LEGO">
+        @BrickTools4LEGO on Twitter
+      </TextLink>
       <TextLink style={styles.paragraph} url="https://www.reddit.com/r/BrickToolsForLEGO/">
-        r/BrickToolsForLEGO/
+        Reddit community: r/BrickToolsForLEGO/
       </TextLink>
       <Text style={styles.paragraph}>
         Show your ❤️ for this project:
