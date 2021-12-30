@@ -9,7 +9,7 @@ export default function AboutScreen({ navigation }: RootStackScreenProps<'About'
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.paragraph}>
-        This project is free, open source, and maintained by out of a love of all things LEGO®.{' '}
+        This project is free, open source, and maintained by volunteers out of a love of all things LEGO®.{' '}
         If you'd like to get involved in any way, check out this project's{' '}
         <TextLink url="https://github.com/JeromeDane/brick-tools-for-lego">
           GitHub page
