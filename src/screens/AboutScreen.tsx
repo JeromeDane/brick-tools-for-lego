@@ -2,7 +2,7 @@ import * as React from 'react'
 import {StyleSheet, Linking, Button, ScrollView} from 'react-native'
 import {Text, View} from '../components/Themed'
 import TextLink from '../components/TextLink'
-import {version} from '../package.json'
+import {version} from '../../package.json'
 
 export default function AboutScreen() {
   return (

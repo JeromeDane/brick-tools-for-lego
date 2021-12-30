@@ -1,4 +1,4 @@
-import themesData from '../data/raw/themes.json'
+import themesData from './raw/themes.json'
 
 type ThemeData = {
   id: string

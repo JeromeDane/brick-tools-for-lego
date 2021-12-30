@@ -9,7 +9,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-data/rebrickable/
+src/data/rebrickable/*.csv
 
 # macOS
 .DS_Store

@@ -4,11 +4,11 @@ export default {
     slug: 'brickToolsForLego',
     version: '0.0.1',
     orientation: 'portrait',
-    icon: './assets/images/icon.png',
+    icon: './src/assets/images/icon.png',
     scheme: 'brick-tools-for-lego',
     userInterfaceStyle: 'automatic',
     splash: {
-      image: './assets/images/splash.png',
+      image: './src/assets/images/splash.png',
       resizeMode: 'contain',
       backgroundColor: '#ffffff'
     },
@@ -24,13 +24,13 @@ export default {
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: './assets/images/adaptive-icon.png',
+        foregroundImage: './src/assets/images/adaptive-icon.png',
         backgroundColor: '#ffffff'
       },
       package: 'com.jeromedane.bricktoolsforlego'
     },
     web: {
-      favicon: './assets/images/favicon.png'
+      favicon: './src/assets/images/favicon.png'
     },
     extra: {
       BRICKSET_API_KEY: process.env.BRICKSET_API_KEY

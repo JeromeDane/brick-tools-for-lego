@@ -15,7 +15,7 @@ const run = async () => {
   if(argv.updateData) await updateCsvData()
   await buildJson()
   const bricksetSets = JSON.parse(
-    readFileSync(path.join(__dirname, '../data/brickset/sets.json')).toString()
+    readFileSync(path.join(__dirname, '../src/data/brickset/sets.json')).toString()
   )
   console.log(Object.keys(bricksetSets).length, 'sets currently loaded')
   // process.exit(0)
@@ -36,7 +36,7 @@ const run = async () => {
   //     bricksetSets[set.number + '-' + set.numberVariant] = set
   //   })
   //   writeFileSync(
-  //     path.join(__dirname, '../data/brickset/sets.json'),
+  //     path.join(__dirname, '../src/data/brickset/sets.json'),
   //     JSON.stringify(bricksetSets, null, 2)
   //   )
   //   if(result.sets.length == 500 && pageNumber < 200) await getSets(pageNumber + 1)

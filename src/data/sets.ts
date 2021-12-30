@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import {useCollection} from '../api/brickset'
-import setsData from '../data/raw/sets.json'
+import setsData from './raw/sets.json'
 import bricksetSets from './brickset/sets.json'
 import themes, {Theme} from './themes'
 
