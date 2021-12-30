@@ -118,5 +118,5 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
         } title="Rebrickable" />
       </View>
     </ScrollView>
-    : <Text>Unable to find set number "{id}"</Text>
+    : <Text>Unable to find set number &quot;{id}&quot;</Text>
 }

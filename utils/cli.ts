@@ -1,12 +1,12 @@
-import {json} from 'stream/consumers'
 import {buildJson, updateCsvData} from './rebrickable'
-import {readFileSync, writeFileSync} from 'fs'
+import {readFileSync} from 'fs'
 import bricksetApi from './brickset-api'
 import path from 'path'
+import yargs from 'yargs/yargs'
 
-const yargs = require('yargs/yargs')
-const {hideBin} = require('yargs/helpers')
-const argv = yargs(hideBin(process.argv)).argv
+// TODO: figure out why this can't be done as an import
+const {hideBin} = require('yargs/helpers'),
+      argv = yargs(hideBin(process.argv)).argv
 
 const run = async () => {
   const usageResults = await bricksetApi('getKeyUsageStats')

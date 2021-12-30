@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react'
-import {ScrollView, StyleSheet, ViewPropTypes} from 'react-native'
+import React from 'react'
+import {ScrollView, StyleSheet} from 'react-native'
 import sortBy from 'sort-by'
-import {Text, View} from '../components/Themed'
-import {RootDrawerParamList} from '../types'
+import {Text} from '../components/Themed'
 import themes from '../data/raw/themes.json'
 
-export default function TabsScreen({navigation}: RootDrawerParamList<'Themes'>) {
+export default function TabsScreen() {
   return (
     <ScrollView style={styles.container}>
       {themes

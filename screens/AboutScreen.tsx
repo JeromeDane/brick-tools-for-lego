@@ -9,7 +9,7 @@ export default function AboutScreen() {
     <ScrollView style={styles.container}>
       <Text style={styles.paragraph}>
         This project is free, open source, and maintained by volunteers out of a love of all things LEGO®.{' '}
-        If you'd like to get involved in any way, check out this project's{' '}
+        If you&apos;d like to get involved in any way, check out this project&apos;s{' '}
         <TextLink url="https://github.com/JeromeDane/brick-tools-for-lego">
           GitHub page
         </TextLink>.

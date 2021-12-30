@@ -3,7 +3,7 @@ import formUrlEncode from 'form-urlencoded'
 
 let bricksetUserHash = ''
 
-const api : any = async (method: string, data: Object = {}) => {
+const api : any = async (method: string, data: any = {}) => {
   if(method != 'login' && !bricksetUserHash) {
     const {hash} = await api('login', {
       username: process.env.BRICKSET_USERNAME,

@@ -95,7 +95,7 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
           await AsyncStorage.setItem(BRICKSET_KEYS.userHash, '')
           setIsLoggedIn(false)
         },
-        loadCollection = () => new Promise(async (resolve, reject) => {
+        loadCollection = async () => {
           console.log('loading collection')
           const parseCollection = async (result: any) => {
             if(result.status === 'success') {
@@ -107,7 +107,7 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
             }
             else {
               console.log(JSON.stringify(result, null, 2))
-              reject(null)
+              return null
             }
           }
           const ownedResult = await api('getSets', {params: JSON.stringify({owned: 1, pageSize: 500})})
@@ -121,8 +121,8 @@ export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.El
             else acc[setNum] = wantedResult[setNum]
             return acc
           }, Object.assign({}, ownedResult)))
-          resolve(null)
-        }),
+          return null
+        },
         setWanted = async ({bricksetID, setNum}: Set, wanted: boolean) =>
           api('setCollection', {
             SetID: bricksetID,

@@ -5,6 +5,7 @@ import path from 'path'
 import {promisify} from 'util'
 import bricksetApi from './brickset-api'
 
+// TODO: figure out why this can't be done as an import
 const csv = require('csvtojson')
 const gUnzip = require('gunzip-file')
 const writeFilePromise = promisify(writeFile)
@@ -18,7 +19,7 @@ mkdirSync(tmpDir, {recursive: true})
 
 const downloadGzAndExtract = async (url: string) =>
   new Promise(resolve => {
-    const outFile = (url.match(/\/([^\/]+)\.gz/) || '')[1]
+    const outFile = (url.match(/\/([^/]+)\.gz/) || '')[1]
     const gZipDest = path.join(tmpDir, outFile + '.gz')
     process.stdout.write('Downloading ' + outFile + '...')
     fetch(url)
@@ -56,7 +57,7 @@ export const updateCsvData = async () => {
   rmSync(tmpDir, {recursive: true})
 }
 
-const saveData = (type: string, data: Object) => {
+const saveData = (type: string, data: any) => {
   process.stdout.write(`Saving ${type} ...`)
   writeFileSync(
     path.join(dataDir, type + '.json'),

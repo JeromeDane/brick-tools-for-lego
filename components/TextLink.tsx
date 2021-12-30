@@ -7,10 +7,12 @@ interface TextLinkProps extends TextProps {
   url?: string
 }
 
-export default function(props: TextLinkProps) {
+const TextLink = (props: TextLinkProps) => {
   return <Text
     {...Object.assign({}, props,
       props.url ? {onPress: () => Linking.openURL(props.url!)} : {}
     )}
     style={[props.style, {color: '#2e78b7'}]} />
 }
+
+export default TextLink

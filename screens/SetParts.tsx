@@ -21,7 +21,7 @@ export default function SetPartsScreen({navigation, route: {params: {id}}} : Mat
     <ScrollView style={{padding: 20}}>
       {inventory
         ? <Inventory id={inventory.id} navigation={navigation} />
-        : <Text>Unable to find inventory set number "{id}"</Text>
+        : <Text>Unable to find inventory set number &quot;{id}&quot;</Text>
       }
     </ScrollView>
   )

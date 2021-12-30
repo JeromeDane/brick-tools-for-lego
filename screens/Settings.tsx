@@ -1,14 +1,12 @@
 import React, {useState} from 'react'
-import {StyleSheet, Linking, Button, ScrollView} from 'react-native'
+import {StyleSheet, Button, ScrollView} from 'react-native'
 import {Text, TextInput, View} from '../components/Themed'
 import Spinner from '../components/Spinner'
-import {RootStackScreenProps} from '../navigation/types'
 import {useCollection, useIsLoggedIn, useLoadCollection, useLogin, useLogOut} from '../api/brickset'
 import TextLink from '../components/TextLink'
 
-export default function SettingsScreen({navigation}: RootStackScreenProps<'Settings'>) {
-  const [isLoading, setIsLoading] = useState(false),
-        [username, setUsername] = useState(''),
+export default function SettingsScreen() {
+  const [username, setUsername] = useState(''),
         [password, setPassword] = useState(''),
         [loadingMessage, setLoadingMessage] = useState(''),
         collection = useCollection(),
@@ -46,12 +44,12 @@ export default function SettingsScreen({navigation}: RootStackScreenProps<'Setti
           <Text style={{marginBottom: 10}}>
             Log into your{' '}
             <TextLink url="https://www.brickset.com">Brickset.com</TextLink>{' '}
-            account to access your personal data. If you don't already have one, you'll need to{' '}
+            account to access your personal data. If you don&apos;t already have one, you&apos;ll need to{' '}
             <TextLink url="https://brickset.com/signup">create an account</TextLink>.
           </Text>
           <TextInput label="username" onChangeText={setUsername} style={{marginBottom: 10}} />
           <TextInput label="password" secureTextEntry={true} onChangeText={setPassword} style={{marginBottom: 10}} />
-          <Button disabled={isLoading} title="Login" onPress={() => {
+          <Button title="Login" onPress={() => {
             setLoadingMessage('Logging in to Brickset ...')
             login(username, password)
               .then(() => {

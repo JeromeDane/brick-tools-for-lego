@@ -1,15 +1,16 @@
 import React, {useRef, useState} from 'react'
 import {ScrollView, StyleSheet, TouchableOpacity} from 'react-native'
 import sortBy from 'sort-by'
+import {DrawerScreenProps} from '@react-navigation/drawer'
 import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
-import {RootTabScreenProps} from '../types'
+import {RootDrawerParamList} from '../navigation/types'
 import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
 import {useIsLoggedIn} from '../api/brickset'
 import TextLink from '../components/TextLink'
 
-export default function TabsScreen({navigation}: RootTabScreenProps<'Sets'>) {
+export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerParamList, 'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),

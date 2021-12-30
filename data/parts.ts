@@ -20,7 +20,7 @@ export interface Part extends PartData {
   colors: Color[]
 }
 
-const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^\/]|$))?/
+const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^/]|$))?/
 
 const getSubCategory = ({name, partCatId} : PartData) : string => {
   switch(partCatId) {

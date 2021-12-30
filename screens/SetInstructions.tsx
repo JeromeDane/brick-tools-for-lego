@@ -46,5 +46,5 @@ export default function SetInstructionsScreen({route: {params: {id}}}: MaterialT
         : null
       }
     </ScrollView>
-    : <Text>Unable to find set number "{id}"</Text>
+    : <Text>Unable to find set number &quot;{id}&quot;</Text>
 }
