@@ -30,7 +30,7 @@ const ApiContext = createContext({
 // here so that we don't get into a race condition with `useState` hooks
 let userHash = ''
 
-export const BricksetApiContext = ({children}: {children: JSX.Element[] | JSX.Element}) => {
+export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.Element}) => {
   const BRICKSET_KEYS = {
           userHash: 'bricktools-brickset-user-hash',
           ownedSets: 'bricktools-brickset-owned-set-numbers'
