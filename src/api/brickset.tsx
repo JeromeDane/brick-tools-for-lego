@@ -2,6 +2,7 @@ import React, {useContext, createContext, useEffect, useState} from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Constants from 'expo-constants'
 import formUrlEncode from 'form-urlencoded'
+import {useSetIsLoggedInToBrickset} from '../data/DataProvider'
 import {Set} from '../data/sets'
 
 const apiKey = Constants.manifest.extra.BRICKSET_API_KEY
@@ -39,7 +40,7 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
           userHash: 'bricktools-brickset-user-hash',
           ownedSets: 'bricktools-brickset-owned-set-numbers'
         },
-        [isLoggedIn, setIsLoggedIn] = useState(false),
+        setIsLoggedInToBrickset = useSetIsLoggedInToBrickset(),
         [collection, setCollection] = useState({} as Collection),
         saveCollection = async (updatedCollection: Collection) => {
           setCollection(Object.assign({}, updatedCollection))
@@ -83,7 +84,7 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
               .then(async (response: any) => {
                 if(response.status === 'success') {
                   userHash = response.hash
-                  setIsLoggedIn(true)
+                  setIsLoggedInToBrickset(true)
                   await AsyncStorage.setItem(BRICKSET_KEYS.userHash, response.hash)
                   resolve(null)
                 }
@@ -97,7 +98,7 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
           ),
         logOut = async () => {
           await AsyncStorage.setItem(BRICKSET_KEYS.userHash, '')
-          setIsLoggedIn(false)
+          setIsLoggedInToBrickset(false)
         },
         loadCollection = async () => {
           console.log('loading collection')
@@ -171,7 +172,7 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
       storageRead = true
       AsyncStorage.getItem(BRICKSET_KEYS.userHash)
         .then(hash => {
-          setIsLoggedIn(Boolean(hash))
+          setIsLoggedInToBrickset(Boolean(hash))
           userHash = hash || ''
         })
       AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
@@ -179,7 +180,6 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
     }
   }, [])
   return <ApiContext.Provider value={{
-    isLoggedIn,
     login,
     logOut,
     loadCollection,
@@ -196,7 +196,6 @@ export const useApi = () => useContext(ApiContext).api
 export const useCollection = () => useContext(ApiContext).collection
 export const useLogin = () => useContext(ApiContext).login
 export const useLogOut = () => useContext(ApiContext).logOut
-export const useIsLoggedIn = () => useContext(ApiContext).isLoggedIn
 export const useLoadCollection = () => useContext(ApiContext).loadCollection
 export const useSetWanted = () => useContext(ApiContext).setWanted
 export const useSetOwned = () => useContext(ApiContext).setOwned

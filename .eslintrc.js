@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended'
   ],
   parser: '@typescript-eslint/parser',
@@ -31,7 +32,7 @@ module.exports = {
       }
     ],
     'linebreak-style': ['error', 'unix'],
-    'no-unused-vars': ['error', {vars: 'all'}],
+    '@typescript-eslint/no-unused-vars': ['error', {vars: 'all'}],
     'object-curly-spacing': ['error', 'never'],
     quotes: ['error', 'single'],
     semi: ['error', 'never'],

@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import {StyleSheet, Button, ScrollView} from 'react-native'
 import {Text, TextInput, View} from '../components/Themed'
 import Spinner from '../components/Spinner'
-import {useCollection, useIsLoggedIn, useLoadCollection, useLogin, useLogOut} from '../api/brickset'
+import {useCollection, useLoadCollection, useLogin, useLogOut} from '../api/brickset'
+import {useIsLoggedInToBrickset} from '../data/DataProvider'
 import TextLink from '../components/TextLink'
 import RequireAPISupport from '../components/APISupport'
 
@@ -13,7 +14,7 @@ export default function SettingsScreen() {
         collection = useCollection(),
         login = useLogin(),
         logOut = useLogOut(),
-        isLoggedIn = useIsLoggedIn(),
+        isLoggedIn = useIsLoggedInToBrickset(),
         loadCollection = useLoadCollection()
   return (
     <ScrollView style={{padding: 20}}>

@@ -5,17 +5,18 @@ import {ScrollView, Linking, Button} from 'react-native'
 import {Text, View, TextInput} from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
 import {SetTabsParamList} from '../navigation/SetTabs'
-import {useIsLoggedIn, useSetWanted, useSetOwned} from '../api/brickset'
+import {useSetWanted, useSetOwned} from '../api/brickset'
 import {useSet} from '../data/sets'
 import TextLink from '../components/TextLink'
 import CheckBox from '../components/Checkbox'
+import {useIsLoggedInToBrickset} from '../data/DataProvider'
 
 export default function SetDetailsScreen({navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
   const set = useSet(id),
         [loadingMessage, setLoadingMessage] = useState(''),
-        isLoggedIn = useIsLoggedIn(),
+        isLoggedInToBrickset = useIsLoggedInToBrickset(),
         [quantityOwned, setQuantityOwned] = useState(
-          ((isLoggedIn && set && set.collection && set.collection.qtyOwned) || 0).toString()
+          ((isLoggedInToBrickset && set && set.collection && set.collection.qtyOwned) || 0).toString()
         ),
         setWanted = useSetWanted(),
         setOwned = useSetOwned()
@@ -50,7 +51,7 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
         </Text>
         <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
         <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
-        {isLoggedIn
+        {isLoggedInToBrickset
           ? <View style={{marginTop: 20}}>
             <Text style={{fontWeight: 'bold', marginBottom: 10}}>Collection</Text>
             <View style={{marginBottom: 10}}>

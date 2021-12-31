@@ -7,7 +7,7 @@ import ScaledImage from '../components/ScaledImage'
 import {RootDrawerParamList} from '../navigation/types'
 import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
-import {useIsLoggedIn} from '../api/brickset'
+import {useIsLoggedInToBrickset} from '../data/DataProvider'
 import TextLink from '../components/TextLink'
 
 export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerParamList, 'Sets'>) {
@@ -17,13 +17,13 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
         [theme, setTheme] = useState(''),
         [collectionFilter, setCollectionFilter] = useState(''),
         [currentPage, setCurrentPage] = useState(0),
-        isLoggedIn = useIsLoggedIn(),
+        isLoggedInToBrickset = useIsLoggedInToBrickset(),
         scrollRef = useRef(),
         sets = useSets(),
         filteredSets = sets.filter(set =>
           (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
           (!theme || set.theme.id == theme) &&
-          (!isLoggedIn || !collectionFilter ||
+          (!isLoggedInToBrickset || !collectionFilter ||
             (collectionFilter == 'owned' && set.collection.qtyOwned > 0) ||
             (collectionFilter == 'not-owned' && set.collection.qtyOwned === 0) ||
             (collectionFilter == 'wanted' && set.collection.wanted) ||
@@ -82,7 +82,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
           <Picker.Item label="Year Released (desc)" value="-year" />
         </Picker>
       </View>
-      {isLoggedIn
+      {isLoggedInToBrickset
         ? <View style={{marginVertical: 20}}>
           <Picker
             label="Collection"
