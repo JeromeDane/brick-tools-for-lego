@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import React, {useEffect, useContext, useState, createContext} from 'react'
 import {useCollection} from '../api/brickset'
 import setsData from './raw/sets.json'
 import bricksetSets from './brickset/sets.json'
@@ -62,14 +62,13 @@ const emptyLEGOCom = {
   dateLastAvailable: ''
 }
 
-export const useSets = () => {
+const SetsDataContext = createContext([] as Readonly<Set[]>)
+
+export const SetsDataProvider = ({children}: {children: JSX.Element[] | JSX.Element}) => {
   const collection = useCollection(),
-        [sets, setSets] = useState({
-          byId: {} as {[key: string]: Set},
-          list: [] as Set[]
-        })
+        [sets, setSets] = useState([] as Readonly<Set[]>)
   useEffect(() => {
-    const list : Set[] = (setsData as SetData[]).map(setData => {
+    setSets((setsData as SetData[]).map(setData => {
       const bricksetSet = bricksetSets[setData.setNum],
             myCollection = collection[setData.setNum]
       return {
@@ -101,13 +100,13 @@ export const useSets = () => {
         },
         bricksetID: bricksetSet ? bricksetSet.setID : -1
       }
-    })
-    setSets({
-      byId: list.reduce((acc, set: Set) => {
-        return Object.assign(acc, {[set.setNum]: set})
-      }, {} as {[key: string]: Set}),
-      list
-    })
+    }))
   }, [collection])
-  return sets
+  return <SetsDataContext.Provider value={sets}>
+    {children}
+  </SetsDataContext.Provider>
 }
+
+export const useSets = () => useContext(SetsDataContext)
+export const useSet = (setNumber: string) =>
+  useContext(SetsDataContext).find(({setNum}) => setNum === setNumber)

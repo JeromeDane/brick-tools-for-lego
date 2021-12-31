@@ -3,7 +3,7 @@ import React, {useEffect} from 'react'
 import SetDetailsScreen from '../screens/SetDetails'
 import SetPartsScreen from '../screens/SetParts'
 import SetInstructionsScreen from '../screens/SetInstructions'
-import {useSets} from '../data/sets'
+import {useSet} from '../data/sets'
 import {RootStackParamList} from './types'
 
 export type SetTabsParamList = {
@@ -15,7 +15,7 @@ export type SetTabsParamList = {
 const Tab = createMaterialTopTabNavigator()
 
 const SetTabs = ({navigation: {setOptions}, route: {params: {id}}}: MaterialTopTabScreenProps<RootStackParamList, 'Set'>) => {
-  const set = useSets().byId[id]
+  const set = useSet(id)
   useEffect(() => {
     setOptions({title: set?.setNum.replace(/-.*$/, '') + ' ' + set?.name})
   }, [set])

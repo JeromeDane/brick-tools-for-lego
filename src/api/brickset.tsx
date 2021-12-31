@@ -14,12 +14,16 @@ type CollectionItem = {
   notes: string;
 }
 
+type Immutable<T> = {
+  readonly [K in keyof T]: Immutable<T[K]>;
+}
+
 export type Collection = {[key: string]: CollectionItem}
 let storageRead = false
 
 const ApiContext = createContext({
   isLoggedIn: false,
-  collection: {} as Collection,
+  collection: {} as Immutable<Collection>,
   sets: {} as {[key: string]: Set},
   setsList: [] as Set[],
   setWanted: async ({bricksetID, setNum}: Set, wanted: boolean) => {},

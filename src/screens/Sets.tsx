@@ -19,8 +19,8 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
         [currentPage, setCurrentPage] = useState(0),
         isLoggedIn = useIsLoggedIn(),
         scrollRef = useRef(),
-        {list} = useSets(),
-        filteredSets = list.filter(set =>
+        sets = useSets(),
+        filteredSets = sets.filter(set =>
           (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
           (!theme || set.theme.id == theme) &&
           (!isLoggedIn || !collectionFilter ||
@@ -142,7 +142,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
             </TouchableOpacity>
           )
         : <Text style={{textAlign: 'center'}}>
-          {list.length
+          {sets.length
             ? 'No results match your search criteria'
             : 'Loading sets ...'
           }

@@ -4,12 +4,12 @@ import {ScrollView, Button} from 'react-native'
 import WebView from 'react-native-webview'
 import {Text, View} from '../components/Themed'
 import {SetTabsParamList} from '../navigation/SetTabs'
-import {useSets} from '../data/sets'
+import {useSet} from '../data/sets'
 import {useApi} from '../api/brickset'
 import RequireAPISupport from '../components/APISupport'
 
 export default function SetInstructionsScreen({route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
-  const set = useSets().byId[id],
+  const set = useSet(id),
         [instructions, setInstructions] = useState(null),
         [downloadUrl, setDownloadUrl] = useState(''),
         [error, setError] = useState(false),

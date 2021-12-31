@@ -3,12 +3,12 @@ import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
 import {ScrollView} from 'react-native'
 import {Text} from '../components/Themed'
 import {SetTabsParamList} from '../navigation/SetTabs'
-import {useSets} from '../data/sets'
+import {useSet} from '../data/sets'
 import Inventory from '../components/Inventory'
 import inventoryParts, {InventoryPart} from '../data/inventory-parts'
 
 export default function SetPartsScreen({navigation, route: {params: {id}}} : MaterialTopTabScreenProps<SetTabsParamList, 'SetParts'>) {
-  const set = useSets().byId[id],
+  const set = useSet(id),
         inventory = set && set.inventories && set.inventories[0],
         numParts = ((inventory && inventoryParts[inventory.id]) || [])
           .reduce((count: number, inventoryPart: InventoryPart) => count + inventoryPart.quantity, 0)
