@@ -32,8 +32,8 @@ export default function SetInstructionsScreen({route: {params: {id}}}: MaterialT
           ? <Text>No instructions found.</Text>
           : null
         }
-        {instructions?.map(instruction =>
-          <View style={{marginVertical: 10}} key={instruction.url}>
+        {instructions?.map((instruction, i: number) =>
+          <View style={{marginVertical: 10}} key={i}>
             <Button
               disabled={instruction.URL === downloadUrl}
               onPress={() => {
