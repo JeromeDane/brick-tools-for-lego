@@ -6,10 +6,10 @@ import {Text, View, TextInput} from '../components/Themed'
 import ScaledImage from '../components/ScaledImage'
 import {SetTabsParamList} from '../navigation/SetTabs'
 import {useSetWanted, useSetOwned} from '../api/brickset'
-import {useSet} from '../data/sets'
 import TextLink from '../components/TextLink'
 import CheckBox from '../components/Checkbox'
-import {useIsLoggedInToBrickset} from '../data/DataProvider'
+import {useIsLoggedInToBrickset} from '../api/brickset'
+import {useSet} from '../data/sets'
 
 export default function SetDetailsScreen({navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
   const set = useSet(id),

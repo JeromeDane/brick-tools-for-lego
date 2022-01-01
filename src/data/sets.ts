@@ -1,8 +1,10 @@
-import React, {useEffect, useContext, useState, createContext} from 'react'
-import {useCollection} from '../api/brickset'
+import {useContext, useEffect} from 'react'
+import {useBricksetCollection} from '../api/brickset'
 import setsData from './raw/sets.json'
 import bricksetSets from './brickset/sets.json'
-import themes, {Theme} from './themes'
+import themes from './themes'
+import {DataContext} from './DataProvider'
+import type {BricksetCollection} from './types'
 
 type SetData = {
   setNum: string;
@@ -17,60 +19,18 @@ type SetData = {
   }[]
 }
 
-type LEGOComPrice = {
-  retailPrice?: number;
-  dateFirstAvailable?: string,
-  dateLastAvailable?: string
-}
-
-export type Set = {
-  setNum: string;
-  name: string;
-  year: number;
-  theme: Theme;
-  numParts: number;
-  setNumSort: number;
-  inventories: {
-    id: string;
-    version: string;
-  }[]
-  LEGOCom: {
-    US: LEGOComPrice;
-    UK: LEGOComPrice;
-    CA: LEGOComPrice;
-    DE: LEGOComPrice;
-  }
-  ownedBy: number
-  wantedBy: number
-  image: {
-    imageURL: string
-    thumbnailURL: string
-  }
-  collection: {
-    owned: boolean
-    wanted: boolean
-    qtyOwned: number
-    rating: number
-    notes: string
-  }
-  bricksetID: number
-}
-
 const emptyLEGOCom = {
   retailPrice: 0,
   dateFirstAvailable: '',
   dateLastAvailable: ''
 }
 
-const SetsDataContext = createContext([] as Readonly<Set[]>)
-
-export const SetsDataProvider = ({children}: {children: JSX.Element[] | JSX.Element}) => {
-  const collection = useCollection(),
-        [sets, setSets] = useState([] as Readonly<Set[]>)
-  useEffect(() => {
-    setSets((setsData as SetData[]).map(setData => {
+const processSets = (bricksetCollection: BricksetCollection) => {
+  console.log('processing sets')
+  return (setsData as SetData[])
+    .map(setData => {
       const bricksetSet = bricksetSets[setData.setNum],
-            myCollection = collection[setData.setNum]
+            myCollection = bricksetCollection[setData.setNum]
       return {
         setNum: setData.setNum,
         name: setData.name,
@@ -100,13 +60,17 @@ export const SetsDataProvider = ({children}: {children: JSX.Element[] | JSX.Elem
         },
         bricksetID: bricksetSet ? bricksetSet.setID : -1
       }
-    }))
-  }, [collection])
-  return <SetsDataContext.Provider value={sets}>
-    {children}
-  </SetsDataContext.Provider>
+    })
 }
 
-export const useSets = () => useContext(SetsDataContext)
-export const useSet = (setNumber: string) =>
-  useContext(SetsDataContext).find(({setNum}) => setNum === setNumber)
+export const useSets = () => {
+  const {sets, setSets} = useContext(DataContext),
+        bricksetCollection = useBricksetCollection()
+  useEffect(() => {
+    console.log('sets need reprocessing due to new collection')
+    setSets(processSets(bricksetCollection))
+  }, [bricksetCollection])
+  return sets
+}
+export const useSetSets = () => useContext(DataContext).setSets
+export const useSet = (setNumber: string) => useSets().find(({setNum}) => setNum === setNumber)

@@ -7,7 +7,7 @@ import ScaledImage from '../components/ScaledImage'
 import {RootDrawerParamList} from '../navigation/types'
 import {useSets} from '../data/sets'
 import {themesList} from '../data/themes'
-import {useIsLoggedInToBrickset} from '../data/DataProvider'
+import {useIsLoggedInToBrickset} from '../api/brickset'
 import TextLink from '../components/TextLink'
 
 export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerParamList, 'Sets'>) {

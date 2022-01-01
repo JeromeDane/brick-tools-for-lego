@@ -2,7 +2,6 @@ import {StatusBar} from 'expo-status-bar'
 import React from 'react'
 import {SafeAreaProvider} from 'react-native-safe-area-context'
 import {BricksetAPIProvider} from './api/brickset'
-import {SetsDataProvider} from './data/sets'
 import DataProvider from './data/DataProvider'
 
 import useCachedResources from './hooks/useCachedResources'
@@ -23,10 +22,8 @@ export default function App() {
       <SafeAreaProvider>
         <DataProvider>
           <BricksetAPIProvider>
-            <SetsDataProvider>
-              <Navigation colorScheme={colorScheme} />
-              <StatusBar />
-            </SetsDataProvider>
+            <Navigation colorScheme={colorScheme} />
+            <StatusBar />
           </BricksetAPIProvider>
         </DataProvider>
       </SafeAreaProvider>

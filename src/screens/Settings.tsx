@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import {StyleSheet, Button, ScrollView} from 'react-native'
 import {Text, TextInput, View} from '../components/Themed'
 import Spinner from '../components/Spinner'
-import {useCollection, useLoadCollection, useLogin, useLogOut} from '../api/brickset'
-import {useIsLoggedInToBrickset} from '../data/DataProvider'
+import {useBricksetCollection, useLoadCollection, useLogin, useLogOut} from '../api/brickset'
+import {useIsLoggedInToBrickset} from '../api/brickset'
 import TextLink from '../components/TextLink'
 import RequireAPISupport from '../components/APISupport'
 
@@ -11,7 +11,7 @@ export default function SettingsScreen() {
   const [username, setUsername] = useState(''),
         [password, setPassword] = useState(''),
         [loadingMessage, setLoadingMessage] = useState(''),
-        collection = useCollection(),
+        collection = useBricksetCollection(),
         login = useLogin(),
         logOut = useLogOut(),
         isLoggedIn = useIsLoggedInToBrickset(),

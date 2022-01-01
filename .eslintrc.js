@@ -21,7 +21,6 @@ module.exports = {
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'array-bracket-spacing': ['error', 'never'],
-    'array-element-newline': ['error', {'multiline': true, 'minItems': 3}],
     'comma-dangle': ['error', 'never'],
     'eol-last': ['error', 'always'],
     indent: ['error',

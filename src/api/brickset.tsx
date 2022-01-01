@@ -1,32 +1,13 @@
-import React, {useContext, createContext, useEffect, useState} from 'react'
+import React, {useContext, createContext, useEffect, useMemo} from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Constants from 'expo-constants'
 import formUrlEncode from 'form-urlencoded'
-import {useSetIsLoggedInToBrickset} from '../data/DataProvider'
-import {Set} from '../data/sets'
+import {DataContext} from '../data/DataProvider'
+import {BricksetCollection} from '../data/types'
 
 const apiKey = Constants.manifest.extra.BRICKSET_API_KEY
 
-type CollectionItem = {
-  owned: boolean;
-  wanted: boolean;
-  qtyOwned: number;
-  rating: number;
-  notes: string;
-}
-
-type Immutable<T> = {
-  readonly [K in keyof T]: Immutable<T[K]>;
-}
-
-export type Collection = {[key: string]: CollectionItem}
-let storageRead = false
-
 const ApiContext = createContext({
-  isLoggedIn: false,
-  collection: {} as Immutable<Collection>,
-  sets: {} as {[key: string]: Set},
-  setsList: [] as Set[],
   setWanted: async ({bricksetID, setNum}: Set, wanted: boolean) => {},
   setOwned: async ({bricksetID, setNum}: Set, qtyOwned: number) => {}
 })
@@ -34,49 +15,51 @@ const ApiContext = createContext({
 // Note: Normally I hate mutable variables, but I'll make an exception
 // here so that we don't get into a race condition with `useState` hooks
 let userHash = ''
+let storageRead = false
+
+const api = (method: string, data: any) => {
+  return new Promise((resolve, reject) =>
+    fetch('https://brickset.com/api/v3.asmx/' + method, {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+      },
+      body: formUrlEncode(Object.assign({apiKey},
+        userHash ? Object.assign({}, data, {userHash}) : data
+      ))
+    })
+      .then(async response => {
+        const text = await response.text() || '{error: "No response body"}'
+        // console.log(text)
+        try {
+          resolve(JSON.parse(text))
+        } catch(e) {
+          console.warn(e)
+          console.warn(text)
+          reject(e)
+        }
+      })
+      .catch(e => {
+        console.log('ERROR: API request failed')
+        console.log(e)
+        reject(e)
+      })
+  )
+}
 
 export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.Element}) => {
   const BRICKSET_KEYS = {
           userHash: 'bricktools-brickset-user-hash',
           ownedSets: 'bricktools-brickset-owned-set-numbers'
         },
-        setIsLoggedInToBrickset = useSetIsLoggedInToBrickset(),
-        [collection, setCollection] = useState({} as Collection),
-        saveCollection = async (updatedCollection: Collection) => {
-          setCollection(Object.assign({}, updatedCollection))
+        {bricksetCollection, setBricksetCollection, setIsLoggedInToBrickset} = useContext(DataContext),
+        saveCollection = async (updatedCollection: BricksetCollection) => {
+          console.log('saving collection')
+          setBricksetCollection(Object.assign({}, updatedCollection))
           await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
-        },
-        api = (method: string, data: any) => {
-          return new Promise((resolve, reject) =>
-            fetch('https://brickset.com/api/v3.asmx/' + method, {
-              method: 'POST',
-              mode: 'cors',
-              headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-              },
-              body: formUrlEncode(Object.assign({apiKey},
-                userHash ? Object.assign({}, data, {userHash}) : data
-              ))
-            })
-              .then(async response => {
-                const text = await response.text() || '{error: "No response body"}'
-                // console.log(text)
-                try {
-                  resolve(JSON.parse(text))
-                } catch(e) {
-                  console.warn(e)
-                  console.warn(text)
-                  reject(e)
-                }
-              })
-              .catch(e => {
-                console.log('ERROR: API request failed')
-                console.log(e)
-                reject(e)
-              })
-          )
         },
         login = (username: string, password: string) =>
           new Promise((resolve, reject) =>
@@ -97,7 +80,10 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
               })
           ),
         logOut = async () => {
-          await AsyncStorage.setItem(BRICKSET_KEYS.userHash, '')
+          await Promise.all([
+            AsyncStorage.setItem(BRICKSET_KEYS.userHash, ''),
+            AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, '')
+          ])
           setIsLoggedInToBrickset(false)
         },
         loadCollection = async () => {
@@ -135,16 +121,16 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
           })
             .then((response : any) => {
               if(response.status == 'success') {
-                collection[setNum] = collection[setNum] || {
+                bricksetCollection[setNum] = bricksetCollection[setNum] || {
                   owned: false,
                   wanted: false,
                   qtyOwned: 0,
                   rating: 0,
                   notes: ''
                 }
-                collection[setNum].wanted = wanted
+                bricksetCollection[setNum].wanted = wanted
                 console.log(`setting ${setNum} as wanted: ${wanted}`)
-                saveCollection(collection)
+                saveCollection(bricksetCollection)
               }
             }),
         setOwned = async ({bricksetID, setNum}: Set, qtyOwned: number) =>
@@ -154,17 +140,17 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
           })
             .then((response : any) => {
               if(response.status == 'success') {
-                collection[setNum] = collection[setNum] || {
+                bricksetCollection[setNum] = bricksetCollection[setNum] || {
                   owned: false,
                   wanted: false,
                   qtyOwned: 0,
                   rating: 0,
                   notes: ''
                 }
-                collection[setNum].qtyOwned = qtyOwned
-                collection[setNum].owned = qtyOwned > 0
+                bricksetCollection[setNum].qtyOwned = qtyOwned
+                bricksetCollection[setNum].owned = qtyOwned > 0
                 console.log(`setting ${setNum} as owned: ${qtyOwned}`)
-                saveCollection(collection)
+                saveCollection(bricksetCollection)
               }
             })
   useEffect(() => {
@@ -176,14 +162,16 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
           userHash = hash || ''
         })
       AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
-        .then(result => setCollection(JSON.parse(result || '{}')))
+        .then(result => {
+          if(result) saveCollection(JSON.parse(result))
+        })
     }
   }, [])
   return <ApiContext.Provider value={{
     login,
     logOut,
     loadCollection,
-    collection,
+    bricksetCollection,
     setWanted,
     setOwned,
     api
@@ -192,8 +180,16 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
   </ApiContext.Provider>
 }
 
-export const useApi = () => useContext(ApiContext).api
-export const useCollection = () => useContext(ApiContext).collection
+export const useApi = () => api
+export const useIsLoggedInToBrickset = () => useContext(DataContext).isLoggedInToBrickset
+export const useBricksetCollection = () => {
+  const isLoggedIn = useIsLoggedInToBrickset(),
+        {bricksetCollection} = useContext(DataContext)
+  return useMemo(
+    () => isLoggedIn ? bricksetCollection : {},
+    [isLoggedIn, bricksetCollection]
+  )
+}
 export const useLogin = () => useContext(ApiContext).login
 export const useLogOut = () => useContext(ApiContext).logOut
 export const useLoadCollection = () => useContext(ApiContext).loadCollection
