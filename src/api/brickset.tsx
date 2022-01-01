@@ -15,7 +15,6 @@ const ApiContext = createContext({
 // Note: Normally I hate mutable variables, but I'll make an exception
 // here so that we don't get into a race condition with `useState` hooks
 let userHash = ''
-let storageRead = false
 
 const api = (method: string, data: any) => {
   return new Promise((resolve, reject) =>
