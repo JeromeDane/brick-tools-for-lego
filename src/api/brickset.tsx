@@ -62,34 +62,6 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
           setBricksetCollection(Object.assign({}, updatedCollection))
           await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
         },
-        loadCollection = async () => {
-          console.log('loading collection')
-          const parseCollection = async (result: any) => {
-            if(result.status === 'success') {
-              const setsData = result.sets.reduce((acc: {[key: string]: any}, set: any) => {
-                acc[set.number + '-' + set.numberVariant] = set.collection
-                return acc
-              }, {} as {[key: string]: any})
-              return setsData
-            }
-            else {
-              console.log(JSON.stringify(result, null, 2))
-              return null
-            }
-          }
-          const ownedResult = await api('getSets', {params: JSON.stringify({owned: 1, pageSize: 500})})
-            .then(parseCollection)
-          console.log(`Found ${Object.keys(ownedResult).length} owned sets`)
-          const wantedResult = await api('getSets', {params: JSON.stringify({wanted: 1, pageSize: 500})})
-            .then(parseCollection)
-          console.log(`Found ${Object.keys(wantedResult).length} wanted sets`)
-          saveCollection(Object.keys(wantedResult).reduce((acc, setNum) => {
-            if(acc[setNum]) acc[setNum].wanted = true
-            else acc[setNum] = wantedResult[setNum]
-            return acc
-          }, Object.assign({}, ownedResult)))
-          return null
-        },
         setWanted = async ({bricksetID, setNum}: Set, wanted: boolean) =>
           api('setCollection', {
             SetID: bricksetID,
@@ -144,7 +116,6 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
     }
   }, [])
   return <ApiContext.Provider value={{
-    loadCollection,
     bricksetCollection,
     setWanted,
     setOwned,
@@ -152,6 +123,15 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
   }}>
     {children}
   </ApiContext.Provider>
+}
+
+const useSaveCollection = () => {
+  const {setBricksetCollection} = useContext(DataContext)
+  return async (updatedCollection: BricksetCollection) => {
+    console.log('saving collection')
+    setBricksetCollection(Object.assign({}, updatedCollection))
+    await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
+  }
 }
 
 export const useApi = () => api
@@ -197,6 +177,36 @@ export const useLogOut = () => {
   }
 }
 
-export const useLoadCollection = () => useContext(ApiContext).loadCollection
+export const useLoadCollection = () => {
+  const saveCollection = useSaveCollection()
+  return async () => {
+    console.log('loading collection')
+    const parseCollection = async (result: any) => {
+      if(result.status === 'success') {
+        const setsData = result.sets.reduce((acc: {[key: string]: any}, set: any) => {
+          acc[set.number + '-' + set.numberVariant] = set.collection
+          return acc
+        }, {} as {[key: string]: any})
+        return setsData
+      }
+      else {
+        console.log(JSON.stringify(result, null, 2))
+        return null
+      }
+    }
+    const ownedResult = await api('getSets', {params: JSON.stringify({owned: 1, pageSize: 500})})
+      .then(parseCollection)
+    console.log(`Found ${Object.keys(ownedResult).length} owned sets`)
+    const wantedResult = await api('getSets', {params: JSON.stringify({wanted: 1, pageSize: 500})})
+      .then(parseCollection)
+    console.log(`Found ${Object.keys(wantedResult).length} wanted sets`)
+    saveCollection(Object.keys(wantedResult).reduce((acc, setNum) => {
+      if(acc[setNum]) acc[setNum].wanted = true
+      else acc[setNum] = wantedResult[setNum]
+      return acc
+    }, Object.assign({}, ownedResult)))
+    return null
+  }
+}
 export const useSetWanted = () => useContext(ApiContext).setWanted
 export const useSetOwned = () => useContext(ApiContext).setOwned
