@@ -65,32 +65,33 @@ const useSaveCollection = () => {
 
 export const useApi = () => api
 
+let isLoggedInReadFromStorage = false
 export const useIsLoggedInToBrickset = () => {
   const {setIsLoggedInToBrickset} = useContext(DataContext)
-  useEffect(() => {
+  if(!isLoggedInReadFromStorage) {  // can't use a useState hook here because it re-fires when used in different components
+    isLoggedInReadFromStorage = true
     AsyncStorage.getItem(BRICKSET_KEYS.userHash)
       .then(hash => {
         setIsLoggedInToBrickset(Boolean(hash))
         userHash = hash || ''
       })
-  }, [])
+  }
   return useContext(DataContext).isLoggedInToBrickset
 }
 
+let ownedSetsRead = false
 export const useBricksetCollection = () => {
-  const isLoggedIn = useIsLoggedInToBrickset(),
-        {bricksetCollection} = useContext(DataContext),
+  const {bricksetCollection} = useContext(DataContext),
         saveCollection = useSaveCollection()
-  useEffect(() => {
+  if(!ownedSetsRead) { // can't use a useState hook here because it re-fires when used in different components
+    console.log('reading brickset collection from storage')
+    ownedSetsRead = true
     AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
       .then(result => {
         if(result) saveCollection(JSON.parse(result))
       })
-  }, [])
-  return useMemo(
-    () => isLoggedIn ? bricksetCollection : {},
-    [isLoggedIn, bricksetCollection]
-  )
+  }
+  return bricksetCollection
 }
 
 export const useLogin = () => {
