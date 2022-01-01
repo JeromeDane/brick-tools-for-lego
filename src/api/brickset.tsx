@@ -113,11 +113,11 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
 
 const useSaveCollection = () => {
   const {setBricksetCollection} = useContext(DataContext)
-  return async (updatedCollection: BricksetCollection) => {
+  return useMemo(() => async (updatedCollection: BricksetCollection) => {
     console.log('saving collection')
     setBricksetCollection(Object.assign({}, updatedCollection))
     await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
-  }
+  }, [])
 }
 
 export const useApi = () => api
@@ -152,7 +152,7 @@ export const useBricksetCollection = () => {
 
 export const useLogin = () => {
   const {setIsLoggedInToBrickset} = useContext(DataContext)
-  return (username: string, password: string) =>
+  return useMemo(() => (username: string, password: string) =>
     new Promise((resolve, reject) =>
       api('login', {username, password})
         .then(async (response: any) => {
@@ -170,22 +170,23 @@ export const useLogin = () => {
           }
         })
     )
+  , [])
 }
 
 export const useLogOut = () => {
   const {setIsLoggedInToBrickset} = useContext(DataContext)
-  return async () => {
+  return useMemo(() => async () => {
     await Promise.all([
       AsyncStorage.setItem(BRICKSET_KEYS.userHash, ''),
       AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, '')
     ])
     setIsLoggedInToBrickset(false)
-  }
+  }, [])
 }
 
 export const useLoadCollection = () => {
   const saveCollection = useSaveCollection()
-  return async () => {
+  return useMemo(() => async () => {
     console.log('loading collection')
     const parseCollection = async (result: any) => {
       if(result.status === 'success') {
@@ -212,6 +213,9 @@ export const useLoadCollection = () => {
       return acc
     }, Object.assign({}, ownedResult)))
     return null
+  },
+  [])
+}
   }
 }
 export const useSetWanted = () => useContext(ApiContext).setWanted
