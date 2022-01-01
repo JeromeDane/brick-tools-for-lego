@@ -101,20 +101,6 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
                 saveCollection(bricksetCollection)
               }
             })
-  useEffect(() => {
-    if(!storageRead) {
-      storageRead = true
-      AsyncStorage.getItem(BRICKSET_KEYS.userHash)
-        .then(hash => {
-          setIsLoggedInToBrickset(Boolean(hash))
-          userHash = hash || ''
-        })
-      AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
-        .then(result => {
-          if(result) saveCollection(JSON.parse(result))
-        })
-    }
-  }, [])
   return <ApiContext.Provider value={{
     bricksetCollection,
     setWanted,
@@ -135,15 +121,35 @@ const useSaveCollection = () => {
 }
 
 export const useApi = () => api
-export const useIsLoggedInToBrickset = () => useContext(DataContext).isLoggedInToBrickset
+
+export const useIsLoggedInToBrickset = () => {
+  const {setIsLoggedInToBrickset} = useContext(DataContext)
+  useEffect(() => {
+    AsyncStorage.getItem(BRICKSET_KEYS.userHash)
+      .then(hash => {
+        setIsLoggedInToBrickset(Boolean(hash))
+        userHash = hash || ''
+      })
+  }, [])
+  return useContext(DataContext).isLoggedInToBrickset
+}
+
 export const useBricksetCollection = () => {
   const isLoggedIn = useIsLoggedInToBrickset(),
-        {bricksetCollection} = useContext(DataContext)
+        {bricksetCollection} = useContext(DataContext),
+        saveCollection = useSaveCollection()
+  useEffect(() => {
+    AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
+      .then(result => {
+        if(result) saveCollection(JSON.parse(result))
+      })
+  }, [])
   return useMemo(
     () => isLoggedIn ? bricksetCollection : {},
     [isLoggedIn, bricksetCollection]
   )
 }
+
 export const useLogin = () => {
   const {setIsLoggedInToBrickset} = useContext(DataContext)
   return (username: string, password: string) =>
