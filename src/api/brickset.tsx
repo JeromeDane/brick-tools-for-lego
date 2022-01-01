@@ -54,21 +54,6 @@ const BRICKSET_KEYS = {
   ownedSets: 'bricktools-brickset-owned-set-numbers'
 }
 
-export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.Element}) => {
-  const {bricksetCollection, setBricksetCollection, setIsLoggedInToBrickset} = useContext(DataContext),
-        saveCollection = async (updatedCollection: BricksetCollection) => {
-          console.log('saving collection')
-          setBricksetCollection(Object.assign({}, updatedCollection))
-          await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
-        }
-  return <ApiContext.Provider value={{
-    bricksetCollection,
-    api
-  }}>
-    {children}
-  </ApiContext.Provider>
-}
-
 const useSaveCollection = () => {
   const {setBricksetCollection} = useContext(DataContext)
   return useMemo(() => async (updatedCollection: BricksetCollection) => {
