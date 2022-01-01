@@ -50,41 +50,17 @@ const api = (method: string, data: any) => {
   )
 }
 
+const BRICKSET_KEYS = {
+  userHash: 'bricktools-brickset-user-hash',
+  ownedSets: 'bricktools-brickset-owned-set-numbers'
+}
+
 export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.Element}) => {
-  const BRICKSET_KEYS = {
-          userHash: 'bricktools-brickset-user-hash',
-          ownedSets: 'bricktools-brickset-owned-set-numbers'
-        },
-        {bricksetCollection, setBricksetCollection, setIsLoggedInToBrickset} = useContext(DataContext),
+  const {bricksetCollection, setBricksetCollection, setIsLoggedInToBrickset} = useContext(DataContext),
         saveCollection = async (updatedCollection: BricksetCollection) => {
           console.log('saving collection')
           setBricksetCollection(Object.assign({}, updatedCollection))
           await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
-        },
-        login = (username: string, password: string) =>
-          new Promise((resolve, reject) =>
-            api('login', {username, password})
-              .then(async (response: any) => {
-                if(response.status === 'success') {
-                  userHash = response.hash
-                  setIsLoggedInToBrickset(true)
-                  await AsyncStorage.setItem(BRICKSET_KEYS.userHash, response.hash)
-                  resolve(null)
-                }
-                else {
-                  // TODO: Add error handling
-                  console.error('Error logging in to Brickset')
-                  console.warn(JSON.stringify(response, null, 2))
-                  reject(null)
-                }
-              })
-          ),
-        logOut = async () => {
-          await Promise.all([
-            AsyncStorage.setItem(BRICKSET_KEYS.userHash, ''),
-            AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, '')
-          ])
-          setIsLoggedInToBrickset(false)
         },
         loadCollection = async () => {
           console.log('loading collection')
@@ -168,8 +144,6 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
     }
   }, [])
   return <ApiContext.Provider value={{
-    login,
-    logOut,
     loadCollection,
     bricksetCollection,
     setWanted,
@@ -190,8 +164,39 @@ export const useBricksetCollection = () => {
     [isLoggedIn, bricksetCollection]
   )
 }
-export const useLogin = () => useContext(ApiContext).login
-export const useLogOut = () => useContext(ApiContext).logOut
+export const useLogin = () => {
+  const {setIsLoggedInToBrickset} = useContext(DataContext)
+  return (username: string, password: string) =>
+    new Promise((resolve, reject) =>
+      api('login', {username, password})
+        .then(async (response: any) => {
+          if(response.status === 'success') {
+            userHash = response.hash
+            setIsLoggedInToBrickset(true)
+            await AsyncStorage.setItem(BRICKSET_KEYS.userHash, response.hash)
+            resolve(null)
+          }
+          else {
+            // TODO: Add error handling
+            console.error('Error logging in to Brickset')
+            console.warn(JSON.stringify(response, null, 2))
+            reject(null)
+          }
+        })
+    )
+}
+
+export const useLogOut = () => {
+  const {setIsLoggedInToBrickset} = useContext(DataContext)
+  return async () => {
+    await Promise.all([
+      AsyncStorage.setItem(BRICKSET_KEYS.userHash, ''),
+      AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, '')
+    ])
+    setIsLoggedInToBrickset(false)
+  }
+}
+
 export const useLoadCollection = () => useContext(ApiContext).loadCollection
 export const useSetWanted = () => useContext(ApiContext).setWanted
 export const useSetOwned = () => useContext(ApiContext).setOwned
