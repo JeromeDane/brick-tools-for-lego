@@ -60,50 +60,9 @@ export const BricksetAPIProvider = ({children}: {children: JSX.Element[] | JSX.E
           console.log('saving collection')
           setBricksetCollection(Object.assign({}, updatedCollection))
           await AsyncStorage.setItem(BRICKSET_KEYS.ownedSets, JSON.stringify(updatedCollection))
-        },
-        setWanted = async ({bricksetID, setNum}: Set, wanted: boolean) =>
-          api('setCollection', {
-            SetID: bricksetID,
-            params: JSON.stringify({want: wanted ? 1 : 0})
-          })
-            .then((response : any) => {
-              if(response.status == 'success') {
-                bricksetCollection[setNum] = bricksetCollection[setNum] || {
-                  owned: false,
-                  wanted: false,
-                  qtyOwned: 0,
-                  rating: 0,
-                  notes: ''
-                }
-                bricksetCollection[setNum].wanted = wanted
-                console.log(`setting ${setNum} as wanted: ${wanted}`)
-                saveCollection(bricksetCollection)
-              }
-            }),
-        setOwned = async ({bricksetID, setNum}: Set, qtyOwned: number) =>
-          api('setCollection', {
-            SetID: bricksetID,
-            params: JSON.stringify({qtyOwned, owned: qtyOwned > 0 ? 1 : 0})
-          })
-            .then((response : any) => {
-              if(response.status == 'success') {
-                bricksetCollection[setNum] = bricksetCollection[setNum] || {
-                  owned: false,
-                  wanted: false,
-                  qtyOwned: 0,
-                  rating: 0,
-                  notes: ''
-                }
-                bricksetCollection[setNum].qtyOwned = qtyOwned
-                bricksetCollection[setNum].owned = qtyOwned > 0
-                console.log(`setting ${setNum} as owned: ${qtyOwned}`)
-                saveCollection(bricksetCollection)
-              }
-            })
+        }
   return <ApiContext.Provider value={{
     bricksetCollection,
-    setWanted,
-    setOwned,
     api
   }}>
     {children}
@@ -215,7 +174,53 @@ export const useLoadCollection = () => {
   },
   [])
 }
-  }
+export const useSetWanted = () => {
+  const bricksetCollection = useBricksetCollection(),
+        saveCollection = useSaveCollection()
+  return useMemo(() => async ({bricksetID, setNum}: Set, wanted: boolean) =>
+    api('setCollection', {
+      SetID: bricksetID,
+      params: JSON.stringify({want: wanted ? 1 : 0})
+    })
+      .then((response : any) => {
+        if(response.status == 'success') {
+          bricksetCollection[setNum] = bricksetCollection[setNum] || {
+            owned: false,
+            wanted: false,
+            qtyOwned: 0,
+            rating: 0,
+            notes: ''
+          }
+          bricksetCollection[setNum].wanted = wanted
+          console.log(`setting ${setNum} as wanted: ${wanted}`)
+          saveCollection(bricksetCollection)
+        }
+      })
+  , [])
 }
-export const useSetWanted = () => useContext(ApiContext).setWanted
-export const useSetOwned = () => useContext(ApiContext).setOwned
+
+export const useSetOwned = () => {
+  const bricksetCollection = useBricksetCollection(),
+        saveCollection = useSaveCollection()
+  return useMemo(() => async ({bricksetID, setNum}: Set, qtyOwned: number) =>
+    api('setCollection', {
+      SetID: bricksetID,
+      params: JSON.stringify({qtyOwned, owned: qtyOwned > 0 ? 1 : 0})
+    })
+      .then((response : any) => {
+        if(response.status == 'success') {
+          bricksetCollection[setNum] = bricksetCollection[setNum] || {
+            owned: false,
+            wanted: false,
+            qtyOwned: 0,
+            rating: 0,
+            notes: ''
+          }
+          bricksetCollection[setNum].qtyOwned = qtyOwned
+          bricksetCollection[setNum].owned = qtyOwned > 0
+          console.log(`setting ${setNum} as owned: ${qtyOwned}`)
+          saveCollection(bricksetCollection)
+        }
+      })
+  , [])
+}
