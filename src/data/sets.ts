@@ -67,8 +67,10 @@ export const useSets = () => {
   const {sets, setSets} = useContext(DataContext),
         bricksetCollection = useBricksetCollection()
   useEffect(() => {
-    console.log('sets need reprocessing due to new collection')
-    setSets(processSets(bricksetCollection))
+    if(bricksetCollection) {
+      console.log('sets need reprocessing due to new collection with length', Object.keys(bricksetCollection).length)
+      setSets(processSets(bricksetCollection))
+    }
   }, [bricksetCollection])
   return sets
 }
