@@ -128,7 +128,7 @@ export const useLogOut = () => {
   }, [])
 }
 
-export const useLoadCollection = () => {
+export const useFetchBricksetCollection = () => {
   const saveCollection = useSaveCollection()
   return useMemo(() => async () => {
     console.log('loading collection')

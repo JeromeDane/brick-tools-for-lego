@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {StyleSheet, Button, ScrollView} from 'react-native'
 import {Text, TextInput, View} from '../components/Themed'
 import Spinner from '../components/Spinner'
-import {useBricksetCollection, useLoadCollection, useLogin, useLogOut} from '../api/brickset'
+import {useBricksetCollection, useFetchBricksetCollection, useLogin, useLogOut} from '../api/brickset'
 import {useIsLoggedInToBrickset} from '../api/brickset'
 import TextLink from '../components/TextLink'
 import RequireAPISupport from '../components/APISupport'
@@ -15,7 +15,7 @@ export default function SettingsScreen() {
         login = useLogin(),
         logOut = useLogOut(),
         isLoggedIn = useIsLoggedInToBrickset(),
-        loadCollection = useLoadCollection()
+        fetchBricksetCollection = useFetchBricksetCollection()
   return (
     <ScrollView style={{padding: 20}}>
       <Spinner visible={Boolean(loadingMessage)} textContent={loadingMessage} />
@@ -31,7 +31,7 @@ export default function SettingsScreen() {
               <Button
                 title="Re-sync my collection from Brickset" onPress={() => {
                   setLoadingMessage('Syncing collection from Brickset ...')
-                  loadCollection()
+                  fetchBricksetCollection()
                     .then(() => setLoadingMessage(''))
                     .catch(() => setLoadingMessage(''))
                 }}/>
@@ -57,7 +57,7 @@ export default function SettingsScreen() {
               login(username, password)
                 .then(() => {
                   setLoadingMessage('Importing collection from Brickset ...')
-                  loadCollection()
+                  fetchBricksetCollection()
                     .then(() => setLoadingMessage(''))
                     .catch(() => setLoadingMessage(''))
                 })
