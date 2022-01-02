@@ -26,7 +26,7 @@ const emptyLEGOCom = {
 }
 
 const processSets = (bricksetCollection: BricksetCollection) => {
-  console.log('processing sets')
+  console.log(`processing sets against collection of ${Object.keys(bricksetCollection).length} items`)
   return (setsData as SetData[])
     .map(setData => {
       const bricksetSet = bricksetSets[setData.setNum],
@@ -63,12 +63,20 @@ const processSets = (bricksetCollection: BricksetCollection) => {
     })
 }
 
+let previousBricksetCollection: BricksetCollection
 export const useSets = () => {
   const {sets, setSets} = useContext(DataContext),
         bricksetCollection = useBricksetCollection()
   useEffect(() => {
-    if(bricksetCollection) {
-      console.log('sets need reprocessing due to new collection with length', Object.keys(bricksetCollection).length)
+    // Note that the manual check to see if the collection has changed is
+    // necessary even though we're already in a use effect that's dependent
+    // on the bricksetCollection changing. useEffect is called on the first
+    // render of EACH COMPONENT WHERE IT IS USED. This would result in a
+    // re-processing of sets each time a new component is rendered that calls
+    // useSets() rather than the intended behavior of only re-processing
+    // sets when the collection has changed
+    if(bricksetCollection && bricksetCollection !== previousBricksetCollection) {
+      previousBricksetCollection = bricksetCollection
       setSets(processSets(bricksetCollection))
     }
   }, [bricksetCollection])

@@ -7,7 +7,7 @@ const errorIfSetterNotReady = () => {
 
 type DataContext = {
   bricksetCollection: BricksetCollection | null;
-  setBricksetCollection: React.Dispatch<React.SetStateAction<BricksetCollection>>;
+  setBricksetCollection: React.Dispatch<React.SetStateAction<BricksetCollection | null>>;
   isLoggedInToBrickset: boolean;
   setIsLoggedInToBrickset: Dispatch<SetStateAction<boolean>>;
   sets: Sets;
@@ -26,7 +26,7 @@ export const DataContext = createContext({
 const DataProvider = ({children}: {children: JSX.Element[] | JSX.Element}) => {
   const [isLoggedInToBrickset, setIsLoggedInToBrickset] = useState(false),
         [sets, setSets] = useState([] as Sets),
-        [bricksetCollection, setBricksetCollection] = useState({} as BricksetCollection)
+        [bricksetCollection, setBricksetCollection] = useState<BricksetCollection|null>(null)
   return <DataContext.Provider value={{
     bricksetCollection,
     setBricksetCollection,
