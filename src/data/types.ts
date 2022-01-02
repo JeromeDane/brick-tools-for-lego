@@ -83,3 +83,13 @@ export type Element = Immutable<{
 }>
 
 export type Elements = Immutable<{[key: string]: Element}>
+
+export type InventoryPart = Immutable<{
+  part: Part,
+  color: Color,
+  quantity: number,
+  isSpare: boolean,
+  element: Element
+}>
+
+export type InventoryParts = Immutable<InventoryPart>

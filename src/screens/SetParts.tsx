@@ -10,15 +10,16 @@ import {useInventoryParts} from '../data/inventory-parts'
 export default function SetPartsScreen({navigation, route: {params: {id}}} : MaterialTopTabScreenProps<SetTabsParamList, 'SetParts'>) {
   const set = useSet(id),
         inventoryId = (set && set.inventories && set.inventories[0] && set.inventories[0].id) || '',
-        inventoryParts = inventoryId ? useInventoryParts(inventoryId) : null,
+        inventoryParts = useInventoryParts(inventoryId),
         numParts = inventoryParts?.reduce((count: number, inventoryPart) => count + inventoryPart.quantity, 0)
   useEffect(() => {
     navigation.setOptions({
       title: `Parts (${numParts ? numParts.toLocaleString() : '?'})`
     })
-  }, [set])
+  }, [numParts])
   return (
     <ScrollView style={{padding: 20}}>
+      <Text>parts: {inventoryId}, {inventoryParts.length}</Text>
       {inventoryParts
         ? <Inventory id={inventoryId} navigation={navigation} />
         : <Text>Unable to find inventory set number &quot;{id}&quot;</Text>
