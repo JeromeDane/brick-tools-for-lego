@@ -23,17 +23,6 @@ export type InventoryPart = {
 
 const data = inventoryPartsData as {[key: string]: InventoryPartData[]}
 
-export default Object.keys(data).reduce((acc: {[id: string]: InventoryPart[]}, id: string) => {
-  acc[id] = data[id].map(inventoryPartData => ({
-    part: getPart(inventoryPartData.p),
-    color: colors[inventoryPartData.c],
-    quantity: inventoryPartData.q,
-    isSpare: inventoryPartData.s == 1,
-    element: getElementByPartAndColor(inventoryPartData.p, inventoryPartData.c)
-  }) as InventoryPart)
-  return acc
-}, {})
-
 export const useInventoryParts = (inventoryId: string) => {
   return useMemo(() => {
     return data[inventoryId].map(inventoryPartData => ({
