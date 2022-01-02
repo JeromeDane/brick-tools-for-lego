@@ -1,4 +1,4 @@
-import React, {useMemo, useRef, useState} from 'react'
+import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ScrollView} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
 import {Paginator, Picker, Text, TextInput, View} from '../../components/Themed'
@@ -16,22 +16,32 @@ const PartsScreen = () => {
         [colorFilter, setColorFilter] = useState(''),
         [showPrints, setShowPrints] = useState(false),
         [pageSize, setPageSize] = useState(25),
+        [isSorting, setIsSorting] = useState(true),
         [currentPage, setCurrentPage] = useState(0),
         [filterBy, setFilterBy] = useState(''),
         scrollRef = useRef(),
         partsList = usePartsAsLists(),
-        filteredPartNumbers = useMemo(
-          () => partsList ?
-            partsList.filter(part => {
+        sortedParts = useMemo(
+          () => (!isSorting && partsList)
+            ? [...partsList].sort(sortBy.apply(sortBy, sortOrder.split(',')))
+            : null,
+          [partsList, sortOrder, isSorting]
+        ),
+        filteredParts = useMemo(
+          () => sortedParts ?
+            sortedParts.filter(part => {
               return (part.colors.length > 0) &&
                     (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase())) &&
                     (!partCategory || part.category.id == partCategory) &&
                     (showPrints || !part.partNum.match('pr')) &&
                     (!colorFilter || part.colors.find(({id}) => id == colorFilter))
             })
-            : [],
-          [partsList, showPrints, colorFilter, partCategory, filterBy]
+            : null,
+          [sortedParts, showPrints, colorFilter, partCategory, filterBy]
         )
+  useEffect(() => {
+    if(isSorting) setIsSorting(false)
+  }, [isSorting])
   return (
     <ScrollView ref={scrollRef} style={{
       paddingBottom: 100,
@@ -39,7 +49,7 @@ const PartsScreen = () => {
       flex: 1,
       flexGrow: 1
     }}>
-      <LoadingWrapper>
+      <LoadingWrapper loading={!filteredParts}>
         <View style={{marginBottom: 20}}>
           <TextInput
             label="Search Parts"
@@ -53,6 +63,7 @@ const PartsScreen = () => {
             label="Sort by"
             selectedValue={sortOrder}
             onValueChange={value => {
+              setIsSorting(true)
               setCurrentPage(0)
               setSortOrder(value)
             }}>
@@ -97,25 +108,27 @@ const PartsScreen = () => {
               value={showPrints} />
           </View>
         </View>
-        {filteredPartNumbers.length
-          ? filteredPartNumbers
-            .sort(sortBy.apply(sortBy, sortOrder.split(',')))
-            .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
-            .map((part, i: number) => <PartPreview part={part} key={i} defaultColorId={colorFilter} />)
-          : <Text style={{paddingVertical: 20}}>No parts found matching your criteria.</Text>
-        }
-        <View style={{paddingTop: 20}}>
-          <Paginator
-            pageSize={pageSize}
-            numItems={filteredPartNumbers.length}
-            onPageSizeChange={setPageSize}
-            onPageChange={(val : number) => {
-              scrollRef.current?.scrollTo({y: 0, animated: true})
-              setCurrentPage(val)
-            }}
-            selectedValue={currentPage} />
-        </View>
+        <LoadingWrapper loading={isSorting || !filteredParts}>
+          {filteredParts?.length
+            ? filteredParts
+              .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
+              .map((part, i: number) => <PartPreview part={part} key={i} defaultColorId={colorFilter} />)
+            : <Text style={{paddingVertical: 20}}>No parts found matching your criteria.</Text>
+          }
+          <View style={{paddingTop: 20}}>
+            <Paginator
+              pageSize={pageSize}
+              numItems={filteredParts?.length || 0}
+              onPageSizeChange={setPageSize}
+              onPageChange={(val : number) => {
+                scrollRef.current?.scrollTo({y: 0, animated: true})
+                setCurrentPage(val)
+              }}
+              selectedValue={currentPage} />
+          </View>
+        </LoadingWrapper>
       </LoadingWrapper>
+      <View style={{height: 50}} />
     </ScrollView>
   )
 }

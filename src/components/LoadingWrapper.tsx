@@ -1,13 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import {ActivityIndicator, View} from 'react-native'
 
-const LoadingWrapper = ({children}: {children: JSX.Element[] | JSX.Element}) => {
+type LoadingWrapperProps = {
+  children: JSX.Element[] | JSX.Element,
+  loading?: boolean
+}
+
+const LoadingWrapper = ({children, loading}: LoadingWrapperProps) => {
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
     if(isLoading) setIsLoading(false)
   }, [isLoading])
   return <View>
-    {isLoading
+    {(isLoading || loading)
       ? <ActivityIndicator color="#aaa" />
       : children
     }
