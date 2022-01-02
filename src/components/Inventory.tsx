@@ -1,15 +1,15 @@
 import React, {useState} from 'react'
 import {sortBy} from 'sort-by-typescript'
 import {Image, TouchableOpacity} from 'react-native'
+import {DrawerNavigationProp} from '@react-navigation/drawer'
+import {RootStackParamList} from '../navigation/types'
 import {Picker, Text, View} from './Themed'
 import {useInventoryParts} from '../data/inventory-parts'
 import Switch from './Switch'
-import {MaterialTopTabNavigationProp} from '@react-navigation/material-top-tabs'
-import {RootStackParamList} from '../navigation/types'
 
 type InventoryProps = {
   id: string,
-  navigation: MaterialTopTabNavigationProp<RootStackParamList>
+  navigation: DrawerNavigationProp<RootStackParamList, 'Sets'>,
 }
 
 const Inventory = ({id, navigation: {navigate}}: InventoryProps) => {
@@ -23,7 +23,7 @@ const Inventory = ({id, navigation: {navigate}}: InventoryProps) => {
         <Picker
           label="Sort by"
           selectedValue={sortOrder}
-          onValueChange={setSortOrder}>
+          onValueChange={value => setSortOrder(value.toString())}>
           <Picker.Item label="Category, size, and color" value={defaultSortOrder} />
           <Picker.Item label="Color, category, and size" value={'element.color.sortOrder,element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,name'} />
           <Picker.Item label="Size, category, and color" value={'element.part.width,element.part.length,element.part.height,element.part.category.name,element.part.subCategory,element.color.sortOrder,name'} />
