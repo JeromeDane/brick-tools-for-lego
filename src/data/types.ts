@@ -75,3 +75,11 @@ export interface Part extends PartData {
 export type Parts = Immutable<{
   [key: string]: Part
 }>
+
+export type Element = Immutable<{
+  id: string,
+  part: Part,
+  color: Color
+}>
+
+export type Elements = Immutable<{[key: string]: Element}>

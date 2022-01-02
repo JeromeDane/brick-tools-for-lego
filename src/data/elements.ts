@@ -1,20 +1,15 @@
+import {useContext, useEffect} from 'react'
 import elementsData from './raw/elements.json'
-import type {Color} from './colors'
-import type {Part} from './parts'
 import colors from './colors'
 import {getPart} from './parts'
+import type {Element, Elements} from './types'
 import elementCorrections from './element-corrections'
+import {DataContext} from './DataProvider'
 
 type ElementData = {
   i: string, // elementId
   p: string, // partNum
   c: string // colorId
-}
-
-export type Element = {
-  id: string,
-  part: Part,
-  color: Color
 }
 
 const partColors : {[keys: string]: {[keys: string]: Element}} = {}
@@ -28,7 +23,7 @@ export const elements = (elementsData as ElementData[]).reduce((acc, {i, p, c}) 
     part,
     color
   }
-  acc[i] = element
+  acc[i] = element // TODO: do this without mutation
   partColors[p] = partColors[p] || {}
   partColors[p][c] = element
   return acc
@@ -42,3 +37,18 @@ export const getElementByPartAndColor = (partNum: string, colorId: string) =>
     part: getPart(partNum),
     color: colors[colorId]
   }
+
+export const useElements = () => {
+  const context = useContext(DataContext)
+  useEffect(() => {
+    if(!context.elements) context.setElements(elements as Elements)
+  }, [elements])
+  return context.elements
+}
+
+export const useElement = (id: string) => {
+  const elementsFromContext = useElements()
+  return elementsFromContext
+    ? elementsFromContext[id]
+    : undefined
+}
