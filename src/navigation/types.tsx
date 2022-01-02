@@ -22,13 +22,15 @@ export type RootDrawerParamList = {
 };
 
 export type RootStackParamList = {
-  Root: NavigatorScreenParams<RootDrawerParamList> | undefined;
-  Modal: undefined;
+  About: undefined;
   Element: {id: string};
+  Modal: undefined;
+  NotFound: undefined;
+  Parts: undefined;
   Set: {id: string};
   Settings: undefined;
-  NotFound: undefined;
-  About: undefined;
+  Sets: undefined;
+  Root: NavigatorScreenParams<RootDrawerParamList> | undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

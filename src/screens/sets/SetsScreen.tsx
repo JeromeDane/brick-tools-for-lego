@@ -3,14 +3,14 @@ import {ActivityIndicator, ScrollView} from 'react-native'
 import sortBy from 'sort-by'
 import {DrawerScreenProps} from '@react-navigation/drawer'
 import {Paginator, Picker, Text, TextInput, View} from '../../components/Themed'
-import {RootDrawerParamList} from '../../navigation/types'
+import {RootStackParamList} from '../../navigation/types'
 import {useSets} from '../../data/sets'
 import {themesList} from '../../data/themes'
 import {useIsLoggedInToBrickset} from '../../api/brickset'
 import TextLink from '../../components/TextLink'
 import SetPreview from './SetPreview'
 
-export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerParamList, 'Sets'>) {
+export default function TabsScreen({navigation}: DrawerScreenProps<RootStackParamList, 'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),

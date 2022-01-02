@@ -3,11 +3,11 @@ import {StyleSheet, TouchableOpacity} from 'react-native'
 import {Text, View} from '../../components/Themed'
 import ScaledImage from '../../components/ScaledImage'
 import type {Set} from '../../data/types'
-import {RootDrawerParamList} from '../../navigation/types'
+import {RootStackParamList} from '../../navigation/types'
 import {DrawerNavigationProp} from '@react-navigation/drawer'
 
 type SetPreviewProps = {
-  navigation: DrawerNavigationProp<RootDrawerParamList, 'Sets'>,
+  navigation: DrawerNavigationProp<RootStackParamList, 'Sets'>,
   set: Set,
   sortField: string
 }
