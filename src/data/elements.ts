@@ -14,7 +14,7 @@ type ElementData = {
 
 const partColors : {[keys: string]: {[keys: string]: Element}} = {}
 
-export const elements = (elementsData as ElementData[]).reduce((acc, {i, p, c}) => {
+const parseElements = (): Elements => (elementsData as ElementData[]).reduce((acc, {i, p, c}) => {
   const part = getPart(p),
         color = colors[c]
   part.colors.push(color)
@@ -29,11 +29,15 @@ export const elements = (elementsData as ElementData[]).reduce((acc, {i, p, c}) 
   return acc
 }, {} as {[key: string]: Element})
 
+let previousElements: Elements
 export const useElements = () => {
   const context = useContext(DataContext)
   useEffect(() => {
-    if(!context.elements) context.setElements(elements as Elements)
-  }, [elements])
+    if(previousElements !== context.elements) {
+      previousElements = parseElements()
+      context.setElements(previousElements)
+    }
+  }, [])
   return context.elements
 }
 
@@ -45,16 +49,20 @@ export const useElement = (id: string) => {
 }
 
 export const useGetElementByPartAndColor = () => {
-  const getPart = useGetPart()
+  const getPart = useGetPart(),
+        elements = useElements()
   return useMemo(
     () => (partNum: string, colorId: string) =>
-      (elementCorrections[partNum] && elementCorrections[partNum][colorId] && elements[elementCorrections[partNum][colorId]]) ||
+      (elementCorrections[partNum] &&
+        elementCorrections[partNum][colorId] &&
+        elements && elements[elementCorrections[partNum][colorId]]
+      ) ||
       (partColors[partNum] && partColors[partNum][colorId]) ||
       {
         id: '-1', // element not found
         part: getPart(partNum),
         color: colors[colorId]
       },
-    [getPart]
+    [getPart, elements]
   )
 }
