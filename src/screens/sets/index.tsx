@@ -10,7 +10,7 @@ import {useIsLoggedInToBrickset} from '../../api/brickset'
 import TextLink from '../../components/TextLink'
 import SetPreview from './SetPreview'
 
-export default function TabsScreen({navigation}: DrawerScreenProps<RootStackParamList, 'Sets'>) {
+export default function SetsScreen({navigation}: DrawerScreenProps<RootStackParamList, 'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
