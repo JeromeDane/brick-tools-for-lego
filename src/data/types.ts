@@ -1,4 +1,6 @@
 import type {Theme} from './themes'
+import type {PartCategory} from './part-categories'
+import type {Color} from './colors'
 
 type Immutable<T> = {
   readonly [K in keyof T]: Immutable<T[K]>;
@@ -52,3 +54,20 @@ export type Set = Immutable<{
 }>
 
 export type Sets = Immutable<Set[]>
+
+export type PartData = {
+  partNum: string,
+  name: string,
+  partCatId: string,
+  partMaterial: string
+}
+
+export interface Part extends PartData {
+  nameSort: string,
+  width: number,
+  length: number,
+  height: number,
+  category: PartCategory,
+  subCategory: string,
+  colors: Color[]
+}
