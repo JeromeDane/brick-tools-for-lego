@@ -80,12 +80,9 @@ export const useBricksetCollection = () => {
   const {bricksetCollection} = useContext(DataContext),
         saveCollection = useSaveCollection()
   if(!collectionRead) { // can't use a useState hook here because it re-fires when used in different components
-    console.log('reading brickset collection from storage')
     collectionRead = true
     AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
-      .then(result => {
-        if(result) saveCollection(JSON.parse(result))
-      })
+      .then(result => saveCollection(result ? JSON.parse(result) : []))
   }
   return bricksetCollection
 }
