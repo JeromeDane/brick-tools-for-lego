@@ -2,7 +2,7 @@ import partsData from './raw/parts.json'
 import {getPartCategory} from './part-categories'
 import {Part, PartData} from './types'
 import {getSubCategory} from './part-subcategories'
-import {useContext, useEffect, useMemo} from 'react'
+import {memo, useContext, useEffect, useMemo} from 'react'
 import {DataContext} from './DataProvider'
 
 const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^/]|$))?/
@@ -74,6 +74,14 @@ export const usePartsAsLists = () => {
     () => parts
       ? Object.keys(parts).map(partNum => parts[partNum])
       : [],
+    [parts]
+  )
+}
+
+export const useGetPart = () => {
+  const parts = useParts()
+  return useMemo(
+    () => (partNum: string) => parts ? parts[partNum] : undefined,
     [parts]
   )
 }

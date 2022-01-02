@@ -92,4 +92,4 @@ export type InventoryPart = Immutable<{
   element: Element
 }>
 
-export type InventoryParts = Immutable<InventoryPart>
+export type InventoryParts = Immutable<InventoryPart[]>

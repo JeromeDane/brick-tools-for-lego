@@ -3,7 +3,7 @@ import {ScrollView, StyleSheet, Image} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
 import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
 import {usePartsAsLists} from '../data/parts'
-import {getElementByPartAndColor} from '../data/elements'
+import {useGetElementByPartAndColor} from '../data/elements'
 import {colorsList} from '../data/colors'
 import {partCategoriesList} from '../data/part-categories'
 import Switch from '../components/Switch'
@@ -31,7 +31,8 @@ const PartsScreen = () => {
             : [],
           [partsList]
         ),
-        defaultColorId = colorFilter || colorsList[0].id
+        defaultColorId = colorFilter || colorsList[0].id,
+        getElementByPartAndColor = useGetElementByPartAndColor()
   return (
     <ScrollView ref={scrollRef} style={{
       paddingBottom: 100,

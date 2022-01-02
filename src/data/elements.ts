@@ -1,7 +1,7 @@
-import {useContext, useEffect} from 'react'
+import {useContext, useEffect, useMemo} from 'react'
 import elementsData from './raw/elements.json'
 import colors from './colors'
-import {getPart} from './parts'
+import {getPart, useGetPart} from './parts'
 import type {Element, Elements} from './types'
 import elementCorrections from './element-corrections'
 import {DataContext} from './DataProvider'
@@ -29,15 +29,6 @@ export const elements = (elementsData as ElementData[]).reduce((acc, {i, p, c}) 
   return acc
 }, {} as {[key: string]: Element})
 
-export const getElementByPartAndColor = (partNum: string, colorId: string) =>
-  (elementCorrections[partNum] && elementCorrections[partNum][colorId] && elements[elementCorrections[partNum][colorId]]) ||
-  (partColors[partNum] && partColors[partNum][colorId]) ||
-  {
-    id: '-1', // element not found
-    part: getPart(partNum),
-    color: colors[colorId]
-  }
-
 export const useElements = () => {
   const context = useContext(DataContext)
   useEffect(() => {
@@ -53,12 +44,17 @@ export const useElement = (id: string) => {
     : undefined
 }
 
-export const useElementByPartAndColor = (partNum: string, colorId: string) =>
-
-  (elementCorrections[partNum] && elementCorrections[partNum][colorId] && elements[elementCorrections[partNum][colorId]]) ||
-  (partColors[partNum] && partColors[partNum][colorId]) ||
-  {
-    id: '-1', // element not found
-    part: getPart(partNum),
-    color: colors[colorId]
-  }
+export const useGetElementByPartAndColor = () => {
+  const getPart = useGetPart()
+  return useMemo(
+    () => (partNum: string, colorId: string) =>
+      (elementCorrections[partNum] && elementCorrections[partNum][colorId] && elements[elementCorrections[partNum][colorId]]) ||
+      (partColors[partNum] && partColors[partNum][colorId]) ||
+      {
+        id: '-1', // element not found
+        part: getPart(partNum),
+        color: colors[colorId]
+      },
+    [getPart]
+  )
+}
