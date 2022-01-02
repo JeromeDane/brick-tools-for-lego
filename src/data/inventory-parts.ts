@@ -26,6 +26,6 @@ export const useInventoryParts = (inventoryId: string) => {
         isSpare: inventoryPartData.s == 1,
         element: getElementByPartAndColor(inventoryPartData.p, inventoryPartData.c)
       }) as InventoryPart) || [] as InventoryParts
-      : [] as InventoryPart[]
+      : null
   }, [inventoryId, parts])
 }
