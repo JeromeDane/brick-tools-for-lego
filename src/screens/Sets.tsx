@@ -1,5 +1,5 @@
-import React, {useRef, useState} from 'react'
-import {ScrollView, StyleSheet, TouchableOpacity} from 'react-native'
+import React, {useEffect, useRef, useState} from 'react'
+import {ActivityIndicator, ScrollView, StyleSheet, TouchableOpacity} from 'react-native'
 import sortBy from 'sort-by'
 import {DrawerScreenProps} from '@react-navigation/drawer'
 import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
@@ -15,22 +15,28 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
         [theme, setTheme] = useState(''),
+        [isProcessing, setIsProcessing] = useState(true),
         [collectionFilter, setCollectionFilter] = useState(''),
         [currentPage, setCurrentPage] = useState(0),
         isLoggedInToBrickset = useIsLoggedInToBrickset(),
         scrollRef = useRef(),
         sets = useSets(),
-        filteredSets = sets.filter(set =>
-          (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
-          (!theme || set.theme.id == theme) &&
-          (!isLoggedInToBrickset || !collectionFilter ||
-            (collectionFilter == 'owned' && set.collection.qtyOwned > 0) ||
-            (collectionFilter == 'not-owned' && set.collection.qtyOwned === 0) ||
-            (collectionFilter == 'wanted' && set.collection.wanted) ||
-            (collectionFilter == 'not-wanted' && !set.collection.wanted) ||
-            (collectionFilter == 'not-wanted-not-owned' && !set.collection.wanted && set.collection.qtyOwned === 0)
+        filteredSets = isProcessing
+          ? []
+          : sets.filter(set =>
+            (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
+            (!theme || set.theme.id == theme) &&
+            (!isLoggedInToBrickset || !collectionFilter ||
+              (collectionFilter == 'owned' && set.collection.qtyOwned > 0) ||
+              (collectionFilter == 'not-owned' && set.collection.qtyOwned === 0) ||
+              (collectionFilter == 'wanted' && set.collection.wanted) ||
+              (collectionFilter == 'not-wanted' && !set.collection.wanted) ||
+              (collectionFilter == 'not-wanted-not-owned' && !set.collection.wanted && set.collection.qtyOwned === 0)
+            )
           )
-        )
+  useEffect(() => {
+    if(isProcessing) setIsProcessing(false)
+  }, [isProcessing])
   return (
     <ScrollView ref={scrollRef} style={{
       padding: 20,
@@ -65,6 +71,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
           prompt="Sort by"
           selectedValue={sortField}
           onValueChange={(field: string) => {
+            setIsProcessing(true)
             setCurrentPage(0)
             setSortField(field)
           }}>
@@ -90,6 +97,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
             selectedValue={collectionFilter}
             onValueChange={(value: string) => {
               setCurrentPage(0)
+              setIsProcessing(true)
               setCollectionFilter(value)
             }}>
             <Picker.Item label="Any" value="" />
@@ -142,9 +150,9 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
             </TouchableOpacity>
           )
         : <Text style={{textAlign: 'center'}}>
-          {sets.length
-            ? 'No results match your search criteria'
-            : 'Loading sets ...'
+          {(isProcessing || sets.length == 0)
+            ? <ActivityIndicator size="large" color="#aaaa" />
+            : 'No results match your search criteria'
           }
         </Text>
       }
@@ -155,6 +163,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
           numItems={filteredSets.length}
           onPageSizeChange={setPageSize}
           onPageChange={(val : number) => {
+            setIsProcessing(true)
             scrollRef.current?.scrollTo({y: 0, animated: true})
             setCurrentPage(val)
           }}
