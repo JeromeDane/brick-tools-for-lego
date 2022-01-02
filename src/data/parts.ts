@@ -4,6 +4,7 @@ import {Part, PartData} from './types'
 import {getSubCategory} from './part-subcategories'
 import {useContext, useEffect, useMemo} from 'react'
 import {DataContext} from './DataProvider'
+import {useElementsAsList} from './elements'
 
 const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^/]|$))?/
 
@@ -51,10 +52,14 @@ export const getPart = (partNum: string) =>
   }
 
 export const useParts = () => {
-  const dataContext = useContext(DataContext)
+  const dataContext = useContext(DataContext),
+        elements = useElementsAsList()
   useEffect(
     () => {
       if(!dataContext.parts) {
+        elements?.forEach(element => {
+          processedParts[element.part.partNum].colors.push(element.color)
+        })
         dataContext.setParts(processedParts)
       }
     },

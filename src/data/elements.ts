@@ -48,6 +48,14 @@ export const useElement = (id: string) => {
     : undefined
 }
 
+export const useElementsAsList = () => {
+  const elements = useElements()
+  return useMemo(
+    () => elements ? Object.keys(elements).map(id => elements[id]) : null,
+    [elements]
+  )
+}
+
 export const useGetElementByPartAndColor = () => {
   const getPart = useGetPart(),
         elements = useElements()
