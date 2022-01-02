@@ -2,10 +2,12 @@ import partsData from './raw/parts.json'
 import {getPartCategory} from './part-categories'
 import {Part, PartData} from './types'
 import {getSubCategory} from './part-subcategories'
+import {useContext, useMemo} from 'react'
+import {DataContext} from './DataProvider'
 
 const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^/]|$))?/
 
-const parts = (partsData as PartData[]).reduce(
+const processedParts = (partsData as PartData[]).reduce(
   (acc: {[key: string]: Part}, partData: PartData) => {
     const size = partData.name.match(sizeRegex),
           width = size ? parseInt(size[1].padStart(2) < size[2].padStart(2) ? size[1] : size[2]) : 0,
@@ -29,12 +31,12 @@ const parts = (partsData as PartData[]).reduce(
   {}
 )
 
-export const partsList = Object.keys(parts).map(partNum => parts[partNum])
+export const partsList = Object.keys(processedParts).map(partNum => processedParts[partNum])
 
-export default parts
+export default processedParts
 
 export const getPart = (partNum: string) =>
-  parts[partNum] || {
+  processedParts[partNum] || {
     partNum: '-1',
     name: 'unknown part',
     partCatId: '',
@@ -47,3 +49,26 @@ export const getPart = (partNum: string) =>
     subCategory: '',
     colors: []
   }
+
+export const useParts = () => {
+  const dataContext = useContext(DataContext)
+  if(!dataContext.parts) {
+    dataContext.setParts(processedParts)
+  }
+  return dataContext.parts
+}
+
+export const usePart = (partNum: string) => {
+  const parts = useParts()
+  return parts ? parts[partNum] : undefined
+}
+
+export const usePartsAsLists = () => {
+  const parts = useParts()
+  return useMemo(
+    () => parts
+      ? Object.keys(parts).map(partNum => parts[partNum])
+      : [],
+    [parts]
+  )
+}

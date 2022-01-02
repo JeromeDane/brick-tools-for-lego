@@ -71,3 +71,7 @@ export interface Part extends PartData {
   subCategory: string,
   colors: Color[]
 }
+
+export type Parts = Immutable<{
+  [key: string]: Part
+}>

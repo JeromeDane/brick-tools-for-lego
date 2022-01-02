@@ -1,8 +1,8 @@
-import React, {useRef, useState} from 'react'
+import React, {useMemo, useRef, useState} from 'react'
 import {ScrollView, StyleSheet, Image} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
 import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
-import {partsList} from '../data/parts'
+import {usePartsAsLists} from '../data/parts'
 import {getElementByPartAndColor} from '../data/elements'
 import {colorsList} from '../data/colors'
 import {partCategoriesList} from '../data/part-categories'
@@ -18,13 +18,19 @@ const PartsScreen = () => {
         [currentPage, setCurrentPage] = useState(0),
         [filterBy, setFilterBy] = useState(''),
         scrollRef = useRef(),
-        filteredPartNumbers = partsList.filter(part => {
-          return (part.colors.length > 0) &&
-                 (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase())) &&
-                 (!partCategory || part.category.id == partCategory) &&
-                 (showPrints || !part.partNum.match('pr')) &&
-                 (!colorFilter || part.colors.find(({id}) => id == colorFilter))
-        }),
+        partsList = usePartsAsLists(),
+        filteredPartNumbers = useMemo(
+          () => partsList ?
+            partsList.filter(part => {
+              return (part.colors.length > 0) &&
+                    (!filterBy || (part.partNum + part.name).toLowerCase().match(filterBy.toLowerCase())) &&
+                    (!partCategory || part.category.id == partCategory) &&
+                    (showPrints || !part.partNum.match('pr')) &&
+                    (!colorFilter || part.colors.find(({id}) => id == colorFilter))
+            })
+            : [],
+          [partsList]
+        ),
         defaultColorId = colorFilter || colorsList[0].id
   return (
     <ScrollView ref={scrollRef} style={{
