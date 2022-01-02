@@ -8,7 +8,7 @@ import {colorsList} from '../data/colors'
 import {partCategoriesList} from '../data/part-categories'
 import Switch from '../components/Switch'
 
-const TabsScreen = () => {
+const PartsScreen = () => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [partCategory, setPartCategory] = useState(''),
@@ -128,7 +128,7 @@ const TabsScreen = () => {
   )
 }
 
-export default TabsScreen
+export default PartsScreen
 
 const styles = StyleSheet.create({
   part: {
