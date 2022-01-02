@@ -68,6 +68,7 @@ export const useSets = () => {
   const {sets, setSets} = useContext(DataContext),
         bricksetCollection = useBricksetCollection()
   useEffect(() => {
+    console.log('checking collection', bricksetCollection ? 'loaded' : 'not loaded', Object.keys(bricksetCollection || {}).length)
     // Note that the manual check to see if the collection has changed is
     // necessary even though we're already in a use effect that's dependent
     // on the bricksetCollection changing. useEffect is called on the first
