@@ -79,13 +79,13 @@ export const useIsLoggedInToBrickset = () => {
   return useContext(DataContext).isLoggedInToBrickset
 }
 
-let ownedSetsRead = false
+let collectionRead = false
 export const useBricksetCollection = () => {
   const {bricksetCollection} = useContext(DataContext),
         saveCollection = useSaveCollection()
-  if(!ownedSetsRead) { // can't use a useState hook here because it re-fires when used in different components
+  if(!collectionRead) { // can't use a useState hook here because it re-fires when used in different components
     console.log('reading brickset collection from storage')
-    ownedSetsRead = true
+    collectionRead = true
     AsyncStorage.getItem(BRICKSET_KEYS.ownedSets)
       .then(result => {
         if(result) saveCollection(JSON.parse(result))
