@@ -30,7 +30,7 @@ const PartsScreen = () => {
                     (!colorFilter || part.colors.find(({id}) => id == colorFilter))
             })
             : [],
-          [partsList]
+          [partsList, showPrints, colorFilter, partCategory, filterBy]
         )
   return (
     <ScrollView ref={scrollRef} style={{
