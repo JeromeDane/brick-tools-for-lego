@@ -1,4 +1,4 @@
-import sortBy from 'sort-by'
+import {sortBy} from 'sort-by-typescript'
 import categoriesData from './raw/part_categories.json'
 
 type PartCategoryData = {

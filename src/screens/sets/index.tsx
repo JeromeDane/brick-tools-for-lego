@@ -1,6 +1,6 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ActivityIndicator, ScrollView} from 'react-native'
-import sortBy from 'sort-by'
+import {sortBy} from 'sort-by-typescript'
 import {DrawerScreenProps} from '@react-navigation/drawer'
 import {Paginator, Picker, Text, TextInput, View} from '../../components/Themed'
 import {RootStackParamList} from '../../navigation/types'

@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
 import {ScrollView, StyleSheet, Image} from 'react-native'
-import sortBy from 'sort-by'
+import {sortBy} from 'sort-by-typescript'
 import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
 import {partsList} from '../data/parts'
 import {getElementByPartAndColor} from '../data/elements'

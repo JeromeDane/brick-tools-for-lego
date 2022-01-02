@@ -58,7 +58,7 @@
     "react-native-web": "0.17.1",
     "react-native-webview": "^11.15.0",
     "rn-fetch-blob": "^0.12.0",
-    "sort-by": "^1.2.0"
+    "sort-by-typescript": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

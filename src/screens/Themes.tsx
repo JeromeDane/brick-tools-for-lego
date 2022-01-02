@@ -1,6 +1,6 @@
 import React from 'react'
 import {ScrollView, StyleSheet} from 'react-native'
-import sortBy from 'sort-by'
+import {sortBy} from 'sort-by-typescript'
 import {Text} from '../components/Themed'
 import themes from '../data/raw/themes.json'
 

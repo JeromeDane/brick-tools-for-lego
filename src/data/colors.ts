@@ -1,4 +1,4 @@
-import sortBy from 'sort-by'
+import {sortBy} from 'sort-by-typescript'
 import colorsData from './raw/colors.json'
 import colorOrder from './color-order'
 

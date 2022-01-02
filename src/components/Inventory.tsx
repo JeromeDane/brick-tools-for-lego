@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import sortBy from 'sort-by'
+import {sortBy} from 'sort-by-typescript'
 import {Image, TouchableOpacity} from 'react-native'
 import {Picker, Text, View} from './Themed'
 import inventoryParts from '../data/inventory-parts'
