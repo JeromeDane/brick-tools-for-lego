@@ -1,16 +1,12 @@
-import React, {useContext, createContext, useEffect, useMemo} from 'react'
+import {useContext, useMemo} from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Constants from 'expo-constants'
 import formUrlEncode from 'form-urlencoded'
 import {DataContext} from '../data/DataProvider'
 import {BricksetCollection} from '../data/types'
+import type {Set} from '../data/types'
 
 const apiKey = Constants.manifest.extra.BRICKSET_API_KEY
-
-const ApiContext = createContext({
-  setWanted: async ({bricksetID, setNum}: Set, wanted: boolean) => {},
-  setOwned: async ({bricksetID, setNum}: Set, qtyOwned: number) => {}
-})
 
 // Note: Normally I hate mutable variables, but I'll make an exception
 // here so that we don't get into a race condition with `useState` hooks

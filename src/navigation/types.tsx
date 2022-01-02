@@ -7,11 +7,13 @@ import {DrawerScreenProps} from '@react-navigation/Drawer'
 import {CompositeScreenProps, NavigatorScreenParams} from '@react-navigation/native'
 import {NativeStackScreenProps} from '@react-navigation/native-stack'
 
+{/* eslint-disable @typescript-eslint/no-namespace */}
 declare global {
   namespace ReactNavigation {
     type RootParamList = RootStackParamList
   }
 }
+{/* eslint-enable @typescript-eslint/no-namespace */}
 
 export type RootDrawerParamList = {
   Sets: undefined;

@@ -5,9 +5,12 @@ import useColorScheme from '../hooks/useColorScheme'
 
 type DefaultImageProps = React.ComponentProps<typeof DefaultImage>
 interface ImageProps extends DefaultImageProps {
-  source: {uri: string},
-  maxWidth?: number,
-  maxHeight?: number
+  source: {uri: string};
+  maxWidth?: number;
+  maxHeight?: number;
+  width: number;
+  height: number;
+  style: any; // TODO: type this properly
 }
 
 const ScaledImage = (props: ImageProps) => {

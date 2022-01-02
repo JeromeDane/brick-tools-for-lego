@@ -10,6 +10,7 @@ import {Picker as DefaultPicker, PickerProps} from '@react-native-picker/picker'
 
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
+import {ItemValue} from '@react-native-picker/picker/typings/Picker'
 
 export function useThemeColor(
   props: { light?: string; dark?: string },
@@ -43,6 +44,7 @@ export function Text(props: TextProps) {
 type DefaultTextInputProps = React.ComponentProps<typeof DefaultTextInput>
 interface TextInputProps extends DefaultTextInputProps {
   label?: string;
+  style: any // TODO: type this properly
 }
 
 export function TextInput(props: TextInputProps) {
@@ -84,14 +86,12 @@ export function TextInput(props: TextInputProps) {
 }
 
 export function View(props: ViewProps) {
-  const {style, lightColor, darkColor, ...otherProps} = props
-  const backgroundColor = useThemeColor({light: lightColor, dark: darkColor}, 'background')
-
+  const {style, lightColor, darkColor, ...otherProps} = props,
+        backgroundColor = useThemeColor({light: lightColor, dark: darkColor}, 'background')
   return <DefaultView style={[{backgroundColor}, style]} {...otherProps} />
 }
 
 export function Picker(props: PickerProps) {
-  const {style, ...otherProps} = props
   const backgroundColor = useThemeColor({}, 'background')
   const color = useThemeColor({}, 'text')
 
@@ -127,7 +127,7 @@ export function Picker(props: PickerProps) {
           borderStyle: 'none',
           backgroundColor,
           padding: 10
-        }} {...otherProps}
+        }} {...props}
         dropdownIconColor={color} />
     </View>
   </View>
@@ -136,11 +136,11 @@ export function Picker(props: PickerProps) {
 Picker.Item = DefaultPicker.Item
 
 type PaginatorProps = {
-  selectedValue: number,
-  onPageChange: Function,
-  onPageSizeChange: Function,
-  numItems: number,
-  pageSize: number
+  selectedValue: number;
+  onPageChange: (itemValue: ItemValue) => void | undefined;
+  onPageSizeChange: (itemValue: ItemValue) => void | undefined;
+  numItems: number;
+  pageSize: number;
 }
 
 export const Paginator = (props: PaginatorProps) => {
@@ -161,7 +161,7 @@ export const Paginator = (props: PaginatorProps) => {
       prompt="Show"
       label="Show"
       selectedValue={props.pageSize}
-      onValueChange={(num: number) => {
+      onValueChange={num => {
         props.onPageChange(0)
         props.onPageSizeChange(num)
       }}
