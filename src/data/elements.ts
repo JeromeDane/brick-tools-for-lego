@@ -52,3 +52,13 @@ export const useElement = (id: string) => {
     ? elementsFromContext[id]
     : undefined
 }
+
+export const useElementByPartAndColor = (partNum: string, colorId: string) =>
+
+  (elementCorrections[partNum] && elementCorrections[partNum][colorId] && elements[elementCorrections[partNum][colorId]]) ||
+  (partColors[partNum] && partColors[partNum][colorId]) ||
+  {
+    id: '-1', // element not found
+    part: getPart(partNum),
+    color: colors[colorId]
+  }

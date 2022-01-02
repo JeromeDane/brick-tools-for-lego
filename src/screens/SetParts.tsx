@@ -5,22 +5,22 @@ import {Text} from '../components/Themed'
 import {SetTabsParamList} from '../navigation/SetTabs'
 import {useSet} from '../data/sets'
 import Inventory from '../components/Inventory'
-import inventoryParts, {InventoryPart} from '../data/inventory-parts'
+import {useInventoryParts} from '../data/inventory-parts'
 
 export default function SetPartsScreen({navigation, route: {params: {id}}} : MaterialTopTabScreenProps<SetTabsParamList, 'SetParts'>) {
   const set = useSet(id),
-        inventory = set && set.inventories && set.inventories[0],
-        numParts = ((inventory && inventoryParts[inventory.id]) || [])
-          .reduce((count: number, inventoryPart: InventoryPart) => count + inventoryPart.quantity, 0)
+        inventoryId = (set && set.inventories && set.inventories[0] && set.inventories[0].id) || '',
+        inventoryParts = inventoryId ? useInventoryParts(inventoryId) : null,
+        numParts = inventoryParts?.reduce((count: number, inventoryPart) => count + inventoryPart.quantity, 0)
   useEffect(() => {
     navigation.setOptions({
-      title: `Parts (${numParts.toLocaleString()})`
+      title: `Parts (${numParts ? numParts.toLocaleString() : '?'})`
     })
   }, [set])
   return (
     <ScrollView style={{padding: 20}}>
-      {inventory
-        ? <Inventory id={inventory.id} navigation={navigation} />
+      {inventoryParts
+        ? <Inventory id={inventoryId} navigation={navigation} />
         : <Text>Unable to find inventory set number &quot;{id}&quot;</Text>
       }
     </ScrollView>

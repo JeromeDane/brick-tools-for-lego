@@ -1,8 +1,10 @@
+import {useMemo} from 'react'
 import inventoryPartsData from './raw/inventory_parts.json'
-import {getPart, Part} from './parts'
+import {getPart} from './parts'
 import type {Color} from './colors'
+import type {Part, Element} from './types'
 import colors from './colors'
-import {getElementByPartAndColor, Element} from './elements'
+import {getElementByPartAndColor} from './elements'
 
 type InventoryPartData = {
   p: string, // partNum
@@ -31,3 +33,15 @@ export default Object.keys(data).reduce((acc: {[id: string]: InventoryPart[]}, i
   }) as InventoryPart)
   return acc
 }, {})
+
+export const useInventoryParts = (inventoryId: string) => {
+  return useMemo(() => {
+    return data[inventoryId].map(inventoryPartData => ({
+      part: getPart(inventoryPartData.p),
+      color: colors[inventoryPartData.c],
+      quantity: inventoryPartData.q,
+      isSpare: inventoryPartData.s == 1,
+      element: getElementByPartAndColor(inventoryPartData.p, inventoryPartData.c)
+    }) as InventoryPart)
+  }, [inventoryId])
+}
