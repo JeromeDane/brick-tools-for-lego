@@ -3,23 +3,26 @@ import {ScrollView, StyleSheet} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
 import {Text} from '../components/Themed'
 import themes from '../data/raw/themes.json'
+import LoadingWrapper from '../components/LoadingWrapper'
 
 export default function TabsScreen() {
   return (
     <ScrollView style={styles.container}>
-      {themes
-        .filter(({parentId}) => !parentId)
-        .sort(sortBy('name'))
-        .map(theme =>
-          <Text key={theme.id} style={styles.theme}>
-            {theme.name} (
-            {theme.yearFrom ? '' + theme.yearFrom + '' : ''}
-            {theme.yearTo ? '-' + theme.yearTo + '' : ''}
-            {(theme.yearFrom || theme.yearTo) ? ', ' : ''}
-            {theme.numSets} sets)
-          </Text>
-        )
-      }
+      <LoadingWrapper>
+        {themes
+          .filter(({parentId}) => !parentId)
+          .sort(sortBy('name'))
+          .map(theme =>
+            <Text key={theme.id} style={styles.theme}>
+              {theme.name} (
+              {theme.yearFrom ? '' + theme.yearFrom + '' : ''}
+              {theme.yearTo ? '-' + theme.yearTo + '' : ''}
+              {(theme.yearFrom || theme.yearTo) ? ', ' : ''}
+              {theme.numSets} sets)
+            </Text>
+          )
+        }
+      </LoadingWrapper>
     </ScrollView>
   )
 }
