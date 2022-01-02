@@ -23,11 +23,11 @@ import NotFoundScreen from '../screens/NotFoundScreen'
 import ElementScreen from '../screens/Element'
 import ThemesScreen from '../screens/Themes'
 import PartsScreen from '../screens/Parts'
-import SetsScreen from '../screens/sets'
+import SetsScreen from '../screens/sets/SetsScreen'
 import SettingsScreen from '../screens/Settings'
 import {RootStackParamList, RootDrawerParamList} from './types'
 import linking from './linking'
-import SetTabs from './SetTabs'
+import SetTabs from '../screens/set/SetScreen'
 
 /**
  * A root stack navigator is often used for displaying modals on top of all other content.

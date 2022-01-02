@@ -2,7 +2,7 @@ import partsData from './raw/parts.json'
 import {getPartCategory} from './part-categories'
 import {Part, PartData} from './types'
 import {getSubCategory} from './part-subcategories'
-import {memo, useContext, useEffect, useMemo} from 'react'
+import {useContext, useEffect, useMemo} from 'react'
 import {DataContext} from './DataProvider'
 
 const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^/]|$))?/

@@ -1,12 +1,13 @@
 import React, {useEffect, useMemo, useState} from 'react'
 import {sortBy} from 'sort-by-typescript'
 import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
-import {Image, ScrollView, View, TouchableOpacity, ActivityIndicator} from 'react-native'
-import {Picker, Text} from '../components/Themed'
-import {SetTabsParamList} from '../navigation/SetTabs'
-import {useSet} from '../data/sets'
-import Switch from '../components/Switch'
-import {useInventoryParts} from '../data/inventory-parts'
+import {ActivityIndicator, ScrollView, View} from 'react-native'
+import {Picker} from '../../../components/Themed'
+import {SetTabsParamList} from '../SetScreen'
+import {useSet} from '../../../data/sets'
+import Switch from '../../../components/Switch'
+import {useInventoryParts} from '../../../data/inventory-parts'
+import SetPartPreview from './SetPartPreview'
 
 export default function SetPartsScreen({navigation, route: {params: {id}}} : MaterialTopTabScreenProps<SetTabsParamList, 'SetParts'>) {
   const set = useSet(id),
@@ -19,8 +20,6 @@ export default function SetPartsScreen({navigation, route: {params: {id}}} : Mat
         defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder,name',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false)
-  console.log('parts:', Object.keys(inventoryParts || {}).length)
-  if(!inventoryParts) console.log('processing inventory parts')
   useEffect(() => {
     navigation.setOptions({
       title: `Parts (${inventoryParts
@@ -54,21 +53,12 @@ export default function SetPartsScreen({navigation, route: {params: {id}}} : Mat
           </View>
           {(showSpareParts ? inventoryParts : inventoryParts.filter(({isSpare}) => !isSpare))
             .sort(sortBy.apply(sortBy, sortOrder.split(',')))
-            .map(({element: {id, part, color}, quantity, isSpare}, i: number) => {
-              return <TouchableOpacity key={i} style={{flex: 1, flexDirection: 'row', flexGrow: 1, marginBottom: 10}}
-                onPress={() => { navigation.navigate('Element', {id}) }}>
-                <Image
-                  style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
-                  source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${id}.jpg`}} />
-                <View>
-                  <Text>Part: {part.partNum} Element: {id}</Text>
-                  <Text>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
-                  <Text>{part.name}</Text>
-                  <Text>{color.name} ({color.id})</Text>
-                  <Text>Qty: {quantity}{isSpare ? ' (spare part)' : ''}</Text>
-                </View>
-              </TouchableOpacity>
-            })
+            .map((inventoryPart, i: number) =>
+              <SetPartPreview
+                key={i}
+                inventortPart={inventoryPart}
+                onPress={id => { navigation.navigate('Element', {id})}} />
+            )
           }
         </View>
         : <ActivityIndicator color="#aaa" />
