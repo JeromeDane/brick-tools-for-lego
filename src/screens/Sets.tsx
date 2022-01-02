@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ActivityIndicator, ScrollView, StyleSheet, TouchableOpacity} from 'react-native'
 import sortBy from 'sort-by'
 import {DrawerScreenProps} from '@react-navigation/drawer'
@@ -15,15 +15,18 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
         [pageSize, setPageSize] = useState(25),
         [filterBy, setFilterBy] = useState(''),
         [theme, setTheme] = useState(''),
-        [isProcessing, setIsProcessing] = useState(true),
+        [isSorting, setIsSorting] = useState(true),
         [collectionFilter, setCollectionFilter] = useState(''),
         [currentPage, setCurrentPage] = useState(0),
         isLoggedInToBrickset = useIsLoggedInToBrickset(),
         scrollRef = useRef(),
         sets = useSets(),
-        filteredSets = isProcessing
-          ? []
-          : sets.filter(set =>
+        sortedSets = useMemo(
+          () => isSorting ? [] : [...sets].sort(sortBy.apply(sortBy, sortField.split(','))),
+          [isSorting, sets, sortBy]
+        ),
+        filteredSets = useMemo(
+          () => sortedSets.filter(set =>
             (!filterBy || (set.setNum + set.name).toLowerCase().match(filterBy.toLowerCase())) &&
             (!theme || set.theme.id == theme) &&
             (!isLoggedInToBrickset || !collectionFilter ||
@@ -32,11 +35,12 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
               (collectionFilter == 'wanted' && set.collection.wanted) ||
               (collectionFilter == 'not-wanted' && !set.collection.wanted) ||
               (collectionFilter == 'not-wanted-not-owned' && !set.collection.wanted && set.collection.qtyOwned === 0)
-            )
-          )
+            )),
+          [sortedSets, filterBy, collectionFilter, theme]
+        )
   useEffect(() => {
-    if(isProcessing) setIsProcessing(false)
-  }, [isProcessing])
+    if(isSorting) setIsSorting(false)
+  }, [isSorting])
   return (
     <ScrollView ref={scrollRef} style={{
       padding: 20,
@@ -71,7 +75,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
           prompt="Sort by"
           selectedValue={sortField}
           onValueChange={(field: string) => {
-            setIsProcessing(true)
+            setIsSorting(true)
             setCurrentPage(0)
             setSortField(field)
           }}>
@@ -97,7 +101,6 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
             selectedValue={collectionFilter}
             onValueChange={(value: string) => {
               setCurrentPage(0)
-              setIsProcessing(true)
               setCollectionFilter(value)
             }}>
             <Picker.Item label="Any" value="" />
@@ -116,7 +119,6 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
       }
       {filteredSets.length
         ? filteredSets
-          .sort(sortBy.apply(sortBy, sortField.split(',')))
           .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
           .map(set =>
             <TouchableOpacity key={set.setNum} style={styles.set} onPress={() => {
@@ -150,7 +152,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
             </TouchableOpacity>
           )
         : <Text style={{textAlign: 'center'}}>
-          {(isProcessing || sets.length == 0)
+          {(isSorting || sets.length == 0)
             ? <ActivityIndicator size="large" color="#aaaa" />
             : 'No results match your search criteria'
           }
@@ -163,8 +165,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
           numItems={filteredSets.length}
           onPageSizeChange={setPageSize}
           onPageChange={(val : number) => {
-            setIsProcessing(true)
-            scrollRef.current?.scrollTo({y: 0, animated: true})
+            scrollRef.current.scrollTo({y: 0, animated: true})
             setCurrentPage(val)
           }}
           selectedValue={currentPage} />
