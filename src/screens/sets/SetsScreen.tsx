@@ -1,14 +1,14 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react'
-import {ActivityIndicator, ScrollView, StyleSheet, TouchableOpacity} from 'react-native'
+import {ActivityIndicator, ScrollView} from 'react-native'
 import sortBy from 'sort-by'
 import {DrawerScreenProps} from '@react-navigation/drawer'
-import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
-import ScaledImage from '../components/ScaledImage'
-import {RootDrawerParamList} from '../navigation/types'
-import {useSets} from '../data/sets'
-import {themesList} from '../data/themes'
-import {useIsLoggedInToBrickset} from '../api/brickset'
-import TextLink from '../components/TextLink'
+import {Paginator, Picker, Text, TextInput, View} from '../../components/Themed'
+import {RootDrawerParamList} from '../../navigation/types'
+import {useSets} from '../../data/sets'
+import {themesList} from '../../data/themes'
+import {useIsLoggedInToBrickset} from '../../api/brickset'
+import TextLink from '../../components/TextLink'
+import SetPreview from './SetPreview'
 
 export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerParamList, 'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
@@ -120,37 +120,7 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
       {filteredSets.length
         ? filteredSets
           .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
-          .map(set =>
-            <TouchableOpacity key={set.setNum} style={styles.set} onPress={() => {
-              navigation.navigate('Set', {id: set.setNum})
-            }}>
-              <ScaledImage
-                style={styles.image}
-                width={100}
-                source={{uri: set.image.imageURL}} />
-              <View>
-                <Text>{set.setNum}</Text>
-                <Text>{set.name}</Text>
-                <Text>{set.theme.name}</Text>
-                <Text>{set.numParts.toLocaleString()} parts</Text>
-                <Text>
-                  Released in {set.year}
-                  {set.LEGOCom.US.retailPrice ?
-                    ` at $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
-                    : ''
-                  }
-                </Text>
-                {sortField == '-ownedBy'
-                  ? <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
-                  : null
-                }
-                {sortField == '-wantedBy'
-                  ? <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
-                  : null
-                }
-              </View>
-            </TouchableOpacity>
-          )
+          .map(set => <SetPreview key={set.setNum} {...{set, navigation, sortField}} />)
         : <Text style={{textAlign: 'center'}}>
           {(isSorting || sets.length == 0)
             ? <ActivityIndicator size="large" color="#aaaa" />
@@ -175,23 +145,3 @@ export default function TabsScreen({navigation}: DrawerScreenProps<RootDrawerPar
     </ScrollView>
   )
 }
-
-const styles = StyleSheet.create({
-  nowrapRow: {
-    flex: 1,
-    flexDirection: 'row-reverse',
-    flexWrap: 'nowrap'
-  },
-  set: {
-    flex: 1,
-    flexDirection: 'row',
-    textAlign: 'left',
-    paddingVertical: 10,
-    paddingRight: 20,
-    flexGrow: 1
-  },
-  image: {
-    backgroundColor: 'gray',
-    marginRight: 10
-  }
-})
