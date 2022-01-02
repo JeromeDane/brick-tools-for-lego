@@ -4,8 +4,15 @@ import {Image, TouchableOpacity} from 'react-native'
 import {Picker, Text, View} from './Themed'
 import inventoryParts from '../data/inventory-parts'
 import Switch from './Switch'
+import {MaterialTopTabNavigationProp} from '@react-navigation/material-top-tabs'
+import {RootStackParamList} from '../navigation/types'
 
-const Inventory = ({id, navigation: {navigate}}) => {
+type InventoryProps = {
+  id: string,
+  navigation: MaterialTopTabNavigationProp<RootStackParamList>
+}
+
+const Inventory = ({id, navigation: {navigate}}: InventoryProps) => {
   const defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder,name',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false),
