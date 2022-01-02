@@ -1,13 +1,13 @@
 import React, {useMemo, useRef, useState} from 'react'
-import {ScrollView, StyleSheet, Image} from 'react-native'
+import {ScrollView} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
-import {Paginator, Picker, Text, TextInput, View} from '../components/Themed'
-import {usePartsAsLists} from '../data/parts'
-import {useGetElementByPartAndColor} from '../data/elements'
-import {colorsList} from '../data/colors'
-import {partCategoriesList} from '../data/part-categories'
-import Switch from '../components/Switch'
-import LoadingWrapper from '../components/LoadingWrapper'
+import {Paginator, Picker, Text, TextInput, View} from '../../components/Themed'
+import {usePartsAsLists} from '../../data/parts'
+import {colorsList} from '../../data/colors'
+import {partCategoriesList} from '../../data/part-categories'
+import Switch from '../../components/Switch'
+import LoadingWrapper from '../../components/LoadingWrapper'
+import PartPreview from './PartPreview'
 
 const PartsScreen = () => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
@@ -31,9 +31,7 @@ const PartsScreen = () => {
             })
             : [],
           [partsList]
-        ),
-        defaultColorId = colorFilter || colorsList[0].id,
-        getElementByPartAndColor = useGetElementByPartAndColor()
+        )
   return (
     <ScrollView ref={scrollRef} style={{
       paddingBottom: 100,
@@ -103,23 +101,7 @@ const PartsScreen = () => {
           ? filteredPartNumbers
             .sort(sortBy.apply(sortBy, sortOrder.split(',')))
             .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
-            .map((part, i: number) => {
-              const defaultColor = part.colors.find(({id}) => id == defaultColorId) || part.colors[0],
-                    element = defaultColor && getElementByPartAndColor(part.partNum, defaultColor.id)
-              return <View style={styles.part} key={i}>
-                {element &&
-                  <Image
-                    style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
-                    source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
-                }
-                <View>
-                  <Text>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Text>
-                  <Text>{part.name}</Text>
-                  <Text>Part Number: {part.partNum}</Text>
-                  <Text>Colors: {part.colors.length}</Text>
-                </View>
-              </View>
-            })
+            .map((part, i: number) => <PartPreview part={part} key={i} defaultColorId={colorFilter} />)
           : <Text style={{paddingVertical: 20}}>No parts found matching your criteria.</Text>
         }
         <View style={{paddingTop: 20}}>
@@ -139,18 +121,3 @@ const PartsScreen = () => {
 }
 
 export default PartsScreen
-
-const styles = StyleSheet.create({
-  part: {
-    flex: 1,
-    flexDirection: 'row',
-    textAlign: 'left',
-    paddingVertical: 10,
-    paddingRight: 20,
-    flexGrow: 1
-  },
-  image: {
-    backgroundColor: 'gray',
-    marginRight: 10
-  }
-})
