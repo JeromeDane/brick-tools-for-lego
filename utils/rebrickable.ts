@@ -17,6 +17,13 @@ mkdirSync(csvDir, {recursive: true})
 mkdirSync(dataDir, {recursive: true})
 mkdirSync(tmpDir, {recursive: true})
 
+type RebrickableDataType = 'colors'|'themes'
+
+export const fetchRebrickableCSVData = async (type: RebrickableDataType) => {
+  await downloadRebrickableCsv(type)
+  return await csvToJson(type)
+}
+
 const downloadGzAndExtract = async (url: string) =>
   new Promise(resolve => {
     const outFile = (url.match(/\/([^/]+)\.gz/) || '')[1]
@@ -43,7 +50,6 @@ const downloadRebrickableCsv = (type: string) => downloadGzAndExtract(
 
 export const updateCsvData = async () => {
   await downloadRebrickableCsv('themes')
-  await downloadRebrickableCsv('colors')
   await downloadRebrickableCsv('part_categories')
   await downloadRebrickableCsv('parts')
   await downloadRebrickableCsv('part_relationships')
@@ -57,7 +63,7 @@ export const updateCsvData = async () => {
   rmSync(tmpDir, {recursive: true})
 }
 
-const saveData = (type: string, data: any) => {
+export const saveData = (type: string, data: any) => {
   process.stdout.write(`Saving ${type} ...`)
   writeFileSync(
     path.join(dataDir, type + '.json'),
@@ -65,7 +71,7 @@ const saveData = (type: string, data: any) => {
   process.stdout.write(' done.\n')
 }
 
-const csvToJson = (type: string) => {
+export const csvToJson = (type: string) => {
   const csvFilePath = path.join(csvDir, type + '.csv')
   process.stdout.write('Opening CSV ' + csvFilePath + '\n')
   return csv().fromFile(csvFilePath).then(camelize)
@@ -79,8 +85,6 @@ const toKeyed = (input: any[], key: string) => input.reduce(
 
 export const buildJson = async () => {
   const themes = await csvToJson('themes'),
-        colors = await csvToJson('colors'),
-        colorDetails = await csvToJson('color-details'),
         partCategories = await csvToJson('part_categories'),
         parts = await csvToJson('parts'),
         partRelationships = await csvToJson('part_relationships'),
@@ -116,41 +120,8 @@ export const buildJson = async () => {
       theme.yearTo = bricksetTheme.yearTo
     }
   })
-
-
   saveData('themes', themes)
   saveData('themes-by-id', toKeyed(themes, 'id'))
-  // Note: The normal colors.csv download lacks tons of details that
-  // are in the table at https://rebrickable.com/colors/. To update,
-  // copy and paste the table into a google spreadsheet, then delete
-  // all fields except for ID,FirstYear,LastYear,LEGO,LDraw,BrickLink,BrickOwl
-  // save as a CSV file in 'data/rebrickable/color-details.csv`
-  // TODO: Automate scraping https://rebrickable.com/colors/
-  saveData('colors', colors.map((color: any) => {
-    const split = (input: string) => {
-      const match = input && input.match(/^([^[]+?)\s*\['(.+?)'/)
-      return {
-        id: match && match[1],
-        name: match && match[2]
-      }
-    }
-    const {
-      firstYear,
-      lastYear,
-      lego,
-      lDraw,
-      brickLink,
-      brickOwl
-    } = colorDetails.find(({id}: any) => id == color.id) || {}
-    return Object.assign(color, {
-      firstYear: firstYear && parseInt(firstYear),
-      lastYear: lastYear && parseInt(lastYear),
-      lego: split(lego),
-      lDraw: split(lDraw),
-      brickLink: split(brickLink),
-      brickOwl: split(brickOwl)
-    })
-  }))
   saveData('part_categories', partCategories)
   saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
   saveData('parts', parts)

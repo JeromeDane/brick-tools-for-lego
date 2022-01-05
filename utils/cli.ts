@@ -3,6 +3,7 @@ import {readFileSync} from 'fs'
 import bricksetApi from './brickset-api'
 import path from 'path'
 import yargs from 'yargs/yargs'
+import {processColors} from './processors/colors'
 
 // TODO: figure out why this can't be done as an import
 const {hideBin} = require('yargs/helpers'),
@@ -13,6 +14,7 @@ const run = async () => {
   console.log(`Brickset API key usage today: ${usageResults.apiKeyUsage[0]}\n`)
   // process.exit(0)
   if(argv.updateData) await updateCsvData()
+  await processColors()
   await buildJson()
   const bricksetSets = JSON.parse(
     readFileSync(path.join(__dirname, '../src/data/brickset/sets.json')).toString()
