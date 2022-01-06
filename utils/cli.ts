@@ -5,6 +5,7 @@ import path from 'path'
 import yargs from 'yargs/yargs'
 import {processColors} from './processors/colors'
 import {processParts} from './processors/parts'
+import {processSets} from './processors/sets'
 
 // TODO: figure out why this can't be done as an import
 const {hideBin} = require('yargs/helpers'),
@@ -17,6 +18,7 @@ const run = async () => {
   if(argv.updateData) await updateCsvData()
   await processColors()
   await processParts()
+  await processSets()
   await buildJson()
   const bricksetSets = JSON.parse(
     readFileSync(path.join(__dirname, '../src/data/brickset/sets.json')).toString()

@@ -4,7 +4,7 @@ import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path'
 import {promisify} from 'util'
 import bricksetApi from './brickset-api'
-import {processInventories} from './processors/inventories'
+import {getSets} from './processors/sets'
 
 // TODO: figure out why this can't be done as an import
 const csv = require('csvtojson')
@@ -58,7 +58,6 @@ export const updateCsvData = async () => {
   await downloadRebrickableCsv('part_categories')
   await downloadRebrickableCsv('part_relationships')
   await downloadRebrickableCsv('elements')
-  await downloadRebrickableCsv('sets')
   await downloadRebrickableCsv('minifigs')
   await downloadRebrickableCsv('inventory_parts')
   await downloadRebrickableCsv('inventory_sets')
@@ -91,9 +90,8 @@ export const buildJson = async () => {
         partCategories = await csvToJson('part_categories'),
         partRelationships = await csvToJson('part_relationships'),
         elements = await csvToJson('elements'),
-        sets = await csvToJson('sets'),
+        sets = await getSets(),
         minifigs = await csvToJson('minifigs'),
-        inventories = await processInventories(),
         inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
           acc[part.inventoryId] = acc[part.inventoryId] || []
           acc[part.inventoryId].push({
@@ -132,21 +130,6 @@ export const buildJson = async () => {
     p: e.partNum,
     c: e.colorId
   })))
-  saveData('sets', sets.map((set: any) => {
-    const setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))
-    return Object.assign({}, set, {
-      numParts: parseInt(set.numParts),
-      year: parseInt(set.year),
-      setNumSort: isNaN(setNumSort) ? Number.POSITIVE_INFINITY : setNumSort,
-      inventories: inventories
-        .filter(({setNum} : {setNum: string}) => setNum == set.setNum)
-        .map(({id, version}: {id: string, version: string}) => ({
-          id,
-          version
-          // parts: inventoryParts.filter(({inventoryId} : {inventoryId: string}) => inventoryId == id)
-        }))
-    })
-  }))
   saveData('minifigs', minifigs)
   saveData('inventory_parts', inventoryParts)
   saveData('inventory_sets', inventorySets)
