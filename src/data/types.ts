@@ -93,3 +93,14 @@ export type InventoryPart = Immutable<{
 }>
 
 export type InventoryParts = Immutable<InventoryPart[]>
+
+export type Theme = Immutable<{
+  id: string
+  name: string
+  parentId: string
+  numSets: number
+  yearFrom: number
+  yearTo: number
+}>
+
+export type Themes = Immutable<Theme[]>

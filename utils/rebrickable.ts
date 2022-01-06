@@ -54,7 +54,6 @@ const downloadRebrickableCsv = (type: string) => downloadGzAndExtract(
   `https://cdn.rebrickable.com/media/downloads/${type}.csv.gz`)
 
 export const updateCsvData = async () => {
-  await downloadRebrickableCsv('themes')
   await downloadRebrickableCsv('part_categories')
   await downloadRebrickableCsv('part_relationships')
   await downloadRebrickableCsv('elements')
@@ -86,11 +85,9 @@ const toKeyed = (input: any[], key: string) => input.reduce(
   }, {})
 
 export const buildJson = async () => {
-  const themes = await csvToJson('themes'),
-        partCategories = await csvToJson('part_categories'),
+  const partCategories = await csvToJson('part_categories'),
         partRelationships = await csvToJson('part_relationships'),
         elements = await csvToJson('elements'),
-        sets = await getSets(),
         minifigs = await csvToJson('minifigs'),
         inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
           acc[part.inventoryId] = acc[part.inventoryId] || []
@@ -106,22 +103,6 @@ export const buildJson = async () => {
         inventorySets = await csvToJson('inventory_sets'),
         inventoryMinifigs = await csvToJson('inventory_minifigs')
 
-  themes.map((theme: any) => {
-    theme.numSets = sets.reduce((num : number, set: any) =>
-      num + (set.themeId == theme.id ? 1 : 0)
-    , 0)
-    return theme
-  })
-  const bricksetThemes = await bricksetApi('getThemes')
-  bricksetThemes.themes.forEach((bricksetTheme : any) => {
-    const theme = themes.find(({name} : any) => name === bricksetTheme.theme)
-    if(theme) {
-      theme.yearFrom = bricksetTheme.yearFrom
-      theme.yearTo = bricksetTheme.yearTo
-    }
-  })
-  saveData('themes', themes)
-  saveData('themes-by-id', toKeyed(themes, 'id'))
   saveData('part_categories', partCategories)
   saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
   saveData('part_relationships', partRelationships)
