@@ -3,8 +3,6 @@ import fetch from 'cross-fetch'
 import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path'
 import {promisify} from 'util'
-import bricksetApi from './brickset-api'
-import {getSets} from './processors/sets'
 
 // TODO: figure out why this can't be done as an import
 const csv = require('csvtojson')
