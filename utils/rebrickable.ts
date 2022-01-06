@@ -4,6 +4,7 @@ import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
 import path from 'path'
 import {promisify} from 'util'
 import bricksetApi from './brickset-api'
+import {processInventories} from './processors/inventories'
 
 // TODO: figure out why this can't be done as an import
 const csv = require('csvtojson')
@@ -17,7 +18,11 @@ mkdirSync(csvDir, {recursive: true})
 mkdirSync(dataDir, {recursive: true})
 mkdirSync(tmpDir, {recursive: true})
 
-type RebrickableDataType = 'colors'|'parts'|'themes'
+type RebrickableDataType = 'colors' |
+                           'inventories' |
+                           'parts' |
+                           'sets' |
+                           'themes'
 
 export const fetchRebrickableCSVData = async (type: RebrickableDataType) => {
   await downloadRebrickableCsv(type)
@@ -55,7 +60,6 @@ export const updateCsvData = async () => {
   await downloadRebrickableCsv('elements')
   await downloadRebrickableCsv('sets')
   await downloadRebrickableCsv('minifigs')
-  await downloadRebrickableCsv('inventories')
   await downloadRebrickableCsv('inventory_parts')
   await downloadRebrickableCsv('inventory_sets')
   await downloadRebrickableCsv('inventory_minifigs')
@@ -89,7 +93,7 @@ export const buildJson = async () => {
         elements = await csvToJson('elements'),
         sets = await csvToJson('sets'),
         minifigs = await csvToJson('minifigs'),
-        inventories = await csvToJson('inventories'),
+        inventories = await processInventories(),
         inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
           acc[part.inventoryId] = acc[part.inventoryId] || []
           acc[part.inventoryId].push({
@@ -144,7 +148,6 @@ export const buildJson = async () => {
     })
   }))
   saveData('minifigs', minifigs)
-  saveData('inventories', inventories)
   saveData('inventory_parts', inventoryParts)
   saveData('inventory_sets', inventorySets)
   saveData('inventory_minifigs', inventoryMinifigs)
