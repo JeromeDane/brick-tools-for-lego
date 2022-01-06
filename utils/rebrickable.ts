@@ -17,7 +17,7 @@ mkdirSync(csvDir, {recursive: true})
 mkdirSync(dataDir, {recursive: true})
 mkdirSync(tmpDir, {recursive: true})
 
-type RebrickableDataType = 'colors'|'themes'
+type RebrickableDataType = 'colors'|'parts'|'themes'
 
 export const fetchRebrickableCSVData = async (type: RebrickableDataType) => {
   await downloadRebrickableCsv(type)
@@ -51,7 +51,6 @@ const downloadRebrickableCsv = (type: string) => downloadGzAndExtract(
 export const updateCsvData = async () => {
   await downloadRebrickableCsv('themes')
   await downloadRebrickableCsv('part_categories')
-  await downloadRebrickableCsv('parts')
   await downloadRebrickableCsv('part_relationships')
   await downloadRebrickableCsv('elements')
   await downloadRebrickableCsv('sets')
@@ -86,7 +85,6 @@ const toKeyed = (input: any[], key: string) => input.reduce(
 export const buildJson = async () => {
   const themes = await csvToJson('themes'),
         partCategories = await csvToJson('part_categories'),
-        parts = await csvToJson('parts'),
         partRelationships = await csvToJson('part_relationships'),
         elements = await csvToJson('elements'),
         sets = await csvToJson('sets'),
@@ -124,7 +122,6 @@ export const buildJson = async () => {
   saveData('themes-by-id', toKeyed(themes, 'id'))
   saveData('part_categories', partCategories)
   saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
-  saveData('parts', parts)
   saveData('part_relationships', partRelationships)
   saveData('elements', elements.map((e: any) => ({
     i: e.elementId,
