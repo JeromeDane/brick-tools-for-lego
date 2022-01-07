@@ -19,6 +19,7 @@ mkdirSync(tmpDir, {recursive: true})
 type RebrickableDataType = 'colors' |
                            'inventories' |
                            'parts' |
+                           'part_categories' |
                            'sets' |
                            'themes'
 
@@ -52,7 +53,6 @@ const downloadRebrickableCsv = (type: string) => downloadGzAndExtract(
   `https://cdn.rebrickable.com/media/downloads/${type}.csv.gz`)
 
 export const updateCsvData = async () => {
-  await downloadRebrickableCsv('part_categories')
   await downloadRebrickableCsv('part_relationships')
   await downloadRebrickableCsv('elements')
   await downloadRebrickableCsv('minifigs')
@@ -76,15 +76,8 @@ export const csvToJson = (type: string) => {
   return csv().fromFile(csvFilePath).then(camelize)
 }
 
-const toKeyed = (input: any[], key: string) => input.reduce(
-  (acc: any, element: any) => {
-    acc[element[key]] = element
-    return acc
-  }, {})
-
 export const buildJson = async () => {
-  const partCategories = await csvToJson('part_categories'),
-        partRelationships = await csvToJson('part_relationships'),
+  const partRelationships = await csvToJson('part_relationships'),
         elements = await csvToJson('elements'),
         minifigs = await csvToJson('minifigs'),
         inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
@@ -101,8 +94,7 @@ export const buildJson = async () => {
         inventorySets = await csvToJson('inventory_sets'),
         inventoryMinifigs = await csvToJson('inventory_minifigs')
 
-  saveData('part_categories', partCategories)
-  saveData('part_categories-by-id', toKeyed(partCategories, 'id'))
+
   saveData('part_relationships', partRelationships)
   saveData('elements', elements.map((e: any) => ({
     i: e.elementId,
