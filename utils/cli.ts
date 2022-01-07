@@ -10,6 +10,7 @@ import {processThemes} from './processors/themes'
 import {processPartCategories} from './processors/part-categories'
 import {processPartRelationships} from './processors/part-relationships'
 import {processInventoryParts} from './processors/inventory-parts'
+import {processMinifigs} from './processors/minifigs'
 
 // TODO: figure out why this can't be done as an import
 const {hideBin} = require('yargs/helpers'),
@@ -25,6 +26,7 @@ const run = async () => {
   await processPartCategories()
   await processParts()
   await processInventoryParts()
+  await processMinifigs()
   await processSets()
   await processThemes()
   await buildJson()
