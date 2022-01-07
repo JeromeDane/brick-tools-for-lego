@@ -8,6 +8,7 @@ import {processParts} from './processors/parts'
 import {processSets} from './processors/sets'
 import {processThemes} from './processors/themes'
 import {processPartCategories} from './processors/part-categories'
+import {processPartRelationships} from './processors/part-relationships'
 
 // TODO: figure out why this can't be done as an import
 const {hideBin} = require('yargs/helpers'),
@@ -19,10 +20,11 @@ const run = async () => {
   // process.exit(0)
   if(argv.updateData) await updateCsvData()
   await processColors()
+  await processPartRelationships()
+  await processPartCategories()
   await processParts()
   await processSets()
   await processThemes()
-  await processPartCategories()
   await buildJson()
   const bricksetSets = JSON.parse(
     readFileSync(path.join(__dirname, '../src/data/brickset/sets.json')).toString()

@@ -20,6 +20,7 @@ type RebrickableDataType = 'colors' |
                            'inventories' |
                            'parts' |
                            'part_categories' |
+                           'part_relationships' |
                            'sets' |
                            'themes'
 
@@ -53,7 +54,6 @@ const downloadRebrickableCsv = (type: string) => downloadGzAndExtract(
   `https://cdn.rebrickable.com/media/downloads/${type}.csv.gz`)
 
 export const updateCsvData = async () => {
-  await downloadRebrickableCsv('part_relationships')
   await downloadRebrickableCsv('elements')
   await downloadRebrickableCsv('minifigs')
   await downloadRebrickableCsv('inventory_parts')
@@ -77,8 +77,7 @@ export const csvToJson = (type: string) => {
 }
 
 export const buildJson = async () => {
-  const partRelationships = await csvToJson('part_relationships'),
-        elements = await csvToJson('elements'),
+  const elements = await csvToJson('elements'),
         minifigs = await csvToJson('minifigs'),
         inventoryParts = await csvToJson('inventory_parts').reduce((acc: any, part: any) => {
           acc[part.inventoryId] = acc[part.inventoryId] || []
@@ -94,8 +93,6 @@ export const buildJson = async () => {
         inventorySets = await csvToJson('inventory_sets'),
         inventoryMinifigs = await csvToJson('inventory_minifigs')
 
-
-  saveData('part_relationships', partRelationships)
   saveData('elements', elements.map((e: any) => ({
     i: e.elementId,
     p: e.partNum,
