@@ -7,7 +7,7 @@ let processedSets: Sets
 
 export const processSets = async (): Promise<Sets> => {
   const inventories = await processInventories(),
-        bricksetSets = getBricksetSets(),
+        bricksetSets = getBricksetSets(), // TODO: Parse theses
         sets = (await fetchRebrickableCSVData('sets'))
           .map((set: any) => {
             const setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))

@@ -2,6 +2,7 @@ import fetch from 'cross-fetch'
 import formUrlEncode from 'form-urlencoded'
 import {readFileSync, writeFileSync} from 'fs'
 import path from 'path'
+import {downloadData} from './options'
 
 let bricksetUserHash = ''
 
@@ -37,6 +38,10 @@ export const logTodaysAPIUsage = async () => {
 }
 
 export const updateSetsData = async () => {
+  if(!downloadData) {
+    console.log('Skipping Brickset set download')
+    return
+  }
   const bricksetSets = getBricksetSets()
   console.log(Object.keys(bricksetSets).length, 'sets currently loaded')
   async function getSets(pageNumber  =1) {

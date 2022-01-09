@@ -3,6 +3,7 @@ import fetch from 'cross-fetch'
 import {mkdirSync, writeFile, writeFileSync} from 'fs'
 import path from 'path'
 import {promisify} from 'util'
+import {downloadData} from './options'
 
 // TODO: figure out why this can't be done as an import
 const csv = require('csvtojson')
@@ -30,7 +31,8 @@ type RebrickableDataType = 'colors' |
                            'themes'
 
 export const fetchRebrickableCSVData = async (type: RebrickableDataType) => {
-  await downloadRebrickableCsv(type)
+  if(downloadData) await downloadRebrickableCsv(type)
+  else console.log('Skipping download of', type)
   return await csvToJson(type)
 }
 
