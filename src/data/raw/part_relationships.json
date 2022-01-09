@@ -4450,11 +4450,6 @@
     "parentPartNum": "15038"
   },
   {
-    "relType": "M",
-    "childPartNum": "3242e",
-    "parentPartNum": "3242"
-  },
-  {
     "relType": "B",
     "childPartNum": "6626",
     "parentPartNum": "5306bc020"
@@ -19271,6 +19266,11 @@
   },
   {
     "relType": "P",
+    "childPartNum": "21019c00pat017pr1815",
+    "parentPartNum": "21019c00pat017"
+  },
+  {
+    "relType": "P",
     "childPartNum": "3069bpr0248",
     "parentPartNum": "3069b"
   },
@@ -19883,6 +19883,11 @@
     "relType": "P",
     "childPartNum": "60581pr0021",
     "parentPartNum": "60581"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "21019c00pat017pr1822",
+    "parentPartNum": "21019c00pat017"
   },
   {
     "relType": "P",
@@ -71826,11 +71831,6 @@
   },
   {
     "relType": "P",
-    "childPartNum": "4066pr9985",
-    "parentPartNum": "4066"
-  },
-  {
-    "relType": "P",
     "childPartNum": "973c28h22pr9999",
     "parentPartNum": "973c28h22"
   },
@@ -84676,7 +84676,7 @@
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr2647",
+    "childPartNum": "3626cpr3261",
     "parentPartNum": "3626c"
   },
   {
@@ -97391,6 +97391,11 @@
   },
   {
     "relType": "P",
+    "childPartNum": "21019c00pat017pr1663",
+    "parentPartNum": "21019c00pat017"
+  },
+  {
+    "relType": "P",
     "childPartNum": "970x026pr1536",
     "parentPartNum": "970x026"
   },
@@ -109461,12 +109466,12 @@
   },
   {
     "relType": "P",
-    "childPartNum": "98138pr0197",
+    "childPartNum": "98138pr9988",
     "parentPartNum": "98138"
   },
   {
     "relType": "B",
-    "childPartNum": "98138pr0197",
+    "childPartNum": "98138pr9988",
     "parentPartNum": "73095"
   },
   {
@@ -113311,6 +113316,11 @@
   },
   {
     "relType": "P",
+    "childPartNum": "76923pr0001",
+    "parentPartNum": "76923"
+  },
+  {
+    "relType": "P",
     "childPartNum": "15504pr0007",
     "parentPartNum": "15504"
   },
@@ -115826,7 +115836,7 @@
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366645",
+    "childPartNum": "3626cpr3620",
     "parentPartNum": "3626c"
   },
   {
@@ -115916,7 +115926,7 @@
   },
   {
     "relType": "P",
-    "childPartNum": "970c00pr6366629",
+    "childPartNum": "970c00pr2192",
     "parentPartNum": "970c00"
   },
   {
@@ -118305,11 +118315,6 @@
     "parentPartNum": "98086pr0005"
   },
   {
-    "relType": "P",
-    "childPartNum": "68228pr0001",
-    "parentPartNum": "68228"
-  },
-  {
     "relType": "R",
     "childPartNum": "98160pr0002",
     "parentPartNum": "98159pr0002"
@@ -118366,42 +118371,42 @@
   },
   {
     "relType": "P",
-    "childPartNum": "21019c00pat004pr6397",
+    "childPartNum": "21019c00pat004pr2198",
     "parentPartNum": "21019c00pat004"
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366649",
+    "childPartNum": "3626cpr3616",
     "parentPartNum": "3626c"
   },
   {
     "relType": "P",
-    "childPartNum": "970c00pr6366648",
+    "childPartNum": "970c00pr2200",
     "parentPartNum": "970c00"
   },
   {
     "relType": "P",
-    "childPartNum": "973c01h01pr6375608",
+    "childPartNum": "973c01h01pr5863",
     "parentPartNum": "973c01h01"
   },
   {
     "relType": "P",
-    "childPartNum": "973c01h01pr6376221",
+    "childPartNum": "973c01h01pr5875",
     "parentPartNum": "973c01h01"
   },
   {
     "relType": "P",
-    "childPartNum": "973c06h01pr6378414",
+    "childPartNum": "973c06h01pr5884",
     "parentPartNum": "973c06h01"
   },
   {
     "relType": "P",
-    "childPartNum": "973c27h01pr6378366",
+    "childPartNum": "973c27h01pr5883",
     "parentPartNum": "973c27h01"
   },
   {
     "relType": "P",
-    "childPartNum": "98138prNEW",
+    "childPartNum": "98138pr9985",
     "parentPartNum": "98138"
   },
   {
@@ -118431,27 +118436,27 @@
   },
   {
     "relType": "P",
-    "childPartNum": "14769pr6366174",
+    "childPartNum": "14769pr1231",
     "parentPartNum": "14769"
   },
   {
     "relType": "P",
-    "childPartNum": "6179pr6366170",
+    "childPartNum": "6179pr0030",
     "parentPartNum": "6179"
   },
   {
     "relType": "P",
-    "childPartNum": "87079pr6366175",
+    "childPartNum": "87079pr0261",
     "parentPartNum": "87079"
   },
   {
     "relType": "P",
-    "childPartNum": "970c00pr6366635",
+    "childPartNum": "970c00pr2199",
     "parentPartNum": "970c00"
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366633",
+    "childPartNum": "3626cpr3619",
     "parentPartNum": "3626c"
   },
   {
@@ -118461,12 +118466,12 @@
   },
   {
     "relType": "R",
-    "childPartNum": "6365679",
+    "childPartNum": "79505",
     "parentPartNum": "44224"
   },
   {
     "relType": "R",
-    "childPartNum": "6365679",
+    "childPartNum": "79505",
     "parentPartNum": "47455"
   },
   {
@@ -118481,22 +118486,22 @@
   },
   {
     "relType": "P",
-    "childPartNum": "16925c01pr6382001",
+    "childPartNum": "16925c01pr0165",
     "parentPartNum": "16925"
   },
   {
     "relType": "P",
-    "childPartNum": "16925c01pr6373398",
+    "childPartNum": "16925c01pr9999",
     "parentPartNum": "16925"
   },
   {
     "relType": "P",
-    "childPartNum": "11818pr6373408",
+    "childPartNum": "11818pr0303",
     "parentPartNum": "11818"
   },
   {
     "relType": "P",
-    "childPartNum": "11408c01pr6382947",
+    "childPartNum": "11408c01pr0131",
     "parentPartNum": "11408c01"
   },
   {
@@ -118568,6 +118573,156 @@
     "relType": "P",
     "childPartNum": "98138pr0271",
     "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "64225pr0010",
+    "parentPartNum": "64225"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c06h06pr5901",
+    "parentPartNum": "973c06h06"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c28h22pr5899",
+    "parentPartNum": "973c28h22"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "69320pr0005",
+    "parentPartNum": "69320"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "22886pr0004",
+    "parentPartNum": "22886"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c27h27pr5900",
+    "parentPartNum": "973c27h27"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "80481pr0001",
+    "parentPartNum": "80481"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "66857pr0014",
+    "parentPartNum": "66857"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3069bpr0350",
+    "parentPartNum": "3069b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr0591",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "19729pr0049",
+    "parentPartNum": "19729"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3024pr0022",
+    "parentPartNum": "3024"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "19729pr0050",
+    "parentPartNum": "19729"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11203pr0020",
+    "parentPartNum": "11203"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "19729pr0052",
+    "parentPartNum": "19729"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "30367cpr1024",
+    "parentPartNum": "30367c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0273",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr2225",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c27h03pr5947",
+    "parentPartNum": "973c27h03"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11818pr0287",
+    "parentPartNum": "11818"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0274",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "25269pr0031",
+    "parentPartNum": "25269"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0275",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "16925c01pr0013",
+    "parentPartNum": "16925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11818pr0299",
+    "parentPartNum": "11818"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11818pr0298",
+    "parentPartNum": "11818"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "80337",
+    "parentPartNum": "80336"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "24246pr0036",
+    "parentPartNum": "24246"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "24246pr0037",
+    "parentPartNum": "24246"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3070bpr0268",
+    "parentPartNum": "3070b"
   },
   {
     "relType": "P",
@@ -119436,37 +119591,32 @@
   },
   {
     "relType": "P",
-    "childPartNum": "24309pr6366619",
+    "childPartNum": "24309pr0015",
     "parentPartNum": "24309"
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366626",
+    "childPartNum": "3626cpr3607",
     "parentPartNum": "3626c"
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366636",
+    "childPartNum": "3626cpr3618",
     "parentPartNum": "3626c"
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366655",
-    "parentPartNum": "3626c"
-  },
-  {
-    "relType": "P",
-    "childPartNum": "973c01h01pr6376476",
+    "childPartNum": "973c01h01pr5877",
     "parentPartNum": "973c01h01"
   },
   {
     "relType": "P",
-    "childPartNum": "973c22h22pr6375834",
+    "childPartNum": "973c22h22pr5871",
     "parentPartNum": "973c22h22"
   },
   {
     "relType": "P",
-    "childPartNum": "973c27h27pr6374395",
+    "childPartNum": "973c27h27pr5851",
     "parentPartNum": "973c27h27"
   },
   {
@@ -119486,13 +119636,78 @@
   },
   {
     "relType": "P",
-    "childPartNum": "4162pr6366690",
+    "childPartNum": "4162pr0087",
     "parentPartNum": "4162"
   },
   {
     "relType": "P",
-    "childPartNum": "26603pr6378425",
+    "childPartNum": "26603pr0066",
     "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0257",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0258",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0259",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0260",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0261",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0262",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0263",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0264",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0265",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0266",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0267",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0268",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0270",
+    "parentPartNum": "98138"
   },
   {
     "relType": "R",
@@ -120191,42 +120406,42 @@
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366620",
+    "childPartNum": "3626cpr3615",
     "parentPartNum": "3626c"
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366624",
+    "childPartNum": "3626cpr3606",
     "parentPartNum": "3626c"
   },
   {
     "relType": "P",
-    "childPartNum": "3626cpr6366631",
-    "parentPartNum": "3626c"
-  },
-  {
-    "relType": "P",
-    "childPartNum": "970c00pr6366623",
+    "childPartNum": "970c00pr2195",
     "parentPartNum": "970c00"
   },
   {
     "relType": "P",
-    "childPartNum": "970c00pr6366638",
+    "childPartNum": "970c00pr2197",
     "parentPartNum": "970c00"
   },
   {
     "relType": "P",
-    "childPartNum": "970c00pr6366646",
+    "childPartNum": "970c00pr2196",
     "parentPartNum": "970c00"
   },
   {
     "relType": "P",
-    "childPartNum": "970c00pr6379353",
+    "childPartNum": "970c00pr2203",
     "parentPartNum": "970c00"
   },
   {
     "relType": "P",
-    "childPartNum": "85984pr6366029",
+    "childPartNum": "98138pr0269",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "85984pr0029",
     "parentPartNum": "85984"
   },
   {
@@ -120251,22 +120466,22 @@
   },
   {
     "relType": "P",
-    "childPartNum": "26603pr6366169",
+    "childPartNum": "26603pr0071",
     "parentPartNum": "26603"
   },
   {
     "relType": "P",
-    "childPartNum": "3068bpr6366172",
+    "childPartNum": "3068bpr0582",
     "parentPartNum": "3068b"
   },
   {
     "relType": "P",
-    "childPartNum": "60601pr6366171",
+    "childPartNum": "60601pr0009",
     "parentPartNum": "60601"
   },
   {
     "relType": "P",
-    "childPartNum": "87079pr6366173",
+    "childPartNum": "87079pr0260",
     "parentPartNum": "87079"
   },
   {
@@ -120338,5 +120553,2550 @@
     "relType": "P",
     "childPartNum": "973c03h12pr5182",
     "parentPartNum": "973c03h12"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3651",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3632",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3628",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3631",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3630",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c12h12pr5902",
+    "parentPartNum": "973c12h12"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3629",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3663",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "47753pr0023",
+    "parentPartNum": "47753"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3633",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "57895pr0020",
+    "parentPartNum": "57895"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "87079pr0266",
+    "parentPartNum": "87079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c06h01pr5904",
+    "parentPartNum": "973c06h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "87552pr0013",
+    "parentPartNum": "87552"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "19729pr0048",
+    "parentPartNum": "19729"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "19729pr0041",
+    "parentPartNum": "19729"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr0590",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3024pr0020",
+    "parentPartNum": "3024"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3024pr0021",
+    "parentPartNum": "3024"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr0081",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr0080",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "19729pr0051",
+    "parentPartNum": "19729"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c09h09pr6034",
+    "parentPartNum": "973c09h09"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "21019c00pat002pr2222",
+    "parentPartNum": "21019c00pat002"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "2431pr0177",
+    "parentPartNum": "2431"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "16925c01pr0012",
+    "parentPartNum": "16925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "22886pr0005",
+    "parentPartNum": "22886"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "67095pr0013",
+    "parentPartNum": "67095"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11408c01pr0124",
+    "parentPartNum": "11408c01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "16925c01pr0015",
+    "parentPartNum": "16925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "37352pr0013",
+    "parentPartNum": "37352"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3062bpr0032",
+    "parentPartNum": "3062b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3641",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3660",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0276",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "25269pr0034",
+    "parentPartNum": "25269"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "24246pr0032",
+    "parentPartNum": "24246"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3070bpr0264",
+    "parentPartNum": "3070b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0277",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0278",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3070bpr0263",
+    "parentPartNum": "3070b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "25269pr0033",
+    "parentPartNum": "25269"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0279",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "15068pr0054",
+    "parentPartNum": "15068"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "25269pr0032",
+    "parentPartNum": "25269"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "24246pr0031",
+    "parentPartNum": "24246"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "77814",
+    "parentPartNum": "77813"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "77817",
+    "parentPartNum": "77813"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "25269pr0035",
+    "parentPartNum": "25269"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr0073",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3070bpr0266",
+    "parentPartNum": "3070b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3070bpr0265",
+    "parentPartNum": "3070b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "24246pr0033",
+    "parentPartNum": "24246"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0280",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3070bpr0267",
+    "parentPartNum": "3070b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "18895pr0022",
+    "parentPartNum": "18895"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0257",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0258",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0259",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0260",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0261",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0262",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0263",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0264",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0265",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0266",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0267",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0268",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0269",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0270",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "87079pr0257",
+    "parentPartNum": "87079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3667",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3004pr0085",
+    "parentPartNum": "3004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3005pr0030",
+    "parentPartNum": "3005"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9693",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9691",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9689",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9694",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9688",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9687",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "6239pr0021",
+    "parentPartNum": "6239"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9686",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9685",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3665",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9690",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9684",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "37352pr0015",
+    "parentPartNum": "37352"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3069bpr0349",
+    "parentPartNum": "3069b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "85984pr0033",
+    "parentPartNum": "85984"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0197",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "85984pr0034",
+    "parentPartNum": "85984"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "22385pr0134",
+    "parentPartNum": "22385"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr0079",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr0587",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3004pr0009",
+    "parentPartNum": "3004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3622pr0065",
+    "parentPartNum": "3622"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr0588",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3670",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3671",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr2210",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "15068pr0058",
+    "parentPartNum": "15068"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr2214",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr2211",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "6239pr0022",
+    "parentPartNum": "6239"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "10314pr1004",
+    "parentPartNum": "10314"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "44126pr0001",
+    "parentPartNum": "44126"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3672",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3375",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3010pr0084",
+    "parentPartNum": "3010"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "80677pr0001",
+    "parentPartNum": "80677"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "14769pr9994",
+    "parentPartNum": "14769"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3661",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "A",
+    "childPartNum": "98138pr9986",
+    "parentPartNum": "98138pr0074"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr9986",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "40925pat0012",
+    "parentPartNum": "40925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9769",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970x330pr0001",
+    "parentPartNum": "970x330"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3624",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3666",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9768",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3677",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3679",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3680",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3676",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr9998",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "40925pat0013",
+    "parentPartNum": "40925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c28h28pr0001",
+    "parentPartNum": "973c28h28"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr0608",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "40925pat0014",
+    "parentPartNum": "40925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9767",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr9997",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "10509pr0008",
+    "parentPartNum": "10509"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "40925pat0015",
+    "parentPartNum": "40925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c22h22pr0003",
+    "parentPartNum": "973c22h22"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr9976",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9766",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "6239pr0023",
+    "parentPartNum": "6239"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr9975",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3617",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr3621",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "69754",
+    "parentPartNum": "69755"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "18976",
+    "parentPartNum": "58090"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "11439pat0005",
+    "parentPartNum": "11439"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98224pr0008",
+    "parentPartNum": "98224"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98224pr0009",
+    "parentPartNum": "98224"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98223pr0031",
+    "parentPartNum": "98223"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98223pr0032",
+    "parentPartNum": "98223"
+  },
+  {
+    "relType": "A",
+    "childPartNum": "76371pr0202",
+    "parentPartNum": "76371pr0125"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "76371pr0202",
+    "parentPartNum": "76371"
+  },
+  {
+    "relType": "A",
+    "childPartNum": "14222pr9994",
+    "parentPartNum": "14222pr0004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "14222pr9994",
+    "parentPartNum": "14222"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "79782",
+    "parentPartNum": "79783"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4198pr9975",
+    "parentPartNum": "4198"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4198pr9974",
+    "parentPartNum": "4198"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4198pr9973",
+    "parentPartNum": "4198"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4198pr9972",
+    "parentPartNum": "4198"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4198pr9971",
+    "parentPartNum": "4198"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "2654pr0023",
+    "parentPartNum": "2654"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr9984",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0281",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr9996",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "40925pat0016",
+    "parentPartNum": "40925"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9765",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr9995",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9764",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "40925pat0017",
+    "parentPartNum": "40925"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "upn0492",
+    "parentPartNum": "upn0491"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9723",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9763",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c26h01pr0008",
+    "parentPartNum": "973c26h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26603pr9994",
+    "parentPartNum": "26603"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9762",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "85834pr0001",
+    "parentPartNum": "85834"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9682",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9683",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "87079pr0264",
+    "parentPartNum": "87079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "87079pr0265",
+    "parentPartNum": "87079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0282",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "14769pr9991",
+    "parentPartNum": "14769"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "15068pr0059",
+    "parentPartNum": "15068"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9681",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3004pr0089",
+    "parentPartNum": "3004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9680",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9679",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3004pr0079",
+    "parentPartNum": "3004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3004pr0080",
+    "parentPartNum": "3004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3004pr0081",
+    "parentPartNum": "3004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3069bpr0348",
+    "parentPartNum": "3069b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3004pr0088",
+    "parentPartNum": "3004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9678",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "87079pr0270",
+    "parentPartNum": "87079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9677",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9676",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "37352pr0014",
+    "parentPartNum": "37352"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3069bpr0351",
+    "parentPartNum": "3069b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9675",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9692",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9674",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "87079pr0269",
+    "parentPartNum": "87079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9673",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "85984pr0032",
+    "parentPartNum": "85984"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9698",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9856",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9697",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "85984pr0036",
+    "parentPartNum": "85984"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9702",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9700",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11203pr9999",
+    "parentPartNum": "11203"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9701",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9699",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9696",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9695",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "85984pr0035",
+    "parentPartNum": "85984"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "15068pr0057",
+    "parentPartNum": "15068"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "10202pr0015",
+    "parentPartNum": "10202"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3003pr0164",
+    "parentPartNum": "3003"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "66857pr0015",
+    "parentPartNum": "66857"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "66792pr0171",
+    "parentPartNum": "66792"
+  },
+  {
+    "relType": "M",
+    "childPartNum": "79806",
+    "parentPartNum": "87693"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr2193",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr2236",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3068bpr9672",
+    "parentPartNum": "3068b"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11408c01pr0130",
+    "parentPartNum": "11408c01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "2431pr9995",
+    "parentPartNum": "2431"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "2431pr9994",
+    "parentPartNum": "2431"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26490c01pr0007",
+    "parentPartNum": "26490"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26490c01pr0006",
+    "parentPartNum": "26490"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "26490c01pr0008",
+    "parentPartNum": "26490"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0283",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr2647",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "A",
+    "childPartNum": "89678",
+    "parentPartNum": "4274"
+  },
+  {
+    "relType": "M",
+    "childPartNum": "76700",
+    "parentPartNum": "90395"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4198pr9970",
+    "parentPartNum": "4198"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4198pr9969",
+    "parentPartNum": "4198"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98223pr0030",
+    "parentPartNum": "98223"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98223pr0028",
+    "parentPartNum": "98223"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98223pr0029",
+    "parentPartNum": "98223"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98224pr0007",
+    "parentPartNum": "98224"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3011pr1049",
+    "parentPartNum": "3011"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "1891a",
+    "parentPartNum": "1891"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "1891b",
+    "parentPartNum": "1891a"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "1891b",
+    "parentPartNum": "1891"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11344pr0015",
+    "parentPartNum": "11344"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "2302pr0020",
+    "parentPartNum": "2302"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "64225pr0012",
+    "parentPartNum": "64225"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0065",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0066",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0067",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0068",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0069",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0070",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0071",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0044",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0045",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0046",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "A",
+    "childPartNum": "3242e",
+    "parentPartNum": "3242b"
+  },
+  {
+    "relType": "M",
+    "childPartNum": "95270",
+    "parentPartNum": "60614"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970x199pr0002",
+    "parentPartNum": "970x199"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "24246pr9991",
+    "parentPartNum": "24246"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "13792pr0005",
+    "parentPartNum": "13792"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9720",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9721",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9719",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "21019c00pat004pr0004",
+    "parentPartNum": "21019c00pat004"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "75902pr9998",
+    "parentPartNum": "75902"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "16606pat0003",
+    "parentPartNum": "16606"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9718",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c06h01pr5997",
+    "parentPartNum": "973c06h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c27h01pr5993",
+    "parentPartNum": "973c27h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c10h12pr5985",
+    "parentPartNum": "973c10h12"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c06h01pr5984",
+    "parentPartNum": "973c06h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c27h01pr5981",
+    "parentPartNum": "973c27h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9717",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9716",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "92747pr9999",
+    "parentPartNum": "92747"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9715",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9761",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c35h01pr0001",
+    "parentPartNum": "973c35h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9714",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4740pr9999",
+    "parentPartNum": "4740"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9713",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "21019c00pat012pr0002",
+    "parentPartNum": "21019c00pat012"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9712",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "12892pr0002",
+    "parentPartNum": "12892"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9711",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "28621pr0001",
+    "parentPartNum": "28621"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr9760",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3626cpr9710",
+    "parentPartNum": "3626c"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "80501",
+    "parentPartNum": "92851"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "80501",
+    "parentPartNum": "24314c01"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "80501",
+    "parentPartNum": "24314c02"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "21019c00pat008pr0001",
+    "parentPartNum": "21019c00pat008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0047",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0048",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0049",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0050",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0051",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0052",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0053",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0054",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0055",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0056",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0057",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0058",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0059",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0060",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0062",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0063",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0064",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0065",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0066",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0067",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0068",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0069",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0070",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0071",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0072",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0073",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0074",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0075",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0076",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0077",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c01h01pr5971",
+    "parentPartNum": "973c01h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c01h01pr5970",
+    "parentPartNum": "973c01h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c36h01pr5969",
+    "parentPartNum": "973c36h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c03h01pr5966",
+    "parentPartNum": "973c03h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c34h01pr5962",
+    "parentPartNum": "973c34h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c27h01pr5961",
+    "parentPartNum": "973c27h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "973c27h01pr5893",
+    "parentPartNum": "973c27h01"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970x321pr2255",
+    "parentPartNum": "970x321"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970x321pr2252",
+    "parentPartNum": "970x321"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970x119pr2246",
+    "parentPartNum": "970x119"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "970c00pr2245",
+    "parentPartNum": "970c00"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "76371pr9985",
+    "parentPartNum": "76371"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0078",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0079",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0080",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0081",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0082",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0083",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0084",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0085",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0086",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0087",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0088",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0089",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0090",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0091",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0092",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0093",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0094",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0095",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0096",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0097",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0098",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0099",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0100",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0101",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0102",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0103",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0104",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0105",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0106",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0107",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0108",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0109",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0110",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0111",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0112",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0113",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0114",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0115",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0116",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0117",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0118",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009apr0119",
+    "parentPartNum": "3009a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "4066pr9970",
+    "parentPartNum": "4066"
+  },
+  {
+    "relType": "M",
+    "childPartNum": "79194",
+    "parentPartNum": "25893"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0072",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0073",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0074",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0075",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0076",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0077",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0078",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0079",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0080",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0081",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0082",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0083",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "A",
+    "childPartNum": "41819c01",
+    "parentPartNum": "41819c02"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "41820",
+    "parentPartNum": "41819c02"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "41819",
+    "parentPartNum": "41819c02"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "2431pr0178",
+    "parentPartNum": "2431"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "14718pr9993",
+    "parentPartNum": "14718"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0284",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0284",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "11203pr9998",
+    "parentPartNum": "11203"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "98138pr0285",
+    "parentPartNum": "98138"
+  },
+  {
+    "relType": "B",
+    "childPartNum": "98138pr0285",
+    "parentPartNum": "83079"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "759528c07",
+    "parentPartNum": "759532"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "759528c07",
+    "parentPartNum": "759533"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "759528c06",
+    "parentPartNum": "759533"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "759528c06",
+    "parentPartNum": "759532"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "759528c05",
+    "parentPartNum": "759533"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "759528c05",
+    "parentPartNum": "759532"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "25405pr0001",
+    "parentPartNum": "25405"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "80683",
+    "parentPartNum": "42205"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "42509",
+    "parentPartNum": "42205"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "80400",
+    "parentPartNum": "42509"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "80400",
+    "parentPartNum": "80683"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0084",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0085",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0086",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0087",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0088",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0089",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0090",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0091",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0092",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0093",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0094",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0095",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0096",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0097",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0098",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0099",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0100",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0101",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0102",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0103",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3009pr0104",
+    "parentPartNum": "3009"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0034",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0035",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0036",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0037",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0038",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0039",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0040",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0041",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0042",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0043",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0044",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0045",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0046",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0047",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0048",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0049",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0050",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0051",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0052",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0053",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0054",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0055",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0056",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0057",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0058",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0059",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0060",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0061",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0062",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0063",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0064",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0065",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "T",
+    "childPartNum": "3008apr0066",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0067",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0068",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0069",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0070",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0071",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0072",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0073",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0074",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0075",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0076",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0077",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0078",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0079",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0080",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008apr0081",
+    "parentPartNum": "3008a"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr0008",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00046",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00047",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00048",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00049",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00050",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00051",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00052",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00053",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00054",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00055",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00056",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00057",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00058",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00059",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00060",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00061",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00062",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00063",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00064",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00065",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00066",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00067",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00068",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00069",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00070",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00071",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "P",
+    "childPartNum": "3008pr00072",
+    "parentPartNum": "3008"
+  },
+  {
+    "relType": "R",
+    "childPartNum": "3008pr0014",
+    "parentPartNum": "3008"
   }
 ]

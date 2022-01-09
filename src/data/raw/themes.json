@@ -63,7 +63,7 @@
     "id": "22",
     "name": "Creator",
     "parentId": "",
-    "numSets": 280,
+    "numSets": 281,
     "yearFrom": 1995,
     "yearTo": 2022
   },
@@ -159,7 +159,7 @@
     "id": "61",
     "name": "Police",
     "parentId": "52",
-    "numSets": 155
+    "numSets": 156
   },
   {
     "id": "63",
@@ -495,7 +495,7 @@
     "id": "158",
     "name": "Star Wars",
     "parentId": "",
-    "numSets": 800
+    "numSets": 801
   },
   {
     "id": "171",
@@ -611,7 +611,7 @@
     "id": "206",
     "name": "Seasonal",
     "parentId": "",
-    "numSets": 37,
+    "numSets": 38,
     "yearFrom": 1999,
     "yearTo": 2022
   },
@@ -697,7 +697,7 @@
     "id": "229",
     "name": "Easter",
     "parentId": "206",
-    "numSets": 36
+    "numSets": 37
   },
   {
     "id": "230",
@@ -715,7 +715,7 @@
     "id": "232",
     "name": "Valentine",
     "parentId": "206",
-    "numSets": 11
+    "numSets": 12
   },
   {
     "id": "233",
@@ -757,7 +757,7 @@
     "id": "246",
     "name": "Harry Potter",
     "parentId": "",
-    "numSets": 121,
+    "numSets": 124,
     "yearFrom": 2001,
     "yearTo": 2022
   },
@@ -981,7 +981,7 @@
     "id": "301",
     "name": "Other",
     "parentId": "",
-    "numSets": 74
+    "numSets": 84
   },
   {
     "id": "302",
@@ -1141,7 +1141,7 @@
     "id": "368",
     "name": "HO 1:87 Vehicles",
     "parentId": "365",
-    "numSets": 2
+    "numSets": 4
   },
   {
     "id": "369",
@@ -1153,7 +1153,7 @@
     "id": "371",
     "name": "Supplemental",
     "parentId": "365",
-    "numSets": 258
+    "numSets": 259
   },
   {
     "id": "372",
@@ -1293,7 +1293,7 @@
     "id": "408",
     "name": "LEGO Brand Store",
     "parentId": "",
-    "numSets": 148
+    "numSets": 149
   },
   {
     "id": "409",
@@ -1423,7 +1423,7 @@
     "id": "435",
     "name": "Ninjago",
     "parentId": "",
-    "numSets": 419,
+    "numSets": 421,
     "yearFrom": 2011,
     "yearTo": 2022
   },
@@ -1651,7 +1651,7 @@
     "id": "497",
     "name": "Books",
     "parentId": "",
-    "numSets": 411,
+    "numSets": 415,
     "yearFrom": 1966,
     "yearTo": 2022
   },
@@ -1687,7 +1687,7 @@
     "id": "503",
     "name": "Key Chain",
     "parentId": "501",
-    "numSets": 579
+    "numSets": 583
   },
   {
     "id": "504",
@@ -2267,7 +2267,7 @@
     "id": "610",
     "name": "Brickheadz",
     "parentId": "",
-    "numSets": 122
+    "numSets": 125
   },
   {
     "id": "611",
@@ -2691,7 +2691,7 @@
     "id": "688",
     "name": "DOTS",
     "parentId": "",
-    "numSets": 68
+    "numSets": 69
   },
   {
     "id": "689",
@@ -2881,7 +2881,7 @@
     "id": "718",
     "name": "Series 22 Minifigures",
     "parentId": "535",
-    "numSets": 14
+    "numSets": 16
   },
   {
     "id": "719",
