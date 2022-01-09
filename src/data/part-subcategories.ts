@@ -75,6 +75,9 @@ export const getSubCategory = ({name, partCatId} : PartData) : string => {
       if(name.match(/Chain/i)) return 'Chain'
       if(name.match(/String.+Studs.+Grip/i)) return 'Studded String with Grips'
       break
+    case '19': // Tiles
+      if(name.match(/Corner/i)) return 'Corner'
+      break
     case '51': // Technic beams
       if(name.match(/Thin/i)) return 'Thin'
       break
