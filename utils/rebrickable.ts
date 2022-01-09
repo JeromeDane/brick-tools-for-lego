@@ -19,6 +19,7 @@ mkdirSync(tmpDir, {recursive: true})
 type RebrickableDataType = 'colors' |
                            'inventories' |
                            'inventory_parts' |
+                           'inventory_sets' |
                            'minifigs' |
                            'parts' |
                            'part_categories' |
@@ -57,7 +58,6 @@ const downloadRebrickableCsv = (type: string) => downloadGzAndExtract(
 
 export const updateCsvData = async () => {
   await downloadRebrickableCsv('elements')
-  await downloadRebrickableCsv('inventory_sets')
   await downloadRebrickableCsv('inventory_minifigs')
   rmSync(tmpDir, {recursive: true})
 }
@@ -78,7 +78,6 @@ export const csvToJson = (type: string) => {
 
 export const buildJson = async () => {
   const elements = await csvToJson('elements'),
-        inventorySets = await csvToJson('inventory_sets'),
         inventoryMinifigs = await csvToJson('inventory_minifigs')
 
   saveData('elements', elements.map((e: any) => ({
@@ -86,6 +85,5 @@ export const buildJson = async () => {
     p: e.partNum,
     c: e.colorId
   })))
-  saveData('inventory_sets', inventorySets)
   saveData('inventory_minifigs', inventoryMinifigs)
 }
