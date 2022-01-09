@@ -4,14 +4,15 @@ import bricksetApi from './brickset-api'
 import path from 'path'
 import yargs from 'yargs/yargs'
 import {processColors} from './processors/colors'
-import {processParts} from './processors/parts'
-import {processSets} from './processors/sets'
-import {processThemes} from './processors/themes'
-import {processPartCategories} from './processors/part-categories'
-import {processPartRelationships} from './processors/part-relationships'
+import {processInventoryMinifigs} from './processors/inventory-minifigs'
+import {processInventorySets} from './processors/inventories-sets'
 import {processInventoryParts} from './processors/inventory-parts'
 import {processMinifigs} from './processors/minifigs'
-import {processInventorySets} from './processors/inventories-sets'
+import {processParts} from './processors/parts'
+import {processPartCategories} from './processors/part-categories'
+import {processPartRelationships} from './processors/part-relationships'
+import {processSets} from './processors/sets'
+import {processThemes} from './processors/themes'
 
 // TODO: figure out why this can't be done as an import
 const {hideBin} = require('yargs/helpers'),
@@ -26,6 +27,7 @@ const run = async () => {
   await processPartRelationships()
   await processPartCategories()
   await processParts()
+  await processInventoryMinifigs()
   await processInventoryParts()
   await processInventorySets()
   await processMinifigs()
