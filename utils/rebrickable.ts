@@ -1,6 +1,6 @@
 import camelize from 'camelcase-keys'
 import fetch from 'cross-fetch'
-import {mkdirSync, rmSync, writeFile, writeFileSync} from 'fs'
+import {mkdirSync, writeFile, writeFileSync} from 'fs'
 import path from 'path'
 import {promisify} from 'util'
 
@@ -17,6 +17,7 @@ mkdirSync(dataDir, {recursive: true})
 mkdirSync(tmpDir, {recursive: true})
 
 type RebrickableDataType = 'colors' |
+                           'elements' |
                            'inventories' |
                            'inventory_minifigs' |
                            'inventory_parts' |
@@ -57,11 +58,6 @@ const downloadGzAndExtract = async (url: string) =>
 const downloadRebrickableCsv = (type: string) => downloadGzAndExtract(
   `https://cdn.rebrickable.com/media/downloads/${type}.csv.gz`)
 
-export const updateCsvData = async () => {
-  await downloadRebrickableCsv('elements')
-  rmSync(tmpDir, {recursive: true})
-}
-
 export const saveData = (type: string, data: any) => {
   process.stdout.write(`Saving ${type} ...`)
   writeFileSync(
@@ -74,14 +70,4 @@ export const csvToJson = (type: string) => {
   const csvFilePath = path.join(csvDir, type + '.csv')
   process.stdout.write('Opening CSV ' + csvFilePath + '\n')
   return csv().fromFile(csvFilePath).then(camelize)
-}
-
-export const buildJson = async () => {
-  const elements = await csvToJson('elements')
-
-  saveData('elements', elements.map((e: any) => ({
-    i: e.elementId,
-    p: e.partNum,
-    c: e.colorId
-  })))
 }

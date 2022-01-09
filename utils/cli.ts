@@ -1,9 +1,6 @@
-import {buildJson, updateCsvData} from './rebrickable'
-import {readFileSync} from 'fs'
 import bricksetApi from './brickset-api'
-import path from 'path'
-import yargs from 'yargs/yargs'
 import {processColors} from './processors/colors'
+import {processElements} from './processors/elements'
 import {processInventoryMinifigs} from './processors/inventory-minifigs'
 import {processInventorySets} from './processors/inventories-sets'
 import {processInventoryParts} from './processors/inventory-parts'
@@ -14,16 +11,11 @@ import {processPartRelationships} from './processors/part-relationships'
 import {processSets} from './processors/sets'
 import {processThemes} from './processors/themes'
 
-// TODO: figure out why this can't be done as an import
-const {hideBin} = require('yargs/helpers'),
-      argv = yargs(hideBin(process.argv)).argv
-
 const run = async () => {
   const usageResults = await bricksetApi('getKeyUsageStats')
   console.log(`Brickset API key usage today: ${usageResults.apiKeyUsage[0]}\n`)
-  // process.exit(0)
-  if(argv.updateData) await updateCsvData()
   await processColors()
+  await processElements()
   await processPartRelationships()
   await processPartCategories()
   await processParts()
@@ -33,11 +25,6 @@ const run = async () => {
   await processMinifigs()
   await processSets()
   await processThemes()
-  await buildJson()
-  const bricksetSets = JSON.parse(
-    readFileSync(path.join(__dirname, '../src/data/brickset/sets.json')).toString()
-  )
-  console.log(Object.keys(bricksetSets).length, 'sets currently loaded')
   // process.exit(0)
   // async function getSets(pageNumber: number) {
   //   console.log('Fetching Brickset sets page ' + pageNumber)
