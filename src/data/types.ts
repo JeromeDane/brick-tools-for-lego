@@ -1,4 +1,3 @@
-import type {Theme} from './themes'
 import type {PartCategory} from './part-categories'
 import type {Color} from './colors'
 
