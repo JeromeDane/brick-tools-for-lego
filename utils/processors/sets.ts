@@ -1,11 +1,13 @@
 import {fetchRebrickableCSVData, saveData} from '../rebrickable'
-import {processInventories} from './inventories'
 import type {Sets} from '../../src/data/types'
+import {processInventories} from './inventories'
+import {getBricksetSets} from '../brickset-api'
 
 let processedSets: Sets
 
 export const processSets = async (): Promise<Sets> => {
   const inventories = await processInventories(),
+        bricksetSets = getBricksetSets(),
         sets = (await fetchRebrickableCSVData('sets'))
           .map((set: any) => {
             const setNumSort = parseInt(set.setNum.replace(/-.+$/, ''))
