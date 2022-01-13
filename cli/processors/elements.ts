@@ -1,11 +1,11 @@
 import {fetchRebrickableCSVData, saveData} from '../rebrickable'
 
+let processedElements: any
+
 export const processElements = async () => {
+  if(processedElements) return processElements
   const elements = await fetchRebrickableCSVData('elements')
-  saveData('elements', elements.map((e: any) => ({
-    i: e.elementId,
-    p: e.partNum,
-    c: e.colorId
-  })))
+  saveData('elements', elements)
+  processedElements = elements
   return elements
 }

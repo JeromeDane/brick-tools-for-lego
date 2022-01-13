@@ -7,25 +7,25 @@ import elementCorrections from './element-corrections'
 import {DataContext} from './DataProvider'
 
 type ElementData = {
-  i: string, // elementId
-  p: string, // partNum
-  c: string // colorId
+  elementId: string, // elementId
+  partNum: string, // partNum
+  colorId: string // colorId
 }
 
 const partColors : {[keys: string]: {[keys: string]: Element}} = {}
 
-const parseElements = (): Elements => (elementsData as ElementData[]).reduce((acc, {i, p, c}) => {
-  const part = getPart(p),
-        color = colors[c]
+const parseElements = (): Elements => (elementsData as ElementData[]).reduce((acc, {elementId, partNum, colorId}) => {
+  const part = getPart(partNum),
+        color = colors[colorId]
   part.colors.push(color)
   const element = {
-    id: i,
+    id: elementId,
     part,
     color
   }
-  acc[i] = element // TODO: do this without mutation
-  partColors[p] = partColors[p] || {}
-  partColors[p][c] = element
+  acc[elementId] = element // TODO: do this without mutation
+  partColors[partNum] = partColors[partNum] || {}
+  partColors[partNum][colorId] = element
   return acc
 }, {} as {[key: string]: Element})
 
