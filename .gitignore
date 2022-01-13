@@ -9,7 +9,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-utils/tmp/
+cli/tmp/
 src/data/rebrickable/*.csv
 
 # macOS
