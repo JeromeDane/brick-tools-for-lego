@@ -62,7 +62,10 @@ export type PartJSON = {
   colorIds: string[]
 }
 
-export interface Part extends PartJSON {
+export type Part = {
+  partNum: string
+  name: string
+  partMaterial: string
   nameSort: string,
   width: number,
   length: number,

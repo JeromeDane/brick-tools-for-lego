@@ -1,15 +1,15 @@
 import partsData from './raw/parts.json'
 import {getPartCategory} from './part-categories'
-import {Part, PartData} from './types'
+import {Part, PartJSON} from './types'
 import {getSubCategory} from './part-subcategories'
 import {useContext, useEffect, useMemo} from 'react'
 import {DataContext} from './DataProvider'
-import {useElementsAsList} from './elements'
+import colors from './colors'
 
 const sizeRegex = /(\d+)\s?x\s?(\d+)(\s?x\s?(\d+)([^/]|$))?/
 
-const processedParts = (partsData as PartData[]).reduce(
-  (acc: {[key: string]: Part}, partData: PartData) => {
+const processedParts = (partsData as PartJSON[]).reduce(
+  (acc: {[key: string]: Part}, partData) => {
     const size = partData.name.match(sizeRegex),
           width = size ? parseInt(size[1].padStart(2) < size[2].padStart(2) ? size[1] : size[2]) : 0,
           length = size ? parseInt((size[1].padStart(2) > size[2].padStart(2) ? size[1] : size[2])) : 0,
@@ -25,43 +25,37 @@ const processedParts = (partsData as PartData[]).reduce(
       height,
       category: getPartCategory(partData.partCatId),
       subCategory: getSubCategory(partData),
-      colors: []
+      colors: partData.colorIds.map(id => colors[id])
     } as Part
     return acc
   },
   {}
 )
 
+const UNKNOWN_PART: Part = {
+  partNum: '-1',
+  name: 'unknown part',
+  partMaterial: '',
+  nameSort: '',
+  width: 0,
+  length: 0,
+  height: 0,
+  category: {id: '-1', name: ''},
+  subCategory: '',
+  colors: []
+}
+
 export const partsList = Object.keys(processedParts).map(partNum => processedParts[partNum])
 
 export default processedParts
 
-export const getPart = (partNum: string) =>
-  processedParts[partNum] || {
-    partNum: '-1',
-    name: 'unknown part',
-    partCatId: '',
-    partMaterial: '',
-    nameSort: '',
-    width: 0,
-    length: 0,
-    height: 0,
-    category: {},
-    subCategory: '',
-    colors: []
-  }
+export const getPart = (partNum: string): Part => processedParts[partNum] || UNKNOWN_PART
 
 export const useParts = () => {
-  const dataContext = useContext(DataContext),
-        elements = useElementsAsList()
+  const dataContext = useContext(DataContext)
   useEffect(
     () => {
-      if(!dataContext.parts) {
-        elements?.forEach(element => {
-          processedParts[element.part.partNum].colors.push(element.color)
-        })
-        dataContext.setParts(processedParts)
-      }
+      if(!dataContext.parts) dataContext.setParts(processedParts)
     },
     []
   )
@@ -70,7 +64,7 @@ export const useParts = () => {
 
 export const usePart = (partNum: string) => {
   const parts = useParts()
-  return parts ? parts[partNum] : undefined
+  return parts ? parts[partNum] : UNKNOWN_PART
 }
 
 export const usePartsAsLists = () => {
@@ -86,7 +80,7 @@ export const usePartsAsLists = () => {
 export const useGetPart = () => {
   const parts = useParts()
   return useMemo(
-    () => (partNum: string) => parts ? parts[partNum] : undefined,
+    () => (partNum: string) => parts ? parts[partNum] : UNKNOWN_PART,
     [parts]
   )
 }
