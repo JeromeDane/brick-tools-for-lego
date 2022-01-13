@@ -54,14 +54,15 @@ export type Set = Immutable<{
 
 export type Sets = Immutable<Set[]>
 
-export type PartData = {
-  partNum: string,
-  name: string,
-  partCatId: string,
+export type PartJSON = {
+  partNum: string
+  name: string
+  partCatId: string
   partMaterial: string
+  colorIds: string[]
 }
 
-export interface Part extends PartData {
+export interface Part extends PartJSON {
   nameSort: string,
   width: number,
   length: number,
@@ -74,6 +75,12 @@ export interface Part extends PartData {
 export type Parts = Immutable<{
   [key: string]: Part
 }>
+
+export type ElementJSON = {
+  elementId: string
+  partNum: string
+  colorId: string
+}
 
 export type Element = Immutable<{
   id: string,
