@@ -1,4 +1,4 @@
-import {logTodaysAPIUsage, updateSetsData} from './brickset-api'
+import {logTodaysAPIUsage, updateSetsData as updateBricksetSetsData} from './brickset-api'
 import {processColors} from './processors/colors'
 import {processElements} from './processors/elements'
 import {processInventoryMinifigs} from './processors/inventory-minifigs'
@@ -10,10 +10,12 @@ import {processPartCategories} from './processors/part-categories'
 import {processPartRelationships} from './processors/part-relationships'
 import {processSets} from './processors/sets'
 import {processThemes} from './processors/themes'
+import {downloadBrickset, downloadData} from './options'
 
 const run = async () => {
   await logTodaysAPIUsage()
-  await updateSetsData()
+  if(downloadData && downloadBrickset)
+    await updateBricksetSetsData()
   await processColors()
   await processElements()
   await processPartRelationships()

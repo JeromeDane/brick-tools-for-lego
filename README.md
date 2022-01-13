@@ -59,7 +59,7 @@ You'll need to install the following to get started:
 
 There are `json` files in this repository with set and part data from [Brickset](https://www.brickset.com) and [Rebrickable](https://www.rebrickable.com), but it should not be used elsewhere. Both sites provide APIs to get this information, but we gather it at build time to keep a separate copy for this project in order to avoid hammering either site. This data is tracked with the rest of the source code to be able to see when the data was updated and how.
 
-To download the latest data from [Brickset](https://www.brickset.com) and [Rebrickable](https://www.rebrickable.com) run `yarn cli`. To reprocess data without re-downloading the data run `yarn cli --noDownload`.
+To download the latest data from [Brickset](https://www.brickset.com) and [Rebrickable](https://www.rebrickable.com) run `yarn cli`. To reprocess data without re-downloading the data run `yarn cli --noDownload`. To skip Brickset sets download run `yarn cli --noBrickset`.
 ### Android
 
 This is the main and most updated/tested version. See [releases page](https://github.com/JeromeDane/brick-tools-for-lego/releases) to download and manually install an alpha preview APK file). Play Protect may warn you about not recognizing the author. This is because a Play Store account hasn't been created yet that would recognize our signing key.

@@ -15,8 +15,8 @@
     "build:web": "expo build:web && cp web-build/index.html web-build/404.html",
     "build:playstore": "cd android && ./gradlew :app:bundleRelease",
     "build:apk": "cd android && ./gradlew :app:assembleRelease",
-    "cli": "ts-node ./utils/cli.ts",
-    "update-data": "ts-node ./utils/cli.ts --updateData",
+    "cli": "ts-node ./cli/cli.ts",
+    "update-data": "ts-node ./cli/cli.ts --updateData",
     "release": "yarn update-data && cd app && yarn deploy"
   },
   "jest": {
