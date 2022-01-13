@@ -136,7 +136,7 @@
   },
   {
     "figNum": "fig-000028",
-    "name": "Hulk",
+    "name": "Hulk, Dark Purple Pants, Printed",
     "numParts": "4"
   },
   {
@@ -2326,7 +2326,7 @@
   },
   {
     "figNum": "fig-000473",
-    "name": "Hulk Dark Red Stripes and Avengers Logo on Trousers",
+    "name": "Hulk, Dark Purple Pants, Printed Dark Red Stripes and Avengers Logo",
     "numParts": "4"
   },
   {
@@ -10786,7 +10786,7 @@
   },
   {
     "figNum": "fig-002208",
-    "name": "Hulk with Dark Purple Pants",
+    "name": "Hulk (Big Fig), Black Hair, Dark Purple Pants with Print",
     "numParts": "7"
   },
   {
@@ -22391,7 +22391,7 @@
   },
   {
     "figNum": "fig-004590",
-    "name": "Hulk with Black Hair and Dark Tan Pants (Big Fig)",
+    "name": "Hulk (Big Fig), Black Hair, Dark Tan Pants",
     "numParts": "7"
   },
   {
@@ -24476,7 +24476,7 @@
   },
   {
     "figNum": "fig-005036",
-    "name": "Hulk with Black Hair and Dark Purple Pants (Big Fig)",
+    "name": "Hulk (Big Fig), Black Hair, Dark Purple Pants",
     "numParts": "7"
   },
   {
@@ -25996,7 +25996,7 @@
   },
   {
     "figNum": "fig-005342",
-    "name": "Hulk with Dark Green Hair and Magenta Pants (Big Fig)",
+    "name": "Hulk (Big Fig), Dark Green Hair, Magenta Pants",
     "numParts": "7"
   },
   {
@@ -26131,7 +26131,7 @@
   },
   {
     "figNum": "fig-005369",
-    "name": "Hulk with Short Legs",
+    "name": "Hulk, Short Legs",
     "numParts": "4"
   },
   {
@@ -26261,7 +26261,7 @@
   },
   {
     "figNum": "fig-005395",
-    "name": "Hulk with Armor and Black Pants (Big Fig)",
+    "name": "Hulk (Big Fig), Helmet, Armor, Black Pants",
     "numParts": "7"
   },
   {
@@ -26311,7 +26311,7 @@
   },
   {
     "figNum": "fig-005405",
-    "name": "Reverse Flash / Zoom",
+    "name": "Reverse Flash",
     "numParts": "4"
   },
   {
@@ -26741,7 +26741,7 @@
   },
   {
     "figNum": "fig-005491",
-    "name": "Ghost Spider / Spider-Gwen",
+    "name": "Ghost-Spider / Spider-Gwen, Closed Front Hood",
     "numParts": "4"
   },
   {
@@ -27131,7 +27131,7 @@
   },
   {
     "figNum": "fig-005571",
-    "name": "Hulk with Black Hair and Dark Blue Pants (Big Fig)",
+    "name": "Hulk (Big Fig), Black Hair, Dark Blue Pants",
     "numParts": "7"
   },
   {
@@ -27291,7 +27291,7 @@
   },
   {
     "figNum": "fig-005603",
-    "name": "Hulk in White Jumpsuit with Avengers Logo (Big Fig)",
+    "name": "Hulk (Big Fig), White Jumpsuit with Avengers Logo",
     "numParts": "7"
   },
   {
@@ -43666,7 +43666,7 @@
   },
   {
     "figNum": "fig-008919",
-    "name": "Hulk with Black Hair and Magenta Pants (Big Fig)",
+    "name": "Hulk (Big Fig), Black Hair, Magenta Pants",
     "numParts": "7"
   },
   {
@@ -52771,7 +52771,7 @@
   },
   {
     "figNum": "fig-010825",
-    "name": "Spider-man (Miles Morales), Red Hoodie",
+    "name": "Spider-Man (Miles Morales), Dark Red Hoodie",
     "numParts": "4"
   },
   {
@@ -52786,7 +52786,7 @@
   },
   {
     "figNum": "fig-010828",
-    "name": "Spider-Gwen",
+    "name": "Ghost-Spider / Spider-Gwen, Open Front Hood",
     "numParts": "4"
   },
   {
@@ -57816,7 +57816,7 @@
   },
   {
     "figNum": "fig-011990",
-    "name": "Police - Bright Light Blue Shirt, Dark Blue Legs, Dark Blue Cap",
+    "name": "Police Officer - Justin Justice - Bright Light Blue Shirt, Dark Blue Legs, Dark Blue Cap",
     "numParts": "4"
   },
   {
@@ -58336,7 +58336,7 @@
   },
   {
     "figNum": "fig-012102",
-    "name": "Hulk",
+    "name": "Hulk, Dark Purple Pants, Dual Molded Legs",
     "numParts": "4"
   },
   {
@@ -58346,7 +58346,7 @@
   },
   {
     "figNum": "fig-012105",
-    "name": "Ghost-Spider",
+    "name": "Ghost-Spider / Spider-Gwen, Medium Legs",
     "numParts": "4"
   },
   {
@@ -59113,5 +59113,20 @@
     "figNum": "fig-012269",
     "name": "Unikitty - Big Tears Eyes",
     "numParts": "14"
+  },
+  {
+    "figNum": "fig-012271",
+    "name": "Clone Trooper - Anankin Head",
+    "numParts": "4"
+  },
+  {
+    "figNum": "fig-012272",
+    "name": "Chef, Red Neckerchief, Light Bluish Gray Legs, No Wrinkles",
+    "numParts": "4"
+  },
+  {
+    "figNum": "fig-012273",
+    "name": "Ballerina - Magenta Butterflies and Necklace",
+    "numParts": "5"
   }
 ]
