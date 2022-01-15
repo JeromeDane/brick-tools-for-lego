@@ -14,10 +14,6 @@ export default function SetPartsScreen({navigation, route: {params: {id}}} : Mat
   const set = useSet(id),
         inventoryId = (set && set.inventories && set.inventories[0] && set.inventories[0].id) || '',
         inventoryParts = useInventoryParts(inventoryId),
-        numParts = useMemo(
-          () => inventoryParts?.reduce((count: number, inventoryPart) => count + inventoryPart.quantity, 0),
-          [inventoryParts]
-        ),
         defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder,name',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false),
@@ -26,13 +22,8 @@ export default function SetPartsScreen({navigation, route: {params: {id}}} : Mat
           [inventoryParts]
         )
   useEffect(() => {
-    navigation.setOptions({
-      title: `Parts (${inventoryParts
-        ? numParts ? numParts.toLocaleString() : '?'
-        : '...'
-      })`
-    })
-  }, [numParts])
+    navigation.setOptions({title: `Parts (${set?.numParts.toLocaleString()})`})
+  }, [set?.numParts])
   return (
     <ScrollView style={{padding: 20}}>
       <LoadingWrapper>
