@@ -146,6 +146,7 @@ type PaginatorProps = {
 export const Paginator = (props: PaginatorProps) => {
   const numPages = Math.ceil(props.numItems/props.pageSize),
         pickerItems = []
+  if(numPages < 2) return null
   for (let i = 0; i < numPages; i++)
     pickerItems.push(
       <Picker.Item key={i} label={(i + 1).toString()} value={i} />
