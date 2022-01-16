@@ -9,8 +9,8 @@ interface ImageProps extends DefaultImageProps {
   maxWidth?: number;
   maxHeight?: number;
   width: number;
-  height: number;
-  style: any; // TODO: type this properly
+  height?: number;
+  style?: any; // TODO: type this properly
 }
 
 const ScaledImage = (props: ImageProps) => {
