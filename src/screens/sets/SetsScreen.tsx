@@ -1,8 +1,9 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ActivityIndicator, ScrollView} from 'react-native'
+import {TextInput} from 'react-native-paper'
 import {sortBy} from 'sort-by-typescript'
 import {DrawerScreenProps} from '@react-navigation/drawer'
-import {Paginator, Picker, Text, TextInput, View} from '../../components/Themed'
+import {Paginator, Picker, Text, View} from '../../components/Themed'
 import LoadingWrapper from '../../components/LoadingWrapper'
 import {RootStackParamList} from '../../navigation/types'
 import {useSets} from '../../data/sets'
@@ -10,6 +11,7 @@ import {themesList} from '../../data/themes'
 import {useIsLoggedInToBrickset} from '../../api/brickset'
 import TextLink from '../../components/TextLink'
 import SetPreview from './SetPreview'
+import SelectDialog from '../../components/SelectDialog'
 
 export default function SetsScreen({navigation}: DrawerScreenProps<RootStackParamList, 'Sets'>) {
   const [sortField, setSortField] = useState('-year'),
@@ -38,6 +40,10 @@ export default function SetsScreen({navigation}: DrawerScreenProps<RootStackPara
               (collectionFilter == 'not-wanted-not-owned' && !set.collection.wanted && set.collection.qtyOwned === 0)
             )),
           [sortedSets, filterBy, collectionFilter, theme]
+        ),
+        sortedThemes = useMemo(
+          () => [...themesList].sort(sortBy('name')),
+          [themesList]
         )
   useEffect(() => {
     if(isSorting) setIsSorting(false)
@@ -48,14 +54,16 @@ export default function SetsScreen({navigation}: DrawerScreenProps<RootStackPara
       paddingBottom: 100
     }}>
       <LoadingWrapper>
-        <View>
-          <TextInput
-            label="Search Sets"
-            onChangeText={value => {
-              setCurrentPage(0)
-              setFilterBy(value)
-            }} />
-        </View>
+        <TextInput
+          autoComplete={false}
+          label="Search Sets"
+          onChangeText={value => {
+            setCurrentPage(0)
+            setFilterBy(value)
+          }} />
+        <SelectDialog
+          label="Theme"
+          items={sortedThemes.map(({id, name}) => ({id, label: name}))} />
         <View style={{marginVertical: 20}}>
           <Picker
             label="Theme"
@@ -66,7 +74,7 @@ export default function SetsScreen({navigation}: DrawerScreenProps<RootStackPara
               setTheme(theme)
             }}>
             <Picker.Item label="All themes" value="" />
-            {themesList.sort(sortBy('name')).map(theme =>
+            {sortedThemes.map(theme =>
               <Picker.Item key={theme.name} label={`${theme.name} (${theme.numSets.toLocaleString()} sets)`} value={theme.id} />
             )}
           </Picker>
