@@ -1,6 +1,7 @@
 import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
 import React, {useEffect, useState} from 'react'
-import {ScrollView, Button} from 'react-native'
+import {ScrollView} from 'react-native'
+import {Button} from 'react-native-paper'
 import WebView from 'react-native-webview'
 import {Text, View} from '../../components/Themed'
 import {SetTabsParamList} from './SetScreen'
@@ -39,8 +40,9 @@ export default function SetInstructionsScreen({route: {params: {id}}}: MaterialT
               onPress={() => {
                 setDownloadUrl(instruction.URL)
                 setTimeout(() => setDownloadUrl(''), 500)
-              }}
-              title={instruction.description} />
+              }}>
+              {instruction.description}
+            </Button>
           </View>
         )}
         {downloadUrl

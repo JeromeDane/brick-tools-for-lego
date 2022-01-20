@@ -1,7 +1,8 @@
 import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
 import React, {useEffect, useState} from 'react'
 import Spinner from '../../components/Spinner'
-import {ScrollView, Linking, Button} from 'react-native'
+import {ScrollView, Linking} from 'react-native'
+import {Button} from 'react-native-paper'
 import {Text, View, TextInput} from '../../components/Themed'
 import ScaledImage from '../../components/ScaledImage'
 import {SetTabsParamList} from './SetScreen'
@@ -111,12 +112,16 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
       <View style={{marginBottom: 20}}>
         <Button onPress={() =>
           Linking.openURL('https://brickset.com/sets/' + set.setNum)
-        } title="Brickset" />
+        }>
+          Brickset
+        </Button>
       </View>
       <View style={{marginBottom: 20}}>
         <Button onPress={() =>
           Linking.openURL('https://rebrickable.com/sets/' + set.setNum)
-        } title="Rebrickable" />
+        }>
+          Rebrickable
+        </Button>
       </View>
     </ScrollView>
     : <Text>Unable to find set number &quot;{id}&quot;</Text>
