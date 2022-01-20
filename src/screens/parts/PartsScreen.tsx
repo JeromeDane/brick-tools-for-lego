@@ -8,8 +8,9 @@ import {partCategoriesList} from '../../data/part-categories'
 import Switch from '../../components/Switch'
 import LoadingWrapper from '../../components/LoadingWrapper'
 import PartPreview from './PartPreview'
+import {RootStackScreenProps} from '../../navigation/types'
 
-const PartsScreen = () => {
+const PartsScreen = ({navigation} : RootStackScreenProps<'Element'>) => {
   const defaultSortOrder = 'category.name,subCategory,width,length,height',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [partCategory, setPartCategory] = useState(''),
@@ -78,7 +79,7 @@ const PartsScreen = () => {
             selectedValue={partCategory}
             onValueChange={value => {
               setCurrentPage(0)
-              setPartCategory(value)
+              setPartCategory(value.toString())
             }}>
             <Picker.Item label="All categories" value="" />
             {partCategoriesList.map(({id, name}, i) =>
@@ -92,7 +93,7 @@ const PartsScreen = () => {
             selectedValue={colorFilter}
             onValueChange={value => {
               setCurrentPage(0)
-              setColorFilter(value)
+              setColorFilter(value.toString())
             }}>
             <Picker.Item label="All available colors" value="" />
             {colorsList.map(({id, name}, i) =>
@@ -112,7 +113,13 @@ const PartsScreen = () => {
           {filteredParts?.length
             ? filteredParts
               .slice(currentPage * pageSize, currentPage * pageSize + pageSize)
-              .map((part, i: number) => <PartPreview part={part} key={i} defaultColorId={colorFilter} />)
+              .map((part, i: number) =>
+                <PartPreview
+                  part={part}
+                  key={i}
+                  defaultColorId={colorFilter}
+                  onPress={id => { navigation.navigate('Part', {id})}}/>
+              )
             : <Text style={{paddingVertical: 20}}>No parts found matching your criteria.</Text>
           }
           <View style={{paddingTop: 20}}>

@@ -28,6 +28,7 @@ export type RootStackParamList = {
   Element: {id: string};
   Modal: undefined;
   NotFound: undefined;
+  Part: {id: string};
   Parts: undefined;
   Set: {id: string};
   Settings: undefined;

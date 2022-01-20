@@ -34,6 +34,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           SetParts: 'parts'
         }
       },
+      Part: 'brick-tools-for-lego/part/:id',
       Modal: 'brick-tools-for-lego/modal',
       NotFound: '*'
     }

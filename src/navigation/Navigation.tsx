@@ -22,6 +22,7 @@ import AboutScreen from '../screens/AboutScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import ElementScreen from '../screens/Element'
 import ThemesScreen from '../screens/Themes'
+import PartScreen from '../screens/Part'
 import PartsScreen from '../screens/parts/PartsScreen'
 import SetsScreen from '../screens/sets/SetsScreen'
 import SettingsScreen from '../screens/Settings'
@@ -49,6 +50,7 @@ export default function Navigation({colorScheme}: { colorScheme: ColorSchemeName
       <Stack.Navigator>
         <Stack.Screen name="Root" component={DrawerNav} options={{headerShown: false}} />
         <Stack.Screen name="Element" component={ElementScreen} />
+        <Stack.Screen name="Part" component={PartScreen} />
         <Stack.Screen name="Set" component={SetTabs} />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{title: 'Oops!'}} />
       </Stack.Navigator>
