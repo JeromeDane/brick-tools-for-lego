@@ -5,7 +5,8 @@ import {getElements} from './elements'
 export const processParts = async () => {
   const partColors = (await getElements()).reduce((acc, element: ElementJSON) => {
           acc[element.partNum] = acc[element.partNum] || []
-          acc[element.partNum].push(element.colorId)
+          if(acc[element.partNum].indexOf(element.colorId) < 0)
+            acc[element.partNum].push(element.colorId)
           return acc
         }, {} as {[key: string]: string[]}),
         parts: PartJSON[] = await fetchRebrickableCSVData('parts')
