@@ -82,7 +82,8 @@ export type Parts = Immutable<{
 export type ElementJSON = {
   elementId: string
   partNum: string
-  colorId: string
+  colorId: string,
+  setNumbers: string[]
 }
 
 export type Element = Immutable<{

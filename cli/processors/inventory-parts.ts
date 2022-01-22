@@ -1,5 +1,7 @@
 import {fetchRebrickableCSVData, saveData} from '../rebrickable'
 
+let processedInventoryParts: any // TODO fix typing
+
 export const processInventoryParts = async () => {
   const inventoryParts = (await fetchRebrickableCSVData('inventory_parts'))
     .reduce((acc: any, part: any) => { // TODO: type these 'any's
@@ -13,6 +15,9 @@ export const processInventoryParts = async () => {
       delete part.inventoryId
       return acc
     }, {})
+  processedInventoryParts = inventoryParts
   saveData('inventory_parts', inventoryParts)
   return inventoryParts
 }
+
+export const getInventoryParts = async () => processedInventoryParts || await processInventoryParts()
