@@ -14,8 +14,13 @@ require('intl/locale-data/jsonp/en.js')
 export default function App() {
   const isLoadingComplete = useCachedResources(),
         colorScheme = useColorScheme(),
+        BaseTheme = Appearance.getColorScheme() === 'dark' ? DarkTheme : DefaultTheme,
         theme = {
-          ...(Appearance.getColorScheme() === 'dark' ? DarkTheme : DefaultTheme)
+          ...BaseTheme,
+          colors: {
+            ...BaseTheme.colors,
+            primary: '#11C0D7'
+          }
         }
 
   if(!isLoadingComplete) {
