@@ -1,7 +1,7 @@
 import {useContext, useEffect, useMemo} from 'react'
 import elementsData from './raw/elements.json'
 import colors from './colors'
-import {useGetPart} from './parts'
+import {useGetPart, useParts} from './parts'
 import type {Element, ElementJSON, Elements} from './types'
 import elementCorrections from './element-corrections'
 import {DataContext} from './DataProvider'
@@ -12,9 +12,10 @@ const elementsByPartColor : {[keys: string]: {[keys: string]: Element}} = {}
 let previousElements: Elements
 export const useElements = () => {
   const context = useContext(DataContext),
-        getPart = useGetPart()
+        getPart = useGetPart(),
+        parts = useParts()
   useEffect(() => {
-    if(previousElements !== context.elements) {
+    if(!context.elements || previousElements !== context.elements) {
       previousElements = (elementsData as ElementJSON[]).reduce((acc, {elementId, partNum, colorId}) => {
         const element = {
           id: elementId,
@@ -28,15 +29,13 @@ export const useElements = () => {
       }, {} as {[key: string]: Element})
       context.setElements(previousElements)
     }
-  }, [])
+  }, [parts, previousElements])
   return context.elements
 }
 
 export const useElement = (id: string) => {
-  const elementsFromContext = useElements()
-  return elementsFromContext
-    ? elementsFromContext[id]
-    : undefined
+  const elements = useElements()
+  return elements ? elements[id] : undefined
 }
 
 export const useElementsAsList = () => {

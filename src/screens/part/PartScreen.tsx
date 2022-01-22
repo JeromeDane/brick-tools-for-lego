@@ -10,8 +10,8 @@ export default function Part({navigation}: RootStackScreenProps<'Part'>) {
   const {routes, index} = navigation.getState(),
         part = usePart(routes[index].params.id),
         getElementByPartAndColor = useGetElementByPartAndColor(),
-        defaultColor = part.colors[0],
-        element = defaultColor && getElementByPartAndColor(part.partNum, defaultColor.id)
+        defaultColor = part?.colors[0],
+        element = part && defaultColor && getElementByPartAndColor(part.partNum, defaultColor.id)
   useEffect(() => {
     if(part) {
       navigation.setOptions({title: part.name})
