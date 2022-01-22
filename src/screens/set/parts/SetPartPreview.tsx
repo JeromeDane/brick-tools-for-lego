@@ -31,6 +31,9 @@ export default function SetPartPreview({navigation, onPress, inventortPart: {par
         </Paragraph>
         <Paragraph>{color.name} ({color.id})</Paragraph>
         <Paragraph>Qty: {quantity}{isSpare ? ' (spare part)' : ''}</Paragraph>
+        <Paragraph>
+          Sets: {element?.setNumbers?.length}
+        </Paragraph>
       </View>
     </Card.Content>
   </Card>

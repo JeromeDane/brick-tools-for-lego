@@ -20,10 +20,6 @@ export const processElements = async () => {
       elementsByPartColor[e.partNum][e.colorId] = Object.assign(e, {setNumbers: []})
       return elementsByPartColor[e.partNum][e.colorId]
     })
-  const elementsById = elements.reduce((acc, e: ElementJSON) => {
-    acc[e.elementId] = acc[e.elementId] || e
-    return acc
-  }, {} as {[key: string]: ElementJSON})
   const inventories = await getInventories(),
         inventoryParts = await getInventoryParts()
   console.log('Detecting element set usage ...')
@@ -31,9 +27,7 @@ export const processElements = async () => {
   inventories.forEach(({id, setNum}: any, i: number) => {
     progress.update(i + 1)
     inventoryParts[id]?.forEach(({p, c}: {p: string, c: string}) => {
-      const elementId: any = (elementCorrections[p] && elementCorrections[p][c]) ||
-        (elementsByPartColor[p] && elementsByPartColor[p][c])?.id
-      const e = elementsById[elementId]
+      const e: any = (elementsByPartColor[p] && elementsByPartColor[p][c])
       if(e && e.partNum == p && e.colorId == c && e.setNumbers.indexOf(setNum) < 0) {
         e.setNumbers.push(setNum)
       }

@@ -16,11 +16,12 @@ export const useElements = () => {
         parts = useParts()
   useEffect(() => {
     if(!context.elements || previousElements !== context.elements) {
-      previousElements = (elementsData as ElementJSON[]).reduce((acc, {elementId, partNum, colorId}) => {
+      previousElements = (elementsData as ElementJSON[]).reduce((acc, {elementId, partNum, colorId, setNumbers}) => {
         const element = {
           id: elementId,
           part: getPart(partNum),
-          color: colors[colorId]
+          color: colors[colorId],
+          setNumbers
         }
         acc[elementId] = element // TODO: do this without mutation
         elementsByPartColor[partNum] = elementsByPartColor[partNum] || {}

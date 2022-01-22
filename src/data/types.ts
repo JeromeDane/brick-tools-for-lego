@@ -89,7 +89,8 @@ export type ElementJSON = {
 export type Element = Immutable<{
   id: string,
   part: Part,
-  color: Color
+  color: Color,
+setNumbers: string[]
 }>
 
 export type Elements = Immutable<{[key: string]: Element}>
