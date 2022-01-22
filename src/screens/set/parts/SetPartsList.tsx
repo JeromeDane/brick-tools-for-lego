@@ -22,7 +22,7 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false),
         sortedInventortParts = useMemo(
-          () => inventoryParts ? inventoryParts.sort(sortBy.apply(sortBy, sortOrder.split(','))) : null,
+          () => inventoryParts ? [...inventoryParts].sort(sortBy.apply(sortBy, sortOrder.split(','))) : null,
           [inventoryParts]
         )
   return (

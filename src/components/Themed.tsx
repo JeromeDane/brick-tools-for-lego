@@ -6,7 +6,7 @@
 import React from 'react'
 import {FontAwesome} from '@expo/vector-icons'
 import {Text as DefaultText, TouchableOpacity, View as DefaultView, TextInput as DefaultTextInput} from 'react-native'
-import {Picker as DefaultPicker, PickerProps} from '@react-native-picker/picker'
+import {Picker as DefaultPicker, PickerProps as DefaultPickerProps} from '@react-native-picker/picker'
 
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
@@ -89,6 +89,10 @@ export function View(props: ViewProps) {
   const {style, lightColor, darkColor, ...otherProps} = props,
         backgroundColor = useThemeColor({light: lightColor, dark: darkColor}, 'background')
   return <DefaultView style={[{backgroundColor}, style]} {...otherProps} />
+}
+
+interface PickerProps extends DefaultPickerProps {
+  label: string;
 }
 
 export function Picker(props: PickerProps) {
