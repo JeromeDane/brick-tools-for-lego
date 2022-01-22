@@ -1,6 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react'
 import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
-import {ScrollView} from 'react-native'
 import {SetTabsParamList} from '../SetScreen'
 import {useSet} from '../../../data/sets'
 import LoadingWrapper from '../../../components/LoadingWrapper'
@@ -17,10 +16,8 @@ export default function SetPartsScreen({navigation, route: {params: {id}}} : Mat
     if(!hasFocused) setHasFocused(true)
   }, []))
   return (
-    <ScrollView style={{padding: 20}}>
-      <LoadingWrapper loading={!hasFocused}>
-        <SetPartsList set={set} navigation={navigation} />
-      </LoadingWrapper>
-    </ScrollView>
+    <LoadingWrapper loading={!hasFocused} style={{padding: 20}}>
+      <SetPartsList set={set} navigation={navigation} />
+    </LoadingWrapper>
   )
 }
