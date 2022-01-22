@@ -25,7 +25,7 @@ export default function SetPartPreview({navigation, onPress, inventortPart: {par
         <Paragraph>Element: {element.id}</Paragraph>
         <Paragraph>
           Part:{' '}
-          <TextLink onPress={() => navigation.navigate('Part', {id: element.part.partNum})}>
+          <TextLink onPress={() => navigation.navigate('Part', {id: part.partNum})}>
             {part.partNum}
           </TextLink>
         </Paragraph>
