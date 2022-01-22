@@ -45,10 +45,6 @@ const UNKNOWN_PART: Part = {
   colors: []
 }
 
-export const partsList = Object.keys(processedParts).map(partNum => processedParts[partNum])
-
-export default processedParts
-
 export const getPart = (partNum: string): Part => processedParts[partNum] || UNKNOWN_PART
 
 export const useParts = () => {
