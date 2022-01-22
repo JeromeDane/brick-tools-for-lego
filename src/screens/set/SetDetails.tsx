@@ -2,7 +2,7 @@ import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
 import React, {useEffect, useState} from 'react'
 import Spinner from '../../components/Spinner'
 import {ScrollView, Linking, View} from 'react-native'
-import {Button, Card} from 'react-native-paper'
+import {Button, Card, Paragraph} from 'react-native-paper'
 import {Text, TextInput} from '../../components/Themed'
 import ScaledImage from '../../components/ScaledImage'
 import {SetTabsParamList} from './SetScreen'
@@ -35,25 +35,25 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
       <Card style={{marginBottom: 20}}>
         <Card.Title title="Set Details" />
         <Card.Content>
-          <Text>Set number: {set.setNum}</Text>
-          <Text>Theme: {set.theme.name}</Text>
-          <Text>{set.name}</Text>
-          <Text>
+          <Paragraph>Set number: {set.setNum}</Paragraph>
+          <Paragraph>Theme: {set.theme.name}</Paragraph>
+          <Paragraph>{set.name}</Paragraph>
+          <Paragraph>
             {set.numParts.toLocaleString()} parts
             {set.LEGOCom.US.retailPrice ?
               ` - $${(set.LEGOCom.US.retailPrice / set.numParts).toFixed(2)} USD per part`
               : ''
             }
-          </Text>
-          <Text>
+          </Paragraph>
+          <Paragraph>
             Released in {set.year}
             {set.LEGOCom.US.retailPrice ?
               ` at $${set.LEGOCom.US.retailPrice.toLocaleString()} USD`
               : ''
             }
-          </Text>
-          <Text>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Text>
-          <Text>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Text>
+          </Paragraph>
+          <Paragraph>Owned by {set.ownedBy.toLocaleString()} people on Brickset</Paragraph>
+          <Paragraph>Wanted by {set.wantedBy.toLocaleString()} people on Brickset</Paragraph>
         </Card.Content>
       </Card>
       <Card style={{marginBottom: 20}}>

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
-import {ScrollView, Image, Button, Linking, ActivityIndicator} from 'react-native'
+import {ScrollView, Image, Button, Linking, ActivityIndicator, View} from 'react-native'
+import {Paragraph} from 'react-native-paper'
 import {RootStackScreenProps} from '../navigation/types'
-import {Text, View} from '../components/Themed'
 import {useElement} from '../data/elements'
 import colors from '../data/colors'
 
@@ -21,10 +21,10 @@ export default function Element({navigation}: RootStackScreenProps<'Element'>) {
         <Image
           style={{marginBottom: 20, width: 192, height: 192, backgroundColor: 'gray'}}
           source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
-        <Text>Element ID: {element.id}</Text>
-        <Text>Part Number: {element.part.partNum}</Text>
-        <Text>Name: {element.part.name}</Text>
-        <Text>Color: {element.color.name}</Text>
+        <Paragraph>Element ID: {element.id}</Paragraph>
+        <Paragraph>Part Number: {element.part.partNum}</Paragraph>
+        <Paragraph>Name: {element.part.name}</Paragraph>
+        <Paragraph>Color: {element.color.name}</Paragraph>
         <View style={{marginTop: 20}}>
           <Button title="Brickset" onPress={() =>
             Linking.openURL(`https://brickset.com/parts/${element.id}/`)

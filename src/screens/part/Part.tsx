@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react'
 import {ScrollView, Image, ActivityIndicator, View} from 'react-native'
 import {RootStackScreenProps} from '../../navigation/types'
-import {Text} from '../../components/Themed'
 import {usePart} from '../../data/parts'
 import {useGetElementByPartAndColor} from '../../data/elements'
-import {Card, Headline} from 'react-native-paper'
+import {Card, Headline, Paragraph} from 'react-native-paper'
 import ElementPreview from './ElementPreview'
 
 export default function Part({navigation}: RootStackScreenProps<'Part'>) {
@@ -27,9 +26,9 @@ export default function Part({navigation}: RootStackScreenProps<'Part'>) {
         <Card style={{marginBottom: 20}}>
           <Card.Title title="Part Details" />
           <Card.Content>
-            <Text>Part Number: {part.partNum}</Text>
-            <Text>Name: {part.name}</Text>
-            <Text>Colors: {part.colors.length}</Text>
+            <Paragraph>Part Number: {part.partNum}</Paragraph>
+            <Paragraph>Name: {part.name}</Paragraph>
+            <Paragraph>Colors: {part.colors.length}</Paragraph>
           </Card.Content>
         </Card>
         <Headline style={{marginBottom: 20}}>Colors</Headline>

@@ -1,19 +1,20 @@
 import * as React from 'react'
 import {StyleSheet, Linking, Button, ScrollView} from 'react-native'
-import {Text, View} from '../components/Themed'
+import {View} from '../components/Themed'
 import TextLink from '../components/TextLink'
 import {version} from '../../package.json'
+import { Paragraph } from 'react-native-paper'
 
 export default function AboutScreen() {
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.paragraph}>
+      <Paragraph>
         This project is free, open source, and maintained by volunteers out of a love of all things LEGO®.{' '}
         If you&apos;d like to get involved in any way, check out this project&apos;s{' '}
         <TextLink url="https://github.com/JeromeDane/brick-tools-for-lego">
           GitHub page
         </TextLink>.
-      </Text>
+      </Paragraph>
       <TextLink style={styles.paragraph} url="https://github.com/JeromeDane/brick-tools-for-lego/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement">
         Planned features
       </TextLink>
@@ -26,28 +27,28 @@ export default function AboutScreen() {
       <TextLink style={styles.paragraph} url="https://www.reddit.com/r/BrickToolsForLEGO/">
         Reddit community: r/BrickToolsForLEGO/
       </TextLink>
-      <Text style={styles.paragraph}>
+      <Paragraph>
         Show your ❤️ for this project:
-      </Text>
+      </Paragraph>
       <View style={styles.paragraph}>
         <Button
           title="Make a donation"
           onPress={() => Linking.openURL('https://www.paypal.com/donate?hosted_button_id=LWSCPL34NZ6LJ')} />
       </View>
-      <Text style={styles.paragraph}>
+      <Paragraph>
         Author:{' '}
         <TextLink url="https://www.linkedin.com/in/JeromeDane/">
           Jerome Dane
         </TextLink>
-      </Text>
-      <Text style={styles.paragraph}>Version {version}</Text>
-      <Text style={styles.paragraph}>
+      </Paragraph>
+      <Paragraph>Version {version}</Paragraph>
+      <Paragraph>
         Powered by data from{' '}
         <TextLink url="https://www.brickset.com/">Brickset.com</TextLink>
         {' '}and{' '}
         <TextLink url="https://www.rebrickable.com/">Rebrickable.com</TextLink>
-      </Text>
-      <Text style={styles.paragraph}>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project.</Text>
+      </Paragraph>
+      <Paragraph>LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this project.</Paragraph>
     </ScrollView>
   )
 }
