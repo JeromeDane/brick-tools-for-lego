@@ -88791,7 +88791,7 @@
   },
   {
     "inventoryId": "117050",
-    "figNum": "fig-002055",
+    "figNum": "fig-002198",
     "quantity": "1"
   },
   {
@@ -90781,11 +90781,6 @@
   },
   {
     "inventoryId": "123151",
-    "figNum": "fig-008313",
-    "quantity": "1"
-  },
-  {
-    "inventoryId": "123151",
     "figNum": "fig-008314",
     "quantity": "1"
   },
@@ -90820,8 +90815,63 @@
     "quantity": "1"
   },
   {
+    "inventoryId": "123151",
+    "figNum": "fig-012274",
+    "quantity": "1"
+  },
+  {
     "inventoryId": "123158",
     "figNum": "fig-000881",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123564",
+    "figNum": "fig-002131",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123699",
+    "figNum": "fig-012278",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123711",
+    "figNum": "fig-006190",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123717",
+    "figNum": "fig-002068",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123718",
+    "figNum": "fig-001714",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123723",
+    "figNum": "fig-010019",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123754",
+    "figNum": "fig-004413",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "123761",
+    "figNum": "fig-009708",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "124017",
+    "figNum": "fig-011522",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "124147",
+    "figNum": "fig-000029",
     "quantity": "1"
   }
 ]

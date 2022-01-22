@@ -7370,11 +7370,6 @@
     "numParts": "4"
   },
   {
-    "figNum": "fig-001505",
-    "name": "Lime Torso, Lime Legs, Black Helmet",
-    "numParts": "5"
-  },
-  {
     "figNum": "fig-001506",
     "name": "Mia - Medium Blue Overall",
     "numParts": "4"
@@ -8001,7 +7996,7 @@
   },
   {
     "figNum": "fig-001633",
-    "name": "Stephanie - Christmas Sweater, Light Aqua Skirt",
+    "name": "Stephanie - Christmas Sweater, Dark Blue Skirt",
     "numParts": "5"
   },
   {
@@ -40666,7 +40661,7 @@
   },
   {
     "figNum": "fig-008313",
-    "name": "Barista, White Torso, Reddish Brown Apron, Sand Blue Legs",
+    "name": "Barista, White Torso, Reddish Brown Apron, Sand Blue Legs, Dark Grey Shadows",
     "numParts": "4"
   },
   {
@@ -57351,7 +57346,7 @@
   },
   {
     "figNum": "fig-011890",
-    "name": "Dark Azure Torso, Black Legs, Black Hair",
+    "name": "Dark Azure Torso, Dark Blue Legs, Black Hair",
     "numParts": "4"
   },
   {
@@ -57416,7 +57411,7 @@
   },
   {
     "figNum": "fig-011903",
-    "name": "Kid - dark Turquoise Torso and Legs, Long Black Hair",
+    "name": "Kid - Dark Turquoise Torso and Legs, Long Black Hair",
     "numParts": "4"
   },
   {
@@ -58226,7 +58221,7 @@
   },
   {
     "figNum": "fig-012077",
-    "name": "Stephanie - White Top, Dark Purple Skirt",
+    "name": "Mia - White Top, Dark Purple Skirt",
     "numParts": "4"
   },
   {
@@ -59128,5 +59123,20 @@
     "figNum": "fig-012273",
     "name": "Ballerina - Magenta Butterflies and Necklace",
     "numParts": "5"
+  },
+  {
+    "figNum": "fig-012274",
+    "name": "Barista, White Torso, Reddish Brown Apron, Sand Blue Legs",
+    "numParts": "4"
+  },
+  {
+    "figNum": "fig-012276",
+    "name": "Goombrat",
+    "numParts": "14"
+  },
+  {
+    "figNum": "fig-012278",
+    "name": "Elsa - Medium Blue Short Dress",
+    "numParts": "4"
   }
 ]
