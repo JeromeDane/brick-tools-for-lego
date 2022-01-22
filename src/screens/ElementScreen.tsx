@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
-import {ScrollView, Image, Button, Linking, ActivityIndicator, View} from 'react-native'
-import {Paragraph} from 'react-native-paper'
+import {ScrollView, Image, Linking, ActivityIndicator, View} from 'react-native'
+import {Button, Card, Paragraph} from 'react-native-paper'
 import {RootStackScreenProps} from '../navigation/types'
 import {useElement} from '../data/elements'
 import colors from '../data/colors'
@@ -21,20 +21,29 @@ export default function Element({navigation}: RootStackScreenProps<'Element'>) {
         <Image
           style={{marginBottom: 20, width: 192, height: 192, backgroundColor: 'gray'}}
           source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
-        <Paragraph>Element ID: {element.id}</Paragraph>
-        <Paragraph>Part Number: {element.part.partNum}</Paragraph>
-        <Paragraph>Name: {element.part.name}</Paragraph>
-        <Paragraph>Color: {element.color.name}</Paragraph>
-        <View style={{marginTop: 20}}>
-          <Button title="Brickset" onPress={() =>
-            Linking.openURL(`https://brickset.com/parts/${element.id}/`)
-          } />
-        </View>
-        <View style={{marginTop: 20}}>
-          <Button title="BrickLink" onPress={() =>
-            Linking.openURL(`https://www.bricklink.com/v2/catalog/catalogitem.page?P=${element.part.partNum}&idColor=` + colors[element.color.id].brickLink.id)
-          } />
-        </View>
+        <Card style={{marginBottom: 20}}>
+          <Card.Title title={`${element.part.name}`} />
+          <Card.Content>
+            <Paragraph>Element ID: {element.id}</Paragraph>
+            <Paragraph>Part Number: {element.part.partNum}</Paragraph>
+            <Paragraph>Color: {element.color.name}</Paragraph>
+          </Card.Content>
+        </Card>
+        <Card>
+          <Card.Title title="Links" />
+          <Card.Content>
+            <Button onPress={() =>
+              Linking.openURL(`https://brickset.com/parts/${element.id}/`)
+            }>
+              Brickset
+            </Button>
+            <Button onPress={() =>
+              Linking.openURL(`https://www.bricklink.com/v2/catalog/catalogitem.page?P=${element.part.partNum}&idColor=` + colors[element.color.id].brickLink.id)
+            }>
+              BrickLink
+            </Button>
+          </Card.Content>
+        </Card>
       </View>
       : <ActivityIndicator color="#aaa" />
     }
