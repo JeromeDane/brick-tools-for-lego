@@ -7,12 +7,12 @@ import LoadingWrapper from '../../../components/LoadingWrapper'
 import {useInventoryParts} from '../../../data/inventory-parts'
 import SetPartPreview from './SetPartPreview'
 import type {Set} from '../../../data/types'
-import type {MaterialTopTabNavigationProp} from '@react-navigation/material-top-tabs/lib/typescript/src/types'
-import type {SetTabsParamList} from '../SetScreen'
+import {NativeStackNavigationProp} from '@react-navigation/native-stack'
+import {RootStackParamList} from '../../../navigation/types'
 
 type SetPartsListParams = {
   set?: Set,
-  navigation: MaterialTopTabNavigationProp<SetTabsParamList, 'SetParts'>
+  navigation: NativeStackNavigationProp<RootStackParamList, 'Set'>
 }
 
 export default function SetPartsList({navigation, set}: SetPartsListParams) {
@@ -52,6 +52,7 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
             .map((inventoryPart, i: number) =>
               <SetPartPreview
                 key={i}
+                navigation={navigation}
                 inventortPart={inventoryPart}
                 onPress={id => { navigation.navigate('Element', {id})}} />
             )

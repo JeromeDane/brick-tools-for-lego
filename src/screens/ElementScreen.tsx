@@ -4,6 +4,7 @@ import {Button, Card, Paragraph} from 'react-native-paper'
 import {RootStackScreenProps} from '../navigation/types'
 import {useElement} from '../data/elements'
 import colors from '../data/colors'
+import TextLink from '../components/TextLink'
 
 export default function Element({navigation}: RootStackScreenProps<'Element'>) {
   const {routes, index} = navigation.getState(),
@@ -25,7 +26,12 @@ export default function Element({navigation}: RootStackScreenProps<'Element'>) {
           <Card.Title title={`${element.part.name}`} />
           <Card.Content>
             <Paragraph>Element ID: {element.id}</Paragraph>
-            <Paragraph>Part Number: {element.part.partNum}</Paragraph>
+            <Paragraph>
+              Part Number:{' '}
+              <TextLink onPress={() => navigation.navigate('Part', {id: element.part.partNum})}>
+                {element.part.partNum}
+              </TextLink>
+            </Paragraph>
             <Paragraph>Color: {element.color.name}</Paragraph>
           </Card.Content>
         </Card>
