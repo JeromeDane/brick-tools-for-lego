@@ -1,5 +1,7 @@
 import {csvToJson, fetchRebrickableCSVData, saveData} from '../rebrickable'
 
+let processedColors: any // TODO: fix typing
+
 export const processColors = async () => {
   const colors = await fetchRebrickableCSVData('colors'),
         // Note: The normal colors.csv download lacks tons of details that
@@ -9,8 +11,7 @@ export const processColors = async () => {
         // save as a CSV file in 'data/rebrickable/color-details.csv`
         // TODO: Automate call to https://rebrickable.com/api/v3/swagger/?key=#!/lego/lego_colors_list
         colorDetails = await csvToJson('color-details')
-
-  saveData('colors', colors.map((color: any) => {
+  processedColors = colors.map((color: any) => {
     const split = (input: string) => {
       const match = input && input.match(/^([^[]+?)\s*\['(.+?)'/)
       return {
@@ -34,5 +35,8 @@ export const processColors = async () => {
       brickLink: split(brickLink),
       brickOwl: split(brickOwl)
     })
-  }))
+  })
+  saveData('colors', processedColors)
 }
+
+export const getColors = () => processedColors || processColors()
