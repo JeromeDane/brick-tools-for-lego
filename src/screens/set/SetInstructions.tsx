@@ -18,7 +18,7 @@ export default function SetInstructionsScreen({route: {params: {id}}}: MaterialT
   useEffect(() => {
     api('getInstructions2', {setNumber: id})
       .then(response => {
-        setInstructions(response?.instructions)
+        setInstructions(response?.instructions) // TODO: Fix typing
       })
       .catch(() => setError(true))
   }, [set])
@@ -34,16 +34,15 @@ export default function SetInstructionsScreen({route: {params: {id}}}: MaterialT
           : null
         }
         {instructions?.map((instruction, i: number) =>
-          <View style={{marginVertical: 10}} key={i}>
-            <Button
-              disabled={instruction.URL === downloadUrl}
-              onPress={() => {
-                setDownloadUrl(instruction.URL)
-                setTimeout(() => setDownloadUrl(''), 500)
-              }}>
-              {instruction.description}
-            </Button>
-          </View>
+          <Button
+            key={i}
+            disabled={instruction.URL === downloadUrl}
+            onPress={() => {
+              setDownloadUrl(instruction.URL)
+              setTimeout(() => setDownloadUrl(''), 500)
+            }}>
+            {instruction.description}
+          </Button>
         )}
         {downloadUrl
           ? <WebView style={{display: 'none'}} source={{uri: downloadUrl}} />
