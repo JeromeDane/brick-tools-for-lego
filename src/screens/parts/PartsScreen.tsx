@@ -1,8 +1,9 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ScrollView} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
-import {Text, TextInput, View} from '../../components/Themed'
+import {Text, View} from '../../components/Themed'
 import Paginator from '../../components/Paginator'
+import TextInput from '../../components/TextInput'
 import {usePartsAsLists} from '../../data/parts'
 import {colorsList} from '../../data/colors'
 import {partCategoriesList} from '../../data/part-categories'
@@ -55,7 +56,10 @@ const PartsScreen = ({navigation} : RootStackScreenProps<'Element'>) => {
       <LoadingWrapper loading={!filteredParts}>
         <View style={{marginBottom: 20}}>
           <TextInput
+            autoComplete={false}
             label="Search Parts"
+            clearable
+            value={filterBy}
             onChangeText={value => {
               setCurrentPage(0)
               setFilterBy(value)

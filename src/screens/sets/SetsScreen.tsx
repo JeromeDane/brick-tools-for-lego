@@ -2,9 +2,10 @@ import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ActivityIndicator, ScrollView} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
 import {DrawerScreenProps} from '@react-navigation/drawer'
-import {Text, TextInput, View} from '../../components/Themed'
+import {Text, View} from '../../components/Themed'
 import Paginator from '../../components/Paginator'
 import Select from '../../components/Select'
+import TextInput from '../../components/TextInput'
 import LoadingWrapper from '../../components/LoadingWrapper'
 import {RootStackParamList} from '../../navigation/types'
 import {useSets} from '../../data/sets'
@@ -52,7 +53,10 @@ export default function SetsScreen({navigation}: DrawerScreenProps<RootStackPara
       <LoadingWrapper>
         <View>
           <TextInput
+            clearable
             label="Search Sets"
+            autoComplete={false}
+            value={filterBy}
             onChangeText={value => {
               setCurrentPage(0)
               setFilterBy(value)

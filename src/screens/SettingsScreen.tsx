@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import {ScrollView, View} from 'react-native'
-import {Button, Card, Paragraph, TextInput} from 'react-native-paper'
+import {Button, Card, Paragraph} from 'react-native-paper'
 import Spinner from '../components/Spinner'
+import TextInput from '../components/TextInput'
 import {useBricksetCollection, useFetchBricksetCollection, useLogin, useLogOut} from '../api/brickset'
 import {useIsLoggedInToBrickset} from '../api/brickset'
 import TextLink from '../components/TextLink'
@@ -53,8 +54,8 @@ export default function SettingsScreen() {
                   account to access your personal data. If you don&apos;t already have one, you&apos;ll need to{' '}
                   <TextLink url="https://brickset.com/signup">create an account</TextLink>.
                 </Paragraph>
-                <TextInput mode="outlined" label="Username" onChangeText={setUsername} style={{marginBottom: 10}} autoComplete={true} />
-                <TextInput mode="outlined" label="Password" secureTextEntry={true} onChangeText={setPassword} style={{marginBottom: 10}} autoComplete={false} />
+                <TextInput label="Username" onChangeText={setUsername} style={{marginBottom: 10}} autoComplete={true} />
+                <TextInput label="Password" secureTextEntry={true} onChangeText={setPassword} style={{marginBottom: 10}} autoComplete={false} />
                 <Button mode="contained" icon="login" onPress={() => {
                   setLoadingMessage('Logging in to Brickset ...')
                   login(username, password)
