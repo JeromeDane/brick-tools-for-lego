@@ -18,7 +18,7 @@ type SetPartsListParams = {
 export default function SetPartsList({navigation, set}: SetPartsListParams) {
   const inventoryId = (set && set.inventories && set.inventories[0] && set.inventories[0].id) || '',
         inventoryParts = useInventoryParts(inventoryId),
-        defaultSortOrder = 'element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,element.color.sortOrder,name',
+        defaultSortOrder = 'part.category.name,part.subCategory,part.width,part.length,part.height,color.sortOrder,name',
         [sortOrder, setSortOrder] = useState(defaultSortOrder),
         [showSpareParts, setShowSpareParts] = useState(false),
         [pageSize, setPageSize] = useState(25),
@@ -26,12 +26,13 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
         scrollRef = useRef(),
         sortedInventortParts = useMemo(
           () => inventoryParts ? [...inventoryParts].sort(sortBy.apply(sortBy, sortOrder.split(','))) : null,
-          [inventoryParts]
+          [inventoryParts, sortOrder]
         ),
         partsToShow = showSpareParts ? sortedInventortParts : sortedInventortParts?.filter(({isSpare}) => !isSpare)
+  console.log(sortOrder.split(','))
   return (
     <ScrollView style={{padding: 20}} ref={scrollRef}>
-      {sortedInventortParts
+      {partsToShow
         ? <View>
           <View style={{marginVertical: 10}}>
             <Select
@@ -40,11 +41,11 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
               onValueChange={value => setSortOrder(value.toString())}
               items={[
                 {label: 'Category, size, and color', value: defaultSortOrder},
-                {label: 'Color, category, and size', value: 'element.color.sortOrder,element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,name'},
-                {label: 'Size, category, and color', value: 'element.part.width,element.part.length,element.part.height,element.part.category.name,element.part.subCategory,element.color.sortOrder,name'},
-                {label: 'Size descending, category, and color', value: '-element.part.width,-element.part.length,-element.part.height,element.part.category.name,element.part.subCategory,element.color.sortOrder,name'},
-                {label: 'Size, color, and category', value: 'element.part.width,element.part.length,element.part.height,element.color.sortOrder,element.part.category.name,element.part.subCategory,name'},
-                {label: 'Size descending, color, and category', value: '-element.part.width,-element.part.length,-element.part.height,element.color.sortOrder,element.part.category.name,element.part.subCategory,name'}
+                {label: 'Color, category, and size', value: 'color.sortOrder,part.category.name,part.subCategory,part.width,part.length,part.height,name'},
+                {label: 'Size, category, and color', value: 'part.width,part.length,part.height,part.category.name,part.subCategory,color.sortOrder,name'},
+                {label: 'Size descending, category, and color', value: '-part.width,-part.length,-part.height,part.category.name,part.subCategory,color.sortOrder,name'},
+                {label: 'Size, color, and category', value: 'part.width,part.length,part.height,color.sortOrder,part.category.name,part.subCategory,name'},
+                {label: 'Size descending, color, and category', value: '-part.width,-part.length,-part.height,color.sortOrder,part.category.name,part.subCategory,name'}
               ]}/>
           </View>
           <View style={{marginBottom: 20, alignItems: 'flex-end'}}>
