@@ -1,9 +1,9 @@
 import React, {useMemo, useRef, useState} from 'react'
 import {sortBy} from 'sort-by-typescript'
 import {ActivityIndicator, ScrollView, View} from 'react-native'
-import {Picker} from '../../../components/Themed'
 import Paginator from '../../../components/Paginator'
 import Switch from '../../../components/Switch'
+import Select from '../../../components/Select'
 import {useInventoryParts} from '../../../data/inventory-parts'
 import SetPartPreview from './SetPartPreview'
 import type {Set} from '../../../data/types'
@@ -34,17 +34,18 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
       {sortedInventortParts
         ? <View>
           <View style={{marginVertical: 10}}>
-            <Picker
+            <Select
               label="Sort by"
-              selectedValue={sortOrder}
-              onValueChange={value => setSortOrder(value.toString())}>
-              <Picker.Item label="Category, size, and color" value={defaultSortOrder} />
-              <Picker.Item label="Color, category, and size" value={'element.color.sortOrder,element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,name'} />
-              <Picker.Item label="Size, category, and color" value={'element.part.width,element.part.length,element.part.height,element.part.category.name,element.part.subCategory,element.color.sortOrder,name'} />
-              <Picker.Item label="Size descending, category, and color" value={'-element.part.width,-element.part.length,-element.part.height,element.part.category.name,element.part.subCategory,element.color.sortOrder,name'} />
-              <Picker.Item label="Size, color, and category" value={'element.part.width,element.part.length,element.part.height,element.color.sortOrder,element.part.category.name,element.part.subCategory,name'} />
-              <Picker.Item label="Size descending, color, and category" value={'-element.part.width,-element.part.length,-element.part.height,element.color.sortOrder,element.part.category.name,element.part.subCategory,name'} />
-            </Picker>
+              value={sortOrder}
+              onValueChange={value => setSortOrder(value.toString())}
+              items={[
+                {label: 'Category, size, and color', value: defaultSortOrder},
+                {label: 'Color, category, and size', value: 'element.color.sortOrder,element.part.category.name,element.part.subCategory,element.part.width,element.part.length,element.part.height,name'},
+                {label: 'Size, category, and color', value: 'element.part.width,element.part.length,element.part.height,element.part.category.name,element.part.subCategory,element.color.sortOrder,name'},
+                {label: 'Size descending, category, and color', value: '-element.part.width,-element.part.length,-element.part.height,element.part.category.name,element.part.subCategory,element.color.sortOrder,name'},
+                {label: 'Size, color, and category', value: 'element.part.width,element.part.length,element.part.height,element.color.sortOrder,element.part.category.name,element.part.subCategory,name'},
+                {label: 'Size descending, color, and category', value: '-element.part.width,-element.part.length,-element.part.height,element.color.sortOrder,element.part.category.name,element.part.subCategory,name'}
+              ]}/>
           </View>
           <View style={{marginBottom: 20, alignItems: 'flex-end'}}>
             <Switch
@@ -66,8 +67,8 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
             ? <Paginator
               pageSize={pageSize}
               numItems={partsToShow.length}
-              onPageSizeChange={setPageSize}
-              onPageChange={(val : number) => {
+              onPageSizeChange={value => setPageSize(parseInt(value.toString()))}
+              onPageChange={val => {
                 scrollRef.current.scrollTo({y: 0, animated: true})
                 setCurrentPage(val)
               }}

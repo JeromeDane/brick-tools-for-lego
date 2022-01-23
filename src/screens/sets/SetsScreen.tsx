@@ -2,8 +2,9 @@ import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ActivityIndicator, ScrollView} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
 import {DrawerScreenProps} from '@react-navigation/drawer'
-import {Picker, Text, TextInput, View} from '../../components/Themed'
+import {Text, TextInput, View} from '../../components/Themed'
 import Paginator from '../../components/Paginator'
+import Select from '../../components/Select'
 import LoadingWrapper from '../../components/LoadingWrapper'
 import {RootStackParamList} from '../../navigation/types'
 import {useSets} from '../../data/sets'
@@ -57,62 +58,60 @@ export default function SetsScreen({navigation}: DrawerScreenProps<RootStackPara
               setFilterBy(value)
             }} />
         </View>
-        <View style={{marginVertical: 20}}>
-          <Picker
+        <View style={{marginVertical: 15}}>
+          <Select
             label="Theme"
-            prompt="Theme"
-            selectedValue={theme}
-            onValueChange={(theme: string) => {
+            value={theme}
+            onValueChange={theme => {
               setCurrentPage(0)
-              setTheme(theme)
-            }}>
-            <Picker.Item label="All themes" value="" />
-            {themesList.sort(sortBy('name')).map(theme =>
-              <Picker.Item key={theme.name} label={`${theme.name} (${theme.numSets.toLocaleString()} sets)`} value={theme.id} />
-            )}
-          </Picker>
+              setTheme(theme.toString())
+            }}
+            items={[{label: 'All themes', value: ''}].concat([...themesList].sort(sortBy('name')).map(theme =>({
+              label: `${theme.name} (${theme.numSets.toLocaleString()} sets)`,
+              value: theme.id
+            })))} />
         </View>
         <View style={{marginBottom: 0}}>
-          <Picker
+          <Select
             label="Sort by"
-            prompt="Sort by"
-            selectedValue={sortField}
-            onValueChange={(field: string) => {
+            value={sortField}
+            onValueChange={field => {
               setIsSorting(true)
               setCurrentPage(0)
-              setSortField(field)
-            }}>
-            <Picker.Item label="Set Number" value="setNumSort" />
-            <Picker.Item label="Set Number (desc)" value="-setNumSort" />
-            <Picker.Item label="Most Owned" value="-ownedBy" />
-            <Picker.Item label="Most Wanted" value="-wantedBy" />
-            <Picker.Item label="Name" value="name" />
-            <Picker.Item label="Name (desc)" value="-name" />
-            <Picker.Item label="Parts" value="numParts" />
-            <Picker.Item label="Parts (desc)" value="-numParts" />
-            <Picker.Item label="Retail Price" value="LEGOCom.US.retailPrice" />
-            <Picker.Item label="Retail Price (desc)" value="-LEGOCom.US.retailPrice" />
-            <Picker.Item label="Year Released" value="year" />
-            <Picker.Item label="Year Released (desc)" value="-year" />
-          </Picker>
+              setSortField(field.toString())
+            }}
+            items={[
+              {label: 'Set Number', value: 'setNumSort'},
+              {label: 'Set Number (desc)', value: '-setNumSort'},
+              {label: 'Most Owned', value: '-ownedBy'},
+              {label: 'Most Wanted', value: '-wantedBy'},
+              {label: 'Name', value: 'name'},
+              {label: 'Name (desc)', value: '-name'},
+              {label: 'Parts', value: 'numParts'},
+              {label: 'Parts (desc)', value: '-numParts'},
+              {label: 'Retail Price', value: 'LEGOCom.US.retailPrice'},
+              {label: 'Retail Price (desc)', value: '-LEGOCom.US.retailPrice'},
+              {label: 'Year Released', value: 'year'},
+              {label: 'Year Released (desc)', value: '-year'}
+            ]} />
         </View>
         {isLoggedInToBrickset
           ? <View style={{marginVertical: 20}}>
-            <Picker
+            <Select
               label="Collection"
-              prompt="Collection"
-              selectedValue={collectionFilter}
-              onValueChange={(value: string) => {
+              value={collectionFilter}
+              onValueChange={value => {
                 setCurrentPage(0)
-                setCollectionFilter(value)
-              }}>
-              <Picker.Item label="Any" value="" />
-              <Picker.Item label="Owned" value="owned" />
-              <Picker.Item label="Not owned" value="not-owned" />
-              <Picker.Item label="Wanted" value="wanted" />
-              <Picker.Item label="Not Wanted" value="not-wanted" />
-              <Picker.Item label="Not Wanted and Not Owned" value="not-wanted-not-owned" />
-            </Picker>
+                setCollectionFilter(value.toString())
+              }}
+              items={[
+                {label: 'Any', value: ''},
+                {label: 'Owned', value: 'owned'},
+                {label: 'Not owned', value: 'not-owned'},
+                {label: 'Wanted', value: 'wanted'},
+                {label: 'Not Wanted', value: 'not-wanted'},
+                {label: 'Not Wanted and Not Owned', value: 'not-wanted-not-owned'}
+              ]}/>
           </View>
           : <TextLink
             style={{marginTop: 10, marginBottom: 20}}

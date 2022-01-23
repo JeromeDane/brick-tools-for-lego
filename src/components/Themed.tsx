@@ -5,12 +5,9 @@
 
 import React from 'react'
 import {FontAwesome} from '@expo/vector-icons'
-import {Text as DefaultText, TouchableOpacity, View as DefaultView, TextInput as DefaultTextInput} from 'react-native'
-import {Picker as DefaultPicker, PickerProps as DefaultPickerProps} from '@react-native-picker/picker'
-
+import {Text as DefaultText, View as DefaultView, TextInput as DefaultTextInput} from 'react-native'
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
-import {ItemValue} from '@react-native-picker/picker/typings/Picker'
 
 export function useThemeColor(
   props: { light?: string; dark?: string },
@@ -90,54 +87,6 @@ export function View(props: ViewProps) {
         backgroundColor = useThemeColor({light: lightColor, dark: darkColor}, 'background')
   return <DefaultView style={[{backgroundColor}, style]} {...otherProps} />
 }
-
-interface PickerProps extends DefaultPickerProps {
-  label: string;
-}
-
-export function Picker(props: PickerProps) {
-  const backgroundColor = useThemeColor({}, 'background')
-  const color = useThemeColor({}, 'text')
-
-  return <View style={[{
-    flex: 1,
-    flexDirection: 'row',
-    flexGrow: 1,
-    position: 'relative'
-  },
-  props.style]}>
-    <View style={{
-      borderColor: color,
-      borderWidth: 1,
-      borderRadius: 4,
-      flexGrow: 1,
-      flexDirection: 'row'
-    }}>
-      {props.label && <Text style={{
-        position: 'absolute',
-        top: -8,
-        left: 4,
-        zIndex: 100,
-        paddingHorizontal: 4,
-        backgroundColor,
-        fontSize: 12
-      }}>
-        {props.label}
-      </Text>}
-      <DefaultPicker
-        style={{
-          color,
-          flexGrow: 1,
-          borderStyle: 'none',
-          backgroundColor,
-          padding: 10
-        }} {...props}
-        dropdownIconColor={color} />
-    </View>
-  </View>
-}
-
-Picker.Item = DefaultPicker.Item
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/

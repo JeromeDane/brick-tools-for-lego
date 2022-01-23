@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react'
 import {ScrollView} from 'react-native'
 import {sortBy} from 'sort-by-typescript'
-import {Picker, Text, TextInput, View} from '../../components/Themed'
+import {Text, TextInput, View} from '../../components/Themed'
 import Paginator from '../../components/Paginator'
 import {usePartsAsLists} from '../../data/parts'
 import {colorsList} from '../../data/colors'
@@ -9,6 +9,7 @@ import {partCategoriesList} from '../../data/part-categories'
 import Switch from '../../components/Switch'
 import LoadingWrapper from '../../components/LoadingWrapper'
 import PartPreview from './PartPreview'
+import Select from '../../components/Select'
 import {RootStackScreenProps} from '../../navigation/types'
 
 const PartsScreen = ({navigation} : RootStackScreenProps<'Element'>) => {
@@ -61,46 +62,43 @@ const PartsScreen = ({navigation} : RootStackScreenProps<'Element'>) => {
             }} />
         </View>
         <View style={{marginBottom: 20}}>
-          <Picker
+          <Select
             label="Sort by"
-            selectedValue={sortOrder}
+            value={sortOrder}
             onValueChange={value => {
               setIsSorting(true)
               setCurrentPage(0)
-              setSortOrder(value)
-            }}>
-            <Picker.Item label="Category, size" value={defaultSortOrder} />
-            <Picker.Item label="Size, category" value={'width,length,height,category.name,subCategory'} />
-            <Picker.Item label="Size descending, category" value={'-width,-length,-height,category.name,subCategory'} />
-          </Picker>
+              setSortOrder(value.toString())
+            }}
+            items={[
+              {label: 'Category, size', value: defaultSortOrder},
+              {label: 'Size, category', value: 'width,length,height,category.name,subCategory'},
+              {label: 'Size descending, category', value: '-width,-length,-height,category.name,subCategory'}
+            ]}/>
         </View>
         <View style={{marginBottom: 20}}>
-          <Picker
+          <Select
             label="Category"
-            selectedValue={partCategory}
+            value={partCategory}
             onValueChange={value => {
               setCurrentPage(0)
               setPartCategory(value.toString())
-            }}>
-            <Picker.Item label="All categories" value="" />
-            {partCategoriesList.map(({id, name}, i) =>
-              <Picker.Item label={name} value={id} key={i} />
-            )}
-          </Picker>
+            }}
+            items={[{label: 'All themes', value: ''}].concat(partCategoriesList.sort(sortBy('name')).map(
+              ({id, name}) => ({label: name, value: id})
+            ))} />
         </View>
         <View style={{marginBottom: 20}}>
-          <Picker
+          <Select
             label="Color"
-            selectedValue={colorFilter}
+            value={colorFilter}
             onValueChange={value => {
               setCurrentPage(0)
               setColorFilter(value.toString())
-            }}>
-            <Picker.Item label="All available colors" value="" />
-            {colorsList.map(({id, name}, i) =>
-              <Picker.Item label={name} value={id} key={i} />
-            )}
-          </Picker>
+            }}
+            items={[{label: 'All available colors', value: ''}].concat(colorsList.map(
+              ({id, name}) => ({label: name, value: id})
+            ))} />
         </View>
         <View style={{marginBottom: 20}}>
           <View style={{alignItems: 'flex-end'}}>
