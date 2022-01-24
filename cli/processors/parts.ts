@@ -1,11 +1,11 @@
-import {ElementJSON, PartJSON} from '../../src/data/types'
+import {Element, PartJSON} from '../../src/data/types'
 import {fetchRebrickableCSVData, saveData} from '../rebrickable'
 import {getColors} from './colors'
 import {getElements} from './elements'
 
 export const processParts = async () => {
   const colorIds = getColors().map(({id}: {id: string}) => id),
-        partColors = (await getElements()).reduce((acc, element: ElementJSON) => {
+        partColors = (await getElements()).reduce((acc, element: Element) => {
           acc[element.partNum] = acc[element.partNum] || []
           if(acc[element.partNum].indexOf(element.colorId) < 0)
             acc[element.partNum].push(element.colorId)

@@ -9,7 +9,7 @@ import {RootStackParamList} from '../../navigation/types'
 type SetPreviewProps = {
   navigation: DrawerNavigationProp<RootStackParamList, 'Sets'>,
   set: Set,
-  sortField: string
+  sortField?: string
 }
 export default function SetPreview({navigation, set, sortField}: SetPreviewProps) {
   return <Card key={set.setNum} style={styles.set} onPress={() => {

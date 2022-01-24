@@ -1,15 +1,20 @@
 import React from 'react'
 import {Image, View} from 'react-native'
 import {Card, Paragraph} from 'react-native-paper'
-import {Element} from '../../data/types'
+import type {Color} from '../../data/colors'
+import type {Part} from '../../data/types'
+import {useGetElementByPartAndColor} from '../../data/elements'
 
 type ElementPreviewProps = {
-  element: Element,
-  onPress: (elementId: string) => void
+  part: Part;
+  color: Color;
+  onPress: () => void;
 }
 
-export default function ElementPreview({onPress, element: {id, part, color}}: ElementPreviewProps) {
-  return <Card style={{marginBottom: 20}} onPress={() => onPress(id)}>
+export default function ElementPreview({onPress, part, color}: ElementPreviewProps) {
+  const getElementByPartAndColor = useGetElementByPartAndColor(),
+        {id, setNumbers} = getElementByPartAndColor(part.partNum, color.id)
+  return <Card style={{marginBottom: 20}} onPress={() => onPress()}>
     <Card.Title title={part.name} />
     <Card.Content style={{flexDirection: 'row'}}>
       <Image
@@ -19,6 +24,7 @@ export default function ElementPreview({onPress, element: {id, part, color}}: El
         <Paragraph>Part: {part.partNum} Element: {id}</Paragraph>
         <Paragraph>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Paragraph>
         <Paragraph>{color.name} ({color.id})</Paragraph>
+        <Paragraph>Sets: {setNumbers.length.toLocaleString()}</Paragraph>
       </View>
     </Card.Content>
   </Card>

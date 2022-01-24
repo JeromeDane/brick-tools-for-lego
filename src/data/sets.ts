@@ -84,3 +84,5 @@ export const useSets = () => {
 }
 export const useSetSets = () => useContext(DataContext).setSets
 export const useSet = (setNumber: string) => useSets().find(({setNum}) => setNum === setNumber)
+
+export const useGetSet = () => (setNumber: string) => useSet(setNumber)

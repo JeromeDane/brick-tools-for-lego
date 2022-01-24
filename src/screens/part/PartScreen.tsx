@@ -34,7 +34,11 @@ export default function Part({navigation}: RootStackScreenProps<'Part'>) {
         <Headline style={{marginBottom: 20}}>Colors</Headline>
         {part.colors.map(color => {
           const element = getElementByPartAndColor(part.partNum, color.id)
-          return <ElementPreview key={element.id} element={element} onPress={id => { navigation.navigate('Element', {id})}} />
+          return <ElementPreview
+            key={element.id}
+            color={color}
+            part={part}
+            onPress={() => { navigation.navigate('Element', {partNum: part.partNum, colorId: color.id})}} />
         })}
       </View>
       : <ActivityIndicator color="#aaa" />

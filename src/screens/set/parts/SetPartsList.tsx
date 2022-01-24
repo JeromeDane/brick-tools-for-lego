@@ -29,7 +29,6 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
           [inventoryParts, sortOrder]
         ),
         partsToShow = showSpareParts ? sortedInventortParts : sortedInventortParts?.filter(({isSpare}) => !isSpare)
-  console.log(sortOrder.split(','))
   return (
     <ScrollView style={{padding: 20}} ref={scrollRef}>
       {partsToShow
@@ -61,7 +60,7 @@ export default function SetPartsList({navigation, set}: SetPartsListParams) {
                 key={i}
                 navigation={navigation}
                 inventortPart={inventoryPart}
-                onPress={id => { navigation.navigate('Element', {id})}} />
+                onPress={() => { navigation.navigate('Element', {partNum: inventoryPart.part.partNum, colorId: inventoryPart.color.id})}} />
             )
           }
           {partsToShow?.length

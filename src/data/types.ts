@@ -62,7 +62,7 @@ export type PartJSON = {
   colorIds: string[]
 }
 
-export type Part = {
+export type Part = Immutable<{
   partNum: string
   name: string
   partMaterial: string
@@ -73,31 +73,24 @@ export type Part = {
   category: PartCategory,
   subCategory: string,
   colors: Color[]
-}
+}>
 
 export type Parts = Immutable<{
   [key: string]: Part
 }>
 
-export type ElementJSON = {
-  elementId: string
+export type Element = Immutable<{
+  id: string
   partNum: string
   colorId: string,
   setNumbers: string[]
-}
-
-export type Element = Immutable<{
-  id: string,
-  part: Part,
-  color: Color,
-setNumbers: string[]
 }>
 
 export type Elements = Immutable<{[key: string]: Element}>
 
 export type InventoryPart = Immutable<{
-  part: Part,
   color: Color,
+  part: Part,
   quantity: number,
   isSpare: boolean,
   element: Element
