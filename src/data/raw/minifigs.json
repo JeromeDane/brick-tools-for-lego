@@ -10396,7 +10396,7 @@
   },
   {
     "figNum": "fig-002131",
-    "name": "Professor Severus Snape, Long Robes over Dark Purple Vest",
+    "name": "Professor Severus Snape, Long Robes over Dark Purple Vest (Shirt Tails Print)",
     "numParts": "4"
   },
   {
@@ -58296,12 +58296,12 @@
   },
   {
     "figNum": "fig-012094",
-    "name": "Rogue",
+    "name": "Ninja",
     "numParts": "3"
   },
   {
     "figNum": "fig-012095",
-    "name": "Ninja",
+    "name": "Rogue",
     "numParts": "3"
   },
   {
@@ -59138,5 +59138,35 @@
     "figNum": "fig-012278",
     "name": "Elsa - Medium Blue Short Dress",
     "numParts": "4"
+  },
+  {
+    "figNum": "fig-012279",
+    "name": "Sherrif Deadpool",
+    "numParts": "5"
+  },
+  {
+    "figNum": "fig-012280",
+    "name": "Professor Severus Snape, Long Robes over Dark Purple Vest (No Shirt Tails Print)",
+    "numParts": "4"
+  },
+  {
+    "figNum": "fig-012281",
+    "name": "Andrea - Dark Blue Top, Magenta Skirt, Live Jacket",
+    "numParts": "5"
+  },
+  {
+    "figNum": "fig-012282",
+    "name": "Ant Trooper",
+    "numParts": "18"
+  },
+  {
+    "figNum": "fig-012283",
+    "name": "Coin Coffer",
+    "numParts": "16"
+  },
+  {
+    "figNum": "fig-012284",
+    "name": "Freezie",
+    "numParts": "18"
   }
 ]
