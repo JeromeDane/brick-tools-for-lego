@@ -22,21 +22,21 @@ const SetTabs = ({navigation: {setOptions}, route: {params: {id}}}: MaterialTopT
     setOptions({title: set?.setNum.replace(/-.*$/, '') + ' ' + set?.name})
   }, [set])
   return isFocused
-    ? <Tab.Navigator initialRouteName="SetDetails">
+    ? <Tab.Navigator initialRouteName="SetDetails" >
       <Tab.Screen
         name="SetDetails"
         initialParams={{id}}
-        options={{title: 'Details'}}
+        options={{title: 'Details', swipeEnabled: false}}
         component={SetDetailsScreen} />
       <Tab.Screen
         name="SetParts"
         initialParams={{id}}
-        options={{title: 'Parts'}}
+        options={{title: 'Parts', swipeEnabled: false}}
         component={SetPartsScreen} />
       <Tab.Screen
         name="SetInstructions"
         initialParams={{id}}
-        options={{title: 'Instructions'}}
+        options={{title: 'Instructions', swipeEnabled: false}}
         component={SetInstructionsScreen} />
     </Tab.Navigator>
     : null

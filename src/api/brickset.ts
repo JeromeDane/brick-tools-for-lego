@@ -203,3 +203,14 @@ export const useSetOwned = () => {
       })
   , [])
 }
+
+export type SetImage = {
+  imageURL: string;
+  thumbnailURL: string;
+}
+
+export const fetchSetImages = (bricksetID: number) =>
+  api('getAdditionalImages', {setId: bricksetID})
+    .then((response: any) => {
+      return response?.additionalImages as SetImage[]
+    })
