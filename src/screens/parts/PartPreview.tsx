@@ -12,7 +12,7 @@ type PartPreviewProps = {
 
 const PartPreview = ({defaultColorId, part, onPress}: PartPreviewProps) => {
   const getElementByPartAndColor = useGetElementByPartAndColor(),
-        defaultColor = part.colors.find(({id}) => id == defaultColorId) || part.colors[0],
+        defaultColor = part.colors && (part.colors.find(color => color && color.id == defaultColorId) || part.colors[0]),
         element = defaultColor && getElementByPartAndColor(part.partNum, defaultColor.id)
   return <Card style={{marginBottom: 20}} onPress={() => onPress(part.partNum)}>
     <Card.Title title={part.name} />
