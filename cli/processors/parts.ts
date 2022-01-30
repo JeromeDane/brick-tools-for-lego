@@ -7,7 +7,7 @@ export const processParts = async () => {
   const colorIds = getColors().map(({id}: {id: string}) => id),
         partColors = (await getElements()).reduce((acc, element: Element) => {
           acc[element.partNum] = acc[element.partNum] || []
-          if(acc[element.partNum].indexOf(element.colorId) < 0)
+          if(acc[element.partNum].indexOf(element.colorId) < 0 && colorIds.indexOf(element.colorId) > -1)
             acc[element.partNum].push(element.colorId)
           return acc
         }, {} as {[key: string]: string[]}),

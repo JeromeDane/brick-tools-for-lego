@@ -2,10 +2,11 @@ import {Element} from '../../src/data/types'
 import {fetchRebrickableCSVData, saveData} from '../rebrickable'
 import {getInventories} from './inventories'
 import {getInventoryParts} from './inventory-parts'
+import elementCorrections from './element-corrections'
 
 const cliProgress = require('cli-progress')
 
-const progress = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
+const progress = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
 
 let processedElements: Element[]
 
@@ -15,7 +16,7 @@ export const processElements = async () => {
   if(processedElements) return processedElements
   const elements: Element[] = (await fetchRebrickableCSVData('elements'))
     .map((e: any) => {
-      e.id = e.elementId
+      e.id = (elementCorrections[e.partNum] && elementCorrections[e.partNum][e.colorId]) || e.elementId
       delete e.elementId
       elementsByPartColor[e.partNum] = elementsByPartColor[e.partNum] || {}
       elementsByPartColor[e.partNum][e.colorId] = Object.assign(e, {setNumbers: []})
