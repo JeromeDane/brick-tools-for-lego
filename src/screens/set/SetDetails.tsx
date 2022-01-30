@@ -3,12 +3,13 @@ import React, {useEffect, useState} from 'react'
 import Spinner from '../../components/Spinner'
 import {ScrollView, Linking, View} from 'react-native'
 import {Button, Card, Paragraph} from 'react-native-paper'
-import {Text, TextInput} from '../../components/Themed'
+import {Text} from '../../components/Themed'
 import ScaledImage from '../../components/ScaledImage'
 import {SetTabsParamList} from './SetScreen'
 import {useSetWanted, useSetOwned} from '../../api/brickset'
 import TextLink from '../../components/TextLink'
 import CheckBox from '../../components/Checkbox'
+import TextInput from '../../components/TextInput'
 import {useIsLoggedInToBrickset} from '../../api/brickset'
 import {useSet} from '../../data/sets'
 
@@ -92,6 +93,7 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
                 ? <TextInput
                   label="How many copies do I own?"
                   keyboardType="numeric"
+                  autoComplete={false}
                   onChangeText={value => {
                     const int = parseInt(value)
                     if(!value) setQuantityOwned('')
