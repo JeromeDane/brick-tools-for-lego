@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   image: {
-    backgroundColor: 'gray',
+    backgroundColor: 'white',
     marginRight: 10
   }
 })
