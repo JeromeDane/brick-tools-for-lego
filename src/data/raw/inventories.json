@@ -158382,12 +158382,22 @@
   {
     "id": "124232",
     "version": "1",
-    "setNum": "DSARMORCASEIJRODLA-1"
+    "setNum": "DSARMORCASEIJROTLA-1"
   },
   {
     "id": "124233",
     "version": "1",
     "setNum": "DSARMORCASEIJTOD-1"
+  },
+  {
+    "id": "124285",
+    "version": "1",
+    "setNum": "6328560-1"
+  },
+  {
+    "id": "124289",
+    "version": "1",
+    "setNum": "HEART-1"
   },
   {
     "id": "124290",
@@ -158398,11 +158408,6 @@
     "id": "124292",
     "version": "2",
     "setNum": "75953-1"
-  },
-  {
-    "id": "124293",
-    "version": "1",
-    "setNum": "fig-012280"
   },
   {
     "id": "124335",
@@ -158423,5 +158428,60 @@
     "id": "124341",
     "version": "1",
     "setNum": "fig-012284"
+  },
+  {
+    "id": "124439",
+    "version": "1",
+    "setNum": "9780744047936-1"
+  },
+  {
+    "id": "124460",
+    "version": "1",
+    "setNum": "LEGO-Build-a-Mini-5"
+  },
+  {
+    "id": "124462",
+    "version": "1",
+    "setNum": "fig-012285"
+  },
+  {
+    "id": "124527",
+    "version": "2",
+    "setNum": "4689-1"
+  },
+  {
+    "id": "124667",
+    "version": "1",
+    "setNum": "40532-1"
+  },
+  {
+    "id": "124812",
+    "version": "1",
+    "setNum": "610-3"
+  },
+  {
+    "id": "124834",
+    "version": "1",
+    "setNum": "978079444520-1"
+  },
+  {
+    "id": "124836",
+    "version": "1",
+    "setNum": "9780794445218-1"
+  },
+  {
+    "id": "124875",
+    "version": "1",
+    "setNum": "fig-012286"
+  },
+  {
+    "id": "124927",
+    "version": "1",
+    "setNum": "31205-1"
+  },
+  {
+    "id": "125009",
+    "version": "1",
+    "setNum": "fig-012288"
   }
 ]

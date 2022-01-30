@@ -13682,7 +13682,7 @@
   {
     "inventoryId": "4141",
     "figNum": "fig-011288",
-    "quantity": "1"
+    "quantity": "2"
   },
   {
     "inventoryId": "4153",
@@ -38945,11 +38945,6 @@
     "quantity": "1"
   },
   {
-    "inventoryId": "11903",
-    "figNum": "fig-008557",
-    "quantity": "1"
-  },
-  {
     "inventoryId": "11905",
     "figNum": "fig-001277",
     "quantity": "1"
@@ -63247,11 +63242,6 @@
   {
     "inventoryId": "25304",
     "figNum": "fig-006196",
-    "quantity": "1"
-  },
-  {
-    "inventoryId": "25304",
-    "figNum": "fig-012280",
     "quantity": "1"
   },
   {
@@ -90281,12 +90271,12 @@
   },
   {
     "inventoryId": "118931",
-    "figNum": "fig-012115",
+    "figNum": "fig-012117",
     "quantity": "1"
   },
   {
     "inventoryId": "118931",
-    "figNum": "fig-012117",
+    "figNum": "fig-012288",
     "quantity": "1"
   },
   {
@@ -90907,6 +90897,11 @@
   {
     "inventoryId": "124292",
     "figNum": "fig-006196",
+    "quantity": "1"
+  },
+  {
+    "inventoryId": "124667",
+    "figNum": "fig-012286",
     "quantity": "1"
   }
 ]

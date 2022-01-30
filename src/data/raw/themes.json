@@ -715,7 +715,7 @@
     "id": "232",
     "name": "Valentine",
     "parentId": "206",
-    "numSets": 12
+    "numSets": 14
   },
   {
     "id": "233",
@@ -1165,7 +1165,7 @@
     "id": "373",
     "name": "Vehicle",
     "parentId": "365",
-    "numSets": 37
+    "numSets": 38
   },
   {
     "id": "384",
@@ -1293,7 +1293,7 @@
     "id": "408",
     "name": "LEGO Brand Store",
     "parentId": "",
-    "numSets": 150
+    "numSets": 151
   },
   {
     "id": "409",
@@ -1651,7 +1651,7 @@
     "id": "497",
     "name": "Books",
     "parentId": "",
-    "numSets": 425,
+    "numSets": 428,
     "yearFrom": 1966,
     "yearTo": 2022
   },
@@ -2177,7 +2177,7 @@
     "id": "598",
     "name": "Promotional",
     "parentId": "",
-    "numSets": 125,
+    "numSets": 126,
     "yearFrom": 1958,
     "yearTo": 2022
   },
@@ -2827,7 +2827,7 @@
     "id": "709",
     "name": "LEGO Art",
     "parentId": "",
-    "numSets": 8
+    "numSets": 9
   },
   {
     "id": "710",
