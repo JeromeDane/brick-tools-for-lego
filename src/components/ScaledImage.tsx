@@ -1,6 +1,6 @@
 import React, {useMemo, useState} from 'react'
 import {ActivityIndicator, Image, ImageStyle, StyleProp, View} from 'react-native'
-import {TouchableOpacity} from 'react-native-gesture-handler'
+import {TouchableOpacity, TouchableWithoutFeedback} from 'react-native-gesture-handler'
 
 interface ImageProps extends React.ComponentProps<typeof Image> {
   source: {uri: string};
@@ -32,9 +32,9 @@ const ScaledImage = (props: ImageProps) => {
         ],
         Container = useMemo(() => props.onPress
           ? ({children}: React.ComponentProps<typeof TouchableOpacity>) =>
-            <TouchableOpacity onPress={props.onPress} style={containerStyle}>
+            <TouchableWithoutFeedback onPress={props.onPress} style={containerStyle}>
               {children}
-            </TouchableOpacity>
+            </TouchableWithoutFeedback>
           : ({children}: React.ComponentProps<typeof View>) =>
             <View style={containerStyle}>{children}</View>
         , [])
