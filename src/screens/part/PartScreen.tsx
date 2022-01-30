@@ -5,6 +5,7 @@ import {usePart} from '../../data/parts'
 import {useGetElementByPartAndColor} from '../../data/elements'
 import {Card, Headline, Paragraph} from 'react-native-paper'
 import ElementPreview from './ElementPreview'
+import colorOrder from '../../data/color-order'
 
 export default function Part({navigation}: RootStackScreenProps<'Part'>) {
   const {routes, index} = navigation.getState(),
@@ -32,14 +33,22 @@ export default function Part({navigation}: RootStackScreenProps<'Part'>) {
           </Card.Content>
         </Card>
         <Headline style={{marginBottom: 20}}>Colors</Headline>
-        {part.colors.map(color => {
-          const element = getElementByPartAndColor(part.partNum, color.id)
-          return <ElementPreview
-            key={element.id}
-            color={color}
-            part={part}
-            onPress={() => { navigation.navigate('Element', {partNum: part.partNum, colorId: color.id})}} />
-        })}
+        {[...part.colors]
+          .sort((a, b) => colorOrder.indexOf(a.name) > colorOrder.indexOf(b.name)
+            ? 1
+            : colorOrder.indexOf(a.name) < colorOrder.indexOf(b.name)
+              ? -1
+              : 0
+          )
+          .map(color => {
+            const element = getElementByPartAndColor(part.partNum, color?.id)
+            return <ElementPreview
+              key={element?.id}
+              color={color}
+              part={part}
+              onPress={() => { navigation.navigate('Element', {partNum: part.partNum, colorId: color?.id})}} />
+          })
+        }
       </View>
       : <ActivityIndicator color="#aaa" />
     }
