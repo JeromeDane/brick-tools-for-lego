@@ -2,8 +2,8 @@ import {MaterialTopTabScreenProps} from '@react-navigation/material-top-tabs'
 import React, {useEffect, useRef, useState} from 'react'
 import Carousel from 'react-native-snap-carousel'
 import Spinner from '../../components/Spinner'
-import {ScrollView, Image, Linking, View, TouchableOpacity} from 'react-native'
-import {ActivityIndicator, Button, Card, Paragraph} from 'react-native-paper'
+import {ScrollView, Linking, View} from 'react-native'
+import {ActivityIndicator, Button, Card, Paragraph, useTheme} from 'react-native-paper'
 import {Text} from '../../components/Themed'
 import ScaledImage from '../../components/ScaledImage'
 import {SetTabsParamList} from './SetScreen'
@@ -18,7 +18,9 @@ import {useSet} from '../../data/sets'
 export default function SetDetailsScreen({navigation, route: {params: {id}}}: MaterialTopTabScreenProps<SetTabsParamList, 'SetDetails'>) {
   const set = useSet(id),
         carousel = useRef(),
+        theme = useTheme(),
         [loadingMessage, setLoadingMessage] = useState(''),
+        [carousetIndex, setCarouselIndex] = useState(0),
         [setImages, setSetImages] = useState<SetImage[]>([]),
         [alternateImagesLoaded, setAlternateImagesLoaded] = useState(false),
         [width, setWidth] = useState(0),
@@ -58,6 +60,7 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
           ? <Carousel
             ref={carousel}
             data={images}
+            onBeforeSnapToItem={i => setCarouselIndex(i)}
             renderItem={CarouselItem}
             sliderWidth={width}
             itemWidth={width} />
@@ -65,23 +68,17 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
         }
         <ScrollView horizontal={true} style={{marginTop: 5, display: 'flex', flex: 1, flexDirection: 'row', width}}>
           {images.map((image, i: number) =>
-            <TouchableOpacity key={i} style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'white',
-              width: 50,
-              height: 50,
-              marginRight: 5
-            }}
-            onPress={() => {
-              carousel?.current.snapToItem(i)
+            <View key={`altimage-${i}`} style={{
+              marginRight: 5,
+              borderBottomWidth: carousetIndex == i ? 2 : 0,
+              borderColor: theme.colors.primary,
+              paddingBottom: 2
             }}>
-              <Image
+              <ScaledImage
+                onPress={() => carousel?.current?.snapToItem(i)}
                 source={{uri: image.imageURL}}
-                style={{flex: 1, width: '100%', resizeMode: 'contain', zIndex: 10}} />
-              <ActivityIndicator color='#aaaa' style={{position: 'absolute', top: width / 2 - 10, zIndex: 1}} />
-            </TouchableOpacity>
+                width={50} />
+            </View>
           )}
           {alternateImagesLoaded
             ? null
