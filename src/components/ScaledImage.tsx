@@ -32,7 +32,7 @@ const ScaledImage = (props: ImageProps) => {
         ],
         Container = useMemo(() => props.onPress
           ? ({children}: React.ComponentProps<typeof TouchableOpacity>) =>
-            <TouchableOpacity delayPressIn={10000} onPress={props.onPress} style={containerStyle}>
+            <TouchableOpacity onPress={props.onPress} style={containerStyle}>
               {children}
             </TouchableOpacity>
           : ({children}: React.ComponentProps<typeof View>) =>
