@@ -21,6 +21,7 @@ import useColorScheme from '../hooks/useColorScheme'
 import AboutScreen from '../screens/AboutScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import ElementScreen from '../screens/element/ElementScreen'
+import ImageScreen from '../screens/ImageScreen'
 import ThemesScreen from '../screens/ThemesScreen'
 import PartScreen from '../screens/part/PartScreen'
 import PartsScreen from '../screens/parts/PartsScreen'
@@ -51,6 +52,7 @@ export default function Navigation({colorScheme}: { colorScheme: ColorSchemeName
         <Stack.Screen name="Root" component={DrawerNav} options={{headerShown: false}} />
         <Stack.Screen name="Element" component={ElementScreen} />
         <Stack.Screen name="Part" component={PartScreen} />
+        <Stack.Screen name="Image" component={ImageScreen} />
         <Stack.Screen name="Set" component={SetTabs} />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{title: 'Oops!'}} />
       </Stack.Navigator>

@@ -25,6 +25,7 @@ export type RootDrawerParamList = {
 
 export type RootStackParamList = {
   About: undefined;
+  Image: {url: string, title: string};
   Element: {partNum: string, colorId: string};
   Modal: undefined;
   NotFound: undefined;

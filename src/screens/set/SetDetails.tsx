@@ -48,6 +48,9 @@ export default function SetDetailsScreen({navigation, route: {params: {id}}}: Ma
       <ScaledImage
         width={width}
         height={width}
+        onPress={() => {
+          navigation.navigate('Image', {url: item.imageURL, title: set?.setNum.replace(/-.*$/, '') + ' ' + set?.name})
+        }}
         source={{uri: item.imageURL}}
         style={{flex: 1, width: width, height: width, resizeMode: 'contain', zIndex: 10}} />
     )

@@ -26,6 +26,7 @@ const linking: LinkingOptions<RootStackParamList> = {
         }
       },
       Element: 'brick-tools-for-lego/element/:id',
+      Image: 'brick-tools-for-lego/image/:url/:title',
       Set: {
         path: 'brick-tools-for-lego/set/:id',
         screens: {
