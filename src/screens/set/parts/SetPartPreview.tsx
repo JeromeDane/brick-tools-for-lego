@@ -1,9 +1,10 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack'
 import React from 'react'
-import {Image, View} from 'react-native'
+import {View} from 'react-native'
 import {Card, Paragraph} from 'react-native-paper'
+import ElementImage from '../../../components/ElementImage'
 import TextLink from '../../../components/TextLink'
-import { useGetElementByPartAndColor } from '../../../data/elements'
+import {useGetElementByPartAndColor} from '../../../data/elements'
 import {InventoryPart} from '../../../data/types'
 import {RootStackParamList} from '../../../navigation/types'
 
@@ -20,9 +21,7 @@ export default function SetPartPreview({navigation, onPress, inventortPart: {par
     onPress={onPress}>
     <Card.Title title={part.name} />
     <Card.Content style={{flexDirection: 'row'}}>
-      <Image
-        style={{marginRight: 10, width: 100, height: 100, backgroundColor: 'gray'}}
-        source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element?.id}.jpg`}} />
+      <ElementImage id={element?.id} style={{marginRight: 10}} width={100} />
       <View>
         <Paragraph>{part.category.name}{part.subCategory ? ', ' + part.subCategory : ''}</Paragraph>
         <Paragraph>Element: {element?.id || '?'}</Paragraph>

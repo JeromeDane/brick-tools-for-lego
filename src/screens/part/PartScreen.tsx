@@ -1,10 +1,12 @@
 import React, {useEffect} from 'react'
-import {ScrollView, Image, ActivityIndicator, View} from 'react-native'
+import {ScrollView, ActivityIndicator, View} from 'react-native'
 import {RootStackScreenProps} from '../../navigation/types'
 import {usePart} from '../../data/parts'
 import {useGetElementByPartAndColor} from '../../data/elements'
 import {Card, Headline, Paragraph} from 'react-native-paper'
 import ElementPreview from './ElementPreview'
+import colorOrder from '../../data/color-order'
+import ElementImage from '../../components/ElementImage'
 
 export default function Part({navigation}: RootStackScreenProps<'Part'>) {
   const {routes, index} = navigation.getState(),
@@ -20,9 +22,7 @@ export default function Part({navigation}: RootStackScreenProps<'Part'>) {
   return <ScrollView style={{padding: 20}}>
     {part
       ? <View>
-        <Image
-          style={{marginBottom: 20, width: 192, height: 192, backgroundColor: 'gray'}}
-          source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
+        <ElementImage style={{marginBottom: 20}} width={192} id={element?.id} />
         <Card style={{marginBottom: 20}}>
           <Card.Title title="Part Details" />
           <Card.Content>
@@ -32,14 +32,22 @@ export default function Part({navigation}: RootStackScreenProps<'Part'>) {
           </Card.Content>
         </Card>
         <Headline style={{marginBottom: 20}}>Colors</Headline>
-        {part.colors.map(color => {
-          const element = getElementByPartAndColor(part.partNum, color.id)
-          return <ElementPreview
-            key={element.id}
-            color={color}
-            part={part}
-            onPress={() => { navigation.navigate('Element', {partNum: part.partNum, colorId: color.id})}} />
-        })}
+        {[...part.colors]
+          .sort((a, b) => colorOrder.indexOf(a.name) > colorOrder.indexOf(b.name)
+            ? 1
+            : colorOrder.indexOf(a.name) < colorOrder.indexOf(b.name)
+              ? -1
+              : 0
+          )
+          .map(color => {
+            const element = getElementByPartAndColor(part.partNum, color?.id)
+            return <ElementPreview
+              key={element?.id}
+              color={color}
+              part={part}
+              onPress={() => { navigation.navigate('Element', {partNum: part.partNum, colorId: color?.id})}} />
+          })
+        }
       </View>
       : <ActivityIndicator color="#aaa" />
     }

@@ -1,38 +1,57 @@
-import React, {useEffect, useState} from 'react'
-import {Image as DefaultImage} from 'react-native'
-import Colors from '../constants/Colors'
-import useColorScheme from '../hooks/useColorScheme'
+import React, {useMemo, useState} from 'react'
+import {ActivityIndicator, Image, ImageStyle, StyleProp, View} from 'react-native'
+import {TouchableOpacity, TouchableWithoutFeedback} from 'react-native-gesture-handler'
 
-type DefaultImageProps = React.ComponentProps<typeof DefaultImage>
-interface ImageProps extends DefaultImageProps {
+interface ImageProps extends React.ComponentProps<typeof Image> {
   source: {uri: string};
   maxWidth?: number;
   maxHeight?: number;
-  width: number;
+  width?: number;
   height?: number;
-  style?: any; // TODO: type this properly
+  onPress?: () => void,
+  style?: StyleProp<ImageStyle>;
 }
 
 const ScaledImage = (props: ImageProps) => {
-  const {style, ...otherProps} = props,
-        [[width, height], setImageSize] = useState([props.width || 100, props.height || 100])
-  useEffect(() => {
-    DefaultImage.getSize(props.source.uri, (w, h) => {
-      if(props.width && !props.height) {
-        const newWidth = Math.min(props.width, props.maxWidth || Number.POSITIVE_INFINITY)
-        setImageSize([newWidth, h * (newWidth / w)])
-      } else if(!props.width && props.height) {
-        const newHeight = Math.min(props.height, props.maxHeight || Number.POSITIVE_INFINITY)
-        setImageSize([w * (newHeight / h), newHeight])
-      }
-    })
-  }, [])
-  return <DefaultImage style={[{
-    backgroundColor: Colors[useColorScheme()].background,
-    width,
-    height
-  },
-  style]} {...otherProps} />
+  const [retryCounter, setRetryCounter] = useState(0),
+        seed = useMemo(() => Math.random(), []),
+        [loaded, setLoaded] = useState(false),
+        width = props.width || props.height || 0,
+        height = props.height || props.width || 0,
+        containerStyle = [
+          {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'white',
+            width,
+            height,
+            position: 'relative'
+          },
+          props.style
+        ],
+        Container = useMemo(() => props.onPress
+          ? ({children}: React.ComponentProps<typeof TouchableOpacity>) =>
+            <TouchableWithoutFeedback onPress={props.onPress} style={containerStyle}>
+              {children}
+            </TouchableWithoutFeedback>
+          : ({children}: React.ComponentProps<typeof View>) =>
+            <View style={containerStyle}>{children}</View>
+        , [])
+  return <Container>
+    {!loaded
+      ? <ActivityIndicator color='#aaaa' style={{marginTop: (width || 0) / 2 - 10}} />
+      : null
+    }
+    <Image
+      key={`image-${retryCounter}-${seed}`}
+      source={props.source}
+      onLoad={() => setLoaded(true)}
+      onError={() => {
+        if(retryCounter < 1000) setRetryCounter(c => c + 1)
+      }}
+      style={{flex: 1, width, height, resizeMode: 'contain'}} />
+  </Container>
 }
 
 export default ScaledImage

@@ -1,11 +1,12 @@
 import React from 'react'
-import {ScrollView, Image, Linking, ActivityIndicator, View} from 'react-native'
+import {ScrollView, Linking, ActivityIndicator, View} from 'react-native'
 import {Button, Card, Paragraph} from 'react-native-paper'
 import {RootStackScreenProps} from '../../navigation/types'
 import {useGetElementByPartAndColor} from '../../data/elements'
 import colors from '../../data/colors'
 import TextLink from '../../components/TextLink'
 import {usePart} from '../../data/parts'
+import ElementImage from '../../components/ElementImage'
 
 export default function ElementDetails({navigation}: RootStackScreenProps<'Element'>) {
   const {routes, index} = navigation.getState(),
@@ -16,9 +17,7 @@ export default function ElementDetails({navigation}: RootStackScreenProps<'Eleme
   return <ScrollView style={{padding: 20}}>
     {element
       ? <View>
-        <Image
-          style={{marginBottom: 20, width: 192, height: 192, backgroundColor: 'gray'}}
-          source={{uri: `https://www.lego.com/cdn/product-assets/element.img.lod5photo.192x192/${element.id}.jpg`}} />
+        <ElementImage style={{marginBottom: 20}} width={192} id={element.id} />
         <Card style={{marginBottom: 20}}>
           <Card.Title title={`${part.name}`} />
           <Card.Content>
