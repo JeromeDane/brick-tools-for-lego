@@ -53,7 +53,7 @@ You'll need to install the following to get started:
 * [Node](https://nodejs.dev/). We've tested everything using v16.4.0, but you're welcome to try other versions and let us know how it goes. [NVM (Node Version Manager)](https://github.com/nvm-sh/nvm) is your friend. 😏
 * This project uses [yarn](https://classic.yarnpkg.com/lang/en/) over `npm`, so please stick with that for consistency.  We've got everything tested and working with v1.22.17, but feel free to try newer versions and let us know how it goes.
 * Run `yarn install` in the root of the project to download dependencies.
-* You will need a [Brickset API Key](https://brickset.com/tools/webservices/requestkey) for development purposes. It should be set as an environment variable.
+* You will need a [Brickset API Key](https://brickset.com/tools/webservices/requestkey) for development purposes. It should be set as the `BRICKSET_API_KEY` environment variable.
 
 ### Data
 
